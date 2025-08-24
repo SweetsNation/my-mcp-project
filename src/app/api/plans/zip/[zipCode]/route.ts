@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getMedicareplansByZipCode } from '@/lib/database/medicare-plans';
 
+// Force dynamic rendering to prevent build-time issues
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface Props {
   params: {
     zipCode: string;

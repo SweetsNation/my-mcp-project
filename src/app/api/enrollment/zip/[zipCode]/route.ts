@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getEnrollmentByZipCode, getMarketOpportunityScore } from '@/lib/medicare-enrollment';
 
+// Force dynamic rendering to prevent build-time issues
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface RouteParams {
   params: {
     zipCode: string;

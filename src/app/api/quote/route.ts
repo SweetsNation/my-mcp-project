@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { emailService, QuoteRequestData } from '@/lib/email-service';
 
+// Force dynamic rendering to prevent build-time issues
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
