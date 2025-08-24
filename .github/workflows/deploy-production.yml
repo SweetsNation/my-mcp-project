@@ -50,12 +50,12 @@ jobs:
           fi
           echo "✅ All Vercel secrets are configured"
 
-      - name: Deploy to Vercel
+      - name: Deploy to Vercel (Single Region)
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel --prod --token=$VERCEL_TOKEN --yes
+        run: vercel --prod --token=$VERCEL_TOKEN --yes --regions iad1
 
       - name: Wait for deployment
         run: sleep 30
