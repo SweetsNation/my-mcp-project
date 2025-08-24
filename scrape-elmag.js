@@ -1,7 +1,8 @@
+require('dotenv').config();
 const axios = require('axios');
 const fs = require('fs');
 
-const PERPLEXITY_API_KEY = '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';
+const PERPLEXITY_API_KEY = process.env.PERPLEXITY_API_KEY;
 
 async function scrapeElmagInsurance() {
   try {

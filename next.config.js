@@ -6,6 +6,15 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  // Force dynamic rendering to avoid hydration issues
+  output: 'standalone',
+  // Disable static generation completely
+  trailingSlash: false,
+  experimental: {
+    // Disable static optimization for problematic pages
+    workerThreads: false,
+    cpus: 1,
+  },
   images: {
     // Allowed domains for external images
     domains: [

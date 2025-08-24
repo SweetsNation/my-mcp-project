@@ -1,15 +1,12 @@
 import { MedicareAdvantageHero } from '@/components/MedicareAdvantageHero';
-import { PlanComparisonPreview } from '@/components/PlanComparisonPreview';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
 
 export default function HomePage() {
   return (
     <div className="bg-gray-50">
-
       {/* Hero Section */}
       <MedicareAdvantageHero />
 
-      {/* Plan Comparison Preview */}
+      {/* Simplified Plan Comparison Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -20,8 +17,15 @@ export default function HomePage() {
               Find the perfect Medicare Advantage plan with our interactive comparison tool. 
               See plans, benefits, and costs side by side.
             </p>
+            <div className="mt-8">
+              <a 
+                href="/medicare-advantage" 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
+              >
+                View Plans
+              </a>
+            </div>
           </div>
-          <PlanComparisonPreview />
         </div>
       </section>
 
@@ -65,9 +69,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <TestimonialsSection />
-
+      {/* Contact CTA */}
+      <section className="py-16 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to find the perfect Medicare Advantage plan for your needs.
+          </p>
+          <a 
+            href="/contact" 
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors"
+          >
+            Contact Us
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
