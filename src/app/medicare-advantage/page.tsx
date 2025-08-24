@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+// Force dynamic rendering to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export const metadata: Metadata = {
   title: 'Medicare Advantage Plans 2025 | Compare Plans by County | El-Mag Insurance',
   description: 'Compare Medicare Advantage plans across high-opportunity markets. Expert guidance for Fairfax VA, Wake NC, Davidson TN, Fulton GA, and Jefferson AL counties.',

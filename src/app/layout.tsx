@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Suspense } from 'react';
 import './globals.css';
 import RootLayoutClient from '../components/RootLayoutClient';
 import GoogleAnalytics from '../components/GoogleAnalytics';
+
+// Force dynamic rendering to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,7 +36,9 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="El-Mag Insurance" />
         <meta name="twitter:card" content="summary_large_image" />
-        <GoogleAnalytics />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
         
         <script
           type="application/ld+json"

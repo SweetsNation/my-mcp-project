@@ -1,5 +1,9 @@
 import { MedicareAdvantageHero } from '@/components/MedicareAdvantageHero';
 
+// Force dynamic rendering to prevent prerendering issues
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function HomePage() {
   return (
     <div className="bg-gray-50">
