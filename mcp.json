@@ -1,0 +1,13 @@
+{
+    "mcpServers": {
+      "dfs": {
+        "command": "npx",
+        "args": ["-y", "dataforseo-mcp-server"],
+        "env": {
+          "DATAFORSEO_USERNAME": "inquiry@elmaginsurance.com",
+          "DATAFORSEO_PASSWORD": "0f256932a691f1f1"
+        }
+      }
+    }
+  }
+  

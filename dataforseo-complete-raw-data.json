@@ -1,0 +1,2070 @@
+[
+  {
+    "keyword": "Medicare Advantage plans",
+    "search_volume": 135000,
+    "cpc": 19.77,
+    "competition": "LOW",
+    "competition_index": 14,
+    "low_bid": 3.55,
+    "high_bid": 20,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 201000
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 110000
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 90500
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 110000
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 74000
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 165000
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 135000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 165000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 165000
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 90500
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 135000
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 201000
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "medicare advantage plans",
+    "search_volume": 135000,
+    "cpc": 19.77,
+    "competition": 0.14,
+    "competition_level": "LOW",
+    "low_bid": 3.55,
+    "high_bid": 20,
+    "keyword_difficulty": 67,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 201000
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 110000
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 90500
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 110000
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 74000
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 165000
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 135000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 165000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 165000
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 90500
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 135000
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 201000
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "advantage plans medicare",
+    "search_volume": 33100,
+    "cpc": 17.28,
+    "competition": 0.44,
+    "competition_level": "MEDIUM",
+    "low_bid": 2.85,
+    "high_bid": 14.86,
+    "keyword_difficulty": 51,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 74000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 246000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 9900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 8100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "advantage of medicare advantage plans",
+    "search_volume": 33100,
+    "cpc": 17.28,
+    "competition": 0.44,
+    "competition_level": "MEDIUM",
+    "low_bid": 2.85,
+    "high_bid": 14.86,
+    "keyword_difficulty": 52,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 74000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 246000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 9900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 8100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "advantage medicare plans",
+    "search_volume": 33100,
+    "cpc": 17.28,
+    "competition": 0.44,
+    "competition_level": "MEDIUM",
+    "low_bid": 2.85,
+    "high_bid": 14.86,
+    "keyword_difficulty": 56,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 74000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 246000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 9900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 8100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare and advantage plans",
+    "search_volume": 33100,
+    "cpc": 17.28,
+    "competition": 0.44,
+    "competition_level": "MEDIUM",
+    "low_bid": 2.85,
+    "high_bid": 14.86,
+    "keyword_difficulty": 67,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 74000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 246000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 9900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 8100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare and medicare advantage plans",
+    "search_volume": 33100,
+    "cpc": 17.28,
+    "competition": 0.44,
+    "competition_level": "MEDIUM",
+    "low_bid": 2.85,
+    "high_bid": 14.86,
+    "keyword_difficulty": 54,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 74000
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 246000
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 9900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 8100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "humana medicare advantage plans",
+    "search_volume": 22200,
+    "cpc": 13.34,
+    "competition": 0.3,
+    "competition_level": "LOW",
+    "low_bid": 3.77,
+    "high_bid": 39.26,
+    "keyword_difficulty": 48,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 5400
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 5400
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 14800
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 18100
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 60500
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 60500
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 8100
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 12100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "humana advantage plans medicare",
+    "search_volume": 22200,
+    "cpc": 13.34,
+    "competition": 0.3,
+    "competition_level": "LOW",
+    "low_bid": 3.77,
+    "high_bid": 39.26,
+    "keyword_difficulty": 33,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 5400
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 5400
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 14800
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 18100
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 60500
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 60500
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 8100
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 12100
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "united health medicare advantage plans",
+    "search_volume": 22200,
+    "cpc": 16.38,
+    "competition": 0.49,
+    "competition_level": "MEDIUM",
+    "low_bid": 3.8,
+    "high_bid": 17.43,
+    "keyword_difficulty": 25,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 60500
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 33100
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 40500
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 18100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 14800
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare advantage plans 2025",
+    "search_volume": 18100,
+    "cpc": 16.56,
+    "competition": 0.67,
+    "competition_level": "HIGH",
+    "low_bid": 3.49,
+    "high_bid": 15.67,
+    "keyword_difficulty": 51,
+    "search_intent": "commercial",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 12100
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 22200
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 27100
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 49500
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 74000
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 22200
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 1900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 590
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare advantage plans with dental coverage",
+    "search_volume": 12100,
+    "cpc": 9.55,
+    "competition": "N/A",
+    "competition_level": "LOW",
+    "low_bid": 2.39,
+    "high_bid": 7.2,
+    "keyword_difficulty": 17,
+    "search_intent": "commercial",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 40500
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 27100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 22200
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 18100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 5400
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 2400
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 170
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "dental coverage in medicare advantage plans",
+    "search_volume": 12100,
+    "cpc": 9.55,
+    "competition": "N/A",
+    "competition_level": "LOW",
+    "low_bid": 2.39,
+    "high_bid": 7.2,
+    "keyword_difficulty": 21,
+    "search_intent": "commercial",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 40500
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 27100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 22200
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 18100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 5400
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 2400
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 170
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare advantage plans dental coverage",
+    "search_volume": 12100,
+    "cpc": 9.55,
+    "competition": "N/A",
+    "competition_level": "LOW",
+    "low_bid": 2.39,
+    "high_bid": 7.2,
+    "keyword_difficulty": 13,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 40500
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 27100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 22200
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 18100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 5400
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 2400
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 170
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare advantage plans that cover dental",
+    "search_volume": 12100,
+    "cpc": 9.55,
+    "competition": "N/A",
+    "competition_level": "LOW",
+    "low_bid": 2.39,
+    "high_bid": 7.2,
+    "keyword_difficulty": 17,
+    "search_intent": "commercial",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 40500
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 27100
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 22200
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 18100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 5400
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 3600
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 2400
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 170
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "medicare advantage plans aetna",
+    "search_volume": 9900,
+    "cpc": 10.75,
+    "competition": 0.23,
+    "competition_level": "LOW",
+    "low_bid": 3.15,
+    "high_bid": 10.63,
+    "keyword_difficulty": 34,
+    "search_intent": "navigational",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 9900
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 5400
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 8100
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 6600
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 14800
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 18100
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 12100
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 14800
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 6600
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 5400
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 6600
+      }
+    ],
+    "keyword_type": "Related"
+  },
+  {
+    "keyword": "best Medicare Advantage plans",
+    "search_volume": 6600,
+    "cpc": 10.44,
+    "competition": "MEDIUM",
+    "competition_index": 58,
+    "low_bid": 2.54,
+    "high_bid": 11.03,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 3600
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 3600
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 3600
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 5400
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 3600
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 4400
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 6600
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 9900
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 14800
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 8100
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 4400
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 4400
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage vs Supplement",
+    "search_volume": 1900,
+    "cpc": 3.47,
+    "competition": "MEDIUM",
+    "competition_index": 44,
+    "low_bid": 1.34,
+    "high_bid": 4.01,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 1300
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 1300
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 1300
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 1600
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 1300
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 1600
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 1900
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 2900
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 2900
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 1600
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 1900
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 1900
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage cost",
+    "search_volume": 1000,
+    "cpc": 4.86,
+    "competition": "MEDIUM",
+    "competition_index": 42,
+    "low_bid": 1.46,
+    "high_bid": 4.52,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 880
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 880
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 2400
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 720
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 1600
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 880
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 720
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 590
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage enrollment",
+    "search_volume": 880,
+    "cpc": 21.48,
+    "competition": "LOW",
+    "competition_index": 25,
+    "low_bid": 4.24,
+    "high_bid": 17.21,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 880
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 880
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 1600
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 2900
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 590
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 880
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 590
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 480
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 480
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage open enrollment",
+    "search_volume": 720,
+    "cpc": 8.13,
+    "competition": "LOW",
+    "competition_index": 10,
+    "low_bid": 2.89,
+    "high_bid": 13.59,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 880
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 590
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 1000
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 880
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 1000
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 720
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1000
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 590
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 320
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage agent",
+    "search_volume": 590,
+    "cpc": 21.52,
+    "competition": "LOW",
+    "competition_index": 11,
+    "low_bid": 6.46,
+    "high_bid": 36.05,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 210
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 320
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 720
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 720
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 880
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 1300
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 110
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage dental coverage",
+    "search_volume": 480,
+    "cpc": 9.14,
+    "competition": "LOW",
+    "competition_index": 7,
+    "low_bid": 1.81,
+    "high_bid": 7.81,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 1000
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 390
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 590
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 260
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 390
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 390
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 260
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage benefits",
+    "search_volume": 390,
+    "cpc": 11.51,
+    "competition": "MEDIUM",
+    "competition_index": 43,
+    "low_bid": 1.69,
+    "high_bid": 9.57,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 390
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 390
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 480
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 390
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 480
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 390
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 480
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 480
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 390
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 390
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 390
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage near me",
+    "search_volume": 390,
+    "cpc": 14.16,
+    "competition": "MEDIUM",
+    "competition_index": 47,
+    "low_bid": 4.09,
+    "high_bid": 16.53,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 70
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 50
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 70
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 720
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 320
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 480
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 480
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 880
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 110
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 90
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage fitness benefits",
+    "search_volume": 70,
+    "cpc": 4.91,
+    "competition": "LOW",
+    "competition_index": 26,
+    "low_bid": 1.69,
+    "high_bid": 4.46,
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 40
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 30
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 40
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 30
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 20
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 70
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 90
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 90
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 70
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 70
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 140
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 170
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage prescription drug coverage",
+    "search_volume": 20,
+    "cpc": "N/A",
+    "competition": "LOW",
+    "competition_index": 4,
+    "low_bid": "N/A",
+    "high_bid": "N/A",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 50
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 30
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 20
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 30
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 20
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 30
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 30
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 20
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 10
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage savings",
+    "search_volume": 10,
+    "cpc": 2.18,
+    "competition": "MEDIUM",
+    "competition_index": 48,
+    "low_bid": "N/A",
+    "high_bid": "N/A",
+    "monthly_searches": [
+      {
+        "year": 2025,
+        "month": 6,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "search_volume": 10
+      },
+      {
+        "year": 2025,
+        "month": 1,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 12,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 11,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 10,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 9,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 8,
+        "search_volume": 10
+      },
+      {
+        "year": 2024,
+        "month": 7,
+        "search_volume": 10
+      }
+    ],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage telehealth services",
+    "search_volume": "N/A",
+    "cpc": "N/A",
+    "competition": "N/A",
+    "competition_index": "N/A",
+    "low_bid": "N/A",
+    "high_bid": "N/A",
+    "monthly_searches": [],
+    "keyword_type": "Primary"
+  },
+  {
+    "keyword": "Medicare Advantage 2025",
+    "search_volume": "N/A",
+    "cpc": "N/A",
+    "competition": "N/A",
+    "competition_index": "N/A",
+    "low_bid": "N/A",
+    "high_bid": "N/A",
+    "monthly_searches": [],
+    "keyword_type": "Primary"
+  }
+]

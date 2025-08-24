@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "perplexity": {
+      "command": "npx",
+      "args": ["perplexity-mcp-server"]
+    },
+    "dataforseo": {
+      "command": "npx",
+      "args": ["-y", "--cache", "/Users/castlegreyskull/dataforseo-mcp-cache", "dataforseo-mcp-server"],
+      "env": {
+        "DATAFORSEO_LOGIN": "inquiry@elmaginsurance.com",
+        "DATAFORSEO_PASSWORD": "0f256932a691f1f1"
+      }
+    }
+  },
+  "defaultModel": "claude-3-5-sonnet-20241022"
+}
