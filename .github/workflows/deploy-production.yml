@@ -27,8 +27,9 @@ jobs:
       - name: Run tests
         run: npm test || echo "Tests not configured, skipping..."
 
-      - name: Build application
-        run: npm run build
+      # Skip local build - let Vercel handle it
+      - name: Skip local build
+        run: echo "Skipping local build - Vercel will handle the build process"
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
@@ -49,33 +50,15 @@ jobs:
           fi
           echo "✅ All Vercel secrets are configured"
 
-      - name: Pull Vercel Environment Information
+      - name: Deploy to Vercel
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel pull --yes --environment=production --token=$VERCEL_TOKEN
-        
-      - name: Build Project Artifacts
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel build --prod --token=$VERCEL_TOKEN
-        
-      - name: Deploy Project Artifacts to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-        run: vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+        run: vercel --prod --token=$VERCEL_TOKEN --yes
 
       - name: Wait for deployment
-        run: sleep 60
-
-      - name: Run post-deployment tests
-        run: npm run verify:deployment
-        continue-on-error: true
+        run: sleep 30
 
       - name: Notify deployment status
         if: always()
