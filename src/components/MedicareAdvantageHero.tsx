@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { LocationData } from '@/lib/content-generator';
 
@@ -11,14 +11,20 @@ interface Props {
 }
 
 export function MedicareAdvantageHero({ headline, subtitle, locationData }: Props) {
-  const [zipCode, setZipCode] = useState(locationData?.zipCode || '');
+  const [zipCode, setZipCode] = useState('');
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    if (locationData?.zipCode) {
+      setZipCode(locationData.zipCode);
+    }
+  }, [locationData?.zipCode]);
 
   const handleZipCodeSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (zipCode.length === 5) {
-      if (typeof window !== 'undefined') {
-        window.location.href = `/medicare-advantage/plans?zip=${zipCode}`;
-      }
+    if (zipCode.length === 5 && isClient) {
+      window.location.href = `/medicare-advantage/plans?zip=${zipCode}`;
     }
   };
 

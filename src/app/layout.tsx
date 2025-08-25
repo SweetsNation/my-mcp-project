@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import './globals.css';
 import RootLayoutClient from '../components/RootLayoutClient';
 import GoogleAnalytics from '../components/GoogleAnalytics';
+import ClientOnly from '../components/ClientOnly';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -14,9 +15,35 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'El-Mag Insurance - Medicare Advantage Plans',
   description: 'Find the best Medicare Advantage plans with comprehensive coverage. Compare plans, calculate costs, and get expert guidance from licensed agents.',
-  keywords: 'Medicare Advantage, Medicare plans, health insurance, dental coverage, vision coverage',
+  keywords: 'Medicare Advantage, Medicare plans, health insurance, dental coverage, vision coverage, prescription drug coverage',
   authors: [{ name: 'El-Mag Insurance' }],
-  robots: 'index, follow',
+  openGraph: {
+    title: 'El-Mag Insurance - Medicare Advantage Plans',
+    description: 'Find the best Medicare Advantage plans with comprehensive coverage.',
+    url: 'https://elmaginsurance.com',
+    siteName: 'El-Mag Insurance',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'El-Mag Insurance - Medicare Advantage Plans',
+    description: 'Find the best Medicare Advantage plans with comprehensive coverage.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+  },
 };
 
 export const viewport = {
@@ -36,9 +63,9 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="El-Mag Insurance" />
         <meta name="twitter:card" content="summary_large_image" />
-        <Suspense fallback={null}>
+        <ClientOnly>
           <GoogleAnalytics />
-        </Suspense>
+        </ClientOnly>
         
         <script
           type="application/ld+json"
@@ -60,9 +87,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <RootLayoutClient>
-          {children}
-        </RootLayoutClient>
+        <Suspense fallback={<div>Loading...</div>}>
+          <RootLayoutClient>
+            {children}
+          </RootLayoutClient>
+        </Suspense>
       </body>
     </html>
   );

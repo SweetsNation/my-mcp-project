@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface LiveChatProps {
   propertyId?: string;
@@ -11,9 +11,14 @@ export default function LiveChat({
   propertyId = process.env.NEXT_PUBLIC_TAWK_PROPERTY_ID, 
   widgetId = process.env.NEXT_PUBLIC_TAWK_WIDGET_ID 
 }: LiveChatProps) {
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
-    if (!propertyId || !widgetId) {
-      console.warn('Tawk.to: Property ID or Widget ID not configured');
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient || !propertyId || !widgetId) {
       return;
     }
 
@@ -61,36 +66,12 @@ export default function LiveChat({
       delete (window as any).Tawk_API;
       delete (window as any).Tawk_LoadStart;
     };
-  }, [propertyId, widgetId]);
+  }, [propertyId, widgetId, isClient]);
+
+  // Don't render anything until client-side hydration is complete
+  if (!isClient) {
+    return null;
+  }
 
   return null; // This component doesn't render anything visible
 }
-
-// Custom hook for live chat functionality
-export const useLiveChat = () => {
-  const openLiveChat = () => {
-    if (typeof window !== 'undefined') {
-      if ((window as any).Tawk_API && (window as any).Tawk_API.maximize) {
-        (window as any).Tawk_API.maximize();
-        
-        // Track manual chat opening
-        if ((window as any).gtag) {
-          (window as any).gtag('event', 'chat_button_clicked', {
-            event_category: 'engagement',
-            event_label: 'manual_chat_open'
-          });
-        }
-      } else {
-        // Fallback to phone if chat isn't available
-        window.location.href = 'tel:331-343-2584';
-      }
-    }
-  };
-
-  return { openLiveChat };
-};
-
-// Utility function to check if chat is available
-export const isChatAvailable = (): boolean => {
-  return !!(window as any).Tawk_API && !!(window as any).Tawk_API.getStatus;
-};

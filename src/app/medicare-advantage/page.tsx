@@ -290,7 +290,7 @@ export default function MedicareAdvantagePage() {
                   Compare Plans by County
                 </Link>
                 <a href="tel:331-343-2584" className="border-2 border-white text-white font-semibold px-8 py-4 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-lg text-center">
-                  Call 331-343-2584
+                  331-E-HEALTH
                 </a>
               </div>
             </div>
@@ -447,7 +447,7 @@ export default function MedicareAdvantagePage() {
                   Compare Plans Now
                 </Link>
                 <a href="tel:331-343-2584" className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center">
-                  Call 331-343-2584
+                  331-E-HEALTH
                 </a>
               </div>
             </div>

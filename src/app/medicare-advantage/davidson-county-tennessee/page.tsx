@@ -118,7 +118,7 @@ export default function DavidsonCountyTennesseePage() {
                   View Nashville Plans
                 </Link>
                 <a href="tel:331-343-2584" className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center">
-                  Call 331-343-2584
+                  331-E-HEALTH
                 </a>
               </div>
             </div>
@@ -448,7 +448,7 @@ export default function DavidsonCountyTennesseePage() {
                 Check Nashville Plan Options
               </Link>
               <a href="tel:331-343-2584" className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center">
-                Call (615) EL-MAG-INS
+                331-E-HEALTH
               </a>
             </div>
           </div>

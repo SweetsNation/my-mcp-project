@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useLiveChat } from './LiveChat';
+import { useLiveChat } from '@/hooks/useLiveChat';
 
 const faqs = [
   {

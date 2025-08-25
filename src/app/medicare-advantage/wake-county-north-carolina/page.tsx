@@ -118,7 +118,7 @@ export default function WakeCountyNorthCarolinaPage() {
                   Compare Raleigh Plans
                 </Link>
                 <a href="tel:331-343-2584" className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors text-center">
-                  Call 331-343-2584
+                  331-E-HEALTH
                 </a>
               </div>
             </div>
@@ -427,7 +427,7 @@ export default function WakeCountyNorthCarolinaPage() {
                 Compare Raleigh Plans Now
               </Link>
               <a href="tel:331-343-2584" className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center">
-                Call (919) EL-MAG-INS
+                331-E-HEALTH
               </a>
             </div>
           </div>

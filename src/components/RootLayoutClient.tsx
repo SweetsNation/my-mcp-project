@@ -4,6 +4,7 @@ import Navigation from './Navigation';
 import Footer from './Footer';
 import ErrorBoundary from './ErrorBoundary';
 import LiveChat from './LiveChat';
+import ClientOnly from './ClientOnly';
 
 interface RootLayoutClientProps {
   children: React.ReactNode;
@@ -17,7 +18,9 @@ export default function RootLayoutClient({ children }: RootLayoutClientProps) {
         {children}
       </main>
       <Footer />
-      <LiveChat />
+      <ClientOnly>
+        <LiveChat />
+      </ClientOnly>
     </ErrorBoundary>
   );
 }

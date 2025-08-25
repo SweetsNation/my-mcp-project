@@ -2,7 +2,7 @@
 
 import ContactForm from './ContactForm';
 import { trackPhoneCall } from '@/lib/analytics';
-import { useLiveChat } from './LiveChat';
+import { useLiveChat } from '@/hooks/useLiveChat';
 
 export default function ContactPageClient() {
   const { openLiveChat } = useLiveChat();
@@ -33,11 +33,16 @@ export default function ContactPageClient() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us Today</h3>
-              <p className="text-blue-600 font-bold text-2xl mb-2">331-343-2584</p>
+              <a 
+                href="tel:331-343-2584" 
+                onClick={() => trackPhoneCall('331-343-2584')}
+                className="text-blue-600 font-bold text-2xl mb-2 hover:text-blue-800 transition-colors inline-block"
+              >
+                331-E-HEALTH
+              </a>
               <p className="text-gray-600 text-sm mb-4">
-                Monday - Friday: 8AM - 8PM EST<br />
-                Saturday: 9AM - 5PM EST<br />
-                Sunday: Closed
+                Monday - Friday: 9AM - 6PM EST<br />
+                Saturday and Sunday: Closed
               </p>
               <a 
                 href="tel:331-343-2584" 
@@ -78,7 +83,7 @@ export default function ContactPageClient() {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Live Chat</h3>
               <p className="text-purple-600 font-medium mb-4">Chat with an agent now</p>
               <p className="text-gray-600 text-sm mb-4">
-                Get instant answers to your Medicare questions from our live support team.
+                Get instant answers to your Insurance questions from our live support team.
               </p>
               <button 
                 onClick={openLiveChat}
@@ -114,27 +119,27 @@ export default function ContactPageClient() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Atlanta, GA (Headquarters)</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Plantation, FL (Headquarters)</h3>
               <div className="space-y-2 text-gray-600">
                 <p className="flex items-center">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  1234 Peachtree St NE, Suite 500
+                  7520 NW 5th St, #201
                 </p>
                 <p className="flex items-center">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
-                  Atlanta, GA 30309
+                  Plantation, FL 33317
                 </p>
                 <p className="flex items-center">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  (404) 555-0123
+                  <a href="tel:331-343-2584" className="hover:text-blue-600 transition-colors">(331) E-HEALTH</a>
                 </p>
               </div>
             </div>

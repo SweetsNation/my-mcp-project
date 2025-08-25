@@ -263,7 +263,7 @@ export default function AboutPage() {
               Get Free Consultation
             </Link>
             <a href="tel:331-343-2584" className="border border-gray-400 hover:border-white text-white font-semibold py-3 px-8 rounded-lg transition-colors text-center inline-block">
-              Call 331-343-2584
+              331-E-HEALTH
             </a>
           </div>
         </div>

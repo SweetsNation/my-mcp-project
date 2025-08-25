@@ -155,7 +155,7 @@ export default function ContactForm({
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
             <p className="text-sm text-blue-800">
               <strong>Need immediate assistance?</strong><br />
-              Call us at <a href="tel:331-343-2584" className="font-semibold underline">331-343-2584</a>
+              Call us at <a href="tel:331-343-2584" className="font-semibold underline">331-E-HEALTH</a>
             </p>
           </div>
           <button
@@ -186,7 +186,7 @@ export default function ContactForm({
             </div>
             <div>
               <p className="text-red-800 font-semibold">Unable to send message</p>
-              <p className="text-red-700 text-sm">Please try again or call us directly at 331-343-2584</p>
+              <p className="text-red-700 text-sm">Please try again or call us directly at <a href="tel:331-343-2584" className="underline">331-E-HEALTH</a></p>
             </div>
           </div>
         </div>
@@ -345,7 +345,7 @@ export default function ContactForm({
               href="tel:331-343-2584" 
               className="ml-1 text-blue-600 font-semibold hover:text-blue-800"
             >
-              331-343-2584
+              331-E-HEALTH
             </a>
           </div>
         </div>

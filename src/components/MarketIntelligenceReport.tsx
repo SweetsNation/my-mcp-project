@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { MarketIntelligenceReport, MarketOpportunity, MarketingStrategy } from '@/lib/market-intelligence';
 
 interface ReportDisplayProps {
@@ -422,6 +423,7 @@ export default function MarketIntelligenceReportPage() {
   const [reportData, setReportData] = useState<MarketIntelligenceReport | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     async function fetchReport() {
@@ -446,6 +448,15 @@ export default function MarketIntelligenceReportPage() {
     fetchReport();
   }, []);
 
+  const handleRetry = () => {
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    } else {
+      // Fallback for SSR
+      router.refresh();
+    }
+  };
+
   if (error) {
     return (
       <div className="max-w-4xl mx-auto p-6">
@@ -453,11 +464,7 @@ export default function MarketIntelligenceReportPage() {
           <h2 className="text-xl font-semibold text-red-800 mb-2">Error Loading Report</h2>
           <p className="text-red-600">{error}</p>
           <button 
-            onClick={() => {
-              if (typeof window !== 'undefined') {
-                window.location.reload();
-              }
-            }} 
+            onClick={handleRetry} 
             className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
           >
             Retry

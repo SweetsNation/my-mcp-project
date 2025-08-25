@@ -1,14 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import { Metadata } from 'next';
+import { useRouter } from 'next/navigation';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: '404 - Page Not Found | El-Mag Insurance',
   description: 'The page you are looking for could not be found. Return to El-Mag Insurance homepage or browse our Medicare resources.',
 };
 
 export default function NotFound() {
+  const router = useRouter();
+
+  const handleGoBack = () => {
+    if (typeof window !== 'undefined') {
+      window.history.back();
+    } else {
+      router.back();
+    }
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4">
       <div className="max-w-2xl mx-auto text-center">
@@ -88,7 +98,7 @@ export default function NotFound() {
             Go to Homepage
           </Link>
           <button 
-            onClick={() => window.history.back()} 
+            onClick={handleGoBack} 
             className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
           >
             Go Back
