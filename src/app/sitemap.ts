@@ -52,6 +52,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/health-insurance-marketplace`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/health-insurance-marketplace/enrollment`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/health-insurance-marketplace/plans`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/health-insurance-marketplace/subsidies`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/market-intelligence`,
       lastModified: '2025-01-22',
       changeFrequency: 'weekly' as const,
