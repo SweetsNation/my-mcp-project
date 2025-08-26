@@ -1,9 +1,5 @@
 import type { Metadata } from 'next'
-import dynamic from 'next/dynamic'
-
-const MedicareGuideDownload = dynamic(() => import('../../../components/MedicareGuideDownload'), {
-  ssr: false
-})
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Free Hawaii Medicare Supplement Guide 2025 - Island Healthcare Coverage | El-Mag Insurance',
@@ -133,15 +129,28 @@ export default function HawaiiMedicareGuideDownloadPage() {
           </div>
         </section>
 
-        {/* Download Component */}
+        {/* Download Section */}
         <section className="mb-12">
-          <MedicareGuideDownload
-            guideTopic="hawaii-medicare-supplement"
-            guideTitle="Hawaii Medicare Supplement Complete Guide"
-            guideDescription="Your comprehensive 25-page guide to navigating Hawaii's unique Medicare landscape, complete with cost calculators, provider directories, and island-specific healthcare insights."
-            downloadUrl="/downloads/hawaii-medicare-supplement-guide-2025.pdf"
-            state="Hawaii"
-          />
+          <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg text-center">
+            <h2 className="text-3xl font-bold mb-6">Download Your Free Hawaii Medicare Supplement Guide</h2>
+            <p className="text-xl mb-6">
+              Get your comprehensive 25-page guide to navigating Hawaii's unique Medicare landscape, complete with cost calculators, provider directories, and island-specific healthcare insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:331-343-2584"
+                className="bg-yellow-400 text-blue-800 px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors"
+              >
+                📞 CALL NOW: 331-E-HEALTH
+              </a>
+              <Link
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-xl hover:bg-gray-100 transition-colors"
+              >
+                📝 GET FREE GUIDE
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* Guide Contents Preview */}
