@@ -139,14 +139,14 @@ export default function SubsidyCalculator({ county, state }: SubsidyCalculatorPr
       setIsCalculating(false)
       
       // Track calculator usage
-      if (typeof window !== 'undefined' && window.trackCalculatorUsage) {
-        window.trackCalculatorUsage('Subsidy Calculator', county, 
+      if (typeof window !== 'undefined' && (window as any).trackCalculatorUsage) {
+        (window as any).trackCalculatorUsage('Subsidy Calculator', county, 
           calculationResults.eligible ? 'eligible' : 'not-eligible')
       }
       
       // Track Facebook lead event
-      if (typeof window !== 'undefined' && window.fbTrackLead) {
-        window.fbTrackLead(county, calculationResults.totalAnnualSavings / 50) // Convert to lead value
+      if (typeof window !== 'undefined' && (window as any).fbTrackLead) {
+        (window as any).fbTrackLead(county, calculationResults.totalAnnualSavings / 50) // Convert to lead value
       }
       
     }, 1500)
@@ -408,9 +408,9 @@ export default function SubsidyCalculator({ county, state }: SubsidyCalculatorPr
               <button 
                 onClick={() => {
                   // Track conversion
-                  if (typeof window !== 'undefined' && window.trackQuoteRequest) {
-                    window.trackQuoteRequest(county, 'calculator-user', results.plans[1]?.planType || 'unknown')
-                  }
+                        if (typeof window !== 'undefined' && (window as any).trackQuoteRequest) {
+        (window as any).trackQuoteRequest(county, 'calculator-user', results.plans[1]?.planType || 'unknown')
+      }
                 }}
                 className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700"
               >

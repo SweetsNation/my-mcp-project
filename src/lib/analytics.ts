@@ -82,3 +82,75 @@ export const trackResourceView = (resourceName: string, category: string) => {
     console.warn('Failed to track resource view:', error);
   }
 };
+
+// Calculator interaction tracking
+export const trackCalculatorUsage = (calculatorType: 'medicare' | 'health_insurance', inputData: Record<string, any>) => {
+  try {
+    event('calculator_used', {
+      event_category: 'engagement',
+      event_label: `${calculatorType}_calculator`,
+      calculator_type: calculatorType,
+      ...inputData,
+    });
+  } catch (error) {
+    console.warn('Failed to track calculator usage:', error);
+  }
+};
+
+// Calculator result view
+export const trackCalculatorResult = (calculatorType: 'medicare' | 'health_insurance', resultData: Record<string, any>) => {
+  try {
+    event('calculator_result_viewed', {
+      event_category: 'conversion',
+      event_label: `${calculatorType}_result`,
+      calculator_type: calculatorType,
+      ...resultData,
+    });
+  } catch (error) {
+    console.warn('Failed to track calculator result:', error);
+  }
+};
+
+// Plan comparison tracking
+export const trackPlanComparison = (planType: string, comparisonData: Record<string, any>) => {
+  try {
+    event('plan_comparison', {
+      event_category: 'engagement',
+      event_label: `${planType}_comparison`,
+      plan_type: planType,
+      ...comparisonData,
+    });
+  } catch (error) {
+    console.warn('Failed to track plan comparison:', error);
+  }
+};
+
+// CTA click tracking
+export const trackCTAClick = (ctaName: string, location: string, destination: string) => {
+  try {
+    event('cta_click', {
+      event_category: 'conversion',
+      event_label: `${ctaName}_${location}`,
+      cta_name: ctaName,
+      page_location: location,
+      destination: destination,
+    });
+  } catch (error) {
+    console.warn('Failed to track CTA click:', error);
+  }
+};
+
+// Page scroll tracking
+export const trackPageScroll = (percentage: number) => {
+  try {
+    if (percentage >= 25 && percentage % 25 === 0) {
+      event('scroll', {
+        event_category: 'engagement',
+        event_label: `scroll_${percentage}`,
+        scroll_percentage: percentage,
+      });
+    }
+  } catch (error) {
+    console.warn('Failed to track page scroll:', error);
+  }
+};

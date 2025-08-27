@@ -40,8 +40,8 @@ export default function MobileOptimizations({ county, phoneNumber = '331-343-258
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
     
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'scroll_to_top', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'scroll_to_top', {
         event_category: 'User Interaction',
         event_label: 'Mobile Optimization'
       })
@@ -49,8 +49,8 @@ export default function MobileOptimizations({ county, phoneNumber = '331-343-258
   }
 
   const handleQuickAction = (action: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'quick_action_used', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'quick_action_used', {
         event_category: 'Mobile UX',
         event_label: action,
         custom_parameter_1: county
@@ -142,8 +142,8 @@ export default function MobileOptimizations({ county, phoneNumber = '331-343-258
                 href={`tel:${phoneNumber.replace(/[^0-9]/g, '')}`}
                 className="bg-blue-600 text-white px-3 py-1 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
                 onClick={() => {
-                  if (typeof window !== 'undefined' && window.trackPhoneCall) {
-                    window.trackPhoneCall(county, 'sticky-header')
+                  if (typeof window !== 'undefined' && (window as any).trackPhoneCall) {
+                    (window as any).trackPhoneCall(county, 'sticky-header')
                   }
                 }}
               >

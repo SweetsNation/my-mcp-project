@@ -212,7 +212,7 @@ export default function ResourcesPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Enrollment Timeline</h3>
               <p className="text-gray-600 mb-4">Track important Medicare enrollment dates and deadlines personalized to your situation.</p>
-              <Link href="/tools/enrollment-timeline" className="btn-primary inline-block text-center">View Timeline</Link>
+              <Link href="/medicare-enrollment-timeline" className="btn-primary inline-block text-center">View Timeline</Link>
             </div>
           </div>
         </div>

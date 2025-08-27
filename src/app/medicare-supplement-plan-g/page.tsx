@@ -2,19 +2,137 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Medicare Supplement Plan G 2025 - Complete Coverage with Low Out-of-Pocket Costs',
-  description: 'Medicare Supplement Plan G offers comprehensive coverage with just a $240 deductible. Get quotes, compare benefits, and enroll in the most popular Medigap plan for 2025.',
-  keywords: 'Medicare Supplement Plan G, Medigap Plan G, Plan G benefits, Plan G coverage, Plan G deductible, Plan G 2025, Medicare Supplement quotes',
+  title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
+  description: 'Medicare Supplement Plan G: Most popular Medigap choice with only $240 deductible, then 100% coverage. No networks, see any doctor. Free quotes from top insurers. Licensed agents available 331-E-HEALTH.',
+  keywords: 'Medicare Supplement Plan G, Medicare Supplement Plan G 2025, Medigap Plan G, Plan G benefits, Plan G coverage, Plan G deductible, Plan G quotes, Plan G vs Plan F, Plan G vs Plan N, best Medicare Supplement plan, Medigap Plan G rates, Medicare Supplement quotes',
   openGraph: {
-    title: 'Medicare Supplement Plan G 2025 - Most Popular Medigap Plan',
-    description: 'Get comprehensive Medicare coverage with Plan G. Only $240 deductible, covers 100% of Medicare costs. Get your free quote today!',
+    title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan',
+    description: 'Get comprehensive Medicare coverage with Plan G. Only $240 deductible, covers 100% of costs after. No networks, see any doctor nationwide.',
     type: 'website',
+    locale: 'en_US',
+    siteName: 'El-Mag Insurance',
+    url: 'https://elmag-insurance.com/medicare-supplement-plan-g',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Medicare Supplement Plan G 2025 | $240 Deductible Only',
+    description: 'Most popular Medigap plan! Only $240 deductible, then 100% coverage. No networks, see any doctor. Get free quotes.',
+  },
+  alternates: {
+    canonical: 'https://elmag-insurance.com/medicare-supplement-plan-g',
   },
 }
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Medicare Supplement Plan G 2025',
+  description: 'Medicare Supplement Plan G: Most popular Medigap choice with only $240 deductible, then 100% coverage. No networks, see any doctor.',
+  url: 'https://elmag-insurance.com/medicare-supplement-plan-g',
+  datePublished: '2024-08-27',
+  dateModified: '2024-08-27',
+  inLanguage: 'en-US',
+  keywords: 'Medicare Supplement Plan G, Medicare Supplement Plan G 2025, Medigap Plan G, Plan G benefits, Plan G coverage, Plan G deductible',
+  about: {
+    '@type': 'FinancialProduct',
+    name: 'Medicare Supplement Plan G',
+    description: 'Comprehensive Medicare supplement insurance plan with $240 deductible and 100% coverage after deductible',
+    category: 'Medicare Supplement Insurance',
+    provider: {
+      '@type': 'Organization',
+      name: 'El-Mag Insurance'
+    }
+  },
+  provider: {
+    '@type': 'Organization',
+    name: 'El-Mag Insurance',
+    url: 'https://elmag-insurance.com',
+    telephone: '331-343-2584',
+    email: 'support@elmaginsurance.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '7520 NW 5th St, #201',
+      addressLocality: 'Plantation',
+      addressRegion: 'FL',
+      postalCode: '33317',
+      addressCountry: 'US'
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United States'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Medicare Supplement Plan G Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Plan G Quote Comparison',
+            description: 'Free comparison of Medicare Supplement Plan G rates from multiple insurers'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        }
+      ]
+    }
+  },
+  mainEntity: {
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is Medicare Supplement Plan G?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Medicare Supplement Plan G is the most popular Medigap plan that covers 100% of Medicare costs after you pay a $240 deductible. It provides comprehensive coverage with no network restrictions, allowing you to see any doctor who accepts Medicare.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the difference between Plan F and Plan G?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Plan F covers the Part B deductible ($240), while Plan G requires you to pay it. However, Plan G premiums are typically lower, making it more cost-effective for most people. Plan F is no longer available to new Medicare beneficiaries as of 2020.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How much does Plan G cost?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Plan G premiums vary by location, age, gender, and insurance company. Typical monthly premiums range from $120-300 depending on these factors. Contact a licensed agent for personalized quotes from multiple insurers.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I keep my doctor with Plan G?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Plan G works with any doctor who accepts Medicare. You don\'t need referrals and there are no network restrictions. You have complete freedom to choose your healthcare providers.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'When can I enroll in Plan G?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You can enroll in Plan G without medical underwriting during your 6-month Medigap Open Enrollment Period (starting when you turn 65 and enroll in Part B) or during certain guaranteed issue periods. Outside these periods, you may need to answer health questions.'
+        }
+      }
+    ]
+  }
+};
 
 export default function MedicareSupplementPlanGPage() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white p-8 rounded-lg mb-8 text-center">

@@ -15,19 +15,19 @@ export default function MobileContactBar({
 
   const handlePhoneClick = () => {
     // Track phone call conversion
-    if (typeof window !== 'undefined' && window.trackPhoneCall) {
-      window.trackPhoneCall(county, 'mobile-contact-bar')
+    if (typeof window !== 'undefined' && (window as any).trackPhoneCall) {
+      (window as any).trackPhoneCall(county, 'mobile-contact-bar')
     }
     
-    if (typeof window !== 'undefined' && window.fbTrackContact) {
-      window.fbTrackContact('phone', county)
+    if (typeof window !== 'undefined' && (window as any).fbTrackContact) {
+      (window as any).fbTrackContact('phone', county)
     }
   }
 
   const handleTextClick = () => {
     // Track text message interest
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'text_message_click', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'text_message_click', {
         event_category: 'Contact',
         event_label: 'Mobile Contact Bar',
         custom_parameter_1: county
