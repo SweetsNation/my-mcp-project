@@ -15,7 +15,7 @@ export default function ContactPageClient() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Ready to find your perfect Medicare Advantage plan? Our licensed experts are here to help.
+              Ready to find your perfect Insurance plan? Our licensed experts are here to help.
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function ContactPageClient() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ContactForm 
             title="Send Us a Message"
-            subtitle="Fill out the form below and one of our Medicare experts will contact you within one business day."
+            subtitle="Fill out the form below and one of our Insurance experts will contact you within one business day."
             source="Contact Page"
           />
         </div>

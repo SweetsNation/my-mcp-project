@@ -20,7 +20,7 @@ export default function AboutPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About El-Mag Insurance</h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Your trusted partner in navigating Medicare Advantage plans with expert guidance 
+              Your trusted partner in navigating Insurance plans with expert guidance 
               and personalized service.
             </p>
           </div>
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We believe everyone deserves access to quality healthcare coverage that fits their needs and budget. 
-              Our mission is to simplify the Medicare Advantage selection process and help you make informed 
+              Our mission is to simplify the Insurance selection process and help you make informed 
               decisions about your healthcare future.
             </p>
           </div>
@@ -50,18 +50,18 @@ export default function AboutPage() {
               <div className="space-y-4 text-gray-700">
                 <p>
                   Founded with a commitment to transparency and client advocacy, El-Mag Insurance 
-                  emerged from the recognition that Medicare can be overwhelming and confusing for 
-                  many Americans approaching retirement.
+                  emerged from the recognition that Insurance can be overwhelming and confusing for 
+                  many Americans starting married life, building a family, or approaching retirement.
                 </p>
                 <p>
                   Our founders, experienced insurance professionals, witnessed firsthand the 
-                  challenges people face when trying to understand their Medicare options. They 
+                  challenges people face when trying to understand their Insurance options. They 
                   set out to create an agency that would prioritize education, transparency, and 
                   genuine care for each client's unique situation.
                 </p>
                 <p>
                   Today, we continue to uphold those values, helping thousands of individuals and 
-                  families find Medicare Advantage plans that provide the coverage they need at 
+                  families find Insurance plans that provide the coverage they need at 
                   prices they can afford.
                 </p>
               </div>
@@ -131,7 +131,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Expertise</h3>
               <p className="text-gray-600">
-                Our team consists of licensed professionals with deep knowledge of Medicare 
+                Our team consists of licensed professionals with deep knowledge of insurance 
                 regulations and insurance products.
               </p>
             </div>
@@ -149,43 +149,82 @@ export default function AboutPage() {
               through your Medicare Advantage journey.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 text-center">
                 <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">MJ</span>
+                  <span className="text-2xl font-bold text-blue-600">EGL</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Maria Johnson</h3>
-                <p className="text-blue-600 font-medium mb-3">Senior Medicare Advisor</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Elsa Galicia-Lona</h3>
+                <p className="text-blue-600 font-medium mb-3">Senior Insurance Advisor</p>
                 <p className="text-gray-600 text-sm">
-                  15+ years of experience helping clients navigate Medicare options. 
-                  Licensed in all 50 states.
+                  15+ years of experience helping clients navigate Insurance options. 
+                  Licensed in Florida. Fluent in Spanish.
                 </p>
               </div>
             </div>
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 text-center">
                 <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">DS</span>
+                  <span className="text-2xl font-bold text-green-600">MS</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">David Smith</h3>
-                <p className="text-green-600 font-medium mb-3">Medicare Specialist</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Magdalena Salinas</h3>
+                <p className="text-green-600 font-medium mb-3">Senior Insurance Specialist</p>
                 <p className="text-gray-600 text-sm">
-                  Former Medicare administrator with deep knowledge of plan structures 
-                  and benefits comparison.
+                  Former Treasury Manager with deep knowledge of plan structures 
+                  and benefits comparison. Licensed in Alabama, Arizona, Florida, Georgia, South Carolina, Tennessee, Texas, and Utah. Fluent in Spanish.
                 </p>
               </div>
             </div>
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="p-6 text-center">
                 <div className="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-purple-600">LW</span>
+                  <span className="text-2xl font-bold text-purple-600">ES</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Lisa Williams</h3>
-                <p className="text-purple-600 font-medium mb-3">Client Relations Manager</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Eric Salinas</h3>
+                <p className="text-purple-600 font-medium mb-3">Operations Manager</p>
                 <p className="text-gray-600 text-sm">
-                  Dedicated to ensuring exceptional client experience from initial consultation 
-                  through ongoing support.
+                  Technology enthusiast who enjoys taking complex technical issues 
+                  and simplifying them for clients and team members. Licensed in Florida, Georgia, North Carolina, South Carolina, and Texas. Fluent in Spanish.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-6 text-center">
+                <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-orange-600">JG</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Junior Goulbourne</h3>
+                <p className="text-orange-600 font-medium mb-3">Insurance Advisor</p>
+                <p className="text-gray-600 text-sm">
+                  Former police official who brings his passion for serving the community 
+                  to helping clients navigate their insurance needs with care and dedication.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-6 text-center">
+                <div className="w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-teal-600">YA</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Yaissa Acosta</h3>
+                <p className="text-teal-600 font-medium mb-3">Healthcare Insurance Specialist</p>
+                <p className="text-gray-600 text-sm">
+                  Healthcare field veteran who leverages her medical experience 
+                  to guide clients toward insurance solutions that truly meet their health needs. Fluent in Spanish.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="p-6 text-center">
+                <div className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-red-600">MZCR</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Marcia Zulema Cordero Rizo</h3>
+                <p className="text-red-600 font-medium mb-3">Insurance Education Specialist</p>
+                <p className="text-gray-600 text-sm">
+                  Former educator who brings her teaching expertise to help community members 
+                  understand and navigate the complexities of insurance coverage. Fluent in Spanish.
                 </p>
               </div>
             </div>
@@ -206,7 +245,7 @@ export default function AboutPage() {
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    Licensed in all 50 states
+                    Licensed in multiple states
                   </li>
                   <li className="flex items-center">
                     <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -253,9 +292,9 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Find Your Perfect Medicare Plan?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Find Your Perfect Insurance Plan?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let our experienced team help you navigate your Medicare Advantage options 
+            Let our experienced team help you navigate your Insurance options 
             with personalized guidance and expert advice.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -423,10 +423,10 @@ export default function FultonCountyGeorgiaPage() {
         <section className="py-16 bg-primary-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Ready to Find Your Perfect Medicare Advantage Plan in Atlanta & Fulton County?
+              Ready to Find Your Perfect Insurance Plan in Atlanta & Fulton County?
             </h2>
             <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-              Our Atlanta Medicare specialists understand the diverse community needs and can help you 
+              Our Atlanta Insurance specialists understand the diverse community needs and can help you 
               navigate plans from Emory, Piedmont, and other top providers with culturally competent care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -340,10 +340,10 @@ export default function FairfaxCountyVirginiaPage() {
         <section className="py-16 bg-primary-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Ready to Find Your Perfect Medicare Advantage Plan in Fairfax County?
+              Ready to Find Your Perfect Insurance Plan in Fairfax County?
             </h2>
             <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-              Our licensed Medicare specialists understand the Fairfax County market and can help you 
+              Our licensed Insurance specialists understand the Fairfax County market and can help you 
               compare plans from top providers like Inova and Kaiser Permanente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

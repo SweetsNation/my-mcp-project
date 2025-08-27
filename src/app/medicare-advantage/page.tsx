@@ -436,10 +436,10 @@ export default function MedicareAdvantagePage() {
           <section className="py-16 bg-primary-600 text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h2 className="text-3xl font-bold mb-6">
-                Ready to Find Your Perfect Medicare Advantage Plan?
+                Ready to Find Your Perfect Insurance Plan?
               </h2>
               <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-                Our licensed Medicare specialists understand local markets and can help you compare plans 
+                Our licensed Insurance specialists understand local markets and can help you compare plans 
                 from top providers in your area.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

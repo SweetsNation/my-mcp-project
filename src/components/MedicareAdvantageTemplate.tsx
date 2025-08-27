@@ -145,7 +145,7 @@ export function MedicareAdvantageTemplate({ locationData, content, plans }: Prop
         {/* Call to Action */}
         <section className="bg-primary-600 rounded-xl p-8 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Find Your Perfect Medicare Advantage Plan?
+            Ready to Find Your Perfect Insurance Plan?
           </h2>
           <p className="text-xl text-primary-100 mb-6 max-w-2xl mx-auto">
             Our licensed agents are standing by to help you compare plans and enroll in coverage 
