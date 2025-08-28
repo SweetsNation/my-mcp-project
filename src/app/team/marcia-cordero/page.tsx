@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
+import TeamPageAnalytics from '@/components/TeamPageAnalytics'
 
 export const metadata: Metadata = {
-  title: 'Marcia Zulema Cordero Rizo - Especialista en Seguros | Agente Bilingüe | El-Mag Insurance',
-  description: 'Marcia Zulema Cordero Rizo, Especialista en Seguros con más de 1 año de experiencia ayudando a clientes hispanos en Florida con Seguros de Salud del Mercado, Seguros de Vida, Final Expense, Medicare Advantage y Planes de Descuento de Salud. Consultas gratuitas - llame 331-E-HEALTH.',
-  keywords: 'Marcia Cordero, especialista seguros, agente seguros español, Health Insurance Marketplace, seguro vida, final expense, Medicare Advantage, planes descuento salud, Florida seguros',
+  title: 'Marcia Cordero - Health Insurance Marketplace Expert Florida | Life Insurance Specialist | ACA Plans & Term Life Insurance',
+  description: 'Marcia Cordero: Health Insurance Marketplace & Life Insurance expert. 1+ years helping Florida families get affordable health insurance, life insurance quotes, ACA plans. Bilingual service - Free consultations - 786-569-7713.',
+  keywords: 'Health Insurance Marketplace Florida, life insurance agent, ACA plans, affordable health insurance, term life insurance, life insurance quotes, premium tax credits, health insurance subsidies, bilingual insurance agent, final expense insurance',
   openGraph: {
-    title: 'Marcia Zulema Cordero Rizo - Especialista en Seguros | El-Mag Insurance',
-    description: 'Orientación experta en seguros de Marcia Zulema Cordero Rizo. Más de 1 año ayudando a la comunidad hispana con seguros de salud, vida, Medicare Advantage y planes de descuento.',
+    title: 'Health Insurance Marketplace Expert | Life Insurance Specialist | Marcia Cordero',
+    description: 'Get affordable health insurance & life insurance with Marcia Cordero. Expert Health Insurance Marketplace guidance, ACA plan optimization, life insurance quotes. Bilingual service.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
@@ -17,54 +18,221 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marcia Zulema Cordero Rizo - Especialista en Seguros',
-    description: 'Más de 1 año de experiencia en seguros. Ayudando a la comunidad hispana con seguros de salud, vida, Medicare Advantage y planes de descuento en español.',
+    title: 'Health Insurance Marketplace Expert | Life Insurance Specialist',
+    description: 'Expert Health Insurance Marketplace & Life Insurance guidance. Affordable health insurance, ACA plans, term life insurance. Bilingual service.',
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/team/marcia-cordero',
   },
 }
 
-const marciaStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Marcia Zulema Cordero Rizo',
-  jobTitle: 'Insurance Specialist',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
-    telephone: '331-343-2584'
-  },
-  url: 'https://elmag-insurance.com/team/marcia-cordero',
-  description: 'Spanish-speaking Insurance Specialist with over 1 year of experience helping the Hispanic community with Health Insurance Marketplace, Life Insurance, Final Expense Insurance, Medicare Advantage, and Health Discount Plans.',
-  knowsAbout: [
-    'Health Insurance Marketplace',
-    'Life Insurance',
-    'Final Expense Insurance',
-    'Medicare Advantage Plans',
-    'Health Discount Plans',
-    'ACA Plans',
-    'Individual Health Insurance',
-    'Family Health Coverage'
-  ],
-  areaServed: {
-    '@type': 'State',
-    name: 'Florida'
-  },
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Professional License',
-      name: 'Licensed Insurance Agent - Florida'
+const marciaStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://elmag-insurance.com/team/marcia-cordero#person',
+    name: 'Marcia Zulema Cordero Rizo',
+    givenName: 'Marcia Zulema',
+    familyName: 'Cordero Rizo',
+    jobTitle: 'Health Insurance Marketplace Expert & Life Insurance Specialist',
+    description: 'Bilingual Health Insurance Marketplace & Life Insurance expert with 1+ years experience serving Florida families. Specializes in ACA plans, premium tax credits, and life insurance solutions.',
+    url: 'https://elmag-insurance.com/team/marcia-cordero',
+    sameAs: [
+      'https://elmag-insurance.com/team/marcia-cordero',
+      'https://www.linkedin.com/in/marcia-cordero-insurance'
+    ],
+    email: 'marcia@elmag-insurance.com',
+    telephone: '+1-786-569-7713',
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://elmag-insurance.com#organization',
+      name: 'El-Mag Insurance',
+      url: 'https://elmag-insurance.com',
+      telephone: '786-569-7713',
+      email: 'info@elmag-insurance.com'
     },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Certification',
-      name: 'Certified Insurance Specialist'
+    knowsAbout: [
+      {
+        '@type': 'Thing',
+        name: 'Health Insurance Marketplace',
+        description: 'ACA marketplace plans and premium tax credits'
+      },
+      {
+        '@type': 'Thing', 
+        name: 'Life Insurance',
+        description: 'Term life, whole life, and final expense insurance'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Premium Tax Credits',
+        description: 'ACA subsidy optimization and cost sharing reductions'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Final Expense Insurance',
+        description: 'Burial and funeral expense coverage'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Medicare Advantage Plans',
+        description: 'Medicare HMO and PPO plan selection'
+      }
+    ],
+    areaServed: [
+      {
+        '@type': 'State',
+        name: 'Florida',
+        alternateName: 'FL'
+      },
+      {
+        '@type': 'City',
+        name: 'Miami',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City', 
+        name: 'Fort Lauderdale',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'West Palm Beach', 
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      }
+    ],
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional License',
+        name: 'Licensed Insurance Agent - Florida',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Florida Department of Financial Services'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Certification',
+        name: 'Health Insurance Marketplace Certified Agent',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Centers for Medicare & Medicaid Services'
+        }
+      }
+    ],
+    knowsLanguage: [
+      {
+        '@type': 'Language',
+        name: 'Spanish',
+        alternateName: 'Español'
+      },
+      {
+        '@type': 'Language', 
+        name: 'English'
+      }
+    ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Insurance Agent',
+      occupationLocation: {
+        '@type': 'State',
+        name: 'Florida'
+      },
+      skills: [
+        'Health Insurance Marketplace',
+        'Life Insurance',
+        'ACA Plans',
+        'Premium Tax Credits',
+        'Final Expense Insurance',
+        'Bilingual Customer Service'
+      ]
     }
-  ]
-};
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://elmag-insurance.com/team/marcia-cordero#services',
+    name: 'Health Insurance Marketplace & Life Insurance Services',
+    description: 'Professional health insurance marketplace and life insurance services in Florida, including ACA plan enrollment, premium tax credit optimization, and comprehensive life insurance solutions.',
+    provider: {
+      '@id': 'https://elmag-insurance.com/team/marcia-cordero#person'
+    },
+    areaServed: {
+      '@type': 'State',
+      name: 'Florida'
+    },
+    serviceType: [
+      'Health Insurance Marketplace Enrollment',
+      'ACA Plan Selection',
+      'Premium Tax Credit Optimization',
+      'Life Insurance Quotes',
+      'Final Expense Insurance',
+      'Medicare Advantage Enrollment'
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Insurance Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Health Insurance Marketplace Consultation',
+            description: 'Free consultation for ACA marketplace plans and premium tax credits'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service', 
+            name: 'Life Insurance Quotes',
+            description: 'Competitive life insurance quotes for term, whole, and final expense coverage'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        }
+      ]
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free consultation and quotes'
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPoint',
+    '@id': 'https://elmag-insurance.com/team/marcia-cordero#contact',
+    contactType: 'customer service',
+    telephone: '+1-786-569-7713',
+    email: 'marcia@elmag-insurance.com',
+    availableLanguage: ['Spanish', 'English'],
+    areaServed: {
+      '@type': 'State', 
+      name: 'Florida'
+    },
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+      validFrom: '2024-01-01',
+      validThrough: '2025-12-31'
+    }
+  }
+];
 
 export default function MarciaCorderoPage() {
   return (
@@ -72,6 +240,19 @@ export default function MarciaCorderoPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(marciaStructuredData) }}
+      />
+      
+      <TeamPageAnalytics 
+        agentName="Marcia Zulema Cordero Rizo"
+        agentSpecialties={[
+          'Health Insurance Marketplace',
+          'Life Insurance',
+          'Final Expense Insurance',
+          'Medicare Advantage Plans',
+          'Health Discount Plans'
+        ]}
+        states={['Florida']}
+        phoneNumber="786-569-7713"
       />
 
       {/* Hero Section */}
@@ -95,10 +276,10 @@ export default function MarciaCorderoPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:331-343-2584"
+                  href="tel:786-569-7713"
                   className="bg-yellow-400 text-teal-800 px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors text-center"
                 >
-                  📞 Llame a Marcia: 331-E-HEALTH
+                  📞 Llame a Marcia: 786-569-7713
                 </a>
                 <Link
                   href="/contact"
@@ -162,31 +343,41 @@ export default function MarciaCorderoPage() {
               <div>
                 <p className="text-gray-700 mb-4">
                   Marcia Zulema Cordero Rizo es una especialista en seguros dedicada y comprometida que se enfoca 
-                  exclusivamente en servir a la comunidad hispana de Florida. Con más de un año de experiencia 
-                  especializada, Marcia se ha convertido en una voz confiable para familias que necesitan orientación 
-                  completa en español sobre seguros de salud, vida y planes especializados.
+                  exclusivamente en servir a la comunidad hispana de Florida. Como ex-educadora, Marcia trae su 
+                  experiencia en la enseñanza y su pasión por ayudar a otros a comprender conceptos complejos al 
+                  mundo de los seguros. Con más de un año de experiencia especializada en seguros y años de 
+                  experiencia educativa, Marcia se ha convertido en una voz confiable para familias que necesitan 
+                  orientación completa en español sobre seguros de salud, vida y planes especializados.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  Marcia se especializa en el Mercado de Seguros de Salud (ACA), seguros de vida, seguros de gastos 
-                  finales, Medicare Advantage y planes de descuento de salud. Su enfoque está en hacer que los 
-                  seguros sean accesibles y comprensibles para la comunidad hispana, proporcionando orientación 
-                  clara y personalizada completamente en español.
+                  Su formación como educadora le permite descomponer los conceptos complejos de seguros en 
+                  información fácil de entender, utilizando métodos de enseñanza probados para asegurar que cada 
+                  cliente comprenda completamente sus opciones. Marcia se especializa en el Mercado de Seguros de 
+                  Salud (ACA), seguros de vida, seguros de gastos finales, Medicare Advantage y planes de descuento 
+                  de salud. Su enfoque pedagógico está en hacer que los seguros sean accesibles y comprensibles 
+                  para la comunidad hispana, proporcionando orientación educativa clara y personalizada 
+                  completamente en español.
                 </p>
                 <p className="text-gray-700">
-                  Lo que hace única a Marcia es su dedicación completa al servicio en español y su comprensión 
-                  profunda de las necesidades específicas de la comunidad hispana. Ella se toma el tiempo necesario 
-                  para explicar cada detalle y asegurar que sus clientes se sientan completamente cómodos y 
-                  seguros con sus decisiones de seguros.
+                  Lo que hace única a Marcia es su combinación de experiencia educativa y especialización en 
+                  seguros, lo que le permite enseñar a los miembros de la comunidad no solo qué seguro comprar, 
+                  sino también cómo navegar las complejidades del sistema de seguros. Como ex-educadora, ella 
+                  comprende que el aprendizaje requiere paciencia, repetición y explicaciones claras. Se toma el 
+                  tiempo necesario para educar a cada cliente sobre sus opciones, utilizando ejemplos prácticos 
+                  y un lenguaje sencillo para asegurar que se sientan completamente informados y seguros con 
+                  sus decisiones de seguros.
                 </p>
               </div>
               <div className="space-y-6">
                 <div className="bg-teal-50 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-teal-800 mb-4">Antecedentes Profesionales</h3>
                   <ul className="space-y-2 text-teal-700">
-                    <li>• Más de 1 año de experiencia especializada</li>
+                    <li>• Ex-educadora con experiencia en enseñanza</li>
+                    <li>• Más de 1 año de experiencia especializada en seguros</li>
                     <li>• Licenciada en Florida y estados adicionales</li>
                     <li>• Especialista Certificada en Seguros</li>
                     <li>• 180+ clientes hispanohablantes atendidos</li>
+                    <li>• Métodos de enseñanza aplicados a seguros</li>
                     <li>• Servicio exclusivamente en español</li>
                     <li>• Experta en necesidades de la comunidad hispana</li>
                   </ul>
@@ -197,6 +388,7 @@ export default function MarciaCorderoPage() {
                     <li>• Ahorro promedio: $1,200 por año</li>
                     <li>• 97% tasa de satisfacción del cliente</li>
                     <li>• 93% tasa de referidos de clientes</li>
+                    <li>• Enfoque educativo y pedagógico</li>
                     <li>• Servicio culturalmente sensible</li>
                   </ul>
                 </div>
@@ -315,6 +507,94 @@ export default function MarciaCorderoPage() {
                 <li>• Apoyo personalizado</li>
                 <li>• Servicio culturalmente sensible</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content Section - Health Insurance Marketplace & Life Insurance Expertise */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-teal-50 to-pink-50 rounded-xl p-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Health Insurance Marketplace Expert & Life Insurance Specialist</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-teal-800 mb-4">Health Insurance Marketplace Plans</h3>
+                  <p className="text-gray-700 mb-4">
+                    As a dedicated <strong>Health Insurance Marketplace expert</strong> in Florida, Marcia specializes in 
+                    <strong> affordable health insurance</strong> through ACA Marketplace plans. Her expertise in <strong>premium tax credits</strong> and 
+                    subsidy optimization helps Hispanic and English-speaking families save thousands while getting comprehensive healthcare coverage through <strong>ACA plans</strong>.
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Bronze ACA Plans</strong> - Affordable coverage for basic healthcare needs</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Silver Marketplace Plans</strong> - Best value with Cost-Sharing Reductions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Gold Health Insurance</strong> - Comprehensive coverage with lower deductibles</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-pink-800 mb-4">Life Insurance Solutions</h3>
+                  <div className="bg-white rounded-lg p-6 border border-pink-200">
+                    <h4 className="font-bold text-pink-700 mb-3">Life Insurance Options (2025)</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span><strong>Term Life Insurance:</strong></span>
+                        <span className="font-bold text-pink-600">Affordable Protection</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span><strong>Final Expense Insurance:</strong></span>
+                        <span className="font-bold text-pink-600">Burial Costs Coverage</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span><strong>Whole Life Insurance:</strong></span>
+                        <span className="font-bold text-pink-600">Permanent Coverage</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <p className="text-pink-700 font-medium text-center">
+                        🎯 Free Life Insurance Quotes Available
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <div className="bg-white rounded-lg p-6 shadow-lg">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Florida Health Insurance Marketplace & Life Insurance Expert</h4>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Serving All Florida Communities:</strong> Miami-Dade • Broward • Palm Beach • Orange • Hillsborough • Hispanic Communities Statewide
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-teal-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-teal-600 mb-2">$3,800</div>
+                      <div className="text-sm text-teal-700">Average Tax Credits</div>
+                    </div>
+                    <div className="bg-pink-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-pink-600 mb-2">95%</div>
+                      <div className="text-sm text-pink-700">Client Satisfaction</div>
+                    </div>
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-purple-600 mb-2">Bilingüe</div>
+                      <div className="text-sm text-purple-700">English & Español</div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex justify-center">
+                    <Link 
+                      href="/health-insurance-cost-calculator"
+                      className="bg-teal-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-teal-700 transition-colors"
+                    >
+                      Calculate Health Insurance & Life Insurance Savings
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

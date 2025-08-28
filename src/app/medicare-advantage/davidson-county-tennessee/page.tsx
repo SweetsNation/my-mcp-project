@@ -107,7 +107,7 @@ export default function DavidsonCountyTennesseePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Medicare Advantage Plans in Davidson County, Tennessee
+                Medicare Advantage in Davidson County, Tennessee 2025
               </h1>
               <p className="text-xl md:text-2xl text-primary-100 mb-8">
                 Compare Medicare Advantage plans in Nashville and Davidson County. 45% penetration rate 

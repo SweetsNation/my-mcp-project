@@ -61,7 +61,7 @@ export default function OrangeCountyMedicareSupplementPage() {
             <span className="font-bold">🏖️ ORANGE COUNTY: Premium SoCal Medicare Coverage</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Orange County Medicare Supplement Plans: Southern California's Premier Healthcare Access
+            Medicare Supplement in Orange County, California 2025
           </h1>
           <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-lg mb-8">
             <div className="flex items-start">

@@ -20,7 +20,7 @@ export default function MedicareAdvantageVsOriginalPage() {
             <span className="text-blue-200 mr-2">›</span>
             <span className="text-white">Medicare Comparison</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medicare Advantage vs Original Medicare</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medicare Advantage vs Original Medicare | Complete Comparison Guide</h1>
           <p className="text-xl text-blue-100">Understanding the key differences to make the right choice for your healthcare needs</p>
         </div>
       </section>

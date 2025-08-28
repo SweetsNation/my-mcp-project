@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedServices from '@/components/RelatedServices';
+import ResourceLinks from '@/components/ResourceLinks';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -279,7 +281,7 @@ export default function MedicareAdvantagePage() {
           <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                Medicare Advantage Plans 2025
+                Medicare Advantage 2025 | $0 Premium Plans Available
               </h1>
               <p className="text-xl md:text-2xl text-primary-100 mb-8 max-w-4xl mx-auto">
                 Compare Medicare Advantage plans across high-opportunity markets. Expert guidance 
@@ -431,6 +433,22 @@ export default function MedicareAdvantagePage() {
               </div>
             </div>
           </section>
+
+          {/* Resource Links Section */}
+          <ResourceLinks 
+            currentService="medicare-advantage"
+            excludePaths={['/medicare-advantage']}
+            title="Medicare Advantage Resources & Tools"
+            description="Educational guides, cost calculators, and comparison tools to help you understand and choose Medicare Advantage plans"
+          />
+
+          {/* Related Services Section */}
+          <RelatedServices 
+            currentService="medicare-advantage"
+            excludePaths={['/medicare-advantage']}
+            title="Explore Other Medicare & Health Insurance Options"
+            description="Medicare Advantage is just one option. Compare with Medicare Supplement, explore Health Insurance Marketplace for under-65, or use our tools to find the best coverage."
+          />
 
           {/* CTA Section */}
           <section className="py-16 bg-primary-600 text-white">

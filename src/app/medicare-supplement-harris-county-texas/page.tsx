@@ -61,7 +61,7 @@ export default function HarrisCountyMedicareSupplementPage() {
             <span className="font-bold">🏥 HARRIS COUNTY: Houston Medical Capital Access</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Harris County Medicare Supplement Plans: Houston's World-Class Healthcare Access
+            Medicare Supplement in Harris County, Texas 2025
           </h1>
           <div className="bg-green-50 border-l-4 border-green-400 p-6 rounded-lg mb-8">
             <div className="flex items-start">

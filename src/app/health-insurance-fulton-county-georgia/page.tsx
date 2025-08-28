@@ -98,7 +98,7 @@ export default function FultonCountyHealthInsurancePage() {
             <span className="font-bold">🍑 FULTON COUNTY: Atlanta Healthcare Marketplace Access</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Fulton County Health Insurance Marketplace: Affordable Coverage for Atlanta's Economic Hub
+            Health Insurance in Fulton County, Georgia 2025
           </h1>
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-lg mb-8">
             <div className="flex items-start">

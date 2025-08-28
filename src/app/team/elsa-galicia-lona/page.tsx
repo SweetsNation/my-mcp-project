@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
+import TeamPageAnalytics from '@/components/TeamPageAnalytics'
 
 export const metadata: Metadata = {
-  title: 'Elsa Galicia-Lona - Senior Insurance Specialist | Medicare & International Health | El-Mag Insurance',
-  description: 'Elsa Galicia-Lona, Bilingual Senior Insurance Specialist with 15+ years helping Florida residents with Medicare Advantage, Health Insurance Marketplace, and International Health Insurance. Spanish speaker - Free consultations - call 331-E-HEALTH.',
-  keywords: 'Elsa Galicia-Lona, Medicare specialist, Health Insurance Marketplace expert, International Health Insurance, Medicare Advantage agent, Florida insurance agent, licensed insurance agent',
+  title: 'Elsa Galicia-Lona - Health Insurance Marketplace Expert | Medicare Specialist Florida | Affordable ACA Plans',
+  description: 'Elsa Galicia-Lona: Florida Health Insurance Marketplace expert & Medicare Advantage specialist. 15+ years experience with ACA plans, premium tax credits, international health insurance. Bilingual service - Free consultations - 954-240-7777.',
+  keywords: 'Health Insurance Marketplace Florida, ACA plans Florida, Medicare Advantage Florida, premium tax credits, affordable health insurance, international health insurance, bilingual insurance agent, marketplace health insurance, cost sharing reductions, Florida insurance specialist',
   openGraph: {
-    title: 'Elsa Galicia-Lona - Senior Insurance Specialist | El-Mag Insurance',
-    description: 'Expert bilingual insurance guidance from Elsa Galicia-Lona. 15+ years experience helping clients with Medicare, Health Marketplace, and International Health Insurance. Fluent in English and Spanish.',
+    title: 'Florida Health Insurance Marketplace Expert | Medicare Specialist | Elsa Galicia-Lona',
+    description: 'Get affordable ACA plans & Medicare Advantage coverage in Florida. Expert bilingual guidance on marketplace health insurance, premium tax credits, and international coverage. 15+ years experience.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
@@ -17,53 +18,250 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elsa Galicia-Lona - Senior Insurance Specialist',
-    description: '15+ years bilingual insurance expertise. Helping clients with Medicare, Health Marketplace, and International Health Insurance in English and Spanish.',
+    title: 'Florida Health Insurance Marketplace Expert | ACA Plans & Medicare',
+    description: 'Save on ACA marketplace plans & Medicare in Florida. Bilingual expert helps with premium tax credits, affordable health insurance options. Free consultation.',
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/team/elsa-galicia-lona',
   },
 }
 
-const elsaStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Elsa Galicia-Lona',
-  jobTitle: 'Senior Insurance Specialist',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
-    telephone: '331-343-2584'
-  },
-  url: 'https://elmag-insurance.com/team/elsa-galicia-lona',
-  description: 'Bilingual Senior Insurance Specialist with over 15 years of experience helping clients with Medicare Advantage, Health Insurance Marketplace, and International Health Insurance. Fluent in English and Spanish.'
-  knowsAbout: [
-    'Medicare Advantage Plans',
-    'Health Insurance Marketplace',
-    'International Health Insurance',
-    'ACA Plans',
-    'Medicare Enrollment',
-    'Premium Tax Credits',
-    'Expatriate Health Insurance'
-  ],
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States'
-  },
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Professional License',
-      name: 'Licensed Insurance Agent - Florida'
+const elsaStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#person',
+    name: 'Elsa Galicia-Lona',
+    givenName: 'Elsa',
+    familyName: 'Galicia-Lona',
+    jobTitle: 'Health Insurance Marketplace Expert & International Health Specialist',
+    description: 'Bilingual Health Insurance Marketplace expert with over 15 years of experience and international finance background. Specializes in ACA plans, international health coverage, Medicare Advantage enrollment, and comprehensive health insurance solutions for multicultural Florida communities.',
+    url: 'https://elmag-insurance.com/team/elsa-galicia-lona',
+    sameAs: [
+      'https://elmag-insurance.com/team/elsa-galicia-lona',
+      'https://www.linkedin.com/in/elsa-galicia-lona-insurance'
+    ],
+    email: 'elsa@elmag-insurance.com',
+    telephone: '+1-954-240-7777',
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://elmag-insurance.com#organization',
+      name: 'El-Mag Insurance',
+      url: 'https://elmag-insurance.com',
+      telephone: '954-240-7777',
+      email: 'info@elmag-insurance.com'
     },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Certification',
-      name: 'Senior Insurance Specialist Certification'
+    knowsAbout: [
+      {
+        '@type': 'Thing',
+        name: 'Health Insurance Marketplace',
+        description: 'ACA marketplace navigation with premium tax credits and international coverage coordination'
+      },
+      {
+        '@type': 'Thing', 
+        name: 'International Health Insurance',
+        description: 'Global health coverage, expatriate insurance, and international travel health plans'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Global Travel Insurance',
+        description: 'Comprehensive travel health insurance for international trips and business travel'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Medicare Advantage Plans',
+        description: 'Medicare Advantage enrollment with international travel benefits'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Multicultural Health Solutions',
+        description: 'Specialized health insurance guidance for diverse international communities'
+      }
+    ],
+    areaServed: [
+      {
+        '@type': 'State',
+        name: 'Florida',
+        alternateName: 'FL'
+      },
+      {
+        '@type': 'City',
+        name: 'Miami',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'Miami Beach',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'Coral Gables',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'Hialeah',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      }
+    ],
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional License',
+        name: 'Licensed Insurance Agent - Florida',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Florida Department of Financial Services'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Certification',
+        name: 'International Health Insurance Specialist',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'International Association of Insurance Professionals'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Professional Experience',
+        name: 'International Finance Background',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Financial Services Industry'
+        }
+      }
+    ],
+    knowsLanguage: [
+      {
+        '@type': 'Language',
+        name: 'English'
+      },
+      {
+        '@type': 'Language', 
+        name: 'Spanish',
+        alternateName: 'Español'
+      }
+    ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'International Health Insurance Specialist',
+      occupationLocation: {
+        '@type': 'State',
+        name: 'Florida'
+      },
+      skills: [
+        'Health Insurance Marketplace Navigation',
+        'International Health Coverage',
+        'Global Travel Insurance',
+        'Cross-Border Insurance Solutions',
+        'Multicultural Customer Service',
+        'International Finance Expertise',
+        'Bilingual Communication'
+      ]
     }
-  ]
-};
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#services',
+    name: 'Health Insurance Marketplace & International Health Specialist Services',
+    description: 'Professional Health Insurance Marketplace and international health coverage services in Florida, including ACA plans, international health insurance, global travel coverage, and specialized solutions for multicultural communities.',
+    provider: {
+      '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#person'
+    },
+    areaServed: {
+      '@type': 'State',
+      name: 'Florida'
+    },
+    serviceType: [
+      'Health Insurance Marketplace Enrollment',
+      'International Health Insurance',
+      'Global Travel Insurance',
+      'Medicare Advantage Plans',
+      'Expatriate Health Coverage',
+      'Cross-Border Insurance Solutions',
+      'Multicultural Health Planning'
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'International Health Insurance Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Health Insurance Marketplace Consultation',
+            description: 'Complete ACA marketplace plan guidance with international coverage coordination'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service', 
+            name: 'International Health Insurance Planning',
+            description: 'Comprehensive global health coverage for expatriates and international travelers'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Travel Health Insurance',
+            description: 'Global travel insurance for international trips and extended stays abroad'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        }
+      ]
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free international health insurance consultation and planning'
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPoint',
+    '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#contact',
+    contactType: 'customer service',
+    telephone: '+1-954-240-7777',
+    email: 'elsa@elmag-insurance.com',
+    availableLanguage: ['English', 'Spanish'],
+    areaServed: {
+      '@type': 'State', 
+      name: 'Florida'
+    },
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+      validFrom: '2024-01-01',
+      validThrough: '2025-12-31'
+    }
+  }
+];
 
 export default function ElsaGaliciaLonaPage() {
   return (
@@ -71,6 +269,18 @@ export default function ElsaGaliciaLonaPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(elsaStructuredData) }}
+      />
+      
+      <TeamPageAnalytics 
+        agentName="Elsa Galicia-Lona"
+        agentSpecialties={[
+          'Medicare Advantage Plans',
+          'Health Insurance Marketplace',
+          'International Health Insurance',
+          'ACA Plans'
+        ]}
+        states={['Florida']}
+        phoneNumber="954-240-7777"
       />
 
       {/* Hero Section */}
@@ -84,7 +294,7 @@ export default function ElsaGaliciaLonaPage() {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">Elsa Galicia-Lona</h1>
-                  <p className="text-xl text-blue-100">Senior Insurance Specialist</p>
+                  <p className="text-xl text-blue-100">Health Insurance Marketplace Expert & Medicare Specialist</p>
                 </div>
               </div>
               <p className="text-xl text-blue-100 mb-6">
@@ -93,10 +303,10 @@ export default function ElsaGaliciaLonaPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:331-343-2584"
+                  href="tel:954-240-7777"
                   className="bg-yellow-400 text-blue-800 px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors text-center"
                 >
-                  📞 Call Elsa: 331-E-HEALTH
+                  📞 Call Elsa: 954-240-7777
                 </a>
                 <Link
                   href="/contact"
@@ -245,6 +455,80 @@ export default function ElsaGaliciaLonaPage() {
           </div>
         </section>
 
+        {/* SEO Content Section - Florida Health Insurance Marketplace Expertise */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Florida Health Insurance Marketplace Expert</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-4">ACA Plans & Premium Tax Credits</h3>
+                  <p className="text-gray-700 mb-4">
+                    As a certified Health Insurance Marketplace expert serving Florida residents, Elsa specializes in helping you find 
+                    <strong> affordable health insurance</strong> through the ACA marketplace. She maximizes your <strong>premium tax credits</strong> and 
+                    <strong> cost sharing reductions</strong> to ensure you get comprehensive coverage at the lowest possible cost.
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Bronze plan health insurance</strong> - Budget-friendly options starting at $200/month</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Silver plan health insurance</strong> - Most popular choice with cost-sharing reductions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Gold plan health insurance</strong> - Lower deductibles for frequent healthcare users</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-purple-800 mb-4">Marketplace Health Insurance Benefits</h3>
+                  <div className="bg-white rounded-lg p-6 border border-purple-200">
+                    <h4 className="font-bold text-purple-700 mb-3">Florida Marketplace Savings (2025)</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span>Average Premium Tax Credit:</span>
+                        <span className="font-bold text-green-600">$4,800/year</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Silver Plan Cost-Sharing:</span>
+                        <span className="font-bold text-green-600">Up to $3,600/year</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Total Potential Savings:</span>
+                        <span className="font-bold text-green-600">$8,400/year</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <p className="text-purple-700 font-medium text-center">
+                        🎯 Free ACA Subsidy Calculator Available
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <div className="bg-white rounded-lg p-6 shadow-lg">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Serving All Florida Counties</h4>
+                  <p className="text-gray-700">
+                    Miami-Dade • Broward • Palm Beach • Orange • Hillsborough • Pinellas • Duval • Lee • Polk • Brevard • And All 67 Counties
+                  </p>
+                  <div className="mt-4 flex justify-center">
+                    <Link 
+                      href="/health-insurance-cost-calculator"
+                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+                    >
+                      Calculate Your ACA Savings
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Client Success Stories */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Client Success Stories</h2>
@@ -382,7 +666,7 @@ export default function ElsaGaliciaLonaPage() {
                 href="tel:331-343-2584"
                 className="bg-yellow-400 text-blue-800 px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors"
               >
-                📞 Call Elsa Now: 331-E-HEALTH
+                📞 Call Elsa Now: 954-240-7777
               </a>
               <Link
                 href="/contact"

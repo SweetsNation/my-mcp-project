@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedServices from '@/components/RelatedServices'
+import ResourceLinks from '@/components/ResourceLinks'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -140,7 +142,7 @@ export default function MedicareSupplementPlanGPage() {
             <span className="text-6xl">🛡️</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Medicare Supplement Plan G
+            Medicare Supplement Plan G 2025 | Most Popular Medigap Coverage
           </h1>
           <div className="text-2xl font-semibold mb-4">
             The Most Popular Medigap Plan for 2025
@@ -468,27 +470,21 @@ export default function MedicareSupplementPlanGPage() {
           </div>
         </section>
 
-        {/* Related Links */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Medicare Resources</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/medicare-part-d" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow text-center">
-              <div className="text-2xl mb-2">💊</div>
-              <h3 className="font-semibold text-blue-600">Medicare Part D</h3>
-              <p className="text-gray-600 text-sm">Prescription drug coverage</p>
-            </Link>
-            <Link href="/medicare-advantage" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow text-center">
-              <div className="text-2xl mb-2">🏥</div>
-              <h3 className="font-semibold text-blue-600">Medicare Advantage</h3>
-              <p className="text-gray-600 text-sm">All-in-one plans</p>
-            </Link>
-            <Link href="/contact" className="bg-white border border-gray-200 p-4 rounded-lg hover:shadow-md transition-shadow text-center">
-              <div className="text-2xl mb-2">📞</div>
-              <h3 className="font-semibold text-blue-600">Get Help</h3>
-              <p className="text-gray-600 text-sm">Speak with an expert</p>
-            </Link>
-          </div>
-        </section>
+        {/* Resource Links Section */}
+        <ResourceLinks 
+          currentService="medicare-supplement"
+          excludePaths={['/medicare-supplement-plan-g']}
+          title="Medicare Resources & Tools"
+          description="Educational guides, cost calculators, and comparison tools for Medicare coverage options"
+        />
+
+        {/* Related Services */}
+        <RelatedServices 
+          currentService="medicare-supplement"
+          excludePaths={['/medicare-supplement-plan-g']}
+          title="Explore Related Medicare & Health Insurance Options"
+          description="Compare Medicare Supplement with Medicare Advantage, explore Health Marketplace for under-65, or use our tools."
+        />
       </div>
     </main>
   )

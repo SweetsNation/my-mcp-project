@@ -98,7 +98,7 @@ export default function OklahomaCountyHealthInsurancePage() {
             <span className="font-bold">🌪️ OKLAHOMA COUNTY: Sooner State Healthcare Access</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Oklahoma County Health Insurance Marketplace: Affordable Coverage in America's Heartland
+            Health Insurance in Oklahoma County, Oklahoma 2025
           </h1>
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-lg mb-8">
             <div className="flex items-start">

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
+import RelatedServices from '@/components/RelatedServices'
+import ResourceLinks from '@/components/ResourceLinks'
 
 export const metadata: Metadata = {
   title: 'Our Expert Insurance Team | Licensed Agents & Specialists | El-Mag Insurance',
@@ -460,6 +462,22 @@ export default function TeamPage() {
             </div>
           </div>
         </section>
+
+        {/* Resource Links Section */}
+        <ResourceLinks 
+          currentService="team"
+          excludePaths={['/team']}
+          title="Educational Resources from Our Experts"
+          description="Guides, tools, and resources curated by our licensed insurance specialists to help you make informed decisions"
+        />
+
+        {/* Related Services */}
+        <RelatedServices 
+          currentService="team"
+          excludePaths={['/team']}
+          title="Insurance Services Our Team Specializes In"
+          description="Our expert agents can help you with all these insurance options. Contact any team member for personalized assistance."
+        />
 
         {/* Contact Form */}
         <div className="mb-12">

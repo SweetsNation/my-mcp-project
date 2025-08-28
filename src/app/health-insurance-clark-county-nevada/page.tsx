@@ -98,7 +98,7 @@ export default function ClarkCountyHealthInsurancePage() {
             <span className="font-bold">🎰 CLARK COUNTY: Las Vegas Healthcare Marketplace</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Clark County Health Insurance Marketplace: Affordable Coverage for America's Entertainment Capital
+            Health Insurance in Clark County, Nevada 2025
           </h1>
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded-lg mb-8">
             <div className="flex items-start">

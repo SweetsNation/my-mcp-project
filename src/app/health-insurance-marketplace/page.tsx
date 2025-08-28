@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedServices from '@/components/RelatedServices'
+import ResourceLinks from '@/components/ResourceLinks'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -146,7 +148,7 @@ export default function HealthInsuranceMarketplacePage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Health Insurance Marketplace 2025
+            Health Insurance Marketplace 2025 | Save $2,400+ with ACA Subsidies
           </h1>
           <p className="text-xl text-blue-100 mb-6">
             Get affordable health insurance through the Health Insurance Marketplace. 
@@ -322,6 +324,22 @@ export default function HealthInsuranceMarketplacePage() {
             </div>
           </div>
         </section>
+
+        {/* Resource Links Section */}
+        <ResourceLinks 
+          currentService="health-marketplace"
+          excludePaths={['/health-insurance-marketplace']}
+          title="ACA Marketplace Resources & Calculators"
+          description="Educational guides, subsidy calculators, and enrollment tools for Health Insurance Marketplace plans"
+        />
+
+        {/* Related Services Section */}
+        <RelatedServices 
+          currentService="health-marketplace"
+          excludePaths={['/health-insurance-marketplace']}
+          title="Explore Other Insurance Options"
+          description="Health Insurance Marketplace is perfect for under-65. If you're approaching Medicare age, explore Medicare options, or use our calculators to compare all coverage types."
+        />
 
         {/* Call to Action */}
         <section className="mb-12">

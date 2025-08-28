@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
+import TeamPageAnalytics from '@/components/TeamPageAnalytics'
 
 export const metadata: Metadata = {
-  title: 'Yaissa Acosta - Bilingual Insurance Specialist | Health & Medicare Expert | El-Mag Insurance',
-  description: 'Yaissa Acosta, Bilingual Insurance Specialist with 2+ years helping Florida clients with Health Insurance Marketplace, Medicare Advantage, Life Insurance, and Supplemental Health Insurance. Spanish speaker - Free consultations - call 331-E-HEALTH.',
-  keywords: 'Yaissa Acosta, bilingual insurance specialist, Health Insurance Marketplace, Medicare Advantage, Life insurance agent, Supplemental Health Insurance, Spanish speaking agent, Florida insurance agent',
+  title: 'Yaissa Acosta - Health Insurance Marketplace Expert Florida | ACA Plans Specialist | Premium Tax Credits & Affordable Health Insurance',
+  description: 'Yaissa Acosta: Health Insurance Marketplace expert & ACA specialist. 2+ years helping Florida families get affordable health insurance, premium tax credits, subsidy optimization. Bilingual service - Free consultations - 786-378-3921.',
+  keywords: 'Health Insurance Marketplace Florida, ACA plans, affordable health insurance, premium tax credits, health insurance subsidies, marketplace navigator, Obamacare plans, health insurance enrollment, subsidy calculator, bilingual health insurance agent',
   openGraph: {
-    title: 'Yaissa Acosta - Bilingual Insurance Specialist | El-Mag Insurance',
-    description: 'Expert bilingual insurance guidance from Yaissa Acosta. 2+ years helping clients with Health Marketplace, Medicare Advantage, and Life Insurance. Fluent in English and Spanish.',
+    title: 'Health Insurance Marketplace Expert | ACA Plans Specialist | Yaissa Acosta',
+    description: 'Get affordable health insurance & maximize premium tax credits with Yaissa Acosta. Expert Health Insurance Marketplace guidance, ACA plan optimization. Bilingual service.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
@@ -17,54 +18,250 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yaissa Acosta - Bilingual Insurance Specialist',
-    description: '2+ years bilingual insurance expertise. Helping clients with Health Marketplace, Medicare Advantage, and Life Insurance in English and Spanish.',
+    title: 'Health Insurance Marketplace Expert | ACA Specialist',
+    description: 'Expert Health Insurance Marketplace & ACA guidance. Affordable health insurance, premium tax credits, subsidy optimization. Bilingual service.',
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/team/yaissa-acosta',
   },
 }
 
-const yaissaStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Yaissa Acosta',
-  jobTitle: 'Insurance Specialist',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
-    telephone: '331-343-2584'
-  },
-  url: 'https://elmag-insurance.com/team/yaissa-acosta',
-  description: 'Bilingual Insurance Specialist with over 2 years of experience helping clients with Health Insurance Marketplace, Medicare Advantage, Life Insurance, and Supplemental Health Insurance. Fluent in English and Spanish.',
-  knowsAbout: [
-    'Health Insurance Marketplace',
-    'Medicare Advantage Plans',
-    'Life Insurance',
-    'Supplemental Health Insurance',
-    'ACA Plans',
-    'Premium Tax Credits',
-    'Medicare Enrollment',
-    'Individual Health Insurance'
-  ],
-  areaServed: {
-    '@type': 'State',
-    name: 'Florida'
-  },
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Professional License',
-      name: 'Licensed Insurance Agent - Florida'
+const yaissaStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://elmag-insurance.com/team/yaissa-acosta#person',
+    name: 'Yaissa Acosta',
+    givenName: 'Yaissa',
+    familyName: 'Acosta',
+    jobTitle: 'Health Insurance Marketplace Expert & ACA Specialist',
+    description: 'Bilingual Health Insurance Marketplace specialist with over 2 years of experience and healthcare field background. Specializes in ACA plans, premium tax credits, Medicare Advantage enrollment, and comprehensive health insurance solutions for Florida families.',
+    url: 'https://elmag-insurance.com/team/yaissa-acosta',
+    sameAs: [
+      'https://elmag-insurance.com/team/yaissa-acosta',
+      'https://www.linkedin.com/in/yaissa-acosta-insurance'
+    ],
+    email: 'yaissa@elmag-insurance.com',
+    telephone: '+1-786-378-3921',
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://elmag-insurance.com#organization',
+      name: 'El-Mag Insurance',
+      url: 'https://elmag-insurance.com',
+      telephone: '786-378-3921',
+      email: 'info@elmag-insurance.com'
     },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Certification',
-      name: 'Certified Insurance Specialist'
+    knowsAbout: [
+      {
+        '@type': 'Thing',
+        name: 'Health Insurance Marketplace',
+        description: 'ACA marketplace plan navigation with premium tax credits and subsidy optimization'
+      },
+      {
+        '@type': 'Thing', 
+        name: 'Premium Tax Credits',
+        description: 'Advanced Premium Tax Credit calculation and subsidy maximization strategies'
+      },
+      {
+        '@type': 'Thing',
+        name: 'ACA Plans',
+        description: 'Bronze, Silver, Gold, and Platinum ACA marketplace plan selection'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Medicare Advantage Plans',
+        description: 'Medicare Advantage plan enrollment and benefits coordination'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Supplemental Health Insurance',
+        description: 'Gap coverage and supplemental health insurance solutions'
+      }
+    ],
+    areaServed: [
+      {
+        '@type': 'State',
+        name: 'Florida',
+        alternateName: 'FL'
+      },
+      {
+        '@type': 'City',
+        name: 'Miami',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'Fort Lauderdale',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'Orlando',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      },
+      {
+        '@type': 'City',
+        name: 'Tampa',
+        containedInPlace: {
+          '@type': 'State',
+          name: 'Florida'
+        }
+      }
+    ],
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional License',
+        name: 'Licensed Insurance Agent - Florida',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Florida Department of Financial Services'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Certification',
+        name: 'Health Insurance Marketplace Certified Navigator',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Centers for Medicare & Medicaid Services'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Professional Experience',
+        name: 'Healthcare Field Veteran',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Healthcare Industry'
+        }
+      }
+    ],
+    knowsLanguage: [
+      {
+        '@type': 'Language',
+        name: 'English'
+      },
+      {
+        '@type': 'Language', 
+        name: 'Spanish',
+        alternateName: 'Español'
+      }
+    ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Health Insurance Specialist',
+      occupationLocation: {
+        '@type': 'State',
+        name: 'Florida'
+      },
+      skills: [
+        'Health Insurance Marketplace Navigation',
+        'Premium Tax Credits Optimization',
+        'ACA Plan Selection',
+        'Medicare Advantage Enrollment',
+        'Healthcare System Knowledge',
+        'Bilingual Customer Service',
+        'Subsidy Qualification Analysis'
+      ]
     }
-  ]
-};
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://elmag-insurance.com/team/yaissa-acosta#services',
+    name: 'Health Insurance Marketplace & ACA Specialist Services',
+    description: 'Professional Health Insurance Marketplace and ACA plan services in Florida, including premium tax credits optimization, subsidy analysis, Medicare Advantage enrollment, and comprehensive health insurance solutions.',
+    provider: {
+      '@id': 'https://elmag-insurance.com/team/yaissa-acosta#person'
+    },
+    areaServed: {
+      '@type': 'State',
+      name: 'Florida'
+    },
+    serviceType: [
+      'Health Insurance Marketplace Enrollment',
+      'Premium Tax Credits Optimization',
+      'ACA Plan Selection',
+      'Medicare Advantage Plans',
+      'Supplemental Health Insurance',
+      'Cost-Sharing Reductions',
+      'Special Enrollment Periods'
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Health Insurance Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Health Insurance Marketplace Consultation',
+            description: 'Complete ACA marketplace plan comparison and premium tax credit optimization'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service', 
+            name: 'Subsidy Analysis',
+            description: 'Comprehensive subsidy qualification review and cost-sharing reduction analysis'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Medicare Advantage Transition',
+            description: 'Assistance with Medicare Advantage plan selection and enrollment'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        }
+      ]
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free health insurance consultation and enrollment assistance'
+    }
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPoint',
+    '@id': 'https://elmag-insurance.com/team/yaissa-acosta#contact',
+    contactType: 'customer service',
+    telephone: '+1-786-378-3921',
+    email: 'yaissa@elmag-insurance.com',
+    availableLanguage: ['English', 'Spanish'],
+    areaServed: {
+      '@type': 'State', 
+      name: 'Florida'
+    },
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+      validFrom: '2024-01-01',
+      validThrough: '2025-12-31'
+    }
+  }
+];
 
 export default function YaissaAcostaPage() {
   return (
@@ -72,6 +269,18 @@ export default function YaissaAcostaPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(yaissaStructuredData) }}
+      />
+      
+      <TeamPageAnalytics 
+        agentName="Yaissa Acosta"
+        agentSpecialties={[
+          'Health Insurance Marketplace',
+          'Medicare Advantage Plans',
+          'Life Insurance',
+          'Supplemental Health Insurance'
+        ]}
+        states={['Florida']}
+        phoneNumber="786-378-3921"
       />
 
       {/* Hero Section */}
@@ -85,7 +294,7 @@ export default function YaissaAcostaPage() {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">Yaissa Acosta</h1>
-                  <p className="text-xl text-orange-100">Insurance Specialist</p>
+                  <p className="text-xl text-orange-100">Health Insurance Marketplace Expert & ACA Specialist</p>
                 </div>
               </div>
               <p className="text-xl text-orange-100 mb-6">
@@ -94,10 +303,10 @@ export default function YaissaAcostaPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:331-343-2584"
+                  href="tel:786-378-3921"
                   className="bg-yellow-400 text-orange-800 px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors text-center"
                 >
-                  📞 Call Yaissa: 331-E-HEALTH
+                  📞 Call Yaissa: 786-378-3921
                 </a>
                 <Link
                   href="/contact"
@@ -156,32 +365,44 @@ export default function YaissaAcostaPage() {
             <div className="grid lg:grid-cols-2 gap-8">
               <div>
                 <p className="text-gray-700 mb-4">
-                  Yaissa Acosta is a passionate and dedicated insurance specialist who brings fresh energy and 
-                  bilingual expertise to help Florida families find the right insurance coverage. With over 2 years 
-                  of focused experience in health insurance, Medicare, and life insurance, Yaissa has quickly 
-                  established herself as a trusted advisor for diverse communities seeking quality coverage.
+                  Yaissa Acosta is a passionate and dedicated insurance specialist who brings fresh energy, 
+                  bilingual expertise, and valuable healthcare field experience to help Florida families find 
+                  the right insurance coverage. As a healthcare field veteran, Yaissa understands the medical 
+                  system from the inside out, which gives her a unique perspective when guiding clients toward 
+                  insurance solutions. With over 2 years of focused insurance experience combined with her medical 
+                  background, Yaissa has quickly established herself as a trusted advisor for diverse communities 
+                  seeking quality coverage that truly meets their health needs.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  Yaissa specializes in Health Insurance Marketplace navigation, Medicare Advantage plan selection, 
-                  Life Insurance planning, and Supplemental Health Insurance to fill coverage gaps. Her bilingual 
-                  capabilities and cultural understanding make her especially valuable for Spanish-speaking families 
-                  who need clear guidance through the insurance selection process.
+                  Yaissa's healthcare background provides her with invaluable insight into how insurance coverage 
+                  translates to real-world medical care and patient experiences. She specializes in Health Insurance 
+                  Marketplace navigation, Medicare Advantage plan selection, Life Insurance planning, and Supplemental 
+                  Health Insurance to fill coverage gaps. Her combination of medical experience and bilingual 
+                  capabilities makes her especially valuable for Spanish-speaking families who need someone who 
+                  understands both the healthcare system and the insurance landscape to provide clear guidance 
+                  through the selection process.
                 </p>
                 <p className="text-gray-700">
-                  What makes Yaissa special is her commitment to personalized service and her ability to explain 
-                  complex insurance concepts in simple terms. She takes the time to understand each client's unique 
-                  situation and provides clear guidance in both English and Spanish (<em>¡Hablo Español!</em>) to 
-                  ensure everyone feels confident about their insurance decisions.
+                  What makes Yaissa special is her unique combination of healthcare field expertise and insurance 
+                  knowledge, allowing her to bridge the gap between medical needs and coverage options. Her medical 
+                  experience enables her to understand which insurance benefits will be most valuable for different 
+                  health conditions and life stages. She takes the time to understand each client's unique health 
+                  situation and leverages her medical background to recommend insurance solutions that provide 
+                  meaningful protection. Her clear guidance in both English and Spanish (<em>¡Hablo Español!</em>) 
+                  ensures clients feel confident that their insurance choices will truly support their health and 
+                  wellness goals.
                 </p>
               </div>
               <div className="space-y-6">
                 <div className="bg-orange-50 rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-orange-800 mb-4">Professional Background</h3>
                   <ul className="space-y-2 text-orange-700">
+                    <li>• Healthcare field veteran with medical experience</li>
                     <li>• 2+ years focused insurance experience</li>
                     <li>• Licensed in Florida and growing states</li>
                     <li>• Certified Insurance Specialist</li>
                     <li>• 450+ clients successfully enrolled</li>
+                    <li>• Medical-to-insurance expertise bridge</li>
                     <li>• Fluent in English and Spanish</li>
                     <li>• Health and Medicare specialist</li>
                   </ul>
@@ -192,6 +413,7 @@ export default function YaissaAcostaPage() {
                     <li>• Average savings: $1,400 per year</li>
                     <li>• 98% client satisfaction rate</li>
                     <li>• 91% client referral rate</li>
+                    <li>• Health-focused coverage recommendations</li>
                     <li>• Bilingual service excellence</li>
                   </ul>
                 </div>
@@ -274,6 +496,94 @@ export default function YaissaAcostaPage() {
                 <li>• Gap coverage analysis</li>
                 <li>• Affordable supplemental options</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content Section - Health Insurance Marketplace & ACA Expertise */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Health Insurance Marketplace Expert & ACA Specialist</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-green-800 mb-4">Health Insurance Marketplace Plans</h3>
+                  <p className="text-gray-700 mb-4">
+                    As a certified <strong>Health Insurance Marketplace expert</strong> in Florida, Yaissa specializes in 
+                    <strong> affordable health insurance</strong> through ACA Marketplace plans. Her expertise in <strong>premium tax credits</strong> and 
+                    subsidy optimization helps families save thousands while getting comprehensive healthcare coverage through <strong>ACA plans</strong>.
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Bronze ACA Plans</strong> - Low premium, essential coverage for healthy individuals</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Silver Marketplace Plans</strong> - Best value with Cost-Sharing Reductions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Gold Health Insurance</strong> - Lower deductibles, comprehensive benefits</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-4">Premium Tax Credits & Subsidies</h3>
+                  <div className="bg-white rounded-lg p-6 border border-blue-200">
+                    <h4 className="font-bold text-blue-700 mb-3">Health Insurance Subsidies (2025)</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span><strong>Premium Tax Credits:</strong></span>
+                        <span className="font-bold text-blue-600">Up to $15,000/year</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span><strong>Cost-Sharing Reductions:</strong></span>
+                        <span className="font-bold text-blue-600">Lower Deductibles</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span><strong>Income Limits:</strong></span>
+                        <span className="font-bold text-blue-600">Up to $125K Family</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <p className="text-blue-700 font-medium text-center">
+                        🎯 Free Subsidy Calculator Available
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <div className="bg-white rounded-lg p-6 shadow-lg">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Florida Health Insurance Marketplace Expert</h4>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Serving All Florida Counties:</strong> Miami-Dade • Broward • Palm Beach • Orange • Hillsborough • Pinellas • Duval • All 67 Counties
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-green-600 mb-2">$4,200</div>
+                      <div className="text-sm text-green-700">Average Tax Credits</div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-blue-600 mb-2">93%</div>
+                      <div className="text-sm text-blue-700">Qualify for Subsidies</div>
+                    </div>
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-purple-600 mb-2">Bilingüe</div>
+                      <div className="text-sm text-purple-700">English & Spanish</div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex justify-center">
+                    <Link 
+                      href="/health-insurance-cost-calculator"
+                      className="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition-colors"
+                    >
+                      Calculate Your Health Insurance Savings
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

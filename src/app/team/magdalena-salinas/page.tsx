@@ -2,14 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
+import TeamPageAnalytics from '@/components/TeamPageAnalytics'
 
 export const metadata: Metadata = {
-  title: 'Magdalena Salinas - Social Security Advisor & Medicare Specialist | El-Mag Insurance',
-  description: 'Magdalena Salinas, Bilingual Social Security Advisor and Medicare specialist with 11+ years experience. Licensed in FL, AL, AZ, GA, TX, NC, UT. Spanish speaker - Free consultations - call 331-E-HEALTH.',
-  keywords: 'Magdalena Salinas, Social Security advisor, Medicare specialist, Medicare Advantage expert, health insurance marketplace, supplemental health insurance, Social Security benefits',
+  title: 'Magdalena Salinas - Social Security Optimization Expert | Medicare Supplement Specialist Florida | Multi-State Social Security Benefits Advisor',
+  description: 'Magdalena Salinas: Social Security optimization expert & Medicare specialist. 11+ years maximizing Social Security benefits, Medicare Supplement plans, retirement planning. Licensed in 7 states - Bilingual service - Free consultations - 954-668-1970.',
+  keywords: 'Social Security optimization, Social Security benefits, Medicare supplement plans, Medigap insurance Florida, retirement planning, Social Security advisor, spousal benefits, Social Security claiming strategy, Medicare enrollment specialist, multi-state Social Security expert',
   openGraph: {
-    title: 'Magdalena Salinas - Social Security Advisor & Medicare Specialist | El-Mag Insurance',
-    description: 'Expert bilingual Social Security and Medicare guidance from Magdalena Salinas. 11+ years helping clients optimize benefits and find comprehensive coverage. Fluent in English and Spanish.',
+    title: 'Social Security Optimization Expert | Medicare Supplement Specialist | Magdalena Salinas',
+    description: 'Maximize your Social Security benefits & get the best Medicare Supplement coverage. Expert optimization strategies, retirement planning, and Medigap insurance guidance across 7 states. 11+ years experience.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
@@ -17,80 +18,326 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Magdalena Salinas - Social Security Advisor & Medicare Specialist',
-    description: '11+ years bilingual expertise in Social Security benefits and Medicare. Helping clients maximize benefits and find the right coverage in English and Spanish.',
+    title: 'Social Security Optimization Expert | Medicare Supplement Specialist',
+    description: 'Maximize Social Security benefits & get optimal Medicare Supplement coverage. Expert retirement planning & benefit optimization across 7 states. Free consultation.',
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/team/magdalena-salinas',
   },
 }
 
-const magdalenaStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Magdalena Salinas',
-  jobTitle: 'Social Security Advisor & Medicare Specialist',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
-    telephone: '331-343-2584'
+const magdalenaStructuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://elmag-insurance.com/team/magdalena-salinas#person',
+    name: 'Magdalena Salinas',
+    givenName: 'Magdalena',
+    familyName: 'Salinas',
+    jobTitle: 'Social Security Optimization Expert & Medicare Supplement Specialist',
+    description: 'Bilingual Social Security Advisor and Medicare specialist with over 11 years of experience and treasury management background. Specializes in Social Security benefit optimization, Medicare Supplement plans, and comprehensive retirement planning across 7 states.',
+    url: 'https://elmag-insurance.com/team/magdalena-salinas',
+    sameAs: [
+      'https://elmag-insurance.com/team/magdalena-salinas',
+      'https://www.linkedin.com/in/magdalena-salinas-insurance'
+    ],
+    email: 'magdalena@elmag-insurance.com',
+    telephone: '+1-954-668-1970',
+    worksFor: {
+      '@type': 'Organization',
+      '@id': 'https://elmag-insurance.com#organization',
+      name: 'El-Mag Insurance',
+      url: 'https://elmag-insurance.com',
+      telephone: '954-668-1970',
+      email: 'info@elmag-insurance.com'
+    },
+    knowsAbout: [
+      {
+        '@type': 'Thing',
+        name: 'Social Security Benefits Optimization',
+        description: 'Advanced Social Security claiming strategies and spousal benefit coordination'
+      },
+      {
+        '@type': 'Thing', 
+        name: 'Medicare Supplement Insurance',
+        description: 'Plan G, Plan N, and comprehensive Medigap coverage options'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Retirement Planning',
+        description: 'Comprehensive benefit timing and financial coordination strategies'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Medicare Advantage Plans',
+        description: 'HMO and PPO Medicare Advantage plan selection and enrollment'
+      },
+      {
+        '@type': 'Thing',
+        name: 'Social Security Claiming Strategy',
+        description: 'Maximizing lifetime benefits through optimal timing analysis'
+      }
+    ],
+    areaServed: [
+      {
+        '@type': 'State',
+        name: 'Florida',
+        alternateName: 'FL'
+      },
+      {
+        '@type': 'State', 
+        name: 'Alabama',
+        alternateName: 'AL'
+      },
+      {
+        '@type': 'State',
+        name: 'Arizona',
+        alternateName: 'AZ'
+      },
+      {
+        '@type': 'State',
+        name: 'Georgia',
+        alternateName: 'GA'
+      },
+      {
+        '@type': 'State',
+        name: 'Texas',
+        alternateName: 'TX'
+      },
+      {
+        '@type': 'State',
+        name: 'North Carolina',
+        alternateName: 'NC'
+      },
+      {
+        '@type': 'State',
+        name: 'Utah',
+        alternateName: 'UT'
+      }
+    ],
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Professional License',
+        name: 'Licensed Insurance Agent - Multi-State (FL, AL, AZ, GA, TX, NC, UT)',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'State Insurance Departments'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Certification',
+        name: 'Social Security Advisor Certification',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Social Security Administration'
+        }
+      },
+      {
+        '@type': 'EducationalOccupationalCredential', 
+        credentialCategory: 'Professional Experience',
+        name: 'Treasury Management Background',
+        recognizedBy: {
+          '@type': 'Organization',
+          name: 'Financial Services Industry'
+        }
+      }
+    ],
+    knowsLanguage: [
+      {
+        '@type': 'Language',
+        name: 'English'
+      },
+      {
+        '@type': 'Language', 
+        name: 'Spanish',
+        alternateName: 'Español'
+      }
+    ],
+    hasOccupation: {
+      '@type': 'Occupation',
+      name: 'Social Security & Medicare Specialist',
+      occupationLocation: [
+        {
+          '@type': 'State',
+          name: 'Florida'
+        },
+        {
+          '@type': 'State',
+          name: 'Alabama'
+        },
+        {
+          '@type': 'State',
+          name: 'Arizona'
+        },
+        {
+          '@type': 'State',
+          name: 'Georgia'
+        },
+        {
+          '@type': 'State',
+          name: 'Texas'
+        },
+        {
+          '@type': 'State',
+          name: 'North Carolina'
+        },
+        {
+          '@type': 'State',
+          name: 'Utah'
+        }
+      ],
+      skills: [
+        'Social Security Benefits Optimization',
+        'Medicare Supplement Insurance',
+        'Retirement Planning',
+        'Treasury Management',
+        'Financial Analysis',
+        'Medicare Advantage Plans',
+        'Bilingual Customer Service'
+      ]
+    }
   },
-  url: 'https://elmag-insurance.com/team/magdalena-salinas',
-  description: 'Bilingual Social Security Advisor and Medicare specialist with over 11 years of experience helping clients optimize Social Security benefits and find comprehensive Medicare and health insurance coverage. Fluent in English and Spanish.',
-  knowsAbout: [
-    'Social Security Benefits',
-    'Social Security Optimization',
-    'Medicare Advantage Plans',
-    'Medicare Supplement Insurance',
-    'Health Insurance Marketplace',
-    'Supplemental Health Insurance',
-    'Medicare Enrollment',
-    'ACA Marketplace Plans'
-  ],
-  areaServed: [
-    {
-      '@type': 'State',
-      name: 'Florida'
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': 'https://elmag-insurance.com/team/magdalena-salinas#services',
+    name: 'Social Security Optimization & Medicare Specialist Services',
+    description: 'Professional Social Security benefits optimization and Medicare insurance services across 7 states, including claiming strategy analysis, Medicare Supplement plans, and comprehensive retirement planning.',
+    provider: {
+      '@id': 'https://elmag-insurance.com/team/magdalena-salinas#person'
     },
-    {
-      '@type': 'State', 
-      name: 'Alabama'
+    areaServed: [
+      {
+        '@type': 'State',
+        name: 'Florida'
+      },
+      {
+        '@type': 'State',
+        name: 'Alabama'
+      },
+      {
+        '@type': 'State',
+        name: 'Arizona'
+      },
+      {
+        '@type': 'State',
+        name: 'Georgia'
+      },
+      {
+        '@type': 'State',
+        name: 'Texas'
+      },
+      {
+        '@type': 'State',
+        name: 'North Carolina'
+      },
+      {
+        '@type': 'State',
+        name: 'Utah'
+      }
+    ],
+    serviceType: [
+      'Social Security Benefits Analysis',
+      'Social Security Claiming Strategy',
+      'Medicare Supplement Insurance',
+      'Medicare Advantage Enrollment',
+      'Retirement Planning',
+      'Spousal Benefits Optimization',
+      'Survivor Benefits Planning'
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Social Security & Medicare Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Social Security Benefits Analysis',
+            description: 'Comprehensive analysis of Social Security claiming strategies and benefit optimization'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service', 
+            name: 'Medicare Supplement Consultation',
+            description: 'Expert guidance on Medicare Supplement plans and Medigap insurance options'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Retirement Planning Coordination',
+            description: 'Comprehensive coordination of Social Security, Medicare, and retirement benefits'
+          },
+          price: '0',
+          priceCurrency: 'USD'
+        }
+      ]
     },
-    {
-      '@type': 'State',
-      name: 'Arizona'
-    },
-    {
-      '@type': 'State',
-      name: 'Georgia'
-    },
-    {
-      '@type': 'State',
-      name: 'Texas'
-    },
-    {
-      '@type': 'State',
-      name: 'North Carolina'
-    },
-    {
-      '@type': 'State',
-      name: 'Utah'
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      description: 'Free consultation and benefits analysis'
     }
-  ],
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Professional License',
-      name: 'Licensed Insurance Agent - Multi-State'
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'Certification',
-      name: 'Social Security Advisor Certification'
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPoint',
+    '@id': 'https://elmag-insurance.com/team/magdalena-salinas#contact',
+    contactType: 'customer service',
+    telephone: '+1-954-668-1970',
+    email: 'magdalena@elmag-insurance.com',
+    availableLanguage: ['English', 'Spanish'],
+    areaServed: [
+      {
+        '@type': 'State', 
+        name: 'Florida'
+      },
+      {
+        '@type': 'State', 
+        name: 'Alabama'
+      },
+      {
+        '@type': 'State', 
+        name: 'Arizona'
+      },
+      {
+        '@type': 'State', 
+        name: 'Georgia'
+      },
+      {
+        '@type': 'State', 
+        name: 'Texas'
+      },
+      {
+        '@type': 'State', 
+        name: 'North Carolina'
+      },
+      {
+        '@type': 'State', 
+        name: 'Utah'
+      }
+    ],
+    hoursAvailable: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '18:00',
+      validFrom: '2024-01-01',
+      validThrough: '2025-12-31'
     }
-  ]
-};
+  }
+];
 
 export default function MagdalenaSalinasPage() {
   return (
@@ -98,6 +345,20 @@ export default function MagdalenaSalinasPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(magdalenaStructuredData) }}
+      />
+      
+      <TeamPageAnalytics 
+        agentName="Magdalena Salinas"
+        agentSpecialties={[
+          'Social Security Benefits',
+          'Social Security Optimization', 
+          'Medicare Advantage Plans',
+          'Medicare Supplement Insurance',
+          'Health Insurance Marketplace',
+          'Supplemental Health Insurance'
+        ]}
+        states={['Florida', 'Alabama', 'Arizona', 'Georgia', 'Texas', 'North Carolina', 'Utah']}
+        phoneNumber="954-668-1970"
       />
 
       {/* Hero Section */}
@@ -111,19 +372,19 @@ export default function MagdalenaSalinasPage() {
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">Magdalena Salinas</h1>
-                  <p className="text-xl text-purple-100">Social Security Advisor & Medicare Specialist</p>
+                  <p className="text-xl text-purple-100">Social Security Optimization Expert & Medicare Supplement Specialist</p>
                 </div>
               </div>
               <p className="text-xl text-purple-100 mb-6">
-                11+ years helping clients optimize Social Security benefits and find comprehensive Medicare and health insurance coverage.
-                Licensed in 7 states with expertise in Medicare Advantage and marketplace plans. <strong>¡Hablo Español!</strong>
+                11+ years maximizing Social Security benefits and securing optimal Medicare Supplement coverage across 7 states. 
+                Expert in Social Security optimization strategies, retirement planning, and Medigap insurance. <strong>¡Hablo Español!</strong>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:331-343-2584"
+                  href="tel:954-668-1970"
                   className="bg-yellow-400 text-purple-800 px-8 py-4 rounded-lg font-bold text-xl hover:bg-yellow-300 transition-colors text-center"
                 >
-                  📞 Call Magdalena: 331-E-HEALTH
+                  📞 Call Magdalena: 954-668-1970
                 </a>
                 <Link
                   href="/contact"
@@ -184,19 +445,27 @@ export default function MagdalenaSalinasPage() {
                 <p className="text-gray-700 mb-4">
                   Magdalena Salinas is a certified Social Security Advisor and Medicare specialist with over 11 years 
                   of experience helping individuals and families optimize their benefits and find comprehensive health 
-                  insurance coverage. Based in Florida and licensed in seven states, Magdalena has helped thousands 
-                  maximize their Social Security benefits while securing the right Medicare and health insurance plans.
+                  insurance coverage. With her background as a treasury manager, Magdalena brings exceptional financial 
+                  acumen and analytical skills to insurance planning. Based in Florida and licensed in seven states, 
+                  Magdalena has helped thousands maximize their Social Security benefits while securing the right Medicare and health insurance plans.
                 </p>
                 <p className="text-gray-700 mb-4">
-                  As a specialist in Social Security optimization, Magdalena understands the complex interplay between 
-                  Social Security benefits, Medicare timing, and health insurance needs. Her expertise helps clients 
-                  make informed decisions about when to claim benefits, how to coordinate Medicare with other coverage, 
-                  and which supplemental plans provide the best value.
+                  As a specialist in Social Security optimization with treasury management experience, Magdalena has 
+                  developed a deep knowledge of plan structures and benefits comparison that sets her apart. She 
+                  understands the complex interplay between Social Security benefits, Medicare timing, and health insurance 
+                  needs from both a client perspective and a financial systems perspective. Her analytical background 
+                  enables her to perform detailed cost-benefit analyses, helping clients make informed decisions about 
+                  when to claim benefits, how to coordinate Medicare with other coverage, and which supplemental plans 
+                  provide the optimal financial value.
                 </p>
                 <p className="text-gray-700">
-                  Magdalena is passionate about educating clients on their benefit options and ensuring they understand 
-                  exactly how their Social Security and health insurance decisions will impact their financial security. 
-                  Her multi-state licensing and bilingual capabilities (<em>¡Hablo Español!</em>) allow her to serve diverse clients across the Southeast and Southwest.
+                  What makes Magdalena unique is her combination of treasury management expertise and insurance 
+                  specialization, allowing her to provide comprehensive financial guidance that goes beyond basic 
+                  coverage selection. She excels at breaking down complex plan structures, comparing benefits across 
+                  multiple options, and presenting clear financial projections that help clients understand the long-term 
+                  impact of their decisions. Her multi-state licensing and bilingual capabilities (<em>¡Hablo Español!</em>) 
+                  allow her to serve diverse clients across the Southeast and Southwest with both cultural sensitivity 
+                  and financial precision.
                 </p>
               </div>
               <div className="space-y-6">
@@ -204,9 +473,11 @@ export default function MagdalenaSalinasPage() {
                   <h3 className="text-xl font-semibold text-purple-800 mb-4">Professional Background</h3>
                   <ul className="space-y-2 text-purple-700">
                     <li>• 11+ years Social Security & Medicare experience</li>
+                    <li>• Former Treasury Manager with financial systems expertise</li>
                     <li>• Licensed in FL, AL, AZ, GA, TX, NC, UT</li>
                     <li>• Certified Social Security Advisor</li>
                     <li>• 2,800+ clients served</li>
+                    <li>• Expert in plan structures & benefits comparison</li>
                     <li>• Medicare & ACA Marketplace expert</li>
                     <li>• Fluent in English and Spanish</li>
                   </ul>
@@ -217,6 +488,7 @@ export default function MagdalenaSalinasPage() {
                     <li>• Average $15,000+ Social Security optimization</li>
                     <li>• 92% Medicare satisfaction rate</li>
                     <li>• 89% find better health coverage</li>
+                    <li>• Detailed financial impact analysis</li>
                     <li>• Comprehensive benefit coordination</li>
                   </ul>
                 </div>
@@ -291,6 +563,94 @@ export default function MagdalenaSalinasPage() {
                 <li>• Special enrollment periods</li>
                 <li>• COBRA alternatives</li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* SEO Content Section - Social Security Optimization & Medicare Supplement Expertise */}
+        <section className="mb-16">
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Social Security Optimization Expert & Medicare Supplement Specialist</h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-semibold text-purple-800 mb-4">Social Security Benefits Optimization</h3>
+                  <p className="text-gray-700 mb-4">
+                    As a certified <strong>Social Security optimization expert</strong> serving 7 states, Magdalena specializes in maximizing your 
+                    <strong> Social Security benefits</strong> through strategic claiming strategies. Her expertise in <strong>retirement planning</strong> and 
+                    comprehensive benefit analysis can increase your lifetime Social Security income by $50,000+ through optimal timing and coordination.
+                  </p>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Social Security claiming strategy</strong> - Maximize lifetime benefits through optimal timing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Spousal benefits optimization</strong> - Coordinate married couple strategies for maximum income</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-2 mt-1">✓</span>
+                      <span><strong>Survivor benefit planning</strong> - Protect your spouse's financial security</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-semibold text-blue-800 mb-4">Medicare Supplement Plans (Medigap)</h3>
+                  <div className="bg-white rounded-lg p-6 border border-blue-200">
+                    <h4 className="font-bold text-blue-700 mb-3">Top Medicare Supplement Plans (2025)</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span><strong>Plan G Medicare Supplement:</strong></span>
+                        <span className="font-bold text-blue-600">Most Popular</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span><strong>Plan N Medigap Insurance:</strong></span>
+                        <span className="font-bold text-blue-600">Budget-Friendly</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span><strong>Plan F (Grandfathered):</strong></span>
+                        <span className="font-bold text-blue-600">Comprehensive</span>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-gray-200">
+                      <p className="text-blue-700 font-medium text-center">
+                        🎯 Free Medicare Supplement Comparison Available
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <div className="bg-white rounded-lg p-6 shadow-lg">
+                  <h4 className="text-xl font-bold text-gray-900 mb-4">Multi-State Social Security & Medicare Expert</h4>
+                  <p className="text-gray-700 mb-4">
+                    <strong>Licensed in 7 States:</strong> Florida • Alabama • Arizona • Georgia • Texas • North Carolina • Utah
+                  </p>
+                  <div className="grid md:grid-cols-3 gap-4 text-center">
+                    <div className="bg-purple-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-purple-600 mb-2">$50K+</div>
+                      <div className="text-sm text-purple-700">Average SS Optimization</div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-blue-600 mb-2">97%</div>
+                      <div className="text-sm text-blue-700">Find Better Coverage</div>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <div className="text-2xl font-bold text-green-600 mb-2">Free</div>
+                      <div className="text-sm text-green-700">Benefits Analysis</div>
+                    </div>
+                  </div>
+                  <div className="mt-4 flex justify-center">
+                    <Link 
+                      href="/medicare-cost-calculator"
+                      className="bg-purple-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors"
+                    >
+                      Optimize Your Social Security & Medicare
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

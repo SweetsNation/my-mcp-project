@@ -5,6 +5,8 @@ import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import MobileContactBar from '@/components/MobileContactBar'
 import ClientOnly from '@/components/ClientOnly'
+import RelatedServices from '@/components/RelatedServices'
+import ResourceLinks from '@/components/ResourceLinks'
 import { trackCalculatorUsage, trackCalculatorResult, trackCTAClick, trackPhoneCall } from '@/lib/analytics'
 
 // Client component - metadata should be handled by layout.tsx or a separate server component
@@ -270,7 +272,7 @@ export default function HealthInsuranceCostCalculatorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Health Insurance Marketplace Cost Calculator
+              Health Insurance Cost Calculator 2025 | Free ACA Subsidy Estimator
             </h1>
             <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto mb-8">
               Calculate your ACA Health Insurance costs, premium tax credits, and subsidies based on your income and family size.
@@ -834,6 +836,22 @@ export default function HealthInsuranceCostCalculatorPage() {
             </div>
           </div>
         </section>
+
+        {/* Resource Links Section */}
+        <ResourceLinks 
+          currentService="tools"
+          excludePaths={['/health-insurance-cost-calculator']}
+          title="Additional Tools & Educational Resources"
+          description="More calculators, comparison tools, and educational content to support your insurance decisions"
+        />
+
+        {/* Related Services */}
+        <RelatedServices 
+          currentService="tools"
+          excludePaths={['/health-insurance-cost-calculator']}
+          title="Related Insurance Services & Tools"
+          description="Use these tools to compare options, then connect with our agents for enrollment assistance."
+        />
 
         {/* Contact Form */}
         <div className="mb-12">

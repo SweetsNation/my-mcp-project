@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ClientOnly from '@/components/ClientOnly';
+import RelatedServices from '@/components/RelatedServices';
+import ResourceLinks from '@/components/ResourceLinks';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -156,10 +158,7 @@ export default function MedicarePartDPage() {
           <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-                Medicare Part D Plans 2025<br/>
-                <span className="text-3xl md:text-4xl text-yellow-300">
-                  <ClientOnly>NEW $2,000 Out-of-Pocket Cap!</ClientOnly>
-                </span>
+                Medicare Part D 2025 | Historic $2,000 Cap Saves You Money
               </h1>
               <p className="text-xl md:text-2xl text-primary-100 mb-8 max-w-4xl mx-auto">
                 Historic changes save you money! Compare 25+ Medicare Part D prescription drug plans.
@@ -658,6 +657,22 @@ export default function MedicarePartDPage() {
               </div>
             </div>
           </section>
+
+          {/* Resource Links Section */}
+          <ResourceLinks 
+            currentService="medicare-part-d"
+            excludePaths={['/medicare-part-d']}
+            title="Medicare Resources & Tools"
+            description="Educational guides, cost calculators, and comparison tools for Medicare coverage options"
+          />
+
+          {/* Related Services */}
+          <RelatedServices 
+            currentService="medicare-part-d"
+            excludePaths={['/medicare-part-d']}
+            title="Explore Related Medicare & Health Insurance Options"
+            description="Compare Medicare Part D with Medicare Advantage, explore Health Marketplace for under-65, or use our tools."
+          />
 
           {/* Enhanced CTA Section */}
           <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 text-white relative overflow-hidden">

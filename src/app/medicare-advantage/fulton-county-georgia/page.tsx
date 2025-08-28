@@ -107,7 +107,7 @@ export default function FultonCountyGeorgiaPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                Medicare Advantage Plans in Fulton County, Georgia
+                Medicare Advantage in Fulton County, Georgia 2025
               </h1>
               <p className="text-xl md:text-2xl text-primary-100 mb-8">
                 Compare Medicare Advantage plans in Atlanta and Fulton County. 60% penetration rate 
