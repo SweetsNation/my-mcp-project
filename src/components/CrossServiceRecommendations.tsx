@@ -9,6 +9,15 @@ interface CrossServiceRecommendationsProps {
   showAgeBased?: boolean;
 }
 
+interface Recommendation {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+  color: string;
+  priority: 'high' | 'medium' | 'low';
+}
+
 export default function CrossServiceRecommendations({
   currentService,
   userAge,
@@ -19,7 +28,7 @@ export default function CrossServiceRecommendations({
   const isApproaching65 = userAge && userAge >= 60 && userAge < 65;
   const isUnder65 = userAge && userAge < 65;
 
-  const getRecommendations = () => {
+  const getRecommendations = (): { title: string; description: string; recommendations: Recommendation[] } => {
     switch (currentService) {
       case 'medicare-supplement':
         return {
@@ -128,7 +137,7 @@ export default function CrossServiceRecommendations({
 
   const config = getRecommendations();
   const sortedRecommendations = config.recommendations.sort((a, b) => {
-    const priorityOrder = { high: 3, medium: 2, low: 1 };
+    const priorityOrder: Record<'high' | 'medium' | 'low', number> = { high: 3, medium: 2, low: 1 };
     return priorityOrder[b.priority] - priorityOrder[a.priority];
   });
 
