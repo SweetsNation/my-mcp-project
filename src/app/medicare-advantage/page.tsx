@@ -5,6 +5,7 @@ import ResourceLinks from '@/components/ResourceLinks';
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
 import ResourceLinking from '@/components/ResourceLinking';
 import ToolLinking from '@/components/ToolLinking';
+import GeographicGrouping from '@/components/GeographicGrouping';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -445,6 +446,14 @@ export default function MedicareAdvantagePage() {
           showTools={true}
           maxResources={4}
           maxTools={3}
+        />
+
+        {/* Geographic Grouping */}
+        <GeographicGrouping 
+          serviceType="medicare-advantage"
+          showMarketData={true}
+          layout="hierarchical"
+          maxItems={15}
         />
 
         {/* Tool Linking */}

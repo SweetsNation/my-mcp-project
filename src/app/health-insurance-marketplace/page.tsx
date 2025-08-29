@@ -6,6 +6,7 @@ import ServiceComparison from '@/components/ServiceComparison'
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
 import ResourceLinking from '@/components/ResourceLinking'
 import ToolLinking from '@/components/ToolLinking'
+import GeographicGrouping from '@/components/GeographicGrouping'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -343,6 +344,14 @@ export default function HealthInsuranceMarketplacePage() {
           showTools={true}
           maxResources={4}
           maxTools={3}
+        />
+
+        {/* Geographic Grouping */}
+        <GeographicGrouping 
+          serviceType="health-marketplace"
+          showMarketData={true}
+          layout="hierarchical"
+          maxItems={15}
         />
 
         {/* Tool Linking */}

@@ -6,6 +6,7 @@ import ServiceComparison from '@/components/ServiceComparison'
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
 import ResourceLinking from '@/components/ResourceLinking'
 import ToolLinking from '@/components/ToolLinking'
+import GeographicGrouping from '@/components/GeographicGrouping'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -488,6 +489,14 @@ export default function MedicareSupplementPlanGPage() {
           showTools={true}
           maxResources={4}
           maxTools={3}
+        />
+
+        {/* Geographic Grouping */}
+        <GeographicGrouping 
+          serviceType="medicare-supplement"
+          showMarketData={true}
+          layout="hierarchical"
+          maxItems={15}
         />
 
         {/* Tool Linking */}
