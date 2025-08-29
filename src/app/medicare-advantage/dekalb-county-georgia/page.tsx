@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs, generateMedicareBreadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LocationPageAnalytics from '@/components/LocationPageAnalytics';
+import StateCountyLinking from '@/components/StateCountyLinking';
 
 export const metadata: Metadata = {
   title: 'Best Medicare Advantage Plans DeKalb County GA 2025 | Atlanta Metro | Diverse Communities | Emory Healthcare Access | African American Seniors',
@@ -653,6 +654,15 @@ export default function DeKalbCountyMedicareAdvantagePage() {
             </div>
           </div>
         </section>
+
+        {/* State-to-County Linking */}
+        <StateCountyLinking 
+          serviceType="medicare-advantage"
+          currentState="Georgia"
+          currentCounty="DeKalb County"
+          showStateLink={true}
+          maxCounties={4}
+        />
 
         {/* Call to Action */}
         <section className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-lg">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import StateCountyLinking from '@/components/StateCountyLinking'
 
 export const metadata: Metadata = {
   title: 'Texas Medicare Supplement Plans 2025 - Best Value, Lowest Costs | El-Mag Insurance',
@@ -311,6 +312,14 @@ export default function TexasMedicareSupplementPage() {
             </div>
           </div>
         </section>
+
+        {/* State-to-County Linking */}
+        <StateCountyLinking 
+          serviceType="medicare-supplement"
+          currentState="Texas"
+          showStateLink={false}
+          maxCounties={6}
+        />
 
         {/* Related Links */}
         <section className="mb-12">

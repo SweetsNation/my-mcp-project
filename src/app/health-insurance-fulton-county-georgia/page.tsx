@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
+import StateCountyLinking from '@/components/StateCountyLinking'
 
 export const metadata: Metadata = {
   title: 'Fulton County Health Insurance Marketplace 2025 - Atlanta ACA Plans | El-Mag Insurance',
@@ -544,6 +545,15 @@ export default function FultonCountyHealthInsurancePage() {
             </div>
           </div>
         </section>
+
+        {/* State-to-County Linking */}
+        <StateCountyLinking 
+          serviceType="health-marketplace"
+          currentState="Georgia"
+          currentCounty="Fulton County"
+          showStateLink={true}
+          maxCounties={4}
+        />
 
         {/* Cross-Service Recommendations */}
         <CrossServiceRecommendations 
