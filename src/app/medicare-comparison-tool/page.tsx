@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
+import ToolLinking from '@/components/ToolLinking'
 
 // Dynamically import the comparison tool to avoid SSR issues
 const MedicareComparisonTool = dynamic(() => import('../../components/MedicareComparisonTool'), {
@@ -249,6 +250,16 @@ export default function MedicareComparisonToolPage() {
             </div>
           </div>
         </section>
+
+        {/* Tool Linking */}
+        <ToolLinking 
+          currentTool="medicare-comparison-tool"
+          userContext="plan-selection"
+          showRelatedTools={true}
+          maxTools={6}
+          showFeatures={true}
+          layout="grid"
+        />
 
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg text-center">

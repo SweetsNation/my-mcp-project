@@ -4,6 +4,7 @@ import RelatedServices from '@/components/RelatedServices';
 import ResourceLinks from '@/components/ResourceLinks';
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
 import ResourceLinking from '@/components/ResourceLinking';
+import ToolLinking from '@/components/ToolLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -444,6 +445,16 @@ export default function MedicareAdvantagePage() {
           showTools={true}
           maxResources={4}
           maxTools={3}
+        />
+
+        {/* Tool Linking */}
+        <ToolLinking 
+          currentTool=""
+          userContext="medicare-advantage"
+          showRelatedTools={true}
+          maxTools={6}
+          showFeatures={false}
+          layout="featured"
         />
 
         {/* Cross-Service Recommendations */}

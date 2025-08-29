@@ -8,6 +8,7 @@ import MobileContactBar from '@/components/MobileContactBar'
 import ClientOnly from '@/components/ClientOnly'
 import RelatedServices from '@/components/RelatedServices'
 import ResourceLinks from '@/components/ResourceLinks'
+import ToolLinking from '@/components/ToolLinking'
 import { trackCalculatorUsage, trackCalculatorResult, trackCTAClick, trackPhoneCall } from '@/lib/analytics'
 
 // Note: This would typically be generated server-side
@@ -622,6 +623,16 @@ export default function MedicareCostCalculatorPage() {
             </div>
           </div>
         </section>
+
+        {/* Tool Linking */}
+        <ToolLinking 
+          currentTool="medicare-cost-calculator"
+          userContext="cost-analysis"
+          showRelatedTools={true}
+          maxTools={6}
+          showFeatures={true}
+          layout="grid"
+        />
 
         {/* Resource Links Section */}
         <ResourceLinks 

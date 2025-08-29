@@ -7,6 +7,7 @@ import MobileContactBar from '@/components/MobileContactBar'
 import ClientOnly from '@/components/ClientOnly'
 import RelatedServices from '@/components/RelatedServices'
 import ResourceLinks from '@/components/ResourceLinks'
+import ToolLinking from '@/components/ToolLinking'
 import { trackCalculatorUsage, trackCalculatorResult, trackCTAClick, trackPhoneCall } from '@/lib/analytics'
 
 // Client component - metadata should be handled by layout.tsx or a separate server component
@@ -898,6 +899,16 @@ export default function HealthInsuranceCostCalculatorPage() {
             </div>
           </div>
         </section>
+
+        {/* Tool Linking */}
+        <ToolLinking 
+          currentTool="health-insurance-cost-calculator"
+          userContext="cost-analysis"
+          showRelatedTools={true}
+          maxTools={6}
+          showFeatures={true}
+          layout="grid"
+        />
 
         {/* Success Stories */}
         <section className="mb-16">
