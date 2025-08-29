@@ -23,7 +23,7 @@ export default function PrescriptionDrugCoveragePage() {
         <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Medicare Prescription Drug Coverage Guide
+              Medicare Prescription Drug Coverage | Save on Medications
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Understanding Medicare Part D prescription drug coverage, including formularies, coverage phases, and how to save on your medications.

@@ -20,7 +20,7 @@ export default function EnrollmentPeriodsExplainedPage() {
             <span className="text-blue-200 mr-2">›</span>
             <span className="text-white">Enrollment Periods</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medicare Enrollment Periods Explained</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Medicare Enrollment Periods | Never Miss Critical Deadlines</h1>
           <p className="text-xl text-blue-100">Understanding when you can enroll, change, or switch your Medicare coverage</p>
         </div>
       </section>

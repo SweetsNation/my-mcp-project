@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import RelatedServices from '@/components/RelatedServices';
 import ResourceLinks from '@/components/ResourceLinks';
+import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -433,6 +434,12 @@ export default function MedicareAdvantagePage() {
               </div>
             </div>
           </section>
+
+          {/* Cross-Service Recommendations */}
+          <CrossServiceRecommendations 
+            currentService="medicare-advantage"
+            showAgeBased={true}
+          />
 
           {/* Resource Links Section */}
           <ResourceLinks 

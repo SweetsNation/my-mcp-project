@@ -183,7 +183,7 @@ export default function RelatedServices({
   const getRecommendedServices = (): ServiceLink[] => {
     let filtered = ALL_SERVICES.filter(service => !excludePaths.includes(service.href));
 
-    // Cross-service recommendations based on current page
+    // Enhanced cross-service recommendations based on current page
     switch (currentService) {
       case 'medicare-advantage':
         // For Medicare Advantage, suggest supplements, marketplace for under-65, and tools
@@ -193,15 +193,29 @@ export default function RelatedServices({
           s.category === 'tools' ||
           (s.category === 'medicare' && s.href !== '/medicare-advantage')
         );
+        // Prioritize Medicare Supplement as the main alternative
+        filtered.sort((a, b) => {
+          if (a.href === '/medicare-supplement-plan-g') return -1;
+          if (b.href === '/medicare-supplement-plan-g') return 1;
+          return 0;
+        });
         break;
 
       case 'medicare-supplement':
-        // For Medicare Supplement, suggest Medicare Advantage, Part D, and tools
+        // For Medicare Supplement, suggest Medicare Advantage, Part D, and family marketplace coverage
         filtered = filtered.filter(s => 
           s.category === 'medicare' || 
           s.category === 'marketplace' || 
           s.category === 'tools'
         );
+        // Prioritize Medicare Advantage and family marketplace coverage
+        filtered.sort((a, b) => {
+          if (a.href === '/medicare-advantage') return -1;
+          if (b.href === '/medicare-advantage') return 1;
+          if (a.href === '/health-insurance-marketplace') return -1;
+          if (b.href === '/health-insurance-marketplace') return 1;
+          return 0;
+        });
         break;
 
       case 'medicare-part-d':
@@ -212,6 +226,14 @@ export default function RelatedServices({
           s.category === 'marketplace' || 
           s.category === 'tools'
         );
+        // Prioritize Medicare Advantage and Medicare Supplement
+        filtered.sort((a, b) => {
+          if (a.href === '/medicare-advantage') return -1;
+          if (b.href === '/medicare-advantage') return 1;
+          if (a.href === '/medicare-supplement-plan-g') return -1;
+          if (b.href === '/medicare-supplement-plan-g') return 1;
+          return 0;
+        });
         break;
 
       case 'health-marketplace':
@@ -223,6 +245,14 @@ export default function RelatedServices({
           s.category === 'tools' ||
           (s.category === 'marketplace' && s.href !== '/health-insurance-marketplace')
         );
+        // Prioritize Medicare Supplement for those approaching 65
+        filtered.sort((a, b) => {
+          if (a.href === '/medicare-supplement-plan-g') return -1;
+          if (b.href === '/medicare-supplement-plan-g') return 1;
+          if (a.href === '/medicare-open-enrollment-2025') return -1;
+          if (b.href === '/medicare-open-enrollment-2025') return 1;
+          return 0;
+        });
         break;
 
       case 'tools':

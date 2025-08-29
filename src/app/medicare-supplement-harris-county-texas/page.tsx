@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
 
 export const metadata: Metadata = {
   title: 'Harris County Medicare Supplement Plans 2025 - Houston Area Medigap Coverage | El-Mag Insurance',
@@ -378,6 +379,13 @@ export default function HarrisCountyMedicareSupplementPage() {
             </p>
           </div>
         </section>
+
+        {/* Cross-Service Recommendations */}
+        <CrossServiceRecommendations 
+          currentService="medicare-supplement"
+          location="Harris County, Texas"
+          showAgeBased={true}
+        />
 
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-12">

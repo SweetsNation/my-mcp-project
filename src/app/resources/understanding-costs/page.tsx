@@ -23,7 +23,7 @@ export default function UnderstandingCostsPage() {
         <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Understanding Medicare Advantage Costs
+              Understanding Medicare Advantage Costs | Budget Confidently
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Navigate the various costs associated with Medicare Advantage plans and learn how to budget for your healthcare expenses effectively.

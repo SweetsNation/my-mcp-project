@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedServices from '@/components/RelatedServices'
 import ResourceLinks from '@/components/ResourceLinks'
+import ServiceComparison from '@/components/ServiceComparison'
+import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -469,6 +471,18 @@ export default function MedicareSupplementPlanGPage() {
             </div>
           </div>
         </section>
+
+        {/* Service Comparison */}
+        <ServiceComparison 
+          primaryService="medicare-supplement"
+          showCTA={true}
+        />
+
+        {/* Cross-Service Recommendations */}
+        <CrossServiceRecommendations 
+          currentService="medicare-supplement"
+          showAgeBased={true}
+        />
 
         {/* Resource Links Section */}
         <ResourceLinks 

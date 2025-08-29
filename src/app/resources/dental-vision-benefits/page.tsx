@@ -23,7 +23,7 @@ export default function DentalVisionBenefitsPage() {
         <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Medicare Advantage Dental & Vision Benefits
+              Medicare Advantage Dental & Vision Benefits | Extra Coverage Included
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Discover how Medicare Advantage plans provide comprehensive dental and vision coverage that Original Medicare doesn't offer.

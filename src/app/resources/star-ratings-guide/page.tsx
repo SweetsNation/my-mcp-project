@@ -23,7 +23,7 @@ export default function StarRatingsGuidePage() {
         <article className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <header className="mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Medicare Star Ratings Guide
+              Medicare Star Ratings Guide | Choose Quality Plans
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Learn how Medicare Star Ratings work and use them to identify high-quality Medicare Advantage and prescription drug plans.

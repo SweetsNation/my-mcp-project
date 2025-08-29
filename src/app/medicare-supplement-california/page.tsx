@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
 
 export const metadata: Metadata = {
   title: 'California Medicare Supplement Plans 2025 - Community Rating Benefits | El-Mag Insurance',
@@ -670,6 +671,13 @@ export default function CaliforniaMedicareSupplementPage() {
             </p>
           </div>
         </section>
+
+        {/* Cross-Service Recommendations */}
+        <CrossServiceRecommendations 
+          currentService="medicare-supplement"
+          location="California"
+          showAgeBased={true}
+        />
 
         {/* Related Resources */}
         <section className="mb-12">

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import RelatedServices from '@/components/RelatedServices'
 import ResourceLinks from '@/components/ResourceLinks'
+import ServiceComparison from '@/components/ServiceComparison'
+import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -324,6 +326,18 @@ export default function HealthInsuranceMarketplacePage() {
             </div>
           </div>
         </section>
+
+        {/* Service Comparison */}
+        <ServiceComparison 
+          primaryService="health-marketplace"
+          showCTA={true}
+        />
+
+        {/* Cross-Service Recommendations */}
+        <CrossServiceRecommendations 
+          currentService="health-marketplace"
+          showAgeBased={true}
+        />
 
         {/* Resource Links Section */}
         <ResourceLinks 
