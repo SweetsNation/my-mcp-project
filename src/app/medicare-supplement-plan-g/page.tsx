@@ -8,6 +8,7 @@ import ResourceLinking from '@/components/ResourceLinking'
 import ToolLinking from '@/components/ToolLinking'
 import GeographicGrouping from '@/components/GeographicGrouping'
 import ServiceRecommendations from '@/components/ServiceRecommendations'
+import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -499,6 +500,15 @@ export default function MedicareSupplementPlanGPage() {
           maxRecommendations={6}
           showMatchScores={true}
           showAlternatives={true}
+        />
+
+        {/* Enrollment Timeline */}
+        <EnrollmentTimeline 
+          userContext="medicare-supplement"
+          showActiveOnly={false}
+          maxPeriods={6}
+          showCountdown={true}
+          layout="timeline"
         />
 
         {/* Geographic Grouping */}

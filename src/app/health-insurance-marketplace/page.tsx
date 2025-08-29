@@ -8,6 +8,7 @@ import ResourceLinking from '@/components/ResourceLinking'
 import ToolLinking from '@/components/ToolLinking'
 import GeographicGrouping from '@/components/GeographicGrouping'
 import ServiceRecommendations from '@/components/ServiceRecommendations'
+import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -354,6 +355,15 @@ export default function HealthInsuranceMarketplacePage() {
           maxRecommendations={6}
           showMatchScores={true}
           showAlternatives={true}
+        />
+
+        {/* Enrollment Timeline */}
+        <EnrollmentTimeline 
+          userContext="health-marketplace"
+          showActiveOnly={false}
+          maxPeriods={6}
+          showCountdown={true}
+          layout="timeline"
         />
 
         {/* Geographic Grouping */}

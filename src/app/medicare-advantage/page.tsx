@@ -7,6 +7,7 @@ import ResourceLinking from '@/components/ResourceLinking';
 import ToolLinking from '@/components/ToolLinking';
 import GeographicGrouping from '@/components/GeographicGrouping';
 import ServiceRecommendations from '@/components/ServiceRecommendations';
+import EnrollmentTimeline from '@/components/EnrollmentTimeline';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -456,6 +457,15 @@ export default function MedicareAdvantagePage() {
           maxRecommendations={6}
           showMatchScores={true}
           showAlternatives={true}
+        />
+
+        {/* Enrollment Timeline */}
+        <EnrollmentTimeline 
+          userContext="medicare-advantage"
+          showActiveOnly={false}
+          maxPeriods={6}
+          showCountdown={true}
+          layout="timeline"
         />
 
         {/* Geographic Grouping */}
