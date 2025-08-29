@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ResourceLinking from '@/components/ResourceLinking';
 
 export const metadata: Metadata = {
   title: 'Medicare Enrollment Periods Explained - El-Mag Insurance',
@@ -338,6 +339,16 @@ export default function EnrollmentPeriodsExplainedPage() {
               </div>
             </div>
           </section>
+
+          {/* Resource Linking */}
+          <ResourceLinking 
+            currentResource="enrollment-periods-explained"
+            currentCategory="Enrollment"
+            userContext="general"
+            showTools={true}
+            maxResources={4}
+            maxTools={3}
+          />
 
           {/* Call to Action */}
           <section className="bg-gray-900 text-white rounded-xl p-8 text-center">

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import RelatedServices from '@/components/RelatedServices';
 import ResourceLinks from '@/components/ResourceLinks';
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
+import ResourceLinking from '@/components/ResourceLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -435,11 +436,21 @@ export default function MedicareAdvantagePage() {
             </div>
           </section>
 
-          {/* Cross-Service Recommendations */}
-          <CrossServiceRecommendations 
-            currentService="medicare-advantage"
-            showAgeBased={true}
-          />
+                  {/* Educational Resources */}
+        <ResourceLinking 
+          currentResource=""
+          currentCategory=""
+          userContext="medicare-advantage"
+          showTools={true}
+          maxResources={4}
+          maxTools={3}
+        />
+
+        {/* Cross-Service Recommendations */}
+        <CrossServiceRecommendations
+          currentService="medicare-advantage"
+          showAgeBased={true}
+        />
 
           {/* Resource Links Section */}
           <ResourceLinks 

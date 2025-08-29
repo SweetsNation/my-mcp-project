@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ResourceLinking from '@/components/ResourceLinking';
 
 export const metadata: Metadata = {
   title: 'Medicare Advantage vs Original Medicare: Complete Comparison - El-Mag Insurance',
@@ -532,6 +533,16 @@ export default function MedicareAdvantageVsOriginalPage() {
               </p>
             </div>
           </section>
+
+          {/* Resource Linking */}
+          <ResourceLinking 
+            currentResource="medicare-advantage-vs-original"
+            currentCategory="Comparison"
+            userContext="general"
+            showTools={true}
+            maxResources={4}
+            maxTools={3}
+          />
 
           {/* Call to Action */}
           <section className="bg-gray-900 text-white rounded-xl p-8 text-center">

@@ -4,6 +4,7 @@ import RelatedServices from '@/components/RelatedServices'
 import ResourceLinks from '@/components/ResourceLinks'
 import ServiceComparison from '@/components/ServiceComparison'
 import CrossServiceRecommendations from '@/components/CrossServiceRecommendations'
+import ResourceLinking from '@/components/ResourceLinking'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -333,8 +334,18 @@ export default function HealthInsuranceMarketplacePage() {
           showCTA={true}
         />
 
+                {/* Educational Resources */}
+        <ResourceLinking 
+          currentResource=""
+          currentCategory=""
+          userContext="health-marketplace"
+          showTools={true}
+          maxResources={4}
+          maxTools={3}
+        />
+
         {/* Cross-Service Recommendations */}
-        <CrossServiceRecommendations 
+        <CrossServiceRecommendations
           currentService="health-marketplace"
           showAgeBased={true}
         />

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ResourceLinking from '@/components/ResourceLinking';
 
 export const metadata: Metadata = {
   title: 'Medicare Resources & Education - El-Mag Insurance',
@@ -217,6 +218,16 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
+
+      {/* Enhanced Resource Linking */}
+      <ResourceLinking 
+        currentResource=""
+        currentCategory=""
+        userContext="general"
+        showTools={true}
+        maxResources={6}
+        maxTools={6}
+      />
 
       {/* Newsletter Signup */}
       <section className="py-16 bg-gray-900 text-white">
