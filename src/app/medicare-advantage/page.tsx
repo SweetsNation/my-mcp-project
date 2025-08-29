@@ -8,6 +8,7 @@ import ToolLinking from '@/components/ToolLinking';
 import GeographicGrouping from '@/components/GeographicGrouping';
 import ServiceRecommendations from '@/components/ServiceRecommendations';
 import EnrollmentTimeline from '@/components/EnrollmentTimeline';
+import TeamMemberLinking from '@/components/TeamMemberLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -490,6 +491,20 @@ export default function MedicareAdvantagePage() {
         <CrossServiceRecommendations
           currentService="medicare-advantage"
           showAgeBased={true}
+        />
+
+        {/* Team Member Linking */}
+        <TeamMemberLinking
+          userContext="medicare-advantage"
+          userAge={65}
+          showAvailability={true}
+          maxMembers={3}
+          showRatings={true}
+          showResponseTime={true}
+          layout="grid"
+          showSpecializations={true}
+          showLanguages={true}
+          showStates={true}
         />
 
           {/* Resource Links Section */}

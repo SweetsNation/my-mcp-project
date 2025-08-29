@@ -9,6 +9,7 @@ import ToolLinking from '@/components/ToolLinking'
 import GeographicGrouping from '@/components/GeographicGrouping'
 import ServiceRecommendations from '@/components/ServiceRecommendations'
 import EnrollmentTimeline from '@/components/EnrollmentTimeline'
+import TeamMemberLinking from '@/components/TeamMemberLinking'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -533,6 +534,20 @@ export default function MedicareSupplementPlanGPage() {
         <CrossServiceRecommendations
           currentService="medicare-supplement"
           showAgeBased={true}
+        />
+
+        {/* Team Member Linking */}
+        <TeamMemberLinking
+          userContext="medicare-supplement"
+          userAge={65}
+          showAvailability={true}
+          maxMembers={3}
+          showRatings={true}
+          showResponseTime={true}
+          layout="grid"
+          showSpecializations={true}
+          showLanguages={true}
+          showStates={true}
         />
 
         {/* Resource Links Section */}
