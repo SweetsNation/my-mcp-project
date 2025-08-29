@@ -59,6 +59,12 @@ export default function Navigation() {
                 Resources
               </Link>
               <Link 
+                href="/enrollment-timeline" 
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Timeline
+              </Link>
+              <Link 
                 href="/portal" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
               >
@@ -126,6 +132,20 @@ export default function Navigation() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact
+              </Link>
+              <Link
+                href="/resources"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resources
+              </Link>
+              <Link
+                href="/enrollment-timeline"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Timeline
               </Link>
             </div>
           </div>
