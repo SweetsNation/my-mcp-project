@@ -1,6 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { trackBlogArticleClick, trackBlogSectionView, trackBlogCTAClick } from '@/lib/analytics';
+import BlogSearch from './BlogSearch';
+import RelatedTags from './RelatedTags';
 
 interface BlogPost {
   id: string;
@@ -17,6 +20,7 @@ interface BlogPost {
   hasVideo?: boolean;
   hasCalculator?: boolean;
   hasChecklist?: boolean;
+  tags?: string[];
 }
 
 interface BlogPostLinkingProps {
@@ -24,6 +28,7 @@ interface BlogPostLinkingProps {
   currentPostSlug?: string;
   maxPosts?: number;
   layout?: 'grid' | 'list';
+  showSearch?: boolean;
 }
 
 const BLOG_POSTS: BlogPost[] = [
@@ -41,7 +46,8 @@ const BLOG_POSTS: BlogPost[] = [
     rating: 4.8,
     hasVideo: true,
     hasCalculator: true,
-    hasChecklist: true
+    hasChecklist: true,
+    tags: ['florida', 'miami-dade', 'bilingual', 'spanish', 'hispanic', 'subsidies', 'marketplace', 'uninsured', 'county-specific', 'enrollment-guide']
   },
   {
     id: 'harris-county-health-insurance-guide',
@@ -56,7 +62,8 @@ const BLOG_POSTS: BlogPost[] = [
     insuranceType: ['health-marketplace'],
     rating: 4.7,
     hasCalculator: true,
-    hasChecklist: true
+    hasChecklist: true,
+    tags: ['texas', 'harris-county', 'houston', 'marketplace', 'subsidies', 'uninsured', 'county-specific', 'enrollment-guide', 'healthcare-access']
   },
   {
     id: 'medicare-advantage-vs-original',
@@ -118,6 +125,216 @@ const BLOG_POSTS: BlogPost[] = [
     hasVideo: true,
     hasCalculator: true,
     hasChecklist: true
+  },
+  // Medicare Supplement Articles
+  {
+    id: 'medicare-supplement-plan-f-vs-plan-g',
+    title: 'Medicare Supplement Plan F vs Plan G: Complete Comparison Guide 2025',
+    slug: 'medicare-supplement-plan-f-vs-plan-g',
+    excerpt: 'Detailed comparison of Medicare Supplement Plan F and Plan G, including costs, benefits, and which plan is right for you in 2025.',
+    category: ['Medicare', 'Medicare Supplement'],
+    publishDate: '2025-01-20',
+    readTime: '11 min read',
+    author: 'Eric Salinas',
+    featured: true,
+    insuranceType: ['medicare-supplement'],
+    rating: 4.9,
+    hasVideo: true,
+    hasCalculator: true,
+    hasChecklist: true
+  },
+  {
+    id: 'medicare-supplement-plan-n-guide',
+    title: 'Medicare Supplement Plan N: Affordable Medigap Coverage Explained',
+    slug: 'medicare-supplement-plan-n-guide',
+    excerpt: 'Complete guide to Medicare Supplement Plan N, including benefits, copays, and why it might be the most cost-effective Medigap option.',
+    category: ['Medicare', 'Medicare Supplement'],
+    publishDate: '2025-01-18',
+    readTime: '9 min read',
+    author: 'Magdalena Salinas',
+    featured: false,
+    insuranceType: ['medicare-supplement'],
+    rating: 4.7,
+    hasVideo: false,
+    hasCalculator: true,
+    hasChecklist: true
+  },
+  {
+    id: 'medigap-open-enrollment-guide',
+    title: 'Medigap Open Enrollment: When and How to Apply for Medicare Supplement',
+    slug: 'medigap-open-enrollment-guide',
+    excerpt: 'Essential guide to Medigap Open Enrollment Period, including timeline, guaranteed issue rights, and how to avoid medical underwriting.',
+    category: ['Medicare', 'Enrollment'],
+    publishDate: '2025-01-16',
+    readTime: '10 min read',
+    author: 'Yaissa Acosta',
+    featured: false,
+    insuranceType: ['medicare-supplement'],
+    rating: 4.8,
+    hasVideo: true,
+    hasCalculator: false,
+    hasChecklist: true
+  },
+  {
+    id: 'medicare-supplement-costs-premiums',
+    title: 'Medicare Supplement Insurance Costs: Understanding Medigap Premiums',
+    slug: 'medicare-supplement-costs-premiums',
+    excerpt: 'Comprehensive guide to Medicare Supplement insurance costs, premium pricing methods, and factors that affect Medigap rates.',
+    category: ['Medicare', 'Medicare Supplement'],
+    publishDate: '2025-01-14',
+    readTime: '13 min read',
+    author: 'Junior Goulbourne',
+    featured: false,
+    insuranceType: ['medicare-supplement'],
+    rating: 4.6,
+    hasVideo: false,
+    hasCalculator: true,
+    hasChecklist: false
+  },
+  {
+    id: 'medicare-supplement-plan-c-discontinued',
+    title: 'Medicare Supplement Plan C Discontinued: What You Need to Know',
+    slug: 'medicare-supplement-plan-c-discontinued',
+    excerpt: 'Important information about Medicare Supplement Plan C discontinuation, grandfather provisions, and alternative Medigap options.',
+    category: ['Medicare', 'Medicare Supplement'],
+    publishDate: '2025-01-12',
+    readTime: '8 min read',
+    author: 'Marcia Cordero',
+    featured: false,
+    insuranceType: ['medicare-supplement'],
+    rating: 4.5,
+    hasVideo: false,
+    hasCalculator: false,
+    hasChecklist: true
+  },
+  {
+    id: 'medicare-supplement-guaranteed-issue-rights',
+    title: 'Medicare Supplement Guaranteed Issue Rights: When You Can\'t Be Denied',
+    slug: 'medicare-supplement-guaranteed-issue-rights',
+    excerpt: 'Complete guide to Medicare Supplement guaranteed issue rights, including qualifying situations and protected enrollment periods.',
+    category: ['Medicare', 'Medicare Supplement'],
+    publishDate: '2025-01-09',
+    readTime: '12 min read',
+    author: 'Elsa Galicia-Lona',
+    featured: true,
+    insuranceType: ['medicare-supplement'],
+    rating: 4.8,
+    hasVideo: true,
+    hasCalculator: false,
+    hasChecklist: true
+  },
+  // Healthcare Marketplace Articles
+  {
+    id: 'health-insurance-marketplace-2025-guide',
+    title: 'Health Insurance Marketplace 2025: Complete Enrollment Guide',
+    slug: 'health-insurance-marketplace-2025-guide',
+    excerpt: 'Comprehensive guide to the Health Insurance Marketplace for 2025, including plan types, enrollment periods, and subsidy eligibility.',
+    category: ['Health Insurance', 'ACA Marketplace'],
+    publishDate: '2025-01-22',
+    readTime: '16 min read',
+    author: 'Eric Salinas',
+    featured: true,
+    insuranceType: ['health-marketplace'],
+    rating: 4.9,
+    hasVideo: true,
+    hasCalculator: true,
+    hasChecklist: true
+  },
+  {
+    id: 'bronze-vs-silver-health-plans',
+    title: 'Bronze vs Silver Health Insurance Plans: Which Should You Choose?',
+    slug: 'bronze-vs-silver-health-plans',
+    excerpt: 'Detailed comparison of Bronze and Silver health insurance plans, including costs, coverage, and decision factors for choosing the right tier.',
+    category: ['Health Insurance', 'Comparison Guides'],
+    publishDate: '2025-01-19',
+    readTime: '10 min read',
+    author: 'Magdalena Salinas',
+    featured: true,
+    insuranceType: ['health-marketplace'],
+    rating: 4.8,
+    hasVideo: true,
+    hasCalculator: true,
+    hasChecklist: false
+  },
+  {
+    id: 'special-enrollment-period-marketplace',
+    title: 'Special Enrollment Period: When You Can Enroll Outside Open Enrollment',
+    slug: 'special-enrollment-period-marketplace',
+    excerpt: 'Complete guide to Special Enrollment Periods for Health Insurance Marketplace, including qualifying life events and documentation requirements.',
+    category: ['Health Insurance', 'Enrollment'],
+    publishDate: '2025-01-17',
+    readTime: '11 min read',
+    author: 'Yaissa Acosta',
+    featured: false,
+    insuranceType: ['health-marketplace'],
+    rating: 4.7,
+    hasVideo: false,
+    hasCalculator: false,
+    hasChecklist: true
+  },
+  {
+    id: 'health-insurance-deductibles-explained',
+    title: 'Health Insurance Deductibles Explained: What You Need to Know',
+    slug: 'health-insurance-deductibles-explained',
+    excerpt: 'Comprehensive guide to health insurance deductibles, including how they work, different types, and impact on your healthcare costs.',
+    category: ['Health Insurance', 'ACA Marketplace'],
+    publishDate: '2025-01-13',
+    readTime: '9 min read',
+    author: 'Junior Goulbourne',
+    featured: false,
+    insuranceType: ['health-marketplace'],
+    rating: 4.6,
+    hasVideo: true,
+    hasCalculator: true,
+    hasChecklist: false
+  },
+  {
+    id: 'marketplace-catastrophic-health-plans',
+    title: 'Catastrophic Health Insurance Plans: Coverage for Young Adults',
+    slug: 'marketplace-catastrophic-health-plans',
+    excerpt: 'Complete guide to catastrophic health insurance plans, including eligibility, benefits, costs, and who should consider this coverage.',
+    category: ['Health Insurance', 'ACA Marketplace'],
+    publishDate: '2025-01-11',
+    readTime: '8 min read',
+    author: 'Marcia Cordero',
+    featured: false,
+    insuranceType: ['health-marketplace'],
+    rating: 4.4,
+    hasVideo: false,
+    hasCalculator: false,
+    hasChecklist: true
+  },
+  {
+    id: 'health-savings-account-hsa-guide',
+    title: 'Health Savings Account (HSA) Guide: Triple Tax Advantage for Healthcare',
+    slug: 'health-savings-account-hsa-guide',
+    excerpt: 'Comprehensive HSA guide covering eligibility, contribution limits, investment options, and how to maximize tax benefits for healthcare expenses.',
+    category: ['Health Insurance', 'HSA'],
+    publishDate: '2025-01-07',
+    readTime: '14 min read',
+    author: 'Elsa Galicia-Lona',
+    featured: true,
+    insuranceType: ['health-marketplace'],
+    rating: 4.9,
+    hasVideo: true,
+    hasCalculator: true,
+    hasChecklist: true
+  },
+  {
+    id: 'short-term-health-insurance-guide',
+    title: 'Short-Term Health Insurance: Temporary Coverage Options and Limitations',
+    slug: 'short-term-health-insurance-guide',
+    excerpt: 'Complete guide to short-term health insurance, including coverage gaps, limitations, and when temporary health insurance makes sense.',
+    category: ['Health Insurance', 'Short-Term'],
+    publishDate: '2025-01-04',
+    readTime: '10 min read',
+    author: 'Eric Salinas',
+    featured: false,
+    insuranceType: ['health-marketplace'],
+    rating: 4.5,
+    hasVideo: false,
+    hasCalculator: false,
+    hasChecklist: true
   }
 ];
 
@@ -129,7 +346,9 @@ const getCategoryColor = (category: string) => {
     'Enrollment': 'bg-red-100 text-red-800',
     'ACA Marketplace': 'bg-indigo-100 text-indigo-800',
     'Comparison Guides': 'bg-yellow-100 text-yellow-800',
-    'Medicare Supplement': 'bg-purple-100 text-purple-800'
+    'Medicare Supplement': 'bg-purple-100 text-purple-800',
+    'HSA': 'bg-teal-100 text-teal-800',
+    'Short-Term': 'bg-pink-100 text-pink-800'
   };
   return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800';
 };
@@ -138,7 +357,8 @@ export default function BlogPostLinking({
   userContext = 'general',
   currentPostSlug,
   maxPosts = 3,
-  layout = 'grid'
+  layout = 'grid',
+  showSearch = false
 }: BlogPostLinkingProps) {
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
@@ -171,7 +391,19 @@ export default function BlogPostLinking({
   useEffect(() => {
     const recommendations = getRecommendations();
     setFilteredPosts(recommendations);
+    
+    // Track blog section view
+    trackBlogSectionView(
+      'related_articles',
+      userContext,
+      recommendations.length
+    );
   }, [userContext, currentPostSlug, maxPosts]);
+
+  // Show search component if requested
+  if (showSearch) {
+    return <BlogSearch blogPosts={BLOG_POSTS} showFilters={true} maxResults={50} />;
+  }
 
   if (filteredPosts.length === 0) {
     return (
@@ -204,7 +436,7 @@ export default function BlogPostLinking({
 
         {layout === 'grid' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map((post) => (
+            {filteredPosts.map((post, index) => (
               <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -223,7 +455,20 @@ export default function BlogPostLinking({
                   </div>
 
                   <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-blue-600 transition-colors">
+                    <Link 
+                      href={`/blog/${post.slug}`} 
+                      className="hover:text-blue-600 transition-colors"
+                      onClick={() => {
+                        trackBlogArticleClick(
+                          post.id,
+                          post.title,
+                          post.category[0],
+                          post.insuranceType[0],
+                          userContext,
+                          index + 1
+                        );
+                      }}
+                    >
                       {post.title}
                     </Link>
                   </h3>
@@ -270,6 +515,16 @@ export default function BlogPostLinking({
                   <Link
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+                    onClick={() => {
+                      trackBlogArticleClick(
+                        post.id,
+                        post.title,
+                        post.category[0],
+                        post.insuranceType[0],
+                        userContext,
+                        index + 1
+                      );
+                    }}
                   >
                     Read Article →
                   </Link>
@@ -341,6 +596,9 @@ export default function BlogPostLinking({
           <Link
             href="/blog"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+            onClick={() => {
+              trackBlogCTAClick('related_article', 'blog-section', 'footer');
+            }}
           >
             View All Articles
           </Link>

@@ -154,3 +154,125 @@ export const trackPageScroll = (percentage: number) => {
     console.warn('Failed to track page scroll:', error);
   }
 };
+
+// Blog article engagement tracking
+export const trackBlogArticleClick = (
+  articleId: string,
+  articleTitle: string,
+  category: string,
+  insuranceType: string,
+  userContext?: string,
+  position?: number
+) => {
+  try {
+    event('blog_article_click', {
+      event_category: 'content',
+      event_label: `blog_${category.toLowerCase()}`,
+      article_id: articleId,
+      article_title: articleTitle,
+      article_category: category,
+      insurance_type: insuranceType,
+      user_context: userContext || 'general',
+      article_position: position || 0,
+    });
+  } catch (error) {
+    console.warn('Failed to track blog article click:', error);
+  }
+};
+
+// Blog section engagement
+export const trackBlogSectionView = (
+  sectionType: 'related_articles' | 'featured_content' | 'category_filter',
+  userContext?: string,
+  articlesShown?: number
+) => {
+  try {
+    event('blog_section_view', {
+      event_category: 'content',
+      event_label: `blog_${sectionType}`,
+      section_type: sectionType,
+      user_context: userContext || 'general',
+      articles_shown: articlesShown || 0,
+    });
+  } catch (error) {
+    console.warn('Failed to track blog section view:', error);
+  }
+};
+
+// Blog article reading engagement
+export const trackBlogArticleEngagement = (
+  articleId: string,
+  engagementType: 'start_reading' | 'finish_reading' | 'share' | 'bookmark',
+  timeSpent?: number,
+  scrollPercentage?: number
+) => {
+  try {
+    event('blog_article_engagement', {
+      event_category: 'content',
+      event_label: `blog_${engagementType}`,
+      article_id: articleId,
+      engagement_type: engagementType,
+      time_spent: timeSpent || 0,
+      scroll_percentage: scrollPercentage || 0,
+    });
+  } catch (error) {
+    console.warn('Failed to track blog article engagement:', error);
+  }
+};
+
+// Blog CTA interactions
+export const trackBlogCTAClick = (
+  ctaType: 'contact' | 'phone' | 'quote' | 'related_article',
+  articleId: string,
+  ctaPosition: 'header' | 'inline' | 'footer' | 'sidebar'
+) => {
+  try {
+    event('blog_cta_click', {
+      event_category: 'conversion',
+      event_label: `blog_cta_${ctaType}`,
+      cta_type: ctaType,
+      article_id: articleId,
+      cta_position: ctaPosition,
+    });
+  } catch (error) {
+    console.warn('Failed to track blog CTA click:', error);
+  }
+};
+
+// Blog interactive content usage
+export const trackBlogInteractiveContent = (
+  contentType: 'calculator' | 'checklist' | 'video' | 'quiz',
+  articleId: string,
+  interactionData?: Record<string, any>
+) => {
+  try {
+    event('blog_interactive_content', {
+      event_category: 'engagement',
+      event_label: `blog_${contentType}`,
+      content_type: contentType,
+      article_id: articleId,
+      ...interactionData,
+    });
+  } catch (error) {
+    console.warn('Failed to track blog interactive content:', error);
+  }
+};
+
+// Blog search and filtering
+export const trackBlogFilter = (
+  filterType: 'category' | 'insurance_type' | 'author' | 'date',
+  filterValue: string,
+  resultCount: number
+) => {
+  try {
+    event('blog_filter_used', {
+      event_category: 'engagement',
+      event_label: `blog_filter_${filterType}`,
+      filter_type: filterType,
+      filter_value: filterValue,
+      result_count: resultCount,
+    });
+  } catch (error) {
+    console.warn('Failed to track blog filter:', error);
+  }
+};
