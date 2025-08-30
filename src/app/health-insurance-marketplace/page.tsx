@@ -13,6 +13,7 @@ import TeamMemberLinking from '@/components/TeamMemberLinking'
 import BlogPostLinking from '@/components/BlogPostLinking'
 import FAQCrossReferencing from '@/components/FAQCrossReferencing'
 import SuccessStoryLinking from '@/components/SuccessStoryLinking'
+import ContactFormLinking from '@/components/ContactFormLinking'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -431,6 +432,7 @@ export default function HealthInsuranceMarketplacePage() {
         <SuccessStoryLinking
           userContext="health-marketplace"
           currentState="Texas"
+          userAge={35}
           maxStories={6}
           layout="grid"
           showFilters={true}
@@ -440,6 +442,25 @@ export default function HealthInsuranceMarketplacePage() {
           showGeographic={true}
           showInteractive={true}
           showRelatedStories={true}
+        />
+
+        {/* Contact Form Linking to Specialists */}
+        <ContactFormLinking
+          userContext="health-marketplace"
+          currentState="Texas"
+          userAge={35}
+          userLanguage="English"
+          maxSpecialists={6}
+          layout="grid"
+          showFilters={true}
+          showCategories={true}
+          showRatings={true}
+          showAvailability={true}
+          showResponseTime={true}
+          showAchievements={true}
+          showConsultationInfo={true}
+          showEmergencyContact={false}
+          showFreeConsultation={true}
         />
 
         {/* Resource Links Section */}

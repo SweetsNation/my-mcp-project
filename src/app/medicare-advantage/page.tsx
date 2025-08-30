@@ -12,6 +12,7 @@ import TeamMemberLinking from '@/components/TeamMemberLinking';
 import BlogPostLinking from '@/components/BlogPostLinking';
 import FAQCrossReferencing from '@/components/FAQCrossReferencing';
 import SuccessStoryLinking from '@/components/SuccessStoryLinking';
+import ContactFormLinking from '@/components/ContactFormLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -542,6 +543,24 @@ export default function MedicareAdvantagePage() {
           showGeographic={true}
           showInteractive={true}
           showRelatedStories={true}
+        />
+
+        {/* Contact Form Linking to Specialists */}
+        <ContactFormLinking
+          userContext="medicare-advantage"
+          currentState="Georgia"
+          userAge={65}
+          maxSpecialists={6}
+          layout="grid"
+          showFilters={true}
+          showCategories={true}
+          showRatings={true}
+          showAvailability={true}
+          showResponseTime={true}
+          showAchievements={true}
+          showConsultationInfo={true}
+          showEmergencyContact={true}
+          showFreeConsultation={true}
         />
 
           {/* Resource Links Section */}

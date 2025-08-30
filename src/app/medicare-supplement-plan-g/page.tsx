@@ -13,6 +13,7 @@ import TeamMemberLinking from '@/components/TeamMemberLinking'
 import BlogPostLinking from '@/components/BlogPostLinking'
 import FAQCrossReferencing from '@/components/FAQCrossReferencing'
 import SuccessStoryLinking from '@/components/SuccessStoryLinking'
+import ContactFormLinking from '@/components/ContactFormLinking'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -585,6 +586,24 @@ export default function MedicareSupplementPlanGPage() {
           showGeographic={true}
           showInteractive={true}
           showRelatedStories={true}
+        />
+
+        {/* Contact Form Linking to Specialists */}
+        <ContactFormLinking
+          userContext="medicare-supplement"
+          currentState="Virginia"
+          userAge={65}
+          maxSpecialists={6}
+          layout="grid"
+          showFilters={true}
+          showCategories={true}
+          showRatings={true}
+          showAvailability={true}
+          showResponseTime={true}
+          showAchievements={true}
+          showConsultationInfo={true}
+          showEmergencyContact={true}
+          showFreeConsultation={true}
         />
 
         {/* Resource Links Section */}
