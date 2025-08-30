@@ -12,6 +12,7 @@ import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 import TeamMemberLinking from '@/components/TeamMemberLinking'
 import BlogPostLinking from '@/components/BlogPostLinking'
 import FAQCrossReferencing from '@/components/FAQCrossReferencing'
+import SuccessStoryLinking from '@/components/SuccessStoryLinking'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -424,6 +425,21 @@ export default function HealthInsuranceMarketplacePage() {
           showHelpfulCount={true}
           showInteractive={true}
           showCrossReferences={true}
+        />
+
+        {/* Success Story Linking */}
+        <SuccessStoryLinking
+          userContext="health-marketplace"
+          currentState="Texas"
+          maxStories={6}
+          layout="grid"
+          showFilters={true}
+          showCategories={true}
+          showSavings={true}
+          showTeamMembers={true}
+          showGeographic={true}
+          showInteractive={true}
+          showRelatedStories={true}
         />
 
         {/* Resource Links Section */}

@@ -11,6 +11,7 @@ import EnrollmentTimeline from '@/components/EnrollmentTimeline';
 import TeamMemberLinking from '@/components/TeamMemberLinking';
 import BlogPostLinking from '@/components/BlogPostLinking';
 import FAQCrossReferencing from '@/components/FAQCrossReferencing';
+import SuccessStoryLinking from '@/components/SuccessStoryLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -526,6 +527,21 @@ export default function MedicareAdvantagePage() {
           showHelpfulCount={true}
           showInteractive={true}
           showCrossReferences={true}
+        />
+
+        {/* Success Story Linking */}
+        <SuccessStoryLinking
+          userContext="medicare-advantage"
+          currentState="Georgia"
+          maxStories={6}
+          layout="grid"
+          showFilters={true}
+          showCategories={true}
+          showSavings={true}
+          showTeamMembers={true}
+          showGeographic={true}
+          showInteractive={true}
+          showRelatedStories={true}
         />
 
           {/* Resource Links Section */}

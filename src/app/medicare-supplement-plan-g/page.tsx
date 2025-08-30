@@ -12,6 +12,7 @@ import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 import TeamMemberLinking from '@/components/TeamMemberLinking'
 import BlogPostLinking from '@/components/BlogPostLinking'
 import FAQCrossReferencing from '@/components/FAQCrossReferencing'
+import SuccessStoryLinking from '@/components/SuccessStoryLinking'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -569,6 +570,21 @@ export default function MedicareSupplementPlanGPage() {
           showHelpfulCount={true}
           showInteractive={true}
           showCrossReferences={true}
+        />
+
+        {/* Success Story Linking */}
+        <SuccessStoryLinking
+          userContext="medicare-supplement"
+          currentState="Virginia"
+          maxStories={6}
+          layout="grid"
+          showFilters={true}
+          showCategories={true}
+          showSavings={true}
+          showTeamMembers={true}
+          showGeographic={true}
+          showInteractive={true}
+          showRelatedStories={true}
         />
 
         {/* Resource Links Section */}
