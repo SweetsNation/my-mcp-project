@@ -9,6 +9,7 @@ import GeographicGrouping from '@/components/GeographicGrouping';
 import ServiceRecommendations from '@/components/ServiceRecommendations';
 import EnrollmentTimeline from '@/components/EnrollmentTimeline';
 import TeamMemberLinking from '@/components/TeamMemberLinking';
+import BlogPostLinking from '@/components/BlogPostLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -505,6 +506,13 @@ export default function MedicareAdvantagePage() {
           showSpecializations={true}
           showLanguages={true}
           showStates={true}
+        />
+
+        {/* Blog Post Linking */}
+        <BlogPostLinking
+          userContext="medicare-advantage"
+          maxPosts={3}
+          layout="grid"
         />
 
           {/* Resource Links Section */}

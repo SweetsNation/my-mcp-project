@@ -10,6 +10,7 @@ import GeographicGrouping from '@/components/GeographicGrouping'
 import ServiceRecommendations from '@/components/ServiceRecommendations'
 import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 import TeamMemberLinking from '@/components/TeamMemberLinking'
+import BlogPostLinking from '@/components/BlogPostLinking'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -403,6 +404,13 @@ export default function HealthInsuranceMarketplacePage() {
           showSpecializations={true}
           showLanguages={true}
           showStates={true}
+        />
+
+        {/* Blog Post Linking */}
+        <BlogPostLinking
+          userContext="health-marketplace"
+          maxPosts={3}
+          layout="grid"
         />
 
         {/* Resource Links Section */}

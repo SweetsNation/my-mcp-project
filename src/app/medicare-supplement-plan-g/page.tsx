@@ -10,6 +10,7 @@ import GeographicGrouping from '@/components/GeographicGrouping'
 import ServiceRecommendations from '@/components/ServiceRecommendations'
 import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 import TeamMemberLinking from '@/components/TeamMemberLinking'
+import BlogPostLinking from '@/components/BlogPostLinking'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -548,6 +549,13 @@ export default function MedicareSupplementPlanGPage() {
           showSpecializations={true}
           showLanguages={true}
           showStates={true}
+        />
+
+        {/* Blog Post Linking */}
+        <BlogPostLinking
+          userContext="medicare-supplement"
+          maxPosts={3}
+          layout="grid"
         />
 
         {/* Resource Links Section */}
