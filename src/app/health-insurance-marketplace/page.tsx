@@ -11,6 +11,7 @@ import ServiceRecommendations from '@/components/ServiceRecommendations'
 import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 import TeamMemberLinking from '@/components/TeamMemberLinking'
 import BlogPostLinking from '@/components/BlogPostLinking'
+import FAQCrossReferencing from '@/components/FAQCrossReferencing'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -411,6 +412,18 @@ export default function HealthInsuranceMarketplacePage() {
           userContext="health-marketplace"
           maxPosts={3}
           layout="grid"
+        />
+
+        {/* FAQ Cross-Referencing */}
+        <FAQCrossReferencing
+          userContext="health-marketplace"
+          maxFAQs={5}
+          layout="accordion"
+          showCategories={true}
+          showDifficulty={false}
+          showHelpfulCount={true}
+          showInteractive={true}
+          showCrossReferences={true}
         />
 
         {/* Resource Links Section */}

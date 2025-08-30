@@ -10,6 +10,7 @@ import ServiceRecommendations from '@/components/ServiceRecommendations';
 import EnrollmentTimeline from '@/components/EnrollmentTimeline';
 import TeamMemberLinking from '@/components/TeamMemberLinking';
 import BlogPostLinking from '@/components/BlogPostLinking';
+import FAQCrossReferencing from '@/components/FAQCrossReferencing';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -513,6 +514,18 @@ export default function MedicareAdvantagePage() {
           userContext="medicare-advantage"
           maxPosts={3}
           layout="grid"
+        />
+
+        {/* FAQ Cross-Referencing */}
+        <FAQCrossReferencing
+          userContext="medicare-advantage"
+          maxFAQs={5}
+          layout="accordion"
+          showCategories={true}
+          showDifficulty={false}
+          showHelpfulCount={true}
+          showInteractive={true}
+          showCrossReferences={true}
         />
 
           {/* Resource Links Section */}

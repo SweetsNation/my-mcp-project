@@ -11,6 +11,7 @@ import ServiceRecommendations from '@/components/ServiceRecommendations'
 import EnrollmentTimeline from '@/components/EnrollmentTimeline'
 import TeamMemberLinking from '@/components/TeamMemberLinking'
 import BlogPostLinking from '@/components/BlogPostLinking'
+import FAQCrossReferencing from '@/components/FAQCrossReferencing'
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan | $240 Deductible Only',
@@ -556,6 +557,18 @@ export default function MedicareSupplementPlanGPage() {
           userContext="medicare-supplement"
           maxPosts={3}
           layout="grid"
+        />
+
+        {/* FAQ Cross-Referencing */}
+        <FAQCrossReferencing
+          userContext="medicare-supplement"
+          maxFAQs={5}
+          layout="accordion"
+          showCategories={true}
+          showDifficulty={false}
+          showHelpfulCount={true}
+          showInteractive={true}
+          showCrossReferences={true}
         />
 
         {/* Resource Links Section */}
