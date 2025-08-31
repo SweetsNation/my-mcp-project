@@ -76,11 +76,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/market-intelligence`,
+      url: `${baseUrl}/medicare-supplement`,
       lastModified: '2025-01-22',
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/social-security-analysis`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/supplemental-insurance`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+
     {
       url: `${baseUrl}/about`,
       lastModified: '2025-01-15',

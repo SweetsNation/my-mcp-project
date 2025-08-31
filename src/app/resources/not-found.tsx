@@ -69,11 +69,7 @@ export default function ResourcesNotFound() {
                     🔍 Plan Comparison Tool
                   </Link>
                 </li>
-                <li>
-                  <Link href="/market-intelligence" className="text-blue-600 hover:text-blue-800 hover:underline text-sm">
-                    📈 Market Intelligence
-                  </Link>
-                </li>
+
                 <li>
                   <Link href="/contact" className="text-blue-600 hover:text-blue-800 hover:underline text-sm">
                     👥 Talk to an Expert

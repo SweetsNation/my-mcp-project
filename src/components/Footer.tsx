@@ -33,11 +33,7 @@ export default function Footer() {
                   Medicare Advantage
                 </Link>
               </li>
-              <li>
-                <Link href="/market-intelligence" className="text-gray-300 hover:text-blue-400 transition-colors">
-                  Market Intelligence
-                </Link>
-              </li>
+
               <li>
                 <Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">
                   About Us
