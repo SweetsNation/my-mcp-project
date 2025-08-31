@@ -83,7 +83,7 @@ export default function Navigation() {
   const handleMouseLeave = () => {
     dropdownTimeoutRef.current = setTimeout(() => {
       setActiveDropdown(null);
-    }, 150); // Small delay to prevent flickering
+    }, 200); // Increased delay to give users time to move to submenu
   };
 
   const handleSubmenuClick = () => {
@@ -139,13 +139,15 @@ export default function Navigation() {
                   {/* Desktop Dropdown */}
                   {activeDropdown === item.title && (
                     <div 
-                      className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
+                      className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[100]"
+                      onMouseEnter={() => handleMouseEnter(item.title)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
-                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
                           onClick={handleSubmenuClick}
                         >
                           <div className="font-medium text-gray-900">{subItem.title}</div>
