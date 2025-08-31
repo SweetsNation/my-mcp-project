@@ -18,6 +18,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -72,6 +73,24 @@ export default function Navigation() {
     setActiveDropdown(activeDropdown === title ? null : title);
   };
 
+  const handleMouseEnter = (title: string) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setActiveDropdown(title);
+  };
+
+  const handleMouseLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 150); // Small delay to prevent flickering
+  };
+
+  const handleSubmenuClick = () => {
+    setActiveDropdown(null);
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,10 +114,15 @@ export default function Navigation() {
               
               {/* Dropdown Menus */}
               {menuItems.map((item) => (
-                <div key={item.title} className="relative" ref={dropdownRef}>
+                <div 
+                  key={item.title} 
+                  className="relative" 
+                  ref={dropdownRef}
+                  onMouseEnter={() => handleMouseEnter(item.title)}
+                  onMouseLeave={handleMouseLeave}
+                >
                   <button
                     onClick={() => toggleDropdown(item.title)}
-                    onMouseEnter={() => setActiveDropdown(item.title)}
                     className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                   >
                     {item.title}
@@ -116,13 +140,13 @@ export default function Navigation() {
                   {activeDropdown === item.title && (
                     <div 
                       className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
-                      onMouseLeave={() => setActiveDropdown(null)}
                     >
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
                           className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                          onClick={handleSubmenuClick}
                         >
                           <div className="font-medium text-gray-900">{subItem.title}</div>
                           {subItem.description && (
@@ -227,7 +251,7 @@ export default function Navigation() {
                           key={subItem.title}
                           href={subItem.href}
                           className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md"
-                          onClick={() => setIsMenuOpen(false)}
+                          onClick={handleSubmenuClick}
                         >
                           {subItem.title}
                         </Link>
