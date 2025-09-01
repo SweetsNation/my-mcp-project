@@ -87,6 +87,7 @@ export default function Navigation() {
   };
 
   const handleSubmenuClick = () => {
+    console.log('Submenu clicked!'); // Debug log
     setActiveDropdown(null);
     setIsMenuOpen(false);
   };
