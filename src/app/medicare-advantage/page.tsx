@@ -2,17 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import RelatedServices from '@/components/RelatedServices';
 import ResourceLinks from '@/components/ResourceLinks';
-import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
-import ResourceLinking from '@/components/ResourceLinking';
-import ToolLinking from '@/components/ToolLinking';
-import GeographicGrouping from '@/components/GeographicGrouping';
-import ServiceRecommendations from '@/components/ServiceRecommendations';
-import EnrollmentTimeline from '@/components/EnrollmentTimeline';
-import TeamMemberLinking from '@/components/TeamMemberLinking';
-import BlogPostLinking from '@/components/BlogPostLinking';
-import FAQCrossReferencing from '@/components/FAQCrossReferencing';
-import SuccessStoryLinking from '@/components/SuccessStoryLinking';
-import ContactFormLinking from '@/components/ContactFormLinking';
+// import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
+// import ResourceLinking from '@/components/ResourceLinking';
+// import ToolLinking from '@/components/ToolLinking';
+// import GeographicGrouping from '@/components/GeographicGrouping';
+// import ServiceRecommendations from '@/components/ServiceRecommendations';
+// import EnrollmentTimeline from '@/components/EnrollmentTimeline';
+// import TeamMemberLinking from '@/components/TeamMemberLinking';
+// import BlogPostLinking from '@/components/BlogPostLinking';
+// import FAQCrossReferencing from '@/components/FAQCrossReferencing';
+// import SuccessStoryLinking from '@/components/SuccessStoryLinking';
+// import ContactFormLinking from '@/components/ContactFormLinking';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -446,59 +446,59 @@ export default function MedicareAdvantagePage() {
           </section>
 
                   {/* Educational Resources */}
-        <ResourceLinking 
+        {/* ResourceLinking 
           currentResource=""
           currentCategory=""
           userContext="medicare-advantage"
           showTools={true}
           maxResources={4}
           maxTools={3}
-        />
+        /> */}
 
         {/* Service Recommendations */}
-        <ServiceRecommendations 
+        {/* ServiceRecommendations 
           userContext="medicare-advantage"
           showEligibilityCheck={true}
           maxRecommendations={6}
           showMatchScores={true}
           showAlternatives={true}
-        />
+        /> */}
 
         {/* Enrollment Timeline */}
-        <EnrollmentTimeline 
+        {/* EnrollmentTimeline 
           userContext="medicare-advantage"
           showActiveOnly={false}
           maxPeriods={6}
           showCountdown={true}
           layout="timeline"
-        />
+        /> */}
 
         {/* Geographic Grouping */}
-        <GeographicGrouping 
+        {/* GeographicGrouping 
           serviceType="medicare-advantage"
           showMarketData={true}
           layout="hierarchical"
           maxItems={15}
-        />
+        /> */}
 
         {/* Tool Linking */}
-        <ToolLinking 
+        {/* ToolLinking 
           currentTool=""
           userContext="medicare-advantage"
           showRelatedTools={true}
           maxTools={6}
           showFeatures={false}
           layout="featured"
-        />
+        /> */}
 
         {/* Cross-Service Recommendations */}
-        <CrossServiceRecommendations
+        {/* CrossServiceRecommendations
           currentService="medicare-advantage"
           showAgeBased={true}
-        />
+        /> */}
 
         {/* Team Member Linking */}
-        <TeamMemberLinking
+        {/* TeamMemberLinking
           userContext="medicare-advantage"
           userAge={65}
           showAvailability={true}
@@ -509,17 +509,17 @@ export default function MedicareAdvantagePage() {
           showSpecializations={true}
           showLanguages={true}
           showStates={true}
-        />
+        /> */}
 
         {/* Blog Post Linking */}
-        <BlogPostLinking
+        {/* BlogPostLinking
           userContext="medicare-advantage"
           maxPosts={3}
           layout="grid"
-        />
+        /> */}
 
         {/* FAQ Cross-Referencing */}
-        <FAQCrossReferencing
+        {/* FAQCrossReferencing
           userContext="medicare-advantage"
           maxFAQs={5}
           layout="accordion"
@@ -528,10 +528,10 @@ export default function MedicareAdvantagePage() {
           showHelpfulCount={true}
           showInteractive={true}
           showCrossReferences={true}
-        />
+        /> */}
 
         {/* Success Story Linking */}
-        <SuccessStoryLinking
+        {/* SuccessStoryLinking
           userContext="medicare-advantage"
           currentState="Georgia"
           maxStories={6}
@@ -543,10 +543,10 @@ export default function MedicareAdvantagePage() {
           showGeographic={true}
           showInteractive={true}
           showRelatedStories={true}
-        />
+        /> */}
 
         {/* Contact Form Linking to Specialists */}
-        <ContactFormLinking
+        {/* ContactFormLinking
           userContext="medicare-advantage"
           currentState="Georgia"
           userAge={65}
@@ -561,7 +561,7 @@ export default function MedicareAdvantagePage() {
           showConsultationInfo={true}
           showEmergencyContact={true}
           showFreeConsultation={true}
-        />
+        /> */}
 
           {/* Resource Links Section */}
           <ResourceLinks 
