@@ -17,10 +17,6 @@ interface MenuItem {
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const menuItems: MenuItem[] = [
     {
@@ -41,55 +37,19 @@ export default function Navigation() {
     }
   ];
 
-  // Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  // Close dropdown on escape key
-  useEffect(() => {
-    function handleEscape(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        setActiveDropdown(null);
-      }
-    }
-
-    document.addEventListener('keydown', handleEscape);
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, []);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const toggleDropdown = (title: string) => {
     setActiveDropdown(activeDropdown === title ? null : title);
   };
 
-  const handleMouseEnter = (title: string) => {
-    if (dropdownTimeoutRef.current) {
-      clearTimeout(dropdownTimeoutRef.current);
-    }
-    setActiveDropdown(title);
-  };
-
-  const handleMouseLeave = () => {
-    dropdownTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 200); // Increased delay to give users time to move to submenu
-  };
-
-  const handleSubmenuClick = () => {
-    console.log('Submenu clicked!'); // Debug log
+  const closeDropdown = () => {
     setActiveDropdown(null);
+  };
+
+  const closeMenu = () => {
     setIsMenuOpen(false);
+    setActiveDropdown(null);
   };
 
   return (
@@ -115,15 +75,10 @@ export default function Navigation() {
               
               {/* Dropdown Menus */}
               {menuItems.map((item) => (
-                <div 
-                  key={item.title} 
-                  className="relative" 
-                  ref={dropdownRef}
-                  onMouseEnter={() => handleMouseEnter(item.title)}
-                  onMouseLeave={handleMouseLeave}
-                >
+                <div key={item.title} className="relative">
                   <button
                     onClick={() => toggleDropdown(item.title)}
+                    onMouseEnter={() => setActiveDropdown(item.title)}
                     className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                   >
                     {item.title}
@@ -141,19 +96,14 @@ export default function Navigation() {
                   {activeDropdown === item.title && (
                     <div 
                       className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[100]"
-                      onMouseEnter={() => handleMouseEnter(item.title)}
-                      onMouseLeave={handleMouseLeave}
+                      onMouseLeave={closeDropdown}
                     >
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.title}
                           href={subItem.href}
                           className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
-                          onClick={(e) => {
-                            console.log('Direct click on:', subItem.title, 'href:', subItem.href);
-                            setActiveDropdown(null);
-                            setIsMenuOpen(false);
-                          }}
+                          onClick={closeDropdown}
                         >
                           <div className="font-medium text-gray-900">{subItem.title}</div>
                           {subItem.description && (
@@ -227,7 +177,7 @@ export default function Navigation() {
               <Link
                 href="/"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Home
               </Link>
@@ -258,7 +208,7 @@ export default function Navigation() {
                           key={subItem.title}
                           href={subItem.href}
                           className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md"
-                          onClick={handleSubmenuClick}
+                          onClick={closeMenu}
                         >
                           {subItem.title}
                         </Link>
@@ -271,35 +221,35 @@ export default function Navigation() {
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 About
               </Link>
               <Link
                 href="/contact"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Contact
               </Link>
               <Link
                 href="/resources"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Resources
               </Link>
               <Link
                 href="/enrollment-timeline"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Timeline
               </Link>
               <Link
                 href="/portal"
                 className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={closeMenu}
               >
                 Client Portal
               </Link>
