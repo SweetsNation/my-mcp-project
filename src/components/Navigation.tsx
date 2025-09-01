@@ -149,7 +149,11 @@ export default function Navigation() {
                           key={subItem.title}
                           href={subItem.href}
                           className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors cursor-pointer"
-                          onClick={handleSubmenuClick}
+                          onClick={(e) => {
+                            console.log('Direct click on:', subItem.title, 'href:', subItem.href);
+                            setActiveDropdown(null);
+                            setIsMenuOpen(false);
+                          }}
                         >
                           <div className="font-medium text-gray-900">{subItem.title}</div>
                           {subItem.description && (
