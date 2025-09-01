@@ -3,9 +3,25 @@ import Link from 'next/link';
 import SupplementalInsuranceAnalytics from '@/components/SupplementalInsuranceAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Supplemental Health Insurance 2025 | Accident, Critical Illness & Hospital Coverage | Free Quotes',
-  description: 'Get supplemental insurance to fill health coverage gaps. Accident insurance, critical illness plans, hospital indemnity, and dental/vision coverage. Compare quotes and enroll today - call 331-E-HEALTH.',
-  keywords: 'supplemental health insurance, accident insurance, critical illness insurance, hospital indemnity insurance, supplemental medical insurance, gap insurance coverage, additional health coverage, short-term medical insurance, voluntary benefits, supplemental insurance quotes, dental vision insurance, hospital coverage insurance, supplemental insurance plans',
+  title: 'Supplemental Health Insurance 2025 | Cancer Insurance Coverage | Accident Insurance for Families | Free Quotes',
+  description: 'Get supplemental health insurance to fill coverage gaps in high deductible health plans. Cancer insurance coverage, accident insurance for families, hospital indemnity plans, and critical illness coverage options. Compare supplemental insurance quotes - call 331-E-HEALTH.',
+  keywords: 'supplemental health insurance, cancer insurance coverage, accident insurance for families, hospital indemnity plans, critical illness coverage options, supplemental insurance for Medicare, gap coverage, high deductible health plan supplemental insurance, dental insurance, vision insurance, supplemental medical insurance',
+  openGraph: {
+    title: 'Supplemental Health Insurance 2025 | Cancer & Accident Insurance Coverage',
+    description: 'Fill health insurance gaps with supplemental coverage. Cancer insurance, accident insurance for families, hospital indemnity plans. Get free quotes for critical illness coverage.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'El-Mag Insurance',
+    url: 'https://elmag-insurance.com/supplemental-insurance',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Supplemental Health Insurance | Cancer & Accident Coverage',
+    description: 'Protect your family with supplemental health insurance. Cancer insurance coverage, accident insurance for families, hospital indemnity plans.',
+  },
+  alternates: {
+    canonical: 'https://elmag-insurance.com/supplemental-insurance',
+  },
 };
 
 export default function SupplementalInsurancePage() {
@@ -24,10 +40,10 @@ export default function SupplementalInsurancePage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-green-600 to-teal-600 text-white p-8 rounded-lg mb-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Supplemental Health Insurance 2025
+            Supplemental Health Insurance 2025 | Accident, Critical Illness & Hospital Coverage
           </h1>
           <p className="text-xl text-green-100 mb-6">
-            Fill health insurance gaps with accident, critical illness, and hospital indemnity coverage. Get supplemental insurance quotes to protect against unexpected medical costs.
+            Get supplemental health insurance to fill coverage gaps in your primary health plan. Accident insurance, critical illness insurance, and hospital indemnity insurance provide essential financial protection for families.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -101,6 +117,109 @@ export default function SupplementalInsurancePage() {
             </div>
           </div>
         </div>
+
+        {/* High Deductible Health Plan Gap Coverage */}
+        <section className="mb-12">
+          <div className="bg-orange-50 border-2 border-orange-300 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">High Deductible Health Plan? Get Gap Coverage</h2>
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              If you have a high deductible health plan, supplemental insurance provides essential gap coverage to protect you from expensive out-of-pocket costs.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-lg border border-orange-200">
+                <h3 className="text-xl font-bold text-orange-800 mb-3">Cancer Treatment Costs</h3>
+                <p className="text-gray-600 mb-4">
+                  Cancer insurance provides critical illness coverage when you need it most. Get lump-sum benefits to help pay for cancer treatment costs not covered by your primary plan.
+                </p>
+                <div className="text-sm text-gray-500">
+                  <strong>Cancer Insurance Coverage Benefits:</strong> Diagnostic tests, chemotherapy, radiation, surgery, and recovery expenses.
+                </div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-orange-200">
+                <h3 className="text-xl font-bold text-orange-800 mb-3">Accident Insurance for Families</h3>
+                <p className="text-gray-600 mb-4">
+                  Protect your family with accident insurance that pays cash benefits for emergency room visits, ambulance rides, and accidental injuries.
+                </p>
+                <div className="text-sm text-gray-500">
+                  <strong>Family Benefits:</strong> Coverage for spouse and children, emergency care, fractures, burns, and rehabilitation costs.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Hospital Indemnity Plans */}
+        <section className="mb-12">
+          <div className="bg-red-50 border-2 border-red-300 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Hospital Indemnity Plans - Daily Cash Benefits</h2>
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              Hospital indemnity insurance pays you cash benefits for each day you're hospitalized, helping cover expenses your health insurance doesn't.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg border border-red-200 text-center">
+                <div className="text-3xl font-bold text-red-600 mb-3">$100-500</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Daily Hospital Benefits</h3>
+                <p className="text-gray-600">Cash payments for each day in the hospital</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-red-200 text-center">
+                <div className="text-3xl font-bold text-red-600 mb-3">$50-250</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">ICU Coverage</h3>
+                <p className="text-gray-600">Additional benefits for intensive care</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-red-200 text-center">
+                <div className="text-3xl font-bold text-red-600 mb-3">365</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Days Coverage</h3>
+                <p className="text-gray-600">Up to one full year of benefits</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Critical Illness Coverage Options */}
+        <section className="mb-12">
+          <div className="bg-purple-50 border-2 border-purple-300 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Critical Illness Coverage Options</h2>
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              Critical illness insurance provides lump-sum cash benefits when you're diagnosed with covered conditions like cancer, heart attack, or stroke.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-lg border border-purple-200">
+                <h3 className="text-xl font-bold text-purple-800 mb-4">Covered Conditions</h3>
+                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                  <div>• Cancer</div>
+                  <div>• Heart Attack</div>
+                  <div>• Stroke</div>
+                  <div>• Kidney Failure</div>
+                  <div>• Major Organ Transplant</div>
+                  <div>• Coronary Artery Bypass</div>
+                  <div>• Paralysis</div>
+                  <div>• Blindness</div>
+                </div>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-purple-200">
+                <h3 className="text-xl font-bold text-purple-800 mb-4">Coverage Amounts</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Individual:</span>
+                    <span className="font-bold text-purple-600">$5,000 - $100,000</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Family:</span>
+                    <span className="font-bold text-purple-600">$10,000 - $200,000</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Child Coverage:</span>
+                    <span className="font-bold text-purple-600">25% of adult benefit</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Benefits Section */}
         <div className="bg-green-50 border border-green-200 rounded-lg p-8 mb-8">
