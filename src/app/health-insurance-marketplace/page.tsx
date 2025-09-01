@@ -14,6 +14,7 @@ import BlogPostLinking from '@/components/BlogPostLinking'
 import FAQCrossReferencing from '@/components/FAQCrossReferencing'
 import SuccessStoryLinking from '@/components/SuccessStoryLinking'
 import ContactFormLinking from '@/components/ContactFormLinking'
+import MarketplaceInsuranceAnalytics from '@/components/MarketplaceInsuranceAnalytics'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace 2025 | ACA Plans & Premium Tax Credits | Save $2,400+',
@@ -156,6 +157,13 @@ export default function HealthInsuranceMarketplacePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
+      {/* Analytics Component */}
+      <MarketplaceInsuranceAnalytics 
+        pageType="main"
+        userAge={45}
+        location="United States"
+      />
+      
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-8 text-center">
@@ -185,7 +193,7 @@ export default function HealthInsuranceMarketplacePage() {
         {/* Savings Highlight */}
         <section className="mb-12">
           <div className="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300 p-8 rounded-lg text-center">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">💰 Save an Average of $2,400 per Year!</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-4">Save an Average of $2,400 per Year with ACA Subsidies</h2>
             <p className="text-lg text-green-700 mb-6">
               Most people qualify for premium tax credits and cost-sharing reductions that significantly reduce health insurance costs through the ACA Marketplace.
             </p>
@@ -211,16 +219,15 @@ export default function HealthInsuranceMarketplacePage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">What is the Health Insurance Marketplace?</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">🏛️ Government-Run Exchange</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">🏛️ ACA Health Insurance Exchange</h3>
               <p className="text-gray-700 mb-4">
-                The Health Insurance Marketplace (also called the ACA Exchange or Obamacare Marketplace) is a government-run platform created by the Affordable Care Act 
-                where individuals and families can shop for comprehensive health insurance plans.
+                The Health Insurance Marketplace (also called the ACA Exchange or Obamacare enrollment portal) is a government-run platform where you can shop for affordable health insurance plans, compare Bronze, Silver, Gold, and Platinum coverage levels, and apply for premium tax credits to reduce costs.
               </p>
               <ul className="space-y-2 text-gray-700">
-                <li>• Compare plans side-by-side easily</li>
-                <li>• Check eligibility for subsidies instantly</li>
-                <li>• Enroll in coverage online securely</li>
-                <li>• Get free expert help with enrollment</li>
+                <li>• Compare marketplace health insurance plans instantly with our <Link href="/health-insurance-cost-calculator" className="text-blue-600 hover:text-blue-800 underline">cost calculator</Link></li>
+                <li>• Check <Link href="/eligibility" className="text-blue-600 hover:text-blue-800 underline">ACA subsidy eligibility</Link> and premium tax credits</li>
+                <li>• Enroll in Obamacare coverage online securely</li>
+                <li>• Get free licensed agent help with <Link href="/enrollment-timeline" className="text-blue-600 hover:text-blue-800 underline">enrollment timing</Link></li>
               </ul>
             </div>
             
@@ -333,6 +340,93 @@ export default function HealthInsuranceMarketplacePage() {
               <h3 className="text-xl font-bold text-blue-800 mb-3">Platinum</h3>
               <div className="text-2xl font-bold text-blue-600 mb-2">90%</div>
               <p className="text-blue-700 text-sm">Highest premiums, lowest costs</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Age-Based Insurance Transitions */}
+        <section className="mb-12">
+          <div className="bg-purple-50 border-2 border-purple-300 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Planning for Medicare Transition at Age 65?</h2>
+            <p className="text-lg text-gray-700 mb-6 text-center">
+              The ACA Marketplace is perfect for those under 65. As you approach Medicare age, start planning your transition to avoid coverage gaps.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg border border-purple-200">
+                <h3 className="text-xl font-bold text-purple-800 mb-3">Medicare Enrollment Timeline</h3>
+                <p className="text-gray-600 mb-4">
+                  Learn when you must enroll in Medicare and how to coordinate with your current Marketplace plan.
+                </p>
+                <Link 
+                  href="/medicare-enrollment-timeline"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  View Timeline →
+                </Link>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-purple-200">
+                <h3 className="text-xl font-bold text-purple-800 mb-3">Medicare Advantage Plans</h3>
+                <p className="text-gray-600 mb-4">
+                  Explore Medicare Advantage options as an alternative to traditional Medicare plus supplements.
+                </p>
+                <Link 
+                  href="/medicare-advantage"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  Compare Medicare Plans →
+                </Link>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-purple-200">
+                <h3 className="text-xl font-bold text-purple-800 mb-3">Social Security Coordination</h3>
+                <p className="text-gray-600 mb-4">
+                  Coordinate your Medicare decisions with Social Security claiming strategies for optimal retirement planning.
+                </p>
+                <Link 
+                  href="/social-security-analysis"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  Get Analysis →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Supplemental Coverage Options */}
+        <section className="mb-12">
+          <div className="bg-teal-50 border-2 border-teal-300 p-8 rounded-lg">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Enhance Your Marketplace Coverage</h2>
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              Even with ACA Marketplace insurance, supplemental coverage can fill gaps and provide additional financial protection.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-lg border border-teal-200">
+                <h3 className="text-xl font-bold text-teal-800 mb-3">Supplemental Insurance</h3>
+                <p className="text-gray-600 mb-4">
+                  Add accident, critical illness, or hospital indemnity coverage to supplement your Marketplace plan and protect against unexpected costs.
+                </p>
+                <Link 
+                  href="/supplemental-insurance"
+                  className="text-teal-600 hover:text-teal-800 font-semibold underline"
+                >
+                  Explore Supplemental Options →
+                </Link>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg border border-teal-200">
+                <h3 className="text-xl font-bold text-teal-800 mb-3">Cost Planning Tools</h3>
+                <p className="text-gray-600 mb-4">
+                  Use our calculators to estimate your total healthcare costs and plan your budget with both primary and supplemental coverage.
+                </p>
+                <Link 
+                  href="/health-insurance-cost-calculator"
+                  className="text-teal-600 hover:text-teal-800 font-semibold underline"
+                >
+                  Calculate Total Costs →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
