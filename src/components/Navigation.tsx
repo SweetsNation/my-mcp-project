@@ -53,9 +53,7 @@ export default function Navigation() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleDropdown = (title: string) => {
-    setActiveDropdown(activeDropdown === title ? null : title);
-  };
+
 
   const closeDropdown = () => {
     setActiveDropdown(null);
@@ -91,7 +89,6 @@ export default function Navigation() {
               {menuItems.map((item) => (
                 <div key={item.title} className="relative">
                   <button
-                    onClick={() => toggleDropdown(item.title)}
                     onMouseEnter={() => setActiveDropdown(item.title)}
                     className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                   >
@@ -110,7 +107,8 @@ export default function Navigation() {
                   {activeDropdown === item.title && (
                     <div 
                       className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-[100]"
-                      onMouseLeave={closeDropdown}
+                      onMouseEnter={() => setActiveDropdown(item.title)}
+                      onMouseLeave={() => setActiveDropdown(null)}
                     >
                       {item.submenu.map((subItem) => (
                         <Link
@@ -199,10 +197,10 @@ export default function Navigation() {
               {/* Mobile Dropdown Menus */}
               {menuItems.map((item) => (
                 <div key={item.title} className="space-y-1">
-                  <button
-                    onClick={() => toggleDropdown(item.title)}
-                    className="w-full text-left text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium flex items-center justify-between"
-                  >
+                                      <button
+                      onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}
+                      className="w-full text-left text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-between"
+                    >
                     {item.title}
                     <svg 
                       className={`h-4 w-4 transition-transform ${activeDropdown === item.title ? 'rotate-180' : ''}`} 
