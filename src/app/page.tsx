@@ -91,16 +91,16 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/medicare-advantage" 
+                href="/medicare-plan-finder" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
               >
-                Compare Plans
+                Find & Compare Plans
               </a>
               <a 
-                href="/medicare-plan-comparison-tool" 
+                href="/medicare-advantage" 
                 className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
               >
-                Advanced Comparison Tool
+                Medicare Advantage
               </a>
             </div>
           </div>
