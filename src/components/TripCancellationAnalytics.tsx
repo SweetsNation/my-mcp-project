@@ -15,7 +15,7 @@ import {
 
 declare global {
   interface Window {
-    gtag: (command: string, ...args: any[]) => void
+    gtag: (command: string, targetId: string, config?: Record<string, any>) => void
     tripCancellationTracking?: {
       trackQuoteRequest: typeof trackTripQuoteRequest
       trackLeadCapture: typeof trackTripLeadCapture

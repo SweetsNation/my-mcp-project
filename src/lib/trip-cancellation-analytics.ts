@@ -3,7 +3,7 @@
 
 declare global {
   interface Window {
-    gtag: (command: string, ...args: any[]) => void
+    gtag: (command: string, targetId: string, config?: Record<string, any>) => void
     dataLayer: any[]
   }
 }
