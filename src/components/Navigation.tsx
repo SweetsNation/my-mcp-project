@@ -78,13 +78,6 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link 
-                href="/" 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Home
-              </Link>
-              
               {/* Dropdown Menus */}
               {menuItems.map((item) => (
                 <div key={item.title} className="relative">
@@ -186,14 +179,6 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-              
               {/* Mobile Dropdown Menus */}
               {menuItems.map((item) => (
                 <div key={item.title} className="space-y-1">
