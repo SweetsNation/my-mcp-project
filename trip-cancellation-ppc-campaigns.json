@@ -1,0 +1,783 @@
+{
+  "campaign_structure": {
+    "account_name": "Elmag Insurance - Trip Cancellation",
+    "total_monthly_budget": 7500,
+    "campaign_count": 6,
+    "strategy": "keyword_focused_with_match_type_segmentation",
+    "optimization_goal": "maximize_conversions",
+    "bid_strategy": "target_cpa",
+    "target_cpa": 180,
+    "campaigns": [
+      {
+        "campaign_id": "TC_001_CORE_EXACT",
+        "campaign_name": "Trip Cancellation - Core Terms [Exact]",
+        "campaign_type": "search",
+        "budget": {
+          "daily_budget": 83.33,
+          "monthly_budget": 2500,
+          "budget_allocation": "33.3%"
+        },
+        "targeting": {
+          "match_types": ["exact"],
+          "locations": ["United States"],
+          "exclude_locations": ["Alaska", "Hawaii"],
+          "languages": ["English"],
+          "device_targeting": "all_devices",
+          "device_bid_adjustments": {
+            "mobile": "+15%",
+            "tablet": "+5%",
+            "desktop": "0%"
+          }
+        },
+        "keywords": [
+          {
+            "keyword": "[trip cancellation insurance]",
+            "match_type": "exact",
+            "max_cpc": 8.50,
+            "estimated_searches": 18100,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "[travel cancellation insurance]",
+            "match_type": "exact",
+            "max_cpc": 8.50,
+            "estimated_searches": 18100,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "[vacation cancellation insurance]",
+            "match_type": "exact",
+            "max_cpc": 8.50,
+            "estimated_searches": 18100,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "[trip cancellation coverage]",
+            "match_type": "exact",
+            "max_cpc": 9.00,
+            "estimated_searches": 320,
+            "competition": "MEDIUM",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "[trip cancellation policy]",
+            "match_type": "exact",
+            "max_cpc": 6.50,
+            "estimated_searches": 110,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance"
+          }
+        ],
+        "ad_groups": [
+          {
+            "ad_group_name": "Primary Trip Cancellation",
+            "keywords": ["[trip cancellation insurance]", "[travel cancellation insurance]", "[vacation cancellation insurance]"],
+            "ads": [
+              {
+                "ad_type": "responsive_search_ad",
+                "headlines": [
+                  "Protect Your $5,000+ Vacation Investment",
+                  "Trip Cancellation Insurance From $25/Trip",
+                  "Don't Lose Money on Cancelled Trips",
+                  "Comprehensive Trip Protection Coverage",
+                  "Cancel Your Trip? Get Your Money Back",
+                  "Travel Insurance for Trip Cancellation",
+                  "Protect Your Travel Investment Today",
+                  "Trip Cancellation Coverage You Can Trust",
+                  "Vacation Protection Insurance Plans",
+                  "Get Covered Before You Travel",
+                  "Trip Insurance for Peace of Mind",
+                  "Cancel Trip Coverage - Instant Quotes",
+                  "Travel Cancellation Protection Plans",
+                  "Don't Risk Your Vacation Investment",
+                  "Elmag Trip Cancellation Insurance"
+                ],
+                "descriptions": [
+                  "Get comprehensive trip cancellation insurance starting at just $25/trip. Protect thousands in travel costs when unexpected events force you to cancel.",
+                  "Don't lose your vacation investment. Our trip cancellation coverage protects against illness, job loss, weather, and more. Free quotes in 60 seconds.",
+                  "Join 50,000+ travelers who saved their vacation money with our award-winning trip cancellation insurance. Get instant quotes and same-day coverage.",
+                  "Comprehensive trip cancellation insurance covering flights, hotels, cruises, and tours. Get protected today - quotes start at $25/trip."
+                ],
+                "final_urls": ["https://www.elmaginsurance.com/trip-cancellation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=trip_cancellation_exact"],
+                "tracking_template": "{lpurl}?utm_source=google&utm_medium=cpc&utm_campaign=trip_cancellation_exact&utm_term={keyword}&gclid={gclid}"
+              }
+            ]
+          }
+        ],
+        "extensions": [
+          {
+            "extension_type": "sitelink",
+            "sitelinks": [
+              {
+                "text": "Get Free Quote",
+                "url": "/trip-cancellation-insurance?action=quote",
+                "description1": "Instant quotes in 60 seconds",
+                "description2": "No commitment required"
+              },
+              {
+                "text": "Coverage Calculator",
+                "url": "/trip-cancellation-calculator",
+                "description1": "Calculate your coverage needs",
+                "description2": "Based on your trip cost"
+              },
+              {
+                "text": "What's Covered",
+                "url": "/trip-cancellation-insurance#coverage",
+                "description1": "See all covered reasons",
+                "description2": "Comprehensive protection"
+              },
+              {
+                "text": "Customer Reviews",
+                "url": "/trip-cancellation-reviews",
+                "description1": "5-star rated protection",
+                "description2": "Real customer experiences"
+              }
+            ]
+          },
+          {
+            "extension_type": "callout",
+            "callouts": [
+              "24/7 Customer Support",
+              "Instant Coverage Available",
+              "Cancel for Any Reason Option",
+              "A+ Rated Financial Strength",
+              "Over 50,000 Satisfied Customers",
+              "No Medical Exam Required"
+            ]
+          },
+          {
+            "extension_type": "structured_snippet",
+            "header": "Coverage Types",
+            "values": ["Trip Cancellation", "Trip Interruption", "Travel Delay", "Medical Emergency", "Baggage Protection"]
+          },
+          {
+            "extension_type": "call",
+            "phone_number": "+1-331-343-2584",
+            "country_code": "US",
+            "call_tracking": true
+          }
+        ],
+        "scheduling": {
+          "days_of_week": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+          "hours": "06:00-22:00",
+          "timezone": "America/Chicago"
+        }
+      },
+      {
+        "campaign_id": "TC_002_CORE_PHRASE",
+        "campaign_name": "Trip Cancellation - Core Terms [Phrase]",
+        "campaign_type": "search",
+        "budget": {
+          "daily_budget": 50.00,
+          "monthly_budget": 1500,
+          "budget_allocation": "20.0%"
+        },
+        "targeting": {
+          "match_types": ["phrase"],
+          "locations": ["United States"],
+          "exclude_locations": ["Alaska", "Hawaii"],
+          "languages": ["English"],
+          "device_targeting": "all_devices",
+          "device_bid_adjustments": {
+            "mobile": "+10%",
+            "tablet": "0%",
+            "desktop": "+5%"
+          }
+        },
+        "keywords": [
+          {
+            "keyword": "\"trip cancellation insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 7.50,
+            "estimated_searches": 22000,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "\"cancel trip insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 7.00,
+            "estimated_searches": 1200,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "\"vacation protection insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 6.50,
+            "estimated_searches": 800,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance"
+          },
+          {
+            "keyword": "\"travel protection plan\"",
+            "match_type": "phrase",
+            "max_cpc": 8.00,
+            "estimated_searches": 1500,
+            "competition": "MEDIUM",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance"
+          }
+        ],
+        "negative_keywords": [
+          {
+            "keyword": "free",
+            "match_type": "broad"
+          },
+          {
+            "keyword": "cheap",
+            "match_type": "broad"
+          },
+          {
+            "keyword": "jobs",
+            "match_type": "exact"
+          },
+          {
+            "keyword": "career",
+            "match_type": "broad"
+          }
+        ]
+      },
+      {
+        "campaign_id": "TC_003_TRAVEL_TYPE",
+        "campaign_name": "Trip Cancellation - Travel Types",
+        "campaign_type": "search",
+        "budget": {
+          "daily_budget": 33.33,
+          "monthly_budget": 1000,
+          "budget_allocation": "13.3%"
+        },
+        "targeting": {
+          "match_types": ["exact", "phrase"],
+          "locations": ["United States"],
+          "languages": ["English"],
+          "device_targeting": "all_devices"
+        },
+        "keywords": [
+          {
+            "keyword": "[cruise trip cancellation insurance]",
+            "match_type": "exact",
+            "max_cpc": 10.00,
+            "estimated_searches": 1200,
+            "competition": "MEDIUM",
+            "priority": "high",
+            "landing_page": "/cruise-trip-cancellation-insurance"
+          },
+          {
+            "keyword": "[international travel cancellation insurance]",
+            "match_type": "exact",
+            "max_cpc": 9.50,
+            "estimated_searches": 900,
+            "competition": "MEDIUM",
+            "priority": "high",
+            "landing_page": "/international-trip-cancellation"
+          },
+          {
+            "keyword": "[business trip cancellation insurance]",
+            "match_type": "exact",
+            "max_cpc": 12.00,
+            "estimated_searches": 600,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/business-trip-cancellation"
+          },
+          {
+            "keyword": "\"honeymoon trip cancellation insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 11.00,
+            "estimated_searches": 400,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/honeymoon-trip-cancellation"
+          },
+          {
+            "keyword": "\"family vacation cancellation insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 8.50,
+            "estimated_searches": 700,
+            "competition": "MEDIUM",
+            "priority": "medium",
+            "landing_page": "/family-trip-cancellation"
+          }
+        ],
+        "ad_groups": [
+          {
+            "ad_group_name": "Cruise Trip Cancellation",
+            "keywords": ["[cruise trip cancellation insurance]", "\"cruise cancellation coverage\""],
+            "ads": [
+              {
+                "ad_type": "responsive_search_ad",
+                "headlines": [
+                  "Cruise Trip Cancellation Insurance",
+                  "Protect Your $4,000+ Cruise Investment",
+                  "Cruise Cancellation Coverage Plans",
+                  "Don't Lose Money on Cancelled Cruises",
+                  "Comprehensive Cruise Protection",
+                  "Cancel Your Cruise? Get Covered"
+                ],
+                "descriptions": [
+                  "Specialized cruise trip cancellation insurance covering cabin fees, excursions, and cruise-specific risks. Get protected before you sail.",
+                  "Don't lose thousands on cancelled cruises. Our specialized coverage protects against illness, weather, ship issues, and more."
+                ],
+                "final_urls": ["https://www.elmaginsurance.com/cruise-trip-cancellation-insurance"]
+              }
+            ]
+          },
+          {
+            "ad_group_name": "International Trip Cancellation",
+            "keywords": ["[international travel cancellation insurance]", "\"overseas trip cancellation\""],
+            "ads": [
+              {
+                "ad_type": "responsive_search_ad",
+                "headlines": [
+                  "International Trip Cancellation Coverage",
+                  "Protect Your Overseas Vacation",
+                  "Global Travel Cancellation Insurance",
+                  "International Travel Protection Plans",
+                  "Cancel International Trip? Get Covered",
+                  "Worldwide Trip Cancellation Coverage"
+                ],
+                "descriptions": [
+                  "Comprehensive international trip cancellation insurance covering flights, hotels, visas, and overseas travel risks. Get global protection.",
+                  "Planning international travel? Protect your investment with specialized overseas trip cancellation coverage. Instant quotes available."
+                ],
+                "final_urls": ["https://www.elmaginsurance.com/international-trip-cancellation"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "campaign_id": "TC_004_COMPETITOR",
+        "campaign_name": "Trip Cancellation - Competitive",
+        "campaign_type": "search",
+        "budget": {
+          "daily_budget": 33.33,
+          "monthly_budget": 1000,
+          "budget_allocation": "13.3%"
+        },
+        "targeting": {
+          "match_types": ["phrase", "broad_modified"],
+          "locations": ["United States"],
+          "languages": ["English"]
+        },
+        "keywords": [
+          {
+            "keyword": "\"travel guard trip cancellation\"",
+            "match_type": "phrase",
+            "max_cpc": 12.00,
+            "estimated_searches": 800,
+            "competition": "HIGH",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance?comparison=travel_guard"
+          },
+          {
+            "keyword": "\"allianz trip cancellation\"",
+            "match_type": "phrase",
+            "max_cpc": 11.50,
+            "estimated_searches": 600,
+            "competition": "HIGH",
+            "priority": "medium",
+            "landing_page": "/trip-cancellation-insurance?comparison=allianz"
+          },
+          {
+            "keyword": "+best +trip +cancellation +insurance",
+            "match_type": "broad_modified",
+            "max_cpc": 10.00,
+            "estimated_searches": 2400,
+            "competition": "MEDIUM",
+            "priority": "high",
+            "landing_page": "/best-trip-cancellation-insurance"
+          },
+          {
+            "keyword": "+compare +trip +cancellation +insurance",
+            "match_type": "broad_modified",
+            "max_cpc": 9.50,
+            "estimated_searches": 1200,
+            "competition": "MEDIUM",
+            "priority": "medium",
+            "landing_page": "/compare-trip-cancellation-insurance"
+          }
+        ],
+        "ad_groups": [
+          {
+            "ad_group_name": "Competitive Comparison",
+            "ads": [
+              {
+                "ad_type": "responsive_search_ad",
+                "headlines": [
+                  "Better Than Travel Guard - 40% Less Cost",
+                  "Top-Rated Trip Cancellation Insurance",
+                  "Compare Trip Cancellation Plans",
+                  "Best Value Trip Protection Coverage",
+                  "Why Choose Elmag Over Competitors?",
+                  "#1 Rated Trip Cancellation Coverage"
+                ],
+                "descriptions": [
+                  "Get better trip cancellation coverage for 40% less than major competitors. A+ rated financial strength with personalized service.",
+                  "Compare and save on trip cancellation insurance. Better coverage, lower prices, and award-winning customer service."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "campaign_id": "TC_005_LONG_TAIL",
+        "campaign_name": "Trip Cancellation - Long Tail Keywords",
+        "campaign_type": "search",
+        "budget": {
+          "daily_budget": 20.00,
+          "monthly_budget": 600,
+          "budget_allocation": "8.0%"
+        },
+        "targeting": {
+          "match_types": ["phrase", "broad_modified"],
+          "locations": ["United States"],
+          "languages": ["English"]
+        },
+        "keywords": [
+          {
+            "keyword": "\"what is trip cancellation insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 5.00,
+            "estimated_searches": 1600,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/what-is-trip-cancellation-insurance"
+          },
+          {
+            "keyword": "\"how much does trip cancellation insurance cost\"",
+            "match_type": "phrase",
+            "max_cpc": 6.00,
+            "estimated_searches": 1200,
+            "competition": "LOW",
+            "priority": "high",
+            "landing_page": "/trip-cancellation-insurance-cost"
+          },
+          {
+            "keyword": "\"when to buy trip cancellation insurance\"",
+            "match_type": "phrase",
+            "max_cpc": 5.50,
+            "estimated_searches": 800,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/when-to-buy-trip-cancellation-insurance"
+          },
+          {
+            "keyword": "+do +i +need +trip +cancellation +insurance",
+            "match_type": "broad_modified",
+            "max_cpc": 4.50,
+            "estimated_searches": 2000,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/do-i-need-trip-cancellation-insurance"
+          },
+          {
+            "keyword": "+trip +cancellation +insurance +worth +it",
+            "match_type": "broad_modified",
+            "max_cpc": 5.00,
+            "estimated_searches": 900,
+            "competition": "LOW",
+            "priority": "medium",
+            "landing_page": "/is-trip-cancellation-insurance-worth-it"
+          }
+        ]
+      },
+      {
+        "campaign_id": "TC_006_REMARKETING",
+        "campaign_name": "Trip Cancellation - Remarketing",
+        "campaign_type": "display",
+        "budget": {
+          "daily_budget": 30.00,
+          "monthly_budget": 900,
+          "budget_allocation": "12.0%"
+        },
+        "targeting": {
+          "audiences": [
+            {
+              "audience_name": "Trip Cancellation Page Visitors",
+              "audience_type": "remarketing",
+              "membership_duration": 30,
+              "description": "Users who visited trip cancellation insurance pages"
+            },
+            {
+              "audience_name": "Quote Started - Not Completed",
+              "audience_type": "remarketing",
+              "membership_duration": 45,
+              "description": "Users who started but didn't complete quote process"
+            },
+            {
+              "audience_name": "Travel Enthusiasts",
+              "audience_type": "custom_affinity",
+              "interests": ["Travel", "Vacation Planning", "Cruise Travel", "International Travel"]
+            },
+            {
+              "audience_name": "Similar to Converters",
+              "audience_type": "similar",
+              "seed_audience": "past_customers"
+            }
+          ],
+          "placements": [
+            "gmail.com",
+            "youtube.com",
+            "travel blogs network",
+            "vacation planning websites"
+          ],
+          "demographics": {
+            "age_ranges": ["25-34", "35-44", "45-54", "55-64"],
+            "income": ["top_30_percent", "top_50_percent"]
+          }
+        },
+        "ad_groups": [
+          {
+            "ad_group_name": "Remarketing - Trip Cancellation Visitors",
+            "audiences": ["Trip Cancellation Page Visitors"],
+            "ads": [
+              {
+                "ad_type": "responsive_display_ad",
+                "headlines": [
+                  "Don't Risk Your Vacation Investment",
+                  "Still Planning Your Trip?",
+                  "Get Trip Cancellation Coverage Now"
+                ],
+                "descriptions": [
+                  "Complete your trip cancellation insurance quote in just 2 minutes. Protect your vacation investment today.",
+                  "Don't travel without protection. Get comprehensive trip cancellation coverage starting at $25/trip."
+                ],
+                "images": [
+                  "trip_cancellation_display_300x250.jpg",
+                  "vacation_protection_banner_728x90.jpg",
+                  "trip_insurance_square_250x250.jpg"
+                ],
+                "logos": ["elmag_logo_square.png"],
+                "final_urls": ["https://www.elmaginsurance.com/trip-cancellation-insurance?utm_source=google&utm_medium=display&utm_campaign=remarketing"]
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Remarketing - Quote Abandoners",
+            "audiences": ["Quote Started - Not Completed"],
+            "ads": [
+              {
+                "ad_type": "responsive_display_ad",
+                "headlines": [
+                  "Complete Your Trip Insurance Quote",
+                  "Your Quote is Almost Ready",
+                  "Finish Your Trip Protection"
+                ],
+                "descriptions": [
+                  "Complete your trip cancellation insurance quote now. Takes just 2 more minutes to get full protection.",
+                  "Don't leave your trip unprotected. Complete your quote and get instant coverage today."
+                ],
+                "final_urls": ["https://www.elmaginsurance.com/trip-cancellation-quote?utm_source=google&utm_medium=display&utm_campaign=quote_recovery"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "conversion_tracking": {
+    "conversion_actions": [
+      {
+        "name": "Trip Cancellation Quote Request",
+        "category": "lead",
+        "value": 180,
+        "counting": "one_per_click",
+        "attribution_model": "data_driven",
+        "conversion_window": "30_days"
+      },
+      {
+        "name": "Trip Cancellation Phone Call",
+        "category": "phone_call",
+        "value": 220,
+        "minimum_duration": 60,
+        "counting": "one_per_click",
+        "attribution_model": "data_driven"
+      },
+      {
+        "name": "Trip Cancellation Policy Purchase",
+        "category": "purchase",
+        "value": 750,
+        "counting": "one_per_click",
+        "attribution_model": "data_driven",
+        "conversion_window": "90_days"
+      },
+      {
+        "name": "Email Signup - Trip Cancellation",
+        "category": "signup",
+        "value": 50,
+        "counting": "many_per_click",
+        "attribution_model": "first_click"
+      }
+    ]
+  },
+  "audience_targeting": {
+    "demographics": {
+      "age_ranges": ["25-34", "35-44", "45-54", "55-64", "65+"],
+      "income_brackets": ["top_50_percent", "top_30_percent", "top_10_percent"],
+      "parental_status": ["parent", "not_a_parent"]
+    },
+    "interests": [
+      "Travel",
+      "Vacation Planning",
+      "Cruise Travel",
+      "International Travel",
+      "Adventure Travel",
+      "Luxury Travel",
+      "Business Travel",
+      "Family Travel"
+    ],
+    "custom_audiences": [
+      {
+        "name": "High-Value Travelers",
+        "description": "Users who plan expensive trips ($3,000+)",
+        "signals": ["cruise booking websites", "luxury hotel sites", "international flight booking"]
+      },
+      {
+        "name": "Frequent Travelers",
+        "description": "Users who travel multiple times per year",
+        "signals": ["frequent travel sites", "travel rewards programs", "business travel platforms"]
+      },
+      {
+        "name": "Travel Planners",
+        "description": "Users actively planning upcoming trips",
+        "signals": ["travel planning websites", "destination research", "travel date searches"]
+      }
+    ]
+  },
+  "bid_strategies": {
+    "primary_strategy": "target_cpa",
+    "target_cpa": 180,
+    "backup_strategy": "maximize_conversions",
+    "bid_adjustments": {
+      "locations": {
+        "high_value_states": {
+          "states": ["California", "New York", "Florida", "Texas", "Illinois"],
+          "adjustment": "+20%"
+        },
+        "medium_value_states": {
+          "states": ["Washington", "Colorado", "Virginia", "North Carolina"],
+          "adjustment": "+10%"
+        },
+        "low_value_states": {
+          "states": ["Wyoming", "Montana", "North Dakota", "South Dakota"],
+          "adjustment": "-15%"
+        }
+      },
+      "time_of_day": {
+        "peak_hours": {
+          "hours": ["09:00-12:00", "13:00-17:00"],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+          "adjustment": "+15%"
+        },
+        "evening_hours": {
+          "hours": ["18:00-21:00"],
+          "days": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+          "adjustment": "+10%"
+        },
+        "low_traffic_hours": {
+          "hours": ["22:00-06:00"],
+          "adjustment": "-25%"
+        }
+      },
+      "devices": {
+        "mobile": "+15%",
+        "tablet": "+5%",
+        "desktop": "0%"
+      }
+    }
+  },
+  "quality_optimization": {
+    "quality_score_targets": {
+      "landing_page_experience": "above_average",
+      "ad_relevance": "above_average",
+      "expected_ctr": "average_or_above"
+    },
+    "optimization_tactics": [
+      "Dynamic keyword insertion in headlines",
+      "Ad copy testing with 3+ variants per ad group",
+      "Landing page speed optimization (target <3 seconds)",
+      "Mobile-first landing page design",
+      "Conversion tracking implementation",
+      "Negative keyword refinement weekly"
+    ]
+  },
+  "performance_monitoring": {
+    "kpis": {
+      "primary": [
+        {
+          "metric": "conversion_rate",
+          "target": 3.2,
+          "threshold_alert": 2.5
+        },
+        {
+          "metric": "cost_per_acquisition",
+          "target": 180,
+          "threshold_alert": 220
+        },
+        {
+          "metric": "return_on_ad_spend",
+          "target": 350,
+          "threshold_alert": 280
+        }
+      ],
+      "secondary": [
+        {
+          "metric": "click_through_rate",
+          "target": 3.5,
+          "threshold_alert": 2.8
+        },
+        {
+          "metric": "quality_score",
+          "target": 8.0,
+          "threshold_alert": 6.0
+        },
+        {
+          "metric": "impression_share",
+          "target": 75,
+          "threshold_alert": 60
+        }
+      ]
+    },
+    "reporting_schedule": {
+      "daily": ["spend", "conversions", "cpa"],
+      "weekly": ["quality_scores", "search_terms", "landing_page_performance"],
+      "monthly": ["attribution_analysis", "audience_performance", "competitive_metrics"]
+    }
+  },
+  "optimization_schedule": {
+    "daily_tasks": [
+      "Monitor spend pacing vs budget",
+      "Check conversion volume",
+      "Review high-spend keywords",
+      "Pause underperforming ads"
+    ],
+    "weekly_tasks": [
+      "Search terms analysis and negative keyword additions",
+      "Bid optimization based on performance",
+      "Ad copy performance review",
+      "Landing page conversion rate analysis",
+      "Device and location performance review"
+    ],
+    "monthly_tasks": [
+      "Campaign structure optimization",
+      "Audience performance analysis",
+      "Attribution model review",
+      "Competitive landscape assessment",
+      "Budget reallocation based on ROAS"
+    ]
+  }
+}

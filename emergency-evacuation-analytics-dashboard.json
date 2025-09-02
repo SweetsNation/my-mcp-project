@@ -1,0 +1,488 @@
+{
+  "emergency_evacuation_analytics_dashboard": {
+    "overview": {
+      "dashboard_name": "Emergency Evacuation Insurance Performance Analytics",
+      "update_frequency": "Real-time with 15-minute refresh intervals",
+      "data_retention": "26 months for detailed analytics, lifetime for aggregate reporting",
+      "access_level": "Marketing team, management, and authorized stakeholders",
+      "integration_platforms": ["Google Analytics 4", "Google Ads", "Facebook Analytics", "Custom Analytics API"]
+    },
+
+    "key_performance_indicators": {
+      "conversion_metrics": [
+        {
+          "metric": "Quote Request Rate",
+          "calculation": "(Quote Requests / Page Views) * 100",
+          "target": "4.2%",
+          "current_benchmark": "3.8%",
+          "alert_threshold": "< 3.0%",
+          "widget_type": "gauge_chart",
+          "priority": "high"
+        },
+        {
+          "metric": "Phone Call Conversion Rate",
+          "calculation": "(Phone Calls / Page Views) * 100",
+          "target": "2.1%",
+          "current_benchmark": "1.8%",
+          "alert_threshold": "< 1.2%",
+          "widget_type": "line_chart",
+          "priority": "high"
+        },
+        {
+          "metric": "Cost Per Acquisition (CPA)",
+          "calculation": "Total Ad Spend / Total Conversions",
+          "target": "$75",
+          "current_benchmark": "$85",
+          "alert_threshold": "> $120",
+          "widget_type": "metric_card",
+          "priority": "critical"
+        },
+        {
+          "metric": "Return on Ad Spend (ROAS)",
+          "calculation": "(Conversion Value / Ad Spend) * 100",
+          "target": "400%",
+          "current_benchmark": "350%",
+          "alert_threshold": "< 250%",
+          "widget_type": "trend_chart",
+          "priority": "critical"
+        }
+      ],
+      "engagement_metrics": [
+        {
+          "metric": "Average Session Duration",
+          "calculation": "Total Session Time / Total Sessions",
+          "target": "3:30",
+          "current_benchmark": "2:45",
+          "alert_threshold": "< 2:00",
+          "widget_type": "metric_card",
+          "priority": "medium"
+        },
+        {
+          "metric": "Pages Per Session",
+          "calculation": "Total Pageviews / Total Sessions",
+          "target": "2.8",
+          "current_benchmark": "2.3",
+          "alert_threshold": "< 2.0",
+          "widget_type": "bar_chart",
+          "priority": "medium"
+        },
+        {
+          "metric": "Bounce Rate",
+          "calculation": "(Single Page Sessions / Total Sessions) * 100",
+          "target": "< 40%",
+          "current_benchmark": "45%",
+          "alert_threshold": "> 60%",
+          "widget_type": "gauge_chart",
+          "priority": "medium"
+        },
+        {
+          "metric": "Scroll Depth 75%+",
+          "calculation": "(Users Scrolling 75%+ / Total Users) * 100",
+          "target": "35%",
+          "current_benchmark": "28%",
+          "alert_threshold": "< 20%",
+          "widget_type": "funnel_chart",
+          "priority": "medium"
+        }
+      ],
+      "technical_metrics": [
+        {
+          "metric": "Page Load Time (LCP)",
+          "calculation": "Average Largest Contentful Paint",
+          "target": "< 2.5s",
+          "current_benchmark": "2.8s",
+          "alert_threshold": "> 4.0s",
+          "widget_type": "histogram",
+          "priority": "high"
+        },
+        {
+          "metric": "First Input Delay (FID)",
+          "calculation": "Average First Input Delay",
+          "target": "< 100ms",
+          "current_benchmark": "85ms",
+          "alert_threshold": "> 300ms",
+          "widget_type": "metric_card",
+          "priority": "high"
+        },
+        {
+          "metric": "Cumulative Layout Shift (CLS)",
+          "calculation": "Average Layout Shift Score",
+          "target": "< 0.1",
+          "current_benchmark": "0.08",
+          "alert_threshold": "> 0.25",
+          "widget_type": "gauge_chart",
+          "priority": "high"
+        }
+      ]
+    },
+
+    "conversion_funnel_analysis": {
+      "funnel_stages": [
+        {
+          "stage": "Landing Page Views",
+          "description": "Users arriving on emergency evacuation insurance page",
+          "target_conversion": "100%",
+          "tracking_event": "page_view",
+          "widget_type": "funnel_chart"
+        },
+        {
+          "stage": "Coverage Engagement",
+          "description": "Users interacting with coverage options",
+          "target_conversion": "45%",
+          "tracking_event": "coverage_selected",
+          "widget_type": "funnel_chart"
+        },
+        {
+          "stage": "Calculator Usage",
+          "description": "Users using cost calculator or tools",
+          "target_conversion": "25%",
+          "tracking_event": "calculator_used",
+          "widget_type": "funnel_chart"
+        },
+        {
+          "stage": "Quote Request",
+          "description": "Users requesting quotes or pricing",
+          "target_conversion": "4.2%",
+          "tracking_event": "quote_request",
+          "widget_type": "funnel_chart"
+        },
+        {
+          "stage": "Phone Contact",
+          "description": "Users initiating phone calls",
+          "target_conversion": "2.1%",
+          "tracking_event": "call_initiated",
+          "widget_type": "funnel_chart"
+        },
+        {
+          "stage": "Application Start",
+          "description": "Users beginning policy applications",
+          "target_conversion": "1.2%",
+          "tracking_event": "application_started",
+          "widget_type": "funnel_chart"
+        }
+      ],
+      "dropoff_analysis": {
+        "enabled": true,
+        "alert_thresholds": {
+          "stage_1_to_2": "< 40% conversion",
+          "stage_2_to_3": "< 55% conversion", 
+          "stage_3_to_4": "< 15% conversion",
+          "stage_4_to_5": "< 45% conversion",
+          "stage_5_to_6": "< 55% conversion"
+        }
+      }
+    },
+
+    "audience_segmentation": {
+      "demographic_segments": [
+        {
+          "segment_name": "Adventure Travelers",
+          "criteria": "High-risk destinations + adventure travel selection",
+          "size_estimate": "25-30% of traffic",
+          "conversion_rate": "4.8%",
+          "avg_policy_value": "$350",
+          "widget_type": "pie_chart"
+        },
+        {
+          "segment_name": "Business Travelers", 
+          "criteria": "Business travel + corporate email domains",
+          "size_estimate": "20-25% of traffic",
+          "conversion_rate": "3.9%",
+          "avg_policy_value": "$275",
+          "widget_type": "pie_chart"
+        },
+        {
+          "segment_name": "International Families",
+          "criteria": "International destinations + family coverage",
+          "size_estimate": "30-35% of traffic",
+          "conversion_rate": "3.2%",
+          "avg_policy_value": "$425",
+          "widget_type": "pie_chart"
+        },
+        {
+          "segment_name": "Senior Travelers",
+          "criteria": "Age 65+ indicators + medical coverage interest",
+          "size_estimate": "15-20% of traffic",
+          "conversion_rate": "5.1%",
+          "avg_policy_value": "$550",
+          "widget_type": "pie_chart"
+        }
+      ],
+      "behavioral_segments": [
+        {
+          "segment_name": "High Intent Users",
+          "criteria": "Quote request + calculator usage + 3+ pages",
+          "conversion_rate": "35%",
+          "widget_type": "heat_map"
+        },
+        {
+          "segment_name": "Researchers",
+          "criteria": "Long session + FAQ engagement + comparison tools",
+          "conversion_rate": "8%",
+          "widget_type": "heat_map"
+        },
+        {
+          "segment_name": "Quick Browsers",
+          "criteria": "< 1 minute session + bounce",
+          "conversion_rate": "0.5%",
+          "widget_type": "heat_map"
+        }
+      ]
+    },
+
+    "traffic_source_analysis": {
+      "channels": [
+        {
+          "channel": "Google Ads Search",
+          "traffic_share": "40%",
+          "conversion_rate": "4.5%",
+          "cost_per_click": "$3.85",
+          "quality_score": "7.8/10",
+          "widget_type": "stacked_bar_chart"
+        },
+        {
+          "channel": "Organic Search",
+          "traffic_share": "35%",
+          "conversion_rate": "3.2%",
+          "cost_per_click": "$0.00",
+          "quality_score": "N/A",
+          "widget_type": "stacked_bar_chart"
+        },
+        {
+          "channel": "Facebook Ads",
+          "traffic_share": "15%",
+          "conversion_rate": "2.8%",
+          "cost_per_click": "$2.45",
+          "quality_score": "8.2/10",
+          "widget_type": "stacked_bar_chart"
+        },
+        {
+          "channel": "Direct Traffic",
+          "traffic_share": "7%",
+          "conversion_rate": "6.1%",
+          "cost_per_click": "$0.00",
+          "quality_score": "N/A",
+          "widget_type": "stacked_bar_chart"
+        },
+        {
+          "channel": "Referral Traffic",
+          "traffic_share": "3%",
+          "conversion_rate": "2.1%",
+          "cost_per_click": "$0.00",
+          "quality_score": "N/A",
+          "widget_type": "stacked_bar_chart"
+        }
+      ]
+    },
+
+    "keyword_performance": {
+      "primary_keywords": [
+        {
+          "keyword": "emergency evacuation insurance",
+          "search_volume": "18,100/month",
+          "competition": "LOW (32 index)",
+          "current_rank": "Target: Top 3",
+          "clicks": "Target: 760/month",
+          "conversion_rate": "4.2%",
+          "widget_type": "data_table"
+        },
+        {
+          "keyword": "medical evacuation coverage",
+          "search_volume": "2,400/month",
+          "competition": "MEDIUM (45 index)",
+          "current_rank": "Target: Top 5",
+          "clicks": "Target: 120/month",
+          "conversion_rate": "3.8%",
+          "widget_type": "data_table"
+        },
+        {
+          "keyword": "travel evacuation protection",
+          "search_volume": "1,300/month",
+          "competition": "LOW (28 index)",
+          "current_rank": "Target: Top 3",
+          "clicks": "Target: 85/month",
+          "conversion_rate": "4.0%",
+          "widget_type": "data_table"
+        }
+      ]
+    },
+
+    "geographic_performance": {
+      "top_performing_states": [
+        {
+          "state": "California",
+          "traffic_share": "18%",
+          "conversion_rate": "4.1%",
+          "avg_policy_value": "$385"
+        },
+        {
+          "state": "Florida",
+          "traffic_share": "12%",
+          "conversion_rate": "4.8%",
+          "avg_policy_value": "$425"
+        },
+        {
+          "state": "New York",
+          "traffic_share": "11%",
+          "conversion_rate": "3.5%",
+          "avg_policy_value": "$365"
+        },
+        {
+          "state": "Texas",
+          "traffic_share": "10%",
+          "conversion_rate": "3.9%",
+          "avg_policy_value": "$340"
+        }
+      ],
+      "international_traffic": {
+        "share": "8%",
+        "top_countries": ["Canada", "United Kingdom", "Australia"],
+        "conversion_rate": "2.1%",
+        "widget_type": "world_map"
+      }
+    },
+
+    "competitive_analysis": {
+      "competitors": [
+        {
+          "competitor": "Travel Guard",
+          "estimated_traffic": "45,000/month",
+          "top_keywords": ["travel insurance", "trip protection"],
+          "ad_spend_estimate": "$25,000/month"
+        },
+        {
+          "competitor": "Allianz Travel",
+          "estimated_traffic": "38,000/month", 
+          "top_keywords": ["travel protection", "trip insurance"],
+          "ad_spend_estimate": "$22,000/month"
+        }
+      ],
+      "opportunity_gaps": [
+        "Emergency evacuation specific content",
+        "Adventure travel evacuation targeting",
+        "Senior traveler evacuation needs"
+      ]
+    },
+
+    "alerting_system": {
+      "alert_channels": ["Email", "Slack", "SMS for critical alerts"],
+      "alert_types": [
+        {
+          "alert_name": "Conversion Rate Drop",
+          "condition": "Conversion rate drops 25% week-over-week",
+          "severity": "high",
+          "recipients": ["marketing@elmaginsurance.com", "manager@elmaginsurance.com"]
+        },
+        {
+          "alert_name": "Traffic Spike",
+          "condition": "Traffic increases 100% day-over-day",
+          "severity": "medium",
+          "recipients": ["marketing@elmaginsurance.com"]
+        },
+        {
+          "alert_name": "Page Load Performance",
+          "condition": "LCP > 4.0s for 15+ minutes",
+          "severity": "high",
+          "recipients": ["tech@elmaginsurance.com", "marketing@elmaginsurance.com"]
+        },
+        {
+          "alert_name": "Cost Per Acquisition Spike",
+          "condition": "CPA increases above $120",
+          "severity": "critical",
+          "recipients": ["marketing@elmaginsurance.com", "manager@elmaginsurance.com"]
+        }
+      ]
+    },
+
+    "automated_reporting": {
+      "daily_reports": {
+        "recipients": ["marketing@elmaginsurance.com"],
+        "content": [
+          "Key metrics summary",
+          "Traffic and conversion overview",
+          "Performance alerts",
+          "Top performing content"
+        ],
+        "delivery_time": "9:00 AM EST"
+      },
+      "weekly_reports": {
+        "recipients": ["marketing@elmaginsurance.com", "manager@elmaginsurance.com"],
+        "content": [
+          "Comprehensive funnel analysis",
+          "Audience segment performance",
+          "Keyword ranking changes",
+          "Competitive insights",
+          "Optimization recommendations"
+        ],
+        "delivery_time": "Monday 10:00 AM EST"
+      },
+      "monthly_reports": {
+        "recipients": ["executive@elmaginsurance.com", "marketing@elmaginsurance.com"],
+        "content": [
+          "ROI and business impact analysis",
+          "Goal achievement assessment",
+          "Strategic recommendations",
+          "Budget allocation insights",
+          "Growth opportunities"
+        ],
+        "delivery_time": "First business day of month"
+      }
+    },
+
+    "dashboard_layout": {
+      "executive_summary": {
+        "position": "top",
+        "widgets": [
+          "Total Conversions",
+          "Revenue Impact",
+          "ROAS",
+          "CPA",
+          "Traffic Overview"
+        ]
+      },
+      "conversion_analysis": {
+        "position": "middle_left",
+        "widgets": [
+          "Conversion Funnel",
+          "Conversion Rate Trend",
+          "Lead Quality Score",
+          "Channel Performance"
+        ]
+      },
+      "audience_insights": {
+        "position": "middle_right", 
+        "widgets": [
+          "Audience Segments",
+          "Geographic Performance",
+          "Device Performance",
+          "New vs Returning Users"
+        ]
+      },
+      "technical_performance": {
+        "position": "bottom_left",
+        "widgets": [
+          "Core Web Vitals",
+          "Page Load Times",
+          "Error Rates",
+          "Mobile Performance"
+        ]
+      },
+      "keyword_seo": {
+        "position": "bottom_right",
+        "widgets": [
+          "Keyword Rankings",
+          "Organic Traffic Trends",
+          "Content Performance",
+          "Search Visibility"
+        ]
+      }
+    },
+
+    "data_export_options": {
+      "formats": ["CSV", "Excel", "PDF", "JSON"],
+      "scheduling": ["On-demand", "Daily", "Weekly", "Monthly"],
+      "data_granularity": ["Summary", "Detailed", "Raw"],
+      "retention_compliance": "GDPR and CCPA compliant data handling"
+    }
+  }
+}

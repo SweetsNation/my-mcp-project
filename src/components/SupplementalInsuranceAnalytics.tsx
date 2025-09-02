@@ -205,6 +205,71 @@ export default function SupplementalInsuranceAnalytics({
           location: location,
         })
       }
+
+      // Track cancer insurance interest
+      if (target.closest('[data-cancer-insurance]')) {
+        const cancerType = target.closest('[data-cancer-insurance]')?.getAttribute('data-cancer-insurance')
+        event('cancer_insurance_interest', {
+          event_category: 'supplemental_engagement',
+          event_label: 'cancer_insurance_click',
+          cancer_type: cancerType,
+          page_type: pageType,
+          supplement_type: supplementType,
+          location: location,
+        })
+      }
+
+      // Track accident insurance interactions
+      if (target.closest('[data-accident-insurance]')) {
+        const accidentType = target.closest('[data-accident-insurance]')?.getAttribute('data-accident-insurance')
+        event('accident_insurance_interest', {
+          event_category: 'supplemental_engagement',
+          event_label: 'accident_insurance_click',
+          accident_type: accidentType,
+          page_type: pageType,
+          supplement_type: supplementType,
+          location: location,
+        })
+      }
+
+      // Track critical illness coverage interest
+      if (target.closest('[data-critical-illness]')) {
+        const illnessType = target.closest('[data-critical-illness]')?.getAttribute('data-critical-illness')
+        event('critical_illness_interest', {
+          event_category: 'supplemental_engagement',
+          event_label: 'critical_illness_click',
+          illness_type: illnessType,
+          page_type: pageType,
+          supplement_type: supplementType,
+          location: location,
+        })
+      }
+
+      // Track hospital indemnity plan interactions
+      if (target.closest('[data-hospital-indemnity]')) {
+        const planType = target.closest('[data-hospital-indemnity]')?.getAttribute('data-hospital-indemnity')
+        event('hospital_indemnity_interest', {
+          event_category: 'supplemental_engagement',
+          event_label: 'hospital_indemnity_click',
+          plan_type: planType,
+          page_type: pageType,
+          supplement_type: supplementType,
+          location: location,
+        })
+      }
+
+      // Track high deductible health plan interactions
+      if (target.closest('[data-hdhp-gap]')) {
+        const gapType = target.closest('[data-hdhp-gap]')?.getAttribute('data-hdhp-gap')
+        event('hdhp_gap_coverage_interest', {
+          event_category: 'supplemental_engagement',
+          event_label: 'hdhp_gap_click',
+          gap_type: gapType,
+          page_type: pageType,
+          supplement_type: supplementType,
+          location: location,
+        })
+      }
     }
 
     document.addEventListener('click', trackSupplementalInteractions)
@@ -255,6 +320,73 @@ export const trackSupplementalEducation = (contentType: 'guide' | 'video' | 'art
     event_label: contentType,
     content_type: contentType,
     content_title: contentTitle,
+    location: location,
+  })
+}
+
+export const trackCancerInsuranceCoverage = (coverageType: 'diagnosis' | 'treatment' | 'recovery', benefitAmount: number, location: string) => {
+  event('cancer_insurance_coverage_selection', {
+    event_category: 'supplemental_conversion',
+    event_label: 'cancer_coverage_interest',
+    coverage_type: coverageType,
+    benefit_amount: benefitAmount,
+    location: location,
+    value: 25, // Higher value for cancer insurance leads
+  })
+}
+
+export const trackAccidentInsuranceForFamilies = (familySize: number, coverageAmount: number, accidentTypes: string[], location: string) => {
+  event('accident_insurance_family_interest', {
+    event_category: 'supplemental_conversion',
+    event_label: 'family_accident_coverage',
+    family_size: familySize,
+    coverage_amount: coverageAmount,
+    accident_types: accidentTypes.join(','),
+    location: location,
+    value: 20,
+  })
+}
+
+export const trackHospitalIndemnityPlans = (dailyBenefit: number, maxDays: number, planType: 'basic' | 'comprehensive', location: string) => {
+  event('hospital_indemnity_plan_interest', {
+    event_category: 'supplemental_engagement',
+    event_label: 'hospital_indemnity_selection',
+    daily_benefit: dailyBenefit,
+    max_days: maxDays,
+    plan_type: planType,
+    location: location,
+  })
+}
+
+export const trackCriticalIllnessCoverageOptions = (illnessTypes: string[], coverageAmount: number, payoutType: 'lump_sum' | 'monthly', location: string) => {
+  event('critical_illness_coverage_selection', {
+    event_category: 'supplemental_conversion',
+    event_label: 'critical_illness_interest',
+    illness_types: illnessTypes.join(','),
+    coverage_amount: coverageAmount,
+    payout_type: payoutType,
+    location: location,
+    value: 30, // High value for critical illness leads
+  })
+}
+
+export const trackHighDeductibleHealthPlanGap = (currentDeductible: number, gapCoverage: number, planType: string, location: string) => {
+  event('hdhp_gap_coverage_interest', {
+    event_category: 'supplemental_engagement',
+    event_label: 'hdhp_gap_analysis',
+    current_deductible: currentDeductible,
+    gap_coverage: gapCoverage,
+    plan_type: planType,
+    location: location,
+  })
+}
+
+export const trackSupplementalInsuranceForMedicare = (medicareType: 'original' | 'advantage', supplementType: string, location: string) => {
+  event('medicare_supplemental_interest', {
+    event_category: 'supplemental_engagement',
+    event_label: 'medicare_supplement_inquiry',
+    medicare_type: medicareType,
+    supplement_type: supplementType,
     location: location,
   })
 }

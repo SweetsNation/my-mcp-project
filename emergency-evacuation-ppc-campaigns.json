@@ -1,0 +1,625 @@
+{
+  "emergency_evacuation_ppc_campaigns": {
+    "overview": {
+      "strategy_focus": "Emergency Evacuation Insurance Specialized PPC",
+      "market_opportunity": "22K monthly searches, LOW competition (32 index)",
+      "total_monthly_budget": "$6,300",
+      "target_cpa": "$75",
+      "expected_monthly_conversions": 84,
+      "projected_roas": "450%",
+      "campaign_period": "12-month strategic rollout"
+    },
+
+    "campaign_structure": [
+      {
+        "campaign_name": "Emergency Evacuation Core Terms",
+        "campaign_type": "Search",
+        "budget_allocation": "$2,500/month",
+        "target_cpa": "$75",
+        "expected_conversions": 33,
+        "bidding_strategy": "Target CPA with portfolio optimization",
+        "geographic_targeting": "United States, Canada, United Kingdom, Australia",
+        "device_targeting": "All devices with mobile bid adjustments",
+        "ad_schedule": "24/7 with increased bids 6AM-10PM",
+        
+        "ad_groups": [
+          {
+            "ad_group_name": "Emergency Evacuation Insurance Exact",
+            "match_type": "Exact Match",
+            "daily_budget": "$83",
+            "keywords": [
+              "[emergency evacuation insurance]",
+              "[emergency evacuation coverage]",
+              "[emergency evacuation policy]",
+              "[emergency evacuation protection]"
+            ],
+            "negative_keywords": [
+              "free", "jobs", "careers", "definition", "wiki"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Emergency Evacuation Insurance",
+                "headline_2": "Global Coverage, 24/7 Response",
+                "headline_3": "Free Quote in 2 Minutes",
+                "description_1": "Comprehensive emergency evacuation insurance for medical emergencies, natural disasters, and political unrest. Worldwide coverage with immediate response.",
+                "description_2": "Get protected today. Fast quotes, expert support, guaranteed coverage. Don't travel without emergency evacuation protection.",
+                "path_1": "evacuation",
+                "path_2": "coverage",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=core_exact&utm_term=emergency_evacuation_insurance"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Medical Evacuation Insurance Exact",
+            "match_type": "Exact Match", 
+            "daily_budget": "$67",
+            "keywords": [
+              "[medical evacuation insurance]",
+              "[medical evacuation coverage]",
+              "[medical evacuation policy]",
+              "[air ambulance insurance]"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Medical Evacuation Insurance",
+                "headline_2": "Air Ambulance Coverage Worldwide",
+                "headline_3": "Emergency Medical Transport",
+                "description_1": "Medical evacuation insurance covers emergency air ambulance and medical transport when local facilities are inadequate. Global coverage network.",
+                "description_2": "Protect against $300K+ evacuation costs. Instant quotes, immediate coverage. Medical emergencies happen - be prepared.",
+                "path_1": "medical",
+                "path_2": "evacuation",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=medical_exact&utm_term=medical_evacuation_insurance"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Travel Evacuation Coverage Phrase",
+            "match_type": "Phrase Match",
+            "daily_budget": "$50",
+            "keywords": [
+              "\"travel evacuation coverage\"",
+              "\"travel evacuation insurance\"",
+              "\"international evacuation coverage\"",
+              "\"overseas emergency evacuation\""
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Travel Evacuation Coverage",
+                "headline_2": "Complete Travel Protection",
+                "headline_3": "Emergency Response Worldwide",
+                "description_1": "Travel evacuation coverage for international and domestic trips. Medical evacuation, political evacuation, natural disaster response.",
+                "description_2": "Comprehensive protection starting at $89. Expert evacuation services, 24/7 support. Travel safely with complete coverage.",
+                "path_1": "travel",
+                "path_2": "evacuation",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=travel_phrase&utm_term=travel_evacuation_coverage"
+              }
+            ]
+          }
+        ]
+      },
+      
+      {
+        "campaign_name": "Emergency Evacuation Long-Tail",
+        "campaign_type": "Search",
+        "budget_allocation": "$1,800/month",
+        "target_cpa": "$85",
+        "expected_conversions": 21,
+        "bidding_strategy": "Maximize conversions with target CPA",
+        
+        "ad_groups": [
+          {
+            "ad_group_name": "Evacuation Cost Keywords",
+            "match_type": "Modified Broad/Phrase",
+            "daily_budget": "$40",
+            "keywords": [
+              "\"emergency evacuation insurance cost\"",
+              "\"medical evacuation cost\"",
+              "\"air ambulance insurance cost\"",
+              "\"evacuation insurance price\"",
+              "emergency evacuation +insurance +cost"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Emergency Evacuation Insurance",
+                "headline_2": "Starting at $89 | Free Quote",
+                "headline_3": "Compare Costs & Coverage",
+                "description_1": "Emergency evacuation insurance costs less than you think. Comprehensive coverage starting at $89/trip. Avoid $300K+ evacuation bills.",
+                "description_2": "Get instant quotes, compare coverage options. Protect your travel investment with affordable emergency evacuation insurance.",
+                "path_1": "cost",
+                "path_2": "calculator",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=cost_longtail&utm_term=evacuation_cost"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "International Emergency Coverage",
+            "match_type": "Phrase Match",
+            "daily_budget": "$35",
+            "keywords": [
+              "\"international emergency evacuation\"",
+              "\"overseas medical evacuation\"",
+              "\"international medical transport\"",
+              "\"global emergency coverage\""
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "International Emergency Evacuation",
+                "headline_2": "Worldwide Medical Transport",
+                "headline_3": "24/7 Global Response Team",
+                "description_1": "International emergency evacuation coverage for medical emergencies abroad. Air ambulance, ground transport, repatriation services.",
+                "description_2": "Don't risk being stranded overseas. Comprehensive international coverage with immediate response. Get protected today.",
+                "path_1": "international",
+                "path_2": "coverage",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=international_longtail&utm_term=international_evacuation"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Travel Emergency Scenarios",
+            "match_type": "Modified Broad",
+            "daily_budget": "$25",
+            "keywords": [
+              "medical emergency +abroad",
+              "stranded +overseas +insurance", 
+              "travel +emergency +coverage",
+              "emergency +transport +insurance"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Medical Emergency Abroad?",
+                "headline_2": "Emergency Evacuation Coverage",
+                "headline_3": "Don't Get Stranded Overseas",
+                "description_1": "Medical emergencies abroad can be devastating without proper coverage. Emergency evacuation insurance provides immediate response and transport.",
+                "description_2": "Protect against medical emergencies, political unrest, natural disasters. Comprehensive coverage starts at $89. Get quote now.",
+                "path_1": "emergency",
+                "path_2": "scenarios",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=scenarios_longtail&utm_term=emergency_scenarios"
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "campaign_name": "Competitor Targeting",
+        "campaign_type": "Search",
+        "budget_allocation": "$1,200/month",
+        "target_cpa": "$95",
+        "expected_conversions": 13,
+        "bidding_strategy": "Manual CPC with conversion tracking",
+        
+        "ad_groups": [
+          {
+            "ad_group_name": "Travel Guard Alternatives",
+            "match_type": "Phrase Match",
+            "daily_budget": "$25",
+            "keywords": [
+              "\"travel guard emergency evacuation\"",
+              "\"travel guard vs\"",
+              "\"travel guard alternative\"",
+              "\"travel guard evacuation coverage\""
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Better Than Travel Guard",
+                "headline_2": "Specialized Evacuation Experts",
+                "headline_3": "Superior Coverage & Service",
+                "description_1": "Why settle for generic travel insurance? Get specialized emergency evacuation coverage from dedicated experts. Better coverage, better service.",
+                "description_2": "Compare our evacuation-focused coverage vs. Travel Guard's basic options. Specialized expertise makes the difference.",
+                "path_1": "vs-travelguard",
+                "path_2": "comparison",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=competitor_travelguard&utm_term=travel_guard_alternative"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Allianz Alternatives", 
+            "match_type": "Phrase Match",
+            "daily_budget": "$20",
+            "keywords": [
+              "\"allianz emergency evacuation\"",
+              "\"allianz travel vs\"",
+              "\"allianz alternative\"",
+              "\"allianz evacuation coverage\""
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Allianz Alternative",
+                "headline_2": "Dedicated Evacuation Experts",
+                "headline_3": "Specialized Emergency Coverage",
+                "description_1": "Get specialized emergency evacuation coverage, not generic travel insurance. Dedicated evacuation experts with superior service.",
+                "description_2": "Compare specialized evacuation coverage vs. Allianz basic options. Expert evacuation services when you need them most.",
+                "path_1": "vs-allianz",
+                "path_2": "comparison",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=competitor_allianz&utm_term=allianz_alternative"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Generic Travel Insurance",
+            "match_type": "Modified Broad",
+            "daily_budget": "$15",
+            "keywords": [
+              "travel insurance +evacuation",
+              "travel insurance +emergency",
+              "travel insurance +medical +transport"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Beyond Basic Travel Insurance",
+                "headline_2": "Specialized Evacuation Coverage",
+                "headline_3": "When Generic Isn't Enough",
+                "description_1": "Basic travel insurance often excludes critical evacuation coverage. Get specialized emergency evacuation protection from experts.",
+                "description_2": "Don't rely on basic travel insurance for emergencies. Specialized evacuation coverage ensures proper response and transport.",
+                "path_1": "specialized",
+                "path_2": "coverage",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=competitor_generic&utm_term=specialized_evacuation"
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "campaign_name": "Remarketing Audiences",
+        "campaign_type": "Display/Search Remarketing",
+        "budget_allocation": "$800/month",
+        "target_cpa": "$65",
+        "expected_conversions": 12,
+        "bidding_strategy": "Target CPA with audience optimization",
+        
+        "audiences": [
+          {
+            "audience_name": "Website Visitors 30 Days",
+            "audience_size": "1,000-5,000",
+            "budget_allocation": "$300/month",
+            "ad_format": "Responsive Search Ads + Display",
+            "messaging": "You visited our emergency evacuation page. Complete your quote and get protected.",
+            "ad_copies": [
+              {
+                "headline_1": "Complete Your Evacuation Quote",
+                "headline_2": "Don't Leave Safety to Chance",
+                "headline_3": "Get Protected Today",
+                "description_1": "You were looking at emergency evacuation insurance. Complete your quote and get the protection you need for your next trip.",
+                "description_2": "Emergency evacuation coverage starting at $89. Complete your quote in 2 minutes. Travel with confidence.",
+                "final_url": "/emergency-evacuation-insurance/quote?utm_source=google&utm_medium=cpc&utm_campaign=remarketing_visitors&utm_term=return_visitor"
+              }
+            ]
+          },
+          {
+            "audience_name": "Quote Abandoners",
+            "audience_size": "500-2,000",
+            "budget_allocation": "$250/month",
+            "ad_format": "Responsive Search Ads",
+            "messaging": "Finish your evacuation insurance quote. Your safety shouldn't wait.",
+            "ad_copies": [
+              {
+                "headline_1": "Finish Your Quote",
+                "headline_2": "Emergency Evacuation Coverage",
+                "headline_3": "Save Your Progress",
+                "description_1": "You started an emergency evacuation quote. Complete it now and get immediate coverage for your trip. Only takes 2 minutes.",
+                "description_2": "Don't lose your quote progress. Complete your emergency evacuation insurance application and travel protected.",
+                "final_url": "/emergency-evacuation-insurance/quote/resume?utm_source=google&utm_medium=cpc&utm_campaign=remarketing_abandoners&utm_term=quote_completion"
+              }
+            ]
+          },
+          {
+            "audience_name": "Video Viewers",
+            "audience_size": "2,000-8,000", 
+            "budget_allocation": "$150/month",
+            "ad_format": "Display + YouTube",
+            "messaging": "You watched our evacuation story. Get the same protection for your travels.",
+            "creative_strategy": "Video testimonials and evacuation scenarios"
+          },
+          {
+            "audience_name": "Email Subscribers Non-Customers",
+            "audience_size": "3,000-12,000",
+            "budget_allocation": "$100/month",
+            "ad_format": "Display + Gmail Promotions",
+            "messaging": "Subscriber exclusive: Save 15% on emergency evacuation coverage"
+          }
+        ]
+      },
+
+      {
+        "campaign_name": "Travel Destination Targeting",
+        "campaign_type": "Search + Display",
+        "budget_allocation": "$600/month",
+        "target_cpa": "$90",
+        "expected_conversions": 7,
+        "bidding_strategy": "Target CPA with geographic insights",
+        
+        "ad_groups": [
+          {
+            "ad_group_name": "High-Risk Destinations",
+            "match_type": "Phrase Match",
+            "keywords": [
+              "\"travel insurance [country]\"",
+              "\"medical coverage [destination]\"",
+              "\"evacuation insurance [location]\""
+            ],
+            "geographic_targeting": "Users searching for or planning travel to high-risk areas",
+            "custom_intent_audiences": [
+              "Users researching travel to countries with travel advisories",
+              "Adventure travel and extreme sports enthusiasts",
+              "Business travelers to developing countries"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Traveling to [Destination]?",
+                "headline_2": "Emergency Evacuation Essential",
+                "headline_3": "Specialized Destination Coverage",
+                "description_1": "Traveling to high-risk destinations requires specialized emergency evacuation coverage. Local medical facilities may be inadequate.",
+                "description_2": "Don't risk being stranded. Destination-specific evacuation coverage ensures safe transport home. Get protected before you go.",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=destination_targeting&utm_term=high_risk_travel"
+              }
+            ]
+          },
+          {
+            "ad_group_name": "Adventure Travel",
+            "match_type": "Modified Broad",
+            "keywords": [
+              "adventure travel +insurance",
+              "extreme sports +coverage",
+              "mountaineering +evacuation",
+              "safari +travel +insurance"
+            ],
+            "affinity_audiences": [
+              "Adventure travelers",
+              "Extreme sports enthusiasts", 
+              "Mountain climbing communities",
+              "International adventure tour participants"
+            ],
+            "ad_copies": [
+              {
+                "headline_1": "Adventure Travel Protection",
+                "headline_2": "Specialized Evacuation Coverage",
+                "headline_3": "When Adventure Goes Wrong",
+                "description_1": "Adventure travel requires specialized emergency evacuation coverage. Remote locations, extreme activities, higher risks need expert response.",
+                "description_2": "Helicopter evacuation, air ambulance, emergency transport. Adventure travel evacuation coverage from specialists.",
+                "path_1": "adventure",
+                "path_2": "travel",
+                "final_url": "/emergency-evacuation-insurance?utm_source=google&utm_medium=cpc&utm_campaign=adventure_travel&utm_term=adventure_evacuation"
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        "campaign_name": "Seasonal Emergency Campaigns",
+        "campaign_type": "Search + Display",
+        "budget_allocation": "$400/month",
+        "target_cpa": "$80", 
+        "expected_conversions": 5,
+        "bidding_strategy": "Seasonal bidding with automated rules",
+        
+        "seasonal_strategies": [
+          {
+            "season": "Hurricane Season (June-November)",
+            "budget_increase": "+50%",
+            "keywords": [
+              "hurricane travel insurance",
+              "natural disaster evacuation",
+              "weather emergency coverage"
+            ],
+            "messaging": "Hurricane season travel requires emergency evacuation coverage"
+          },
+          {
+            "season": "Winter Travel (December-February)",
+            "budget_increase": "+25%", 
+            "keywords": [
+              "winter travel insurance",
+              "ski trip evacuation",
+              "mountain rescue coverage"
+            ],
+            "messaging": "Winter travel emergencies need specialized evacuation response"
+          },
+          {
+            "season": "Summer Travel Peak (June-August)",
+            "budget_increase": "+40%",
+            "keywords": [
+              "summer travel insurance",
+              "vacation evacuation coverage",
+              "international summer travel"
+            ],
+            "messaging": "Summer travel peak requires comprehensive evacuation protection"
+          },
+          {
+            "season": "Holiday Travel (November-January)",
+            "budget_increase": "+30%",
+            "keywords": [
+              "holiday travel insurance",
+              "Christmas travel coverage",
+              "new year travel protection"
+            ],
+            "messaging": "Holiday travel disruptions need emergency evacuation backup"
+          }
+        ]
+      }
+    ],
+
+    "budget_management": {
+      "monthly_budget_allocation": {
+        "core_terms": "$2,500 (40%)",
+        "long_tail": "$1,800 (29%)",
+        "competitor": "$1,200 (19%)", 
+        "remarketing": "$800 (13%)",
+        "destination": "$600 (10%)",
+        "seasonal": "$400 (6%)"
+      },
+      "performance_thresholds": {
+        "pause_keywords": "CPA > $150 for 7 days",
+        "increase_bids": "CPA < $50 and impression share < 70%",
+        "decrease_bids": "CPA > $100 for 3 days",
+        "budget_reallocation": "Weekly based on CPA performance"
+      }
+    },
+
+    "tracking_and_attribution": {
+      "conversion_actions": [
+        {
+          "action_name": "Emergency Evacuation Quote Request",
+          "value": "$200",
+          "attribution_model": "data_driven",
+          "conversion_window": "30_days"
+        },
+        {
+          "action_name": "Emergency Evacuation Phone Call",
+          "value": "$250", 
+          "attribution_model": "first_click",
+          "conversion_window": "30_days",
+          "call_length_threshold": "30_seconds"
+        },
+        {
+          "action_name": "Emergency Evacuation Policy Purchase",
+          "value": "$350",
+          "attribution_model": "data_driven", 
+          "conversion_window": "90_days"
+        },
+        {
+          "action_name": "Emergency Evacuation Calculator Usage",
+          "value": "$50",
+          "attribution_model": "last_click",
+          "conversion_window": "7_days"
+        }
+      ],
+      "custom_parameters": {
+        "coverage_type": "basic|comprehensive|premium",
+        "destination_type": "domestic|international|high_risk",
+        "trip_duration": "short|medium|long",
+        "traveler_type": "individual|family|business|senior"
+      }
+    },
+
+    "landing_page_optimization": {
+      "primary_landing_pages": [
+        {
+          "url": "/emergency-evacuation-insurance",
+          "target_keywords": "emergency evacuation insurance, medical evacuation",
+          "optimization_focus": "conversion_rate",
+          "a_b_tests": [
+            "Headline: 'Emergency Evacuation Insurance' vs 'Medical Emergency Transport Coverage'",
+            "CTA: 'Get Free Quote' vs 'Calculate Premium'",
+            "Hero Image: Helicopter rescue vs Air ambulance"
+          ]
+        },
+        {
+          "url": "/emergency-evacuation-insurance/quote",
+          "target_keywords": "evacuation insurance quote",
+          "optimization_focus": "form_completion",
+          "a_b_tests": [
+            "Form length: 5 fields vs 8 fields",
+            "Progress indicator: Steps vs percentage",
+            "Social proof: Testimonials vs statistics"
+          ]
+        }
+      ],
+      "mobile_optimization": {
+        "amp_pages": "Enabled for core landing pages",
+        "mobile_speed_target": "< 3 seconds load time",
+        "mobile_conversion_tracking": "Separate goals for mobile conversions"
+      }
+    },
+
+    "competitive_intelligence": {
+      "monitored_competitors": [
+        {
+          "competitor": "Travel Guard",
+          "monitoring_focus": "Emergency evacuation ad copy, keywords, landing pages",
+          "response_strategy": "Emphasize specialized expertise vs generic coverage"
+        },
+        {
+          "competitor": "Allianz Travel",
+          "monitoring_focus": "Medical evacuation positioning, pricing",
+          "response_strategy": "Highlight superior coverage limits and response time"
+        },
+        {
+          "competitor": "World Nomads",
+          "monitoring_focus": "Adventure travel evacuation marketing",
+          "response_strategy": "Focus on comprehensive coverage vs basic protection"
+        }
+      ],
+      "competitive_alerts": [
+        "New competitor emergency evacuation campaigns",
+        "Pricing changes in evacuation coverage",
+        "New evacuation-focused ad copy or messaging"
+      ]
+    },
+
+    "automation_rules": [
+      {
+        "rule_name": "Pause Low Converting Keywords",
+        "condition": "Conversions = 0 AND Cost > $100 in last 14 days",
+        "action": "Pause keyword",
+        "frequency": "Daily"
+      },
+      {
+        "rule_name": "Increase Bids High Performers",
+        "condition": "CPA < $60 AND Impression Share < 70% in last 7 days",
+        "action": "Increase bid by 15%",
+        "frequency": "Weekly"
+      },
+      {
+        "rule_name": "Budget Reallocation",
+        "condition": "Campaign CPA variance > 20% from target for 3 days",
+        "action": "Email alert for manual review",
+        "frequency": "Daily"
+      },
+      {
+        "rule_name": "Seasonal Budget Adjustment",
+        "condition": "Travel season keyword volume increase > 50%",
+        "action": "Increase campaign budget by 30%", 
+        "frequency": "Weekly during peak seasons"
+      }
+    ],
+
+    "reporting_dashboard": {
+      "key_metrics": [
+        "Total Conversions",
+        "Cost Per Acquisition", 
+        "Return on Ad Spend",
+        "Impression Share",
+        "Quality Score Average",
+        "Click-Through Rate",
+        "Conversion Rate by Campaign",
+        "Search Lost IS (Budget)",
+        "Search Lost IS (Rank)"
+      ],
+      "custom_reports": [
+        {
+          "report_name": "Emergency Evacuation Keyword Performance",
+          "frequency": "Weekly",
+          "recipients": ["marketing@elmaginsurance.com"],
+          "metrics": ["Conversions", "CPA", "Quality Score by keyword"]
+        },
+        {
+          "report_name": "Destination-Based Performance",
+          "frequency": "Monthly", 
+          "metrics": ["Geographic performance", "Destination keyword ROI"]
+        }
+      ]
+    },
+
+    "success_metrics": {
+      "month_3_targets": {
+        "total_conversions": 252,
+        "average_cpa": "$82",
+        "roas": "380%",
+        "impression_share": "65%"
+      },
+      "month_6_targets": {
+        "total_conversions": 504,
+        "average_cpa": "$78",
+        "roas": "420%",
+        "impression_share": "75%"
+      },
+      "month_12_targets": {
+        "total_conversions": 1008,
+        "average_cpa": "$75",
+        "roas": "450%", 
+        "impression_share": "85%"
+      }
+    }
+  }
+}

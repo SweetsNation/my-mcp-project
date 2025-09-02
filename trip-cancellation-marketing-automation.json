@@ -1,0 +1,563 @@
+{
+  "marketing_automation_workflows": {
+    "overview": {
+      "campaign_name": "Trip Cancellation Insurance Marketing Automation",
+      "automation_platform": "integrated_multi_platform",
+      "primary_objectives": [
+        "nurture_leads_to_conversion",
+        "maximize_customer_lifetime_value",
+        "reduce_manual_marketing_tasks",
+        "improve_lead_qualification_efficiency"
+      ],
+      "integration_points": [
+        "email_marketing_platform",
+        "crm_system",
+        "google_ads",
+        "facebook_ads",
+        "website_analytics",
+        "phone_tracking_system"
+      ]
+    },
+    "lead_nurturing_workflows": [
+      {
+        "workflow_id": "TC_001_QUOTE_ABANDONMENT",
+        "workflow_name": "Trip Cancellation Quote Abandonment Recovery",
+        "trigger": "quote_started_not_completed",
+        "objective": "recover_abandoned_quotes",
+        "target_audience": "users_who_started_quote_process",
+        "workflow_steps": [
+          {
+            "step": 1,
+            "delay": "2_hours",
+            "action_type": "email",
+            "subject": "Complete Your Trip Cancellation Quote - Just 2 Minutes Left",
+            "content": "friendly_reminder_with_benefits",
+            "personalization": [
+              "user_name",
+              "trip_destination",
+              "estimated_coverage_cost"
+            ],
+            "call_to_action": "Complete Quote Now",
+            "success_metric": "email_open_rate > 25%, click_rate > 8%"
+          },
+          {
+            "step": 2,
+            "delay": "1_day",
+            "action_type": "retargeting_ad",
+            "platform": "google_facebook",
+            "ad_message": "Don't Risk Your Vacation Investment",
+            "incentive": "5% discount for quote completion",
+            "duration": "7_days",
+            "success_metric": "click_through_rate > 2%"
+          },
+          {
+            "step": 3,
+            "delay": "3_days",
+            "action_type": "email",
+            "subject": "⚠️ Your $X,XXX Trip Needs Protection - Get Quote",
+            "content": "urgency_based_with_statistics",
+            "social_proof": "50,000+ travelers protected",
+            "personalization": ["trip_cost", "destination_risks"],
+            "success_metric": "conversion_rate > 3%"
+          },
+          {
+            "step": 4,
+            "delay": "7_days",
+            "action_type": "phone_outreach",
+            "script": "quote_assistance_offer",
+            "timing": "business_hours",
+            "caller_id": "trip_cancellation_specialist",
+            "success_metric": "contact_rate > 15%, conversion_rate > 8%"
+          },
+          {
+            "step": 5,
+            "delay": "14_days",
+            "action_type": "email",
+            "subject": "Last Chance: Travel Smart with Trip Protection",
+            "content": "final_opportunity_educational",
+            "attached_resource": "trip_cancellation_guide_pdf",
+            "exit_condition": "move_to_educational_nurture",
+            "success_metric": "resource_download > 10%"
+          }
+        ],
+        "performance_targets": {
+          "quote_recovery_rate": 15,
+          "cost_per_recovered_quote": 25,
+          "conversion_rate": 8,
+          "roi": 380
+        }
+      },
+      {
+        "workflow_id": "TC_002_LEAD_NURTURING",
+        "workflow_name": "Trip Cancellation Educational Lead Nurturing",
+        "trigger": "email_signup_or_content_download",
+        "objective": "educate_and_convert_prospects",
+        "target_audience": "educational_content_subscribers",
+        "workflow_steps": [
+          {
+            "step": 1,
+            "delay": "immediate",
+            "action_type": "email",
+            "subject": "Welcome! Your Free Trip Cancellation Insurance Guide",
+            "content": "welcome_email_with_guide",
+            "attachments": ["comprehensive_trip_cancellation_guide.pdf"],
+            "call_to_action": "Get Your Free Quote",
+            "success_metric": "open_rate > 30%, click_rate > 12%"
+          },
+          {
+            "step": 2,
+            "delay": "3_days",
+            "action_type": "email",
+            "subject": "Real Story: How Sarah Saved $4,200 on Her Cancelled Cruise",
+            "content": "customer_success_story",
+            "story_focus": "cruise_cancellation",
+            "call_to_action": "Calculate Your Trip Protection Cost",
+            "success_metric": "engagement_rate > 8%"
+          },
+          {
+            "step": 3,
+            "delay": "7_days",
+            "action_type": "email",
+            "subject": "Do You Need Trip Cancellation Insurance? Take Our Quiz",
+            "content": "interactive_assessment",
+            "quiz_topic": "trip_cancellation_necessity",
+            "personalization": "quiz_results_based",
+            "success_metric": "quiz_completion > 20%"
+          },
+          {
+            "step": 4,
+            "delay": "10_days",
+            "action_type": "segmented_email",
+            "segmentation_criteria": [
+              {
+                "segment": "cruise_interested",
+                "subject": "Cruise Trip Protection: What You Must Know",
+                "content": "cruise_specific_education"
+              },
+              {
+                "segment": "international_travel",
+                "subject": "International Travel Risks & Protection",
+                "content": "international_travel_focus"
+              },
+              {
+                "segment": "family_travelers",
+                "subject": "Protecting Your Family Vacation Investment",
+                "content": "family_travel_protection"
+              }
+            ],
+            "success_metric": "segment_specific_ctr > 10%"
+          },
+          {
+            "step": 5,
+            "delay": "14_days",
+            "action_type": "value_offer_email",
+            "subject": "Exclusive: 15% Off Your First Trip Cancellation Policy",
+            "content": "limited_time_discount_offer",
+            "discount_code": "PROTECT15",
+            "validity": "7_days",
+            "call_to_action": "Get Protected Now - Save 15%",
+            "success_metric": "conversion_rate > 5%"
+          },
+          {
+            "step": 6,
+            "delay": "21_days",
+            "action_type": "retargeting_campaign",
+            "platforms": ["google", "facebook"],
+            "campaign_focus": "educational_content_promotion",
+            "budget": "50_per_week",
+            "duration": "2_weeks"
+          },
+          {
+            "step": 7,
+            "delay": "30_days",
+            "action_type": "survey_email",
+            "subject": "Quick Question: What's Stopping You from Getting Trip Protection?",
+            "survey_purpose": "objection_identification",
+            "incentive": "free_travel_planning_checklist",
+            "success_metric": "response_rate > 8%"
+          }
+        ],
+        "performance_targets": {
+          "email_to_quote_rate": 12,
+          "nurture_to_purchase_rate": 6,
+          "cost_per_conversion": 85,
+          "average_nurture_duration": 45
+        }
+      },
+      {
+        "workflow_id": "TC_003_HIGH_VALUE_LEAD",
+        "workflow_name": "High-Value Trip Cancellation Lead VIP Treatment",
+        "trigger": "lead_score_above_70_or_high_trip_value",
+        "objective": "prioritize_and_convert_premium_leads",
+        "target_audience": "high_value_qualified_prospects",
+        "workflow_steps": [
+          {
+            "step": 1,
+            "delay": "15_minutes",
+            "action_type": "internal_alert",
+            "recipient": "senior_sales_specialist",
+            "alert_content": "high_value_lead_notification",
+            "lead_details": ["trip_cost", "destination", "contact_info", "lead_score"],
+            "priority": "immediate"
+          },
+          {
+            "step": 2,
+            "delay": "30_minutes",
+            "action_type": "personalized_email",
+            "sender": "senior_trip_protection_specialist",
+            "subject": "Your [DESTINATION] Trip Deserves Premium Protection",
+            "content": "vip_personalized_message",
+            "personalization": [
+              "trip_destination",
+              "trip_cost",
+              "travel_date",
+              "specific_risks"
+            ],
+            "call_to_action": "Schedule Personal Consultation"
+          },
+          {
+            "step": 3,
+            "delay": "2_hours",
+            "action_type": "phone_call_attempt",
+            "caller": "dedicated_high_value_specialist",
+            "script": "high_value_lead_consultation_offer",
+            "voice_mail_message": "personalized_callback_request",
+            "success_metric": "contact_rate > 60%"
+          },
+          {
+            "step": 4,
+            "delay": "1_day",
+            "action_type": "custom_quote_email",
+            "subject": "Your Custom Trip Protection Quote - [TRIP_VALUE] Coverage",
+            "content": "detailed_personalized_quote",
+            "quote_details": [
+              "trip_specific_risks",
+              "recommended_coverage_levels",
+              "premium_options",
+              "exclusive_benefits"
+            ],
+            "urgency_element": "limited_time_vip_pricing"
+          },
+          {
+            "step": 5,
+            "delay": "3_days",
+            "action_type": "video_message",
+            "sender": "company_expert",
+            "video_content": "personalized_trip_protection_explanation",
+            "duration": "2_minutes",
+            "call_to_action": "schedule_consultation_or_purchase"
+          }
+        ],
+        "performance_targets": {
+          "contact_rate": 70,
+          "conversion_rate": 25,
+          "average_policy_value": 950,
+          "sales_cycle_duration": 7
+        }
+      },
+      {
+        "workflow_id": "TC_004_SEASONAL_CAMPAIGNS",
+        "workflow_name": "Seasonal Trip Cancellation Marketing Automation",
+        "trigger": "seasonal_calendar_events",
+        "objective": "capitalize_on_seasonal_travel_patterns",
+        "seasonal_workflows": [
+          {
+            "season": "summer_vacation_planning",
+            "timeframe": "march_may",
+            "focus": "family_vacation_protection",
+            "email_sequence": [
+              {
+                "timing": "march_1",
+                "subject": "Summer Vacation Planning? Don't Forget Trip Protection",
+                "content": "early_planning_benefits"
+              },
+              {
+                "timing": "april_1",
+                "subject": "Beach, Mountains, or Cruise? Protect Your Summer Plans",
+                "content": "destination_specific_protection"
+              },
+              {
+                "timing": "may_1",
+                "subject": "Last Call: Summer Trip Protection - School's Almost Out!",
+                "content": "urgency_based_family_focus"
+              }
+            ],
+            "ad_campaigns": [
+              {
+                "platform": "facebook",
+                "targeting": "parents_vacation_planning",
+                "budget": "1000_per_month",
+                "creative_focus": "family_vacation_scenarios"
+              }
+            ]
+          },
+          {
+            "season": "holiday_travel",
+            "timeframe": "november_december",
+            "focus": "winter_holiday_and_thanksgiving_travel",
+            "email_sequence": [
+              {
+                "timing": "november_1",
+                "subject": "Holiday Travel Plans? Weather Delays Are Coming",
+                "content": "winter_weather_protection_focus"
+              },
+              {
+                "timing": "november_15",
+                "subject": "Thanksgiving Week Weather Alerts - Are You Protected?",
+                "content": "urgent_thanksgiving_protection"
+              },
+              {
+                "timing": "december_1",
+                "subject": "Christmas & New Year Travel - The Riskiest Time to Fly",
+                "content": "holiday_travel_statistics_and_protection"
+              }
+            ]
+          },
+          {
+            "season": "spring_break",
+            "timeframe": "january_march",
+            "focus": "college_and_family_spring_break_trips",
+            "email_sequence": [
+              {
+                "timing": "january_15",
+                "subject": "Spring Break 2024: Protect Your Getaway Investment",
+                "content": "spring_break_planning_guide"
+              },
+              {
+                "timing": "february_15",
+                "subject": "Spring Break Countdown: Weather & Cancellation Risks",
+                "content": "spring_weather_and_travel_risks"
+              }
+            ],
+            "targeting_focus": "college_age_travelers_and_families"
+          }
+        ]
+      }
+    ],
+    "customer_lifecycle_automation": [
+      {
+        "lifecycle_stage": "new_customer_onboarding",
+        "workflow_id": "TC_005_CUSTOMER_ONBOARDING",
+        "trigger": "policy_purchase_completion",
+        "objective": "ensure_customer_satisfaction_and_retention",
+        "steps": [
+          {
+            "step": 1,
+            "delay": "immediate",
+            "action_type": "welcome_email",
+            "subject": "Welcome to Elmag Insurance - Your Trip is Now Protected!",
+            "content": "policy_confirmation_and_welcome",
+            "attachments": ["policy_documents", "claims_contact_info", "mobile_app_link"],
+            "call_to_action": "Download Our Mobile App"
+          },
+          {
+            "step": 2,
+            "delay": "7_days",
+            "action_type": "educational_email",
+            "subject": "How to File a Trip Cancellation Claim (Hope You Never Need This!)",
+            "content": "claims_process_education",
+            "attachments": ["claims_process_guide", "emergency_contact_card"]
+          },
+          {
+            "step": 3,
+            "delay": "30_days",
+            "action_type": "satisfaction_survey",
+            "subject": "How Was Your Experience Getting Trip Protection?",
+            "survey_focus": "purchase_experience_feedback",
+            "incentive": "chance_to_win_travel_voucher",
+            "follow_up": "review_request_if_positive"
+          },
+          {
+            "step": 4,
+            "delay": "90_days",
+            "action_type": "renewal_reminder",
+            "subject": "Planning Your Next Adventure? Get Protected Again",
+            "content": "loyalty_discount_offer",
+            "discount": "10%_returning_customer",
+            "personalization": "previous_trip_reference"
+          }
+        ]
+      },
+      {
+        "lifecycle_stage": "customer_retention",
+        "workflow_id": "TC_006_RETENTION_REACTIVATION",
+        "trigger": "customer_inactivity_or_policy_expiration",
+        "objective": "reactivate_past_customers",
+        "steps": [
+          {
+            "step": 1,
+            "delay": "30_days_after_last_policy",
+            "action_type": "reactivation_email",
+            "subject": "Miss Us? Exclusive Offer for Our Valued Customers",
+            "content": "we_miss_you_message",
+            "incentive": "15%_welcome_back_discount",
+            "call_to_action": "Plan Your Next Protected Trip"
+          },
+          {
+            "step": 2,
+            "delay": "60_days",
+            "action_type": "value_reminder_email",
+            "subject": "Remember When We Saved [CUSTOMER_NAME]'s $3,500 Trip?",
+            "content": "success_story_reminder",
+            "personalization": "customer_previous_experience",
+            "call_to_action": "Get Protected for Your Next Adventure"
+          },
+          {
+            "step": 3,
+            "delay": "90_days",
+            "action_type": "survey_and_feedback",
+            "subject": "Help Us Improve - What Would Bring You Back?",
+            "survey_purpose": "reactivation_barrier_identification",
+            "incentive": "gift_card_or_discount",
+            "follow_up": "personalized_offer_based_on_feedback"
+          }
+        ]
+      }
+    ],
+    "behavioral_trigger_automation": [
+      {
+        "trigger_type": "website_behavior",
+        "automation_rules": [
+          {
+            "behavior": "visited_pricing_page_3_times",
+            "action": "send_pricing_clarification_email",
+            "delay": "2_hours",
+            "subject": "Questions About Trip Cancellation Insurance Pricing?",
+            "content": "pricing_transparency_and_value_explanation"
+          },
+          {
+            "behavior": "downloaded_guide_but_no_quote",
+            "action": "educational_nurture_sequence",
+            "delay": "1_day",
+            "sequence_focus": "guide_topic_deep_dive"
+          },
+          {
+            "behavior": "visited_competitor_comparison_page",
+            "action": "competitive_differentiation_email",
+            "delay": "4_hours",
+            "subject": "Why Choose Elmag Over [COMPETITOR_NAME]?",
+            "content": "competitive_advantages_and_testimonials"
+          },
+          {
+            "behavior": "spent_over_5_minutes_on_claims_page",
+            "action": "claims_support_offer",
+            "delay": "immediate",
+            "action_type": "chat_popup_and_email",
+            "message": "Need help with a claim? Our specialists are here to help."
+          }
+        ]
+      },
+      {
+        "trigger_type": "engagement_level",
+        "automation_rules": [
+          {
+            "engagement": "high_email_engagement_low_conversion",
+            "action": "phone_outreach_offer",
+            "criteria": "open_rate > 40%, no_conversion_after_30_days",
+            "message": "Personal consultation offer from trip protection specialist"
+          },
+          {
+            "engagement": "low_email_engagement",
+            "action": "re_engagement_campaign",
+            "criteria": "open_rate < 10%, 3_consecutive_emails",
+            "campaign_focus": "win_back_with_different_content_format"
+          },
+          {
+            "engagement": "social_media_engagement",
+            "action": "social_lead_nurture",
+            "criteria": "likes_shares_comments_on_trip_content",
+            "approach": "social_media_direct_message_with_value_offer"
+          }
+        ]
+      }
+    ],
+    "integration_configurations": [
+      {
+        "platform": "email_marketing_mailchimp",
+        "configuration": {
+          "api_key": "MAILCHIMP_API_KEY",
+          "list_segmentation": "behavior_and_demographic_based",
+          "automation_triggers": "zapier_integration",
+          "personalization": "dynamic_content_blocks",
+          "a_b_testing": "subject_lines_and_send_times"
+        }
+      },
+      {
+        "platform": "crm_salesforce",
+        "configuration": {
+          "lead_scoring_sync": "real_time",
+          "activity_tracking": "all_touchpoints",
+          "sales_alert_triggers": "high_value_lead_identification",
+          "pipeline_management": "automated_lead_routing"
+        }
+      },
+      {
+        "platform": "google_ads",
+        "configuration": {
+          "customer_list_sync": "automated_audience_updates",
+          "conversion_tracking": "offline_conversion_import",
+          "bid_optimization": "audience_based_adjustments",
+          "remarketing": "behavior_triggered_campaigns"
+        }
+      },
+      {
+        "platform": "facebook_ads",
+        "configuration": {
+          "custom_audience_sync": "daily_updates",
+          "lookalike_audience_creation": "automated",
+          "conversion_api": "server_side_tracking",
+          "dynamic_ads": "trip_type_personalized"
+        }
+      }
+    ],
+    "performance_monitoring": {
+      "automation_kpis": [
+        {
+          "metric": "Email Automation ROI",
+          "calculation": "(revenue_from_automation - automation_costs) / automation_costs * 100",
+          "target": "800%",
+          "tracking_method": "utm_tagged_conversions"
+        },
+        {
+          "metric": "Lead Nurturing Conversion Rate",
+          "calculation": "nurtured_leads_converted / total_nurtured_leads * 100",
+          "target": "18%",
+          "tracking_method": "crm_pipeline_analysis"
+        },
+        {
+          "metric": "Customer Lifetime Value Impact",
+          "calculation": "automated_customer_clv - non_automated_customer_clv",
+          "target": "25%_increase",
+          "tracking_method": "cohort_analysis"
+        },
+        {
+          "metric": "Automation Efficiency",
+          "calculation": "manual_task_hours_saved / total_automation_hours",
+          "target": "10:1_ratio",
+          "tracking_method": "time_tracking_analysis"
+        }
+      ],
+      "optimization_schedule": {
+        "daily": ["automation_performance_monitoring", "trigger_optimization"],
+        "weekly": ["a_b_test_analysis", "segment_performance_review"],
+        "monthly": ["workflow_optimization", "roi_analysis"],
+        "quarterly": ["strategy_review", "automation_expansion_planning"]
+      }
+    },
+    "compliance_and_privacy": {
+      "email_marketing_compliance": {
+        "can_spam_compliance": true,
+        "gdpr_compliance": true,
+        "unsubscribe_handling": "one_click_unsubscribe",
+        "consent_tracking": "detailed_consent_records",
+        "data_retention": "automated_cleanup_after_retention_period"
+      },
+      "data_privacy": {
+        "personal_data_handling": "minimal_data_collection",
+        "consent_management": "granular_consent_options",
+        "data_portability": "customer_data_export_available",
+        "right_to_erasure": "automated_data_deletion_process"
+      }
+    }
+  }
+}

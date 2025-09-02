@@ -1,0 +1,585 @@
+{
+  "final_expense_ppc_campaigns": {
+    "campaign_1_branded": {
+      "name": "Final Expense Insurance - Branded",
+      "campaign_type": "Search",
+      "budget": {
+        "daily": 67,
+        "monthly": 2000,
+        "currency": "USD"
+      },
+      "targeting": {
+        "locations": ["United States"],
+        "languages": ["English"],
+        "age_range": "45-85",
+        "devices": ["Desktop", "Mobile", "Tablet"],
+        "demographics": {
+          "parental_status": "Any",
+          "household_income": "Top 40%"
+        }
+      },
+      "ad_groups": [
+        {
+          "name": "Final Expense Insurance - Exact",
+          "keywords": [
+            {
+              "keyword": "[final expense insurance]",
+              "match_type": "Exact",
+              "max_cpc": 5.00,
+              "quality_score_target": 8
+            },
+            {
+              "keyword": "[final expense insurance quotes]",
+              "match_type": "Exact", 
+              "max_cpc": 4.50,
+              "quality_score_target": 8
+            },
+            {
+              "keyword": "[final expense coverage]",
+              "match_type": "Exact",
+              "max_cpc": 4.00,
+              "quality_score_target": 7
+            }
+          ],
+          "ads": [
+            {
+              "headline_1": "Final Expense Insurance",
+              "headline_2": "Get Quote in 5 Minutes",
+              "headline_3": "Guaranteed Acceptance",
+              "description_1": "Protect Your Family From $24,000+ Funeral Costs. No Medical Exam Required.",
+              "description_2": "Starting at $10/Month. Apply Today & Get Instant Approval.",
+              "path_1": "FinalExpense",
+              "path_2": "QuickQuote",
+              "final_url": "https://www.elmaginsurance.com/final-expense?utm_source=google&utm_medium=cpc&utm_campaign=branded&utm_term={keyword}",
+              "display_url": "elmaginsurance.com/final-expense"
+            }
+          ],
+          "extensions": {
+            "sitelink_extensions": [
+              {
+                "text": "Get Free Quote",
+                "url": "https://www.elmaginsurance.com/contact?service=final-expense"
+              },
+              {
+                "text": "Coverage Calculator",
+                "url": "https://www.elmaginsurance.com/tools?calculator=final-expense"
+              },
+              {
+                "text": "Compare Plans",
+                "url": "https://www.elmaginsurance.com/final-expense#coverage-options"
+              },
+              {
+                "text": "Call 331-E-HEALTH",
+                "url": "tel:331-343-2584"
+              }
+            ],
+            "callout_extensions": [
+              "No Medical Exam",
+              "Guaranteed Acceptance",
+              "Fixed Premiums",
+              "A+ Rated Carriers",
+              "Ages 45-85"
+            ],
+            "structured_snippet_extensions": [
+              {
+                "header": "Coverage Amounts",
+                "values": ["$5,000", "$10,000", "$25,000", "$50,000"]
+              },
+              {
+                "header": "Benefits",
+                "values": ["Funeral Costs", "Burial Expenses", "Final Medical Bills", "Outstanding Debts"]
+              }
+            ]
+          }
+        },
+        {
+          "name": "Burial Insurance - Phrase",
+          "keywords": [
+            {
+              "keyword": "\"burial insurance\"",
+              "match_type": "Phrase",
+              "max_cpc": 4.50,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "\"burial insurance quotes\"",
+              "match_type": "Phrase",
+              "max_cpc": 4.00,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "\"funeral insurance\"",
+              "match_type": "Phrase",
+              "max_cpc": 3.50,
+              "quality_score_target": 7
+            }
+          ],
+          "ads": [
+            {
+              "headline_1": "Burial Insurance Plans",
+              "headline_2": "Cover Funeral & Burial Costs",
+              "headline_3": "No Medical Exam Needed",
+              "description_1": "Final Expense Insurance Starting at $10/Month. Protect Your Family Today.",
+              "description_2": "Guaranteed Acceptance for Ages 45-85. Get Your Free Quote Now.",
+              "path_1": "BurialInsurance",
+              "path_2": "NoMedicalExam",
+              "final_url": "https://www.elmaginsurance.com/final-expense?utm_source=google&utm_medium=cpc&utm_campaign=burial&utm_term={keyword}",
+              "display_url": "elmaginsurance.com/burial-insurance"
+            }
+          ]
+        }
+      ],
+      "bidding_strategy": "Target CPA",
+      "target_cpa": 150,
+      "expected_performance": {
+        "ctr": "8-12%",
+        "conversion_rate": "3-5%",
+        "avg_cpc": "$3-5"
+      }
+    },
+    
+    "campaign_2_guaranteed_acceptance": {
+      "name": "Guaranteed Acceptance Life Insurance",
+      "campaign_type": "Search",
+      "budget": {
+        "daily": 50,
+        "monthly": 1500,
+        "currency": "USD"
+      },
+      "targeting": {
+        "locations": ["United States"],
+        "languages": ["English"],
+        "age_range": "55-85",
+        "devices": ["Desktop", "Mobile", "Tablet"],
+        "demographics": {
+          "health_conscious": true,
+          "household_income": "Top 60%"
+        }
+      },
+      "ad_groups": [
+        {
+          "name": "Guaranteed Acceptance - Problem Solving",
+          "keywords": [
+            {
+              "keyword": "[guaranteed acceptance life insurance]",
+              "match_type": "Exact",
+              "max_cpc": 7.00,
+              "quality_score_target": 8
+            },
+            {
+              "keyword": "[no medical exam life insurance]",
+              "match_type": "Exact",
+              "max_cpc": 6.50,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "\"life insurance with health problems\"",
+              "match_type": "Phrase",
+              "max_cpc": 6.00,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "life insurance no health questions",
+              "match_type": "Broad Modified",
+              "max_cpc": 5.50,
+              "quality_score_target": 6
+            }
+          ],
+          "ads": [
+            {
+              "headline_1": "Guaranteed Acceptance",
+              "headline_2": "Life Insurance - No Medical Exam",
+              "headline_3": "Get Approved Regardless of Health",
+              "description_1": "Final Expense Insurance With No Health Questions. Instant Approval Available.",
+              "description_2": "Perfect for Seniors & Pre-Existing Conditions. Apply in 5 Minutes.",
+              "path_1": "GuaranteedAcceptance",
+              "path_2": "NoMedicalExam",
+              "final_url": "https://www.elmaginsurance.com/final-expense?utm_source=google&utm_medium=cpc&utm_campaign=guaranteed&utm_term={keyword}#guaranteed-acceptance",
+              "display_url": "elmaginsurance.com/guaranteed-acceptance"
+            }
+          ],
+          "extensions": {
+            "sitelink_extensions": [
+              {
+                "text": "Apply Now - No Exam",
+                "url": "https://www.elmaginsurance.com/contact?service=guaranteed-acceptance"
+              },
+              {
+                "text": "Health Conditions Accepted",
+                "url": "https://www.elmaginsurance.com/final-expense#health-conditions"
+              },
+              {
+                "text": "Ages 45-85 Eligible",
+                "url": "https://www.elmaginsurance.com/final-expense#age-eligibility"
+              }
+            ],
+            "callout_extensions": [
+              "No Health Questions",
+              "Instant Approval",
+              "Pre-Existing Conditions OK",
+              "Ages 45-85",
+              "Fixed Rates for Life"
+            ]
+          }
+        }
+      ],
+      "bidding_strategy": "Target CPA",
+      "target_cpa": 175,
+      "expected_performance": {
+        "ctr": "6-10%",
+        "conversion_rate": "2-4%",
+        "avg_cpc": "$4-7"
+      }
+    },
+
+    "campaign_3_cost_focused": {
+      "name": "Affordable Final Expense Insurance",
+      "campaign_type": "Search",
+      "budget": {
+        "daily": 33,
+        "monthly": 1000,
+        "currency": "USD"
+      },
+      "targeting": {
+        "locations": ["United States"],
+        "languages": ["English"],
+        "age_range": "45-85",
+        "devices": ["Desktop", "Mobile", "Tablet"],
+        "demographics": {
+          "household_income": "Top 70%",
+          "price_sensitive": true
+        }
+      },
+      "ad_groups": [
+        {
+          "name": "Affordable & Cost-Focused",
+          "keywords": [
+            {
+              "keyword": "[affordable burial insurance]",
+              "match_type": "Exact",
+              "max_cpc": 4.00,
+              "quality_score_target": 8
+            },
+            {
+              "keyword": "[cheap final expense insurance]",
+              "match_type": "Exact",
+              "max_cpc": 3.50,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "\"funeral cost coverage\"",
+              "match_type": "Phrase",
+              "max_cpc": 4.50,
+              "quality_score_target": 8
+            },
+            {
+              "keyword": "burial insurance quotes",
+              "match_type": "Broad Modified",
+              "max_cpc": 3.00,
+              "quality_score_target": 6
+            }
+          ],
+          "ads": [
+            {
+              "headline_1": "Affordable Final Expense",
+              "headline_2": "Insurance From $10/Month",
+              "headline_3": "Cover $24,000+ Funeral Costs",
+              "description_1": "Don't Burden Your Family With Expensive Funeral Bills. Get Protected Today.",
+              "description_2": "Guaranteed Acceptance. No Medical Exam. Get Free Quote in Minutes.",
+              "path_1": "Affordable",
+              "path_2": "From10PerMonth",
+              "final_url": "https://www.elmaginsurance.com/final-expense?utm_source=google&utm_medium=cpc&utm_campaign=affordable&utm_term={keyword}#pricing",
+              "display_url": "elmaginsurance.com/affordable-coverage"
+            }
+          ],
+          "extensions": {
+            "sitelink_extensions": [
+              {
+                "text": "See Pricing",
+                "url": "https://www.elmaginsurance.com/final-expense#coverage-options"
+              },
+              {
+                "text": "Coverage Calculator",
+                "url": "https://www.elmaginsurance.com/tools?calculator=burial-cost"
+              },
+              {
+                "text": "Compare Costs",
+                "url": "https://www.elmaginsurance.com/final-expense#cost-comparison"
+              }
+            ],
+            "callout_extensions": [
+              "Starting at $10/Month",
+              "No Hidden Fees",
+              "Fixed Premiums",
+              "Covers $24,000+ Costs",
+              "Free Quotes"
+            ],
+            "price_extensions": [
+              {
+                "type": "Basic Coverage",
+                "price": "$10/month",
+                "qualifier": "Starting at"
+              },
+              {
+                "type": "Standard Coverage", 
+                "price": "$25/month",
+                "qualifier": "Starting at"
+              },
+              {
+                "type": "Premium Coverage",
+                "price": "$50/month", 
+                "qualifier": "Starting at"
+              }
+            ]
+          }
+        }
+      ],
+      "bidding_strategy": "Maximize Conversions",
+      "target_roas": 400,
+      "expected_performance": {
+        "ctr": "10-15%",
+        "conversion_rate": "5-7%",
+        "avg_cpc": "$2-4"
+      }
+    },
+
+    "campaign_4_long_tail": {
+      "name": "Final Expense - Long Tail Keywords",
+      "campaign_type": "Search",
+      "budget": {
+        "daily": 27,
+        "monthly": 800,
+        "currency": "USD"
+      },
+      "targeting": {
+        "locations": ["United States"],
+        "languages": ["English"],
+        "age_range": "50-85",
+        "devices": ["Desktop", "Mobile", "Tablet"]
+      },
+      "ad_groups": [
+        {
+          "name": "Senior-Focused Long Tail",
+          "keywords": [
+            {
+              "keyword": "\"burial insurance for seniors\"",
+              "match_type": "Phrase",
+              "max_cpc": 6.00,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "\"final expense insurance seniors\"",
+              "match_type": "Phrase", 
+              "max_cpc": 5.50,
+              "quality_score_target": 7
+            },
+            {
+              "keyword": "funeral insurance over 50",
+              "match_type": "Broad Modified",
+              "max_cpc": 4.50,
+              "quality_score_target": 6
+            },
+            {
+              "keyword": "final expense no health questions",
+              "match_type": "Broad Modified",
+              "max_cpc": 5.00,
+              "quality_score_target": 6
+            },
+            {
+              "keyword": "whole life insurance final expense",
+              "match_type": "Broad Modified",
+              "max_cpc": 4.00,
+              "quality_score_target": 6
+            }
+          ],
+          "ads": [
+            {
+              "headline_1": "Senior Final Expense",
+              "headline_2": "Insurance - Ages 50-85",
+              "headline_3": "Designed for Seniors",
+              "description_1": "Fixed Rates for Life. Guaranteed Acceptance. No Medical Exam Required.",
+              "description_2": "Protect Your Family From Funeral Expenses. Apply in Minutes.",
+              "path_1": "Seniors",
+              "path_2": "Ages50to85",
+              "final_url": "https://www.elmaginsurance.com/final-expense?utm_source=google&utm_medium=cpc&utm_campaign=seniors&utm_term={keyword}&age=senior",
+              "display_url": "elmaginsurance.com/senior-coverage"
+            }
+          ],
+          "extensions": {
+            "sitelink_extensions": [
+              {
+                "text": "Senior Benefits",
+                "url": "https://www.elmaginsurance.com/final-expense#senior-benefits"
+              },
+              {
+                "text": "AARP Member Discounts",
+                "url": "https://www.elmaginsurance.com/final-expense#aarp-discount"
+              },
+              {
+                "text": "Medicare Coordination",
+                "url": "https://www.elmaginsurance.com/final-expense#medicare-coordination"
+              }
+            ],
+            "callout_extensions": [
+              "Ages 50-85 Welcome",
+              "Fixed Income Friendly",
+              "Medicare Coordination",
+              "AARP Partner",
+              "Senior Specialists"
+            ]
+          }
+        }
+      ],
+      "bidding_strategy": "Target CPA",
+      "target_cpa": 125,
+      "expected_performance": {
+        "ctr": "12-18%",
+        "conversion_rate": "4-8%",
+        "avg_cpc": "$3-6"
+      }
+    }
+  },
+
+  "campaign_settings": {
+    "ad_rotation": "Optimize for conversions",
+    "conversion_tracking": {
+      "primary_conversion": "Final Expense Quote Request",
+      "value": 150,
+      "secondary_conversions": [
+        {
+          "name": "Phone Call",
+          "value": 125
+        },
+        {
+          "name": "Form Submission",
+          "value": 175
+        },
+        {
+          "name": "Calculator Use",
+          "value": 25
+        }
+      ]
+    },
+    "negative_keywords": [
+      "free",
+      "diy",
+      "do it yourself",
+      "jobs",
+      "career",
+      "employment",
+      "agents wanted",
+      "training",
+      "education",
+      "school",
+      "course",
+      "cheap life insurance",
+      "term life",
+      "whole life comparison",
+      "reviews",
+      "complaints",
+      "scam"
+    ],
+    "audience_targeting": {
+      "remarketing_lists": [
+        "Website Visitors - 30 Days",
+        "Final Expense Page Visitors",
+        "Quote Form Abandoners",
+        "Calculator Users"
+      ],
+      "custom_audiences": [
+        "Life Insurance Intenders",
+        "Senior Financial Planning",
+        "Pre-Retirees 55+"
+      ],
+      "demographic_targeting": {
+        "age": "45-85",
+        "parental_status": "Parent or Not a Parent",
+        "household_income": "Top 50%"
+      }
+    },
+    "ad_schedule": {
+      "monday_friday": "6:00 AM - 10:00 PM",
+      "saturday": "8:00 AM - 8:00 PM", 
+      "sunday": "10:00 AM - 6:00 PM",
+      "timezone": "Account timezone"
+    },
+    "budget_distribution": {
+      "branded": "37.7%",
+      "guaranteed_acceptance": "28.3%",
+      "cost_focused": "18.9%",
+      "long_tail": "15.1%"
+    }
+  },
+
+  "landing_page_mapping": {
+    "branded_campaigns": {
+      "url": "/final-expense",
+      "utm_parameters": "?utm_source=google&utm_medium=cpc&utm_campaign=branded",
+      "key_elements": [
+        "Final expense insurance focus",
+        "Quote form prominence",
+        "Phone number visibility",
+        "Trust signals"
+      ]
+    },
+    "guaranteed_acceptance": {
+      "url": "/final-expense#guaranteed-acceptance",
+      "utm_parameters": "?utm_source=google&utm_medium=cpc&utm_campaign=guaranteed",
+      "key_elements": [
+        "No medical exam emphasis",
+        "Health conditions acceptance",
+        "Instant approval messaging",
+        "Age range 45-85"
+      ]
+    },
+    "cost_focused": {
+      "url": "/final-expense#coverage-options",
+      "utm_parameters": "?utm_source=google&utm_medium=cpc&utm_campaign=affordable",
+      "key_elements": [
+        "Pricing transparency",
+        "Value proposition",
+        "Cost comparison",
+        "Starting at $10/month"
+      ]
+    },
+    "senior_focused": {
+      "url": "/final-expense?age=senior",
+      "utm_parameters": "?utm_source=google&utm_medium=cpc&utm_campaign=seniors",
+      "key_elements": [
+        "Senior-specific messaging",
+        "Medicare coordination",
+        "Fixed income considerations",
+        "AARP partnership mentions"
+      ]
+    }
+  },
+
+  "performance_monitoring": {
+    "kpi_targets": {
+      "overall_ctr": "8-15%",
+      "overall_conversion_rate": "3-6%",
+      "cost_per_acquisition": "Under $150",
+      "return_on_ad_spend": "400%+",
+      "quality_score_average": "7+"
+    },
+    "optimization_schedule": {
+      "daily": [
+        "Budget pacing review",
+        "Bid adjustments",
+        "Search term analysis"
+      ],
+      "weekly": [
+        "Keyword performance review",
+        "Ad copy A/B testing",
+        "Negative keyword additions",
+        "Landing page performance"
+      ],
+      "monthly": [
+        "Campaign structure optimization",
+        "Audience performance analysis",
+        "Competitive landscape review",
+        "Budget reallocation"
+      ]
+    }
+  }
+}

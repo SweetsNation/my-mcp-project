@@ -34,6 +34,13 @@ export default function Navigation() {
         { title: 'Marketplace Insurance', href: '/health-insurance-marketplace', description: 'ACA-compliant health insurance plans' },
         { title: 'Supplemental Insurance', href: '/supplemental-insurance', description: 'Additional coverage for specific needs' },
       ]
+    },
+    {
+      title: 'Finance',
+      submenu: [
+        { title: 'Term Life Insurance', href: '/term-life-insurance', description: 'Affordable life insurance protection for your family' },
+        { title: 'Final Expense', href: '/final-expense', description: 'Coverage for end-of-life expenses and funeral costs' },
+      ]
     }
   ];
 

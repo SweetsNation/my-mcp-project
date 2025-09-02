@@ -234,6 +234,61 @@ export default function SocialSecurityAnalytics({
           location: location,
         })
       }
+
+      // Track Medicare coordination interactions
+      if (target.closest('[data-medicare-coordination]')) {
+        const medicareType = target.closest('[data-medicare-coordination]')?.getAttribute('data-medicare-coordination')
+        event('medicare_coordination_interest', {
+          event_category: 'social_security_engagement',
+          event_label: 'medicare_coordination_click',
+          medicare_type: medicareType,
+          page_type: pageType,
+          user_age: userAge,
+          marital_status: maritalStatus,
+          location: location,
+        })
+      }
+
+      // Track tax planning interactions
+      if (target.closest('[data-tax-planning]')) {
+        const taxStrategy = target.closest('[data-tax-planning]')?.getAttribute('data-tax-planning')
+        event('tax_planning_interest', {
+          event_category: 'social_security_planning',
+          event_label: 'tax_planning_click',
+          tax_strategy: taxStrategy,
+          page_type: pageType,
+          user_age: userAge,
+          location: location,
+        })
+      }
+
+      // Track spousal benefit interactions
+      if (target.closest('[data-spousal-benefits]')) {
+        const spousalStrategy = target.closest('[data-spousal-benefits]')?.getAttribute('data-spousal-benefits')
+        event('spousal_benefits_interest', {
+          event_category: 'social_security_engagement',
+          event_label: 'spousal_benefits_click',
+          spousal_strategy: spousalStrategy,
+          page_type: pageType,
+          user_age: userAge,
+          marital_status: maritalStatus,
+          location: location,
+        })
+      }
+
+      // Track survivor benefit interactions
+      if (target.closest('[data-survivor-benefits]')) {
+        const survivorStrategy = target.closest('[data-survivor-benefits]')?.getAttribute('data-survivor-benefits')
+        event('survivor_benefits_interest', {
+          event_category: 'social_security_engagement',
+          event_label: 'survivor_benefits_click',
+          survivor_strategy: survivorStrategy,
+          page_type: pageType,
+          user_age: userAge,
+          marital_status: maritalStatus,
+          location: location,
+        })
+      }
     }
 
     document.addEventListener('click', trackSocialSecurityInteractions)
@@ -294,6 +349,61 @@ export const trackRetirementPlanningIntegration = (planningTool: 'medicare_coord
     event_label: planningTool,
     planning_tool: planningTool,
     user_age: userAge,
+    location: location,
+  })
+}
+
+export const trackSpousalBenefitsAnalysis = (spouseAge: number, spouseBenefit: number, strategy: 'file_and_suspend' | 'restricted_application' | 'delay_benefits', location: string) => {
+  event('spousal_benefits_analysis', {
+    event_category: 'social_security_conversion',
+    event_label: 'spousal_analysis_request',
+    spouse_age: spouseAge,
+    spouse_benefit: spouseBenefit,
+    optimization_strategy: strategy,
+    location: location,
+    value: 200, // High-value lead for spousal benefits
+  })
+}
+
+export const trackSurvivorBenefitsPlanning = (survivorAge: number, estimatedBenefit: number, planningStrategy: string, location: string) => {
+  event('survivor_benefits_planning', {
+    event_category: 'social_security_planning',
+    event_label: 'survivor_benefits_inquiry',
+    survivor_age: survivorAge,
+    estimated_benefit: estimatedBenefit,
+    planning_strategy: planningStrategy,
+    location: location,
+    value: 175,
+  })
+}
+
+export const trackMedicareCoordinationPlanning = (medicareType: 'original' | 'advantage' | 'supplement', enrollmentTiming: string, location: string) => {
+  event('medicare_coordination_planning', {
+    event_category: 'social_security_planning',
+    event_label: 'medicare_coordination',
+    medicare_type: medicareType,
+    enrollment_timing: enrollmentTiming,
+    location: location,
+  })
+}
+
+export const trackTaxPlanningStrategy = (taxStrategy: 'roth_conversion' | 'withdrawal_timing' | 'tax_bracket_management', retirementYear: number, location: string) => {
+  event('tax_planning_strategy', {
+    event_category: 'social_security_planning',
+    event_label: 'tax_optimization',
+    tax_strategy: taxStrategy,
+    retirement_year: retirementYear,
+    location: location,
+  })
+}
+
+export const trackClaimingAgeOptimization = (currentAge: number, proposedClaimingAge: number, estimatedIncrease: number, location: string) => {
+  event('claiming_age_optimization', {
+    event_category: 'social_security_tools',
+    event_label: 'claiming_age_analysis',
+    current_age: currentAge,
+    proposed_claiming_age: proposedClaimingAge,
+    estimated_increase: estimatedIncrease,
     location: location,
   })
 }

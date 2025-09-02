@@ -1,0 +1,397 @@
+{
+  "emergency_evacuation_conversion_tracking": {
+    "overview": {
+      "campaign_focus": "Emergency Evacuation Insurance Landing Page Performance",
+      "target_keywords": [
+        "emergency evacuation insurance",
+        "medical evacuation coverage", 
+        "travel evacuation protection",
+        "air ambulance insurance",
+        "emergency medical transport"
+      ],
+      "monthly_search_volume": "22,000 searches",
+      "competition_level": "LOW (32 competition index)",
+      "expected_ctr": "4.2%",
+      "target_conversion_rate": "3.8%",
+      "tracking_period": "Continuous monitoring with monthly reporting"
+    },
+    
+    "conversion_actions": [
+      {
+        "action_name": "Emergency Evacuation Quote Request",
+        "conversion_id": "AW-CONVERSION_ID/emergency_evacuation_quotes",
+        "action_type": "form_submission",
+        "category": "lead_generation",
+        "value": 200,
+        "currency": "USD",
+        "attribution_model": "data_driven",
+        "counting": "many_per_click",
+        "conversion_window": "30_days",
+        "view_through_window": "1_day",
+        "tracking_triggers": [
+          "Quote form submission",
+          "Coverage calculator completion", 
+          "Instant quote request",
+          "Custom quote request"
+        ]
+      },
+      {
+        "action_name": "Emergency Evacuation Phone Calls",
+        "conversion_id": "AW-CONVERSION_ID/emergency_evacuation_calls",
+        "action_type": "phone_call",
+        "category": "lead_generation", 
+        "value": 250,
+        "currency": "USD",
+        "attribution_model": "first_click",
+        "counting": "one_per_click",
+        "conversion_window": "30_days",
+        "call_length_threshold": "30_seconds",
+        "tracking_triggers": [
+          "Hero section call button",
+          "Coverage comparison call CTA",
+          "FAQ section call button", 
+          "Final CTA call button",
+          "Mobile click-to-call"
+        ]
+      },
+      {
+        "action_name": "Emergency Evacuation Form Interactions",
+        "conversion_id": "AW-CONVERSION_ID/emergency_evacuation_forms",
+        "action_type": "form_interaction",
+        "category": "micro_conversion",
+        "value": 75,
+        "currency": "USD",
+        "attribution_model": "linear",
+        "counting": "many_per_click",
+        "conversion_window": "7_days",
+        "tracking_triggers": [
+          "Coverage type selection",
+          "Destination type selection",
+          "Evacuation method interest",
+          "Coverage amount selection",
+          "Contact information entry"
+        ]
+      },
+      {
+        "action_name": "Emergency Evacuation Policy Applications",
+        "conversion_id": "AW-CONVERSION_ID/emergency_evacuation_applications",
+        "action_type": "application_start",
+        "category": "high_value_lead",
+        "value": 400,
+        "currency": "USD",
+        "attribution_model": "data_driven",
+        "counting": "one_per_click", 
+        "conversion_window": "90_days",
+        "view_through_window": "7_days",
+        "tracking_triggers": [
+          "Application form start",
+          "Policy customization",
+          "Coverage upgrade selection",
+          "Payment information entry"
+        ]
+      },
+      {
+        "action_name": "Emergency Evacuation Calculator Usage",
+        "conversion_id": "AW-CONVERSION_ID/emergency_evacuation_calculator",
+        "action_type": "tool_usage",
+        "category": "engagement",
+        "value": 50,
+        "currency": "USD", 
+        "attribution_model": "last_click",
+        "counting": "many_per_click",
+        "conversion_window": "1_day",
+        "tracking_triggers": [
+          "Cost calculator completion",
+          "Coverage comparison tool",
+          "Destination risk assessment",
+          "Premium estimation"
+        ]
+      },
+      {
+        "action_name": "Emergency Evacuation Content Downloads",
+        "conversion_id": "AW-CONVERSION_ID/emergency_evacuation_downloads",
+        "action_type": "content_download",
+        "category": "lead_nurturing",
+        "value": 25,
+        "currency": "USD",
+        "attribution_model": "first_click",
+        "counting": "one_per_click",
+        "conversion_window": "30_days",
+        "tracking_triggers": [
+          "Emergency evacuation guide download",
+          "Coverage comparison chart",
+          "Travel safety checklist",
+          "Evacuation procedures PDF"
+        ]
+      }
+    ],
+
+    "enhanced_conversions": {
+      "enabled": true,
+      "customer_data": [
+        "email_address",
+        "phone_number", 
+        "first_name",
+        "last_name",
+        "home_address"
+      ],
+      "hashing": "SHA256",
+      "privacy_compliance": "GDPR_CCPA_compliant"
+    },
+
+    "attribution_modeling": {
+      "primary_model": "data_driven",
+      "fallback_model": "time_decay",
+      "custom_lookback_windows": {
+        "search_ads": "30_days",
+        "display_ads": "7_days", 
+        "social_ads": "1_day",
+        "direct_traffic": "direct_attribution"
+      },
+      "cross_device_tracking": "enabled",
+      "view_through_conversions": "enabled"
+    },
+
+    "audience_segmentation": {
+      "conversion_segments": [
+        {
+          "segment_name": "High-Value Emergency Evacuation Leads",
+          "criteria": "Quote requests + phone calls within 7 days",
+          "size_estimate": "150-300 users/month",
+          "value_threshold": "$300+",
+          "remarketing_lists": ["emergency_evacuation_hot_leads"]
+        },
+        {
+          "segment_name": "Emergency Evacuation Researchers", 
+          "criteria": "Calculator usage + content engagement + 2+ page views",
+          "size_estimate": "800-1200 users/month",
+          "value_threshold": "$75+",
+          "remarketing_lists": ["emergency_evacuation_nurture"]
+        },
+        {
+          "segment_name": "International Travelers",
+          "criteria": "International destination selection + coverage comparison",
+          "size_estimate": "400-600 users/month", 
+          "value_threshold": "$100+",
+          "remarketing_lists": ["international_evacuation_prospects"]
+        },
+        {
+          "segment_name": "Adventure Travelers",
+          "criteria": "High-risk destination + adventure travel selection",
+          "size_estimate": "200-400 users/month",
+          "value_threshold": "$150+",
+          "remarketing_lists": ["adventure_evacuation_prospects"]
+        }
+      ]
+    },
+
+    "conversion_optimization": {
+      "smart_bidding_strategies": [
+        {
+          "strategy": "Target CPA (Cost Per Acquisition)",
+          "target_cpa": "$85",
+          "campaign_type": "search_campaigns",
+          "optimization_goal": "quote_requests"
+        },
+        {
+          "strategy": "Target ROAS (Return on Ad Spend)", 
+          "target_roas": "400%",
+          "campaign_type": "display_campaigns",
+          "optimization_goal": "application_starts"
+        },
+        {
+          "strategy": "Maximize Conversions",
+          "daily_budget": "$300",
+          "campaign_type": "shopping_campaigns",
+          "optimization_goal": "phone_calls"
+        }
+      ],
+      "automated_rules": [
+        {
+          "rule_name": "Pause Low Converting Keywords",
+          "condition": "CTR < 2% AND Conversions = 0 for 14 days",
+          "action": "pause_keyword",
+          "frequency": "daily"
+        },
+        {
+          "rule_name": "Increase Bids for High Performers",
+          "condition": "Conversion Rate > 5% AND CPA < $60",
+          "action": "increase_bid_by_15%", 
+          "frequency": "weekly"
+        },
+        {
+          "rule_name": "Alert for Conversion Drop",
+          "condition": "Conversions decrease by 30% week-over-week",
+          "action": "send_email_alert",
+          "recipients": ["marketing@elmaginsurance.com"]
+        }
+      ]
+    },
+
+    "cross_platform_tracking": {
+      "google_analytics": {
+        "property_id": "GA4-PROPERTY-ID",
+        "goals": [
+          {
+            "goal_name": "Emergency Evacuation Quote Request",
+            "type": "destination",
+            "value": 200,
+            "funnel_steps": ["Landing Page", "Coverage Selection", "Quote Form", "Thank You"]
+          },
+          {
+            "goal_name": "Emergency Evacuation Call",
+            "type": "event",
+            "category": "contact",
+            "action": "phone_call",
+            "value": 250
+          }
+        ],
+        "custom_dimensions": [
+          {"name": "Coverage Type", "scope": "hit"},
+          {"name": "Destination Type", "scope": "session"},
+          {"name": "User Segment", "scope": "user"},
+          {"name": "Traffic Source Detail", "scope": "session"}
+        ]
+      },
+      "facebook_pixel": {
+        "pixel_id": "FB-PIXEL-ID",
+        "events": [
+          {
+            "event_name": "Lead",
+            "trigger": "quote_form_submission",
+            "value": 200,
+            "content_category": "emergency_evacuation_insurance"
+          },
+          {
+            "event_name": "InitiateCheckout", 
+            "trigger": "application_start",
+            "value": 400,
+            "content_category": "evacuation_policy_application"
+          }
+        ]
+      },
+      "microsoft_advertising": {
+        "uet_tag_id": "MS-UET-TAG-ID",
+        "goals": [
+          {
+            "goal_type": "url_destination",
+            "goal_url": "/emergency-evacuation/thank-you",
+            "revenue_value": 200
+          }
+        ]
+      }
+    },
+
+    "performance_monitoring": {
+      "key_metrics": [
+        {
+          "metric": "Conversion Rate",
+          "current_benchmark": "3.8%",
+          "target": "4.5%",
+          "alert_threshold": "< 3.0%"
+        },
+        {
+          "metric": "Cost Per Acquisition (CPA)",
+          "current_benchmark": "$85",
+          "target": "$75",
+          "alert_threshold": "> $120"
+        },
+        {
+          "metric": "Return on Ad Spend (ROAS)",
+          "current_benchmark": "350%",
+          "target": "400%", 
+          "alert_threshold": "< 250%"
+        },
+        {
+          "metric": "Quality Score",
+          "current_benchmark": "7.2/10",
+          "target": "8.0/10",
+          "alert_threshold": "< 6.0/10"
+        }
+      ],
+      "reporting_frequency": "daily_monitoring_weekly_reports",
+      "automated_alerts": "enabled",
+      "dashboard_refresh": "real_time"
+    },
+
+    "testing_framework": {
+      "ab_tests": [
+        {
+          "test_name": "Emergency Evacuation Hero Section",
+          "variants": [
+            "Current: Emergency Evacuation Insurance | Medical Evacuation Coverage",
+            "Variant A: Medical Emergency Evacuation Insurance - Worldwide Protection", 
+            "Variant B: Get Emergency Medical Evacuation Coverage - Air Ambulance Protection"
+          ],
+          "traffic_split": "33/33/34",
+          "primary_metric": "quote_request_rate",
+          "minimum_sample_size": 1000,
+          "statistical_significance": "95%"
+        },
+        {
+          "test_name": "Emergency Evacuation CTA Buttons",
+          "variants": [
+            "Current: Get Free Quote Now",
+            "Variant A: Calculate Your Premium",
+            "Variant B: Protect Your Trip Today"
+          ],
+          "traffic_split": "33/33/34",
+          "primary_metric": "cta_click_rate",
+          "minimum_sample_size": 800,
+          "statistical_significance": "95%"
+        }
+      ],
+      "multivariate_tests": [
+        {
+          "test_name": "Emergency Evacuation Landing Page Optimization",
+          "elements": {
+            "headline": 2,
+            "hero_image": 2,
+            "cta_color": 3,
+            "form_placement": 2
+          },
+          "total_combinations": 24,
+          "traffic_allocation": "100%",
+          "duration": "4_weeks"
+        }
+      ]
+    },
+
+    "compliance_and_privacy": {
+      "gdpr_compliance": "enabled",
+      "ccpa_compliance": "enabled", 
+      "consent_management": "OneTrust_integration",
+      "data_retention": "26_months",
+      "anonymization": "automatic_after_retention_period",
+      "user_rights": [
+        "data_access",
+        "data_deletion",
+        "data_portability", 
+        "consent_withdrawal"
+      ]
+    },
+
+    "integration_apis": {
+      "crm_integration": {
+        "platform": "Salesforce/HubSpot",
+        "lead_sync": "real_time",
+        "field_mapping": {
+          "email": "Email",
+          "phone": "Phone", 
+          "coverage_interest": "Coverage_Type__c",
+          "lead_score": "Lead_Score__c",
+          "lead_source": "LeadSource"
+        }
+      },
+      "marketing_automation": {
+        "platform": "Marketo/Pardot",
+        "trigger_campaigns": [
+          "Emergency evacuation quote request follow-up",
+          "Calculator usage nurture sequence",
+          "High-value lead assignment",
+          "Conversion path optimization"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,485 @@
+{
+  "dashboard_name": "Trip Cancellation Insurance Performance Analytics",
+  "version": "1.0",
+  "created_date": "2024-01-15",
+  "description": "Comprehensive performance monitoring dashboard for trip cancellation insurance landing page optimization and conversion tracking",
+  "refresh_interval": 300000,
+  "data_retention_days": 365,
+  "dashboard_sections": [
+    {
+      "section_id": "conversion_metrics",
+      "section_name": "Conversion & Revenue Metrics",
+      "widgets": [
+        {
+          "widget_id": "primary_conversion_rate",
+          "widget_type": "metric_card",
+          "title": "Trip Cancellation Conversion Rate",
+          "data_source": "google_analytics_4",
+          "metric": "trip_cancellation_conversions",
+          "calculation": "percentage",
+          "time_period": "last_30_days",
+          "comparison_period": "previous_30_days",
+          "target_value": 3.2,
+          "alert_thresholds": {
+            "critical": 2.0,
+            "warning": 2.5
+          },
+          "format": "percentage",
+          "description": "Percentage of trip cancellation page visitors who complete quote request or lead capture"
+        },
+        {
+          "widget_id": "revenue_per_visitor",
+          "widget_type": "metric_card",
+          "title": "Revenue Per Visitor (RPV)",
+          "data_source": "google_analytics_4",
+          "metric": "revenue_per_visitor",
+          "time_period": "last_30_days",
+          "comparison_period": "previous_30_days",
+          "target_value": 45.00,
+          "format": "currency",
+          "description": "Average revenue generated per visitor to trip cancellation insurance pages"
+        },
+        {
+          "widget_id": "lead_quality_score",
+          "widget_type": "gauge_chart",
+          "title": "Average Lead Quality Score",
+          "data_source": "custom_analytics",
+          "metric": "average_lead_score",
+          "time_period": "last_7_days",
+          "min_value": 0,
+          "max_value": 100,
+          "target_value": 65,
+          "color_ranges": [
+            { "min": 0, "max": 40, "color": "#FF4444" },
+            { "min": 40, "max": 70, "color": "#FFA500" },
+            { "min": 70, "max": 100, "color": "#4CAF50" }
+          ]
+        },
+        {
+          "widget_id": "conversion_funnel",
+          "widget_type": "funnel_chart",
+          "title": "Trip Cancellation Conversion Funnel",
+          "data_source": "google_analytics_4",
+          "funnel_steps": [
+            {
+              "step_name": "Landing Page Visit",
+              "event": "page_view",
+              "filters": { "page_path": "/trip-cancellation-insurance" }
+            },
+            {
+              "step_name": "Education Engagement",
+              "event": "scroll_depth",
+              "filters": { "scroll_percentage": ">=25" }
+            },
+            {
+              "step_name": "Coverage Exploration",
+              "event": "coverage_selection"
+            },
+            {
+              "step_name": "Trip Type Selection",
+              "event": "trip_type_interest"
+            },
+            {
+              "step_name": "Quote Initiation",
+              "event": "quote_request"
+            },
+            {
+              "step_name": "Lead Capture",
+              "event": "lead_capture"
+            },
+            {
+              "step_name": "Conversion",
+              "event": "trip_cancellation_conversion"
+            }
+          ],
+          "time_period": "last_30_days"
+        }
+      ]
+    },
+    {
+      "section_id": "traffic_analytics",
+      "section_name": "Traffic & User Behavior",
+      "widgets": [
+        {
+          "widget_id": "traffic_sources",
+          "widget_type": "pie_chart",
+          "title": "Traffic Sources - Trip Cancellation",
+          "data_source": "google_analytics_4",
+          "dimension": "traffic_source",
+          "metric": "sessions",
+          "filters": { "page_path": "/trip-cancellation-insurance" },
+          "time_period": "last_30_days",
+          "top_n": 8
+        },
+        {
+          "widget_id": "user_segments",
+          "widget_type": "stacked_bar_chart",
+          "title": "User Segmentation Analysis",
+          "data_source": "custom_analytics",
+          "dimensions": ["age_group", "travel_frequency", "device_type"],
+          "metric": "sessions",
+          "time_period": "last_30_days",
+          "stacking": "percentage"
+        },
+        {
+          "widget_id": "engagement_metrics",
+          "widget_type": "line_chart",
+          "title": "Engagement Metrics Trends",
+          "data_source": "google_analytics_4",
+          "metrics": [
+            {
+              "name": "Average Session Duration",
+              "metric": "average_session_duration",
+              "color": "#4285F4"
+            },
+            {
+              "name": "Pages Per Session",
+              "metric": "pages_per_session",
+              "color": "#34A853"
+            },
+            {
+              "name": "Bounce Rate",
+              "metric": "bounce_rate",
+              "color": "#EA4335"
+            }
+          ],
+          "time_period": "last_60_days",
+          "granularity": "daily"
+        },
+        {
+          "widget_id": "scroll_depth_analysis",
+          "widget_type": "heatmap",
+          "title": "Content Engagement Heatmap",
+          "data_source": "custom_analytics",
+          "metric": "scroll_depth_percentage",
+          "dimensions": ["page_section", "user_segment"],
+          "time_period": "last_14_days"
+        }
+      ]
+    },
+    {
+      "section_id": "performance_monitoring",
+      "section_name": "Page Performance & Core Web Vitals",
+      "widgets": [
+        {
+          "widget_id": "core_web_vitals",
+          "widget_type": "metric_grid",
+          "title": "Core Web Vitals - Trip Cancellation Pages",
+          "data_source": "google_pagespeed_insights",
+          "metrics": [
+            {
+              "name": "Largest Contentful Paint (LCP)",
+              "metric": "largest_contentful_paint",
+              "target_value": 2.5,
+              "unit": "seconds",
+              "good_threshold": 2.5,
+              "needs_improvement_threshold": 4.0
+            },
+            {
+              "name": "First Input Delay (FID)",
+              "metric": "first_input_delay",
+              "target_value": 100,
+              "unit": "milliseconds",
+              "good_threshold": 100,
+              "needs_improvement_threshold": 300
+            },
+            {
+              "name": "Cumulative Layout Shift (CLS)",
+              "metric": "cumulative_layout_shift",
+              "target_value": 0.1,
+              "unit": "score",
+              "good_threshold": 0.1,
+              "needs_improvement_threshold": 0.25
+            }
+          ],
+          "time_period": "last_7_days"
+        },
+        {
+          "widget_id": "page_load_times",
+          "widget_type": "histogram",
+          "title": "Page Load Time Distribution",
+          "data_source": "custom_analytics",
+          "metric": "page_load_time",
+          "buckets": [0, 1000, 2000, 3000, 4000, 5000, 10000],
+          "time_period": "last_30_days",
+          "filters": { "page_path": "/trip-cancellation-insurance" }
+        },
+        {
+          "widget_id": "device_performance",
+          "widget_type": "comparison_table",
+          "title": "Performance by Device Type",
+          "data_source": "google_analytics_4",
+          "dimension": "device_category",
+          "metrics": [
+            { "name": "Avg Page Load Time", "metric": "avg_page_load_time", "format": "duration" },
+            { "name": "Bounce Rate", "metric": "bounce_rate", "format": "percentage" },
+            { "name": "Conversion Rate", "metric": "conversion_rate", "format": "percentage" }
+          ],
+          "time_period": "last_30_days"
+        }
+      ]
+    },
+    {
+      "section_id": "ab_testing",
+      "section_name": "A/B Testing & Optimization",
+      "widgets": [
+        {
+          "widget_id": "active_experiments",
+          "widget_type": "experiment_table",
+          "title": "Active A/B Tests",
+          "data_source": "custom_ab_testing",
+          "columns": [
+            { "name": "Test Name", "field": "test_name" },
+            { "name": "Status", "field": "status" },
+            { "name": "Traffic Split", "field": "traffic_split" },
+            { "name": "Duration", "field": "duration" },
+            { "name": "Sample Size", "field": "sample_size" },
+            { "name": "Statistical Significance", "field": "significance" },
+            { "name": "Winning Variant", "field": "winner" }
+          ],
+          "refresh_interval": 3600000
+        },
+        {
+          "widget_id": "test_results_comparison",
+          "widget_type": "comparison_chart",
+          "title": "A/B Test Results - Hero Optimization",
+          "data_source": "custom_ab_testing",
+          "test_id": "hero_optimization_v1",
+          "metrics": [
+            { "name": "Conversion Rate", "metric": "conversion_rate", "format": "percentage" },
+            { "name": "Quote Requests", "metric": "quote_requests", "format": "number" },
+            { "name": "Lead Quality Score", "metric": "lead_quality", "format": "score" }
+          ],
+          "variants": ["control", "urgency_variant"],
+          "confidence_level": 95
+        },
+        {
+          "widget_id": "experiment_lift",
+          "widget_type": "lift_chart",
+          "title": "Conversion Lift Analysis",
+          "data_source": "custom_ab_testing",
+          "metric": "conversion_rate",
+          "baseline_variant": "control",
+          "time_period": "test_duration",
+          "show_confidence_intervals": true
+        }
+      ]
+    },
+    {
+      "section_id": "revenue_analytics",
+      "section_name": "Revenue & ROI Analysis",
+      "widgets": [
+        {
+          "widget_id": "revenue_trends",
+          "widget_type": "line_chart",
+          "title": "Trip Cancellation Revenue Trends",
+          "data_source": "google_analytics_4",
+          "metrics": [
+            {
+              "name": "Total Revenue",
+              "metric": "total_revenue",
+              "color": "#4CAF50"
+            },
+            {
+              "name": "Revenue Per Session",
+              "metric": "revenue_per_session",
+              "color": "#2196F3"
+            }
+          ],
+          "time_period": "last_90_days",
+          "granularity": "weekly"
+        },
+        {
+          "widget_id": "customer_ltv",
+          "widget_type": "metric_card",
+          "title": "Customer Lifetime Value (LTV)",
+          "data_source": "crm_integration",
+          "metric": "average_ltv",
+          "time_period": "last_12_months",
+          "format": "currency",
+          "target_value": 850.00
+        },
+        {
+          "widget_id": "roi_by_channel",
+          "widget_type": "bar_chart",
+          "title": "ROI by Marketing Channel",
+          "data_source": "marketing_attribution",
+          "dimension": "marketing_channel",
+          "metrics": [
+            { "name": "Cost", "metric": "total_cost", "color": "#FF5722" },
+            { "name": "Revenue", "metric": "attributed_revenue", "color": "#4CAF50" },
+            { "name": "ROI", "metric": "roi_percentage", "color": "#2196F3" }
+          ],
+          "time_period": "last_30_days"
+        }
+      ]
+    },
+    {
+      "section_id": "competitive_analysis",
+      "section_name": "Competitive Intelligence",
+      "widgets": [
+        {
+          "widget_id": "market_share",
+          "widget_type": "donut_chart",
+          "title": "Trip Cancellation Insurance Market Share",
+          "data_source": "competitive_intelligence",
+          "dimension": "competitor",
+          "metric": "estimated_market_share",
+          "time_period": "current_quarter"
+        },
+        {
+          "widget_id": "keyword_rankings",
+          "widget_type": "ranking_table",
+          "title": "Keyword Position Tracking",
+          "data_source": "seo_monitoring",
+          "keywords": [
+            "trip cancellation insurance",
+            "travel cancellation coverage",
+            "vacation insurance protection",
+            "cancel trip insurance",
+            "travel insurance cancellation"
+          ],
+          "metrics": [
+            { "name": "Current Position", "field": "current_rank" },
+            { "name": "Previous Position", "field": "previous_rank" },
+            { "name": "Change", "field": "rank_change" },
+            { "name": "Search Volume", "field": "monthly_searches" },
+            { "name": "Difficulty", "field": "keyword_difficulty" }
+          ]
+        }
+      ]
+    }
+  ],
+  "alerts_configuration": [
+    {
+      "alert_id": "conversion_rate_drop",
+      "alert_name": "Trip Cancellation Conversion Rate Drop",
+      "metric": "conversion_rate",
+      "condition": "less_than",
+      "threshold": 2.5,
+      "time_window": "24_hours",
+      "notification_channels": ["email", "slack"],
+      "recipients": ["marketing@elmaginsurance.com", "analytics@elmaginsurance.com"]
+    },
+    {
+      "alert_id": "core_web_vitals_degradation",
+      "alert_name": "Core Web Vitals Degradation",
+      "metric": "largest_contentful_paint",
+      "condition": "greater_than",
+      "threshold": 3.0,
+      "time_window": "6_hours",
+      "notification_channels": ["email", "pagerduty"],
+      "recipients": ["dev@elmaginsurance.com"]
+    },
+    {
+      "alert_id": "ab_test_significance",
+      "alert_name": "A/B Test Reached Statistical Significance",
+      "metric": "statistical_significance",
+      "condition": "greater_than",
+      "threshold": 95,
+      "notification_channels": ["email", "slack"],
+      "recipients": ["optimization@elmaginsurance.com"]
+    },
+    {
+      "alert_id": "high_quality_lead_surge",
+      "alert_name": "High Quality Lead Surge",
+      "metric": "high_quality_leads",
+      "condition": "greater_than_baseline",
+      "threshold_percentage": 25,
+      "time_window": "4_hours",
+      "notification_channels": ["email"],
+      "recipients": ["sales@elmaginsurance.com"]
+    }
+  ],
+  "integration_settings": {
+    "google_analytics_4": {
+      "property_id": "GA4_PROPERTY_ID",
+      "measurement_id": "G-MEASUREMENT_ID",
+      "api_credentials": "GA4_SERVICE_ACCOUNT_KEY",
+      "custom_events": [
+        "trip_cancellation_quote_request",
+        "coverage_selection",
+        "trip_type_interest",
+        "lead_capture"
+      ]
+    },
+    "google_ads": {
+      "customer_id": "GOOGLE_ADS_CUSTOMER_ID",
+      "campaigns": ["Trip Cancellation - Search", "Travel Insurance - Display"],
+      "conversion_actions": ["Quote Requests", "Lead Capture", "Phone Calls"]
+    },
+    "facebook_ads": {
+      "ad_account_id": "FACEBOOK_AD_ACCOUNT_ID",
+      "pixel_id": "FACEBOOK_PIXEL_ID",
+      "conversion_events": ["Quote", "Lead", "Purchase"]
+    },
+    "crm_integration": {
+      "platform": "salesforce",
+      "api_endpoint": "https://api.salesforce.com",
+      "lead_scoring_fields": ["trip_type", "coverage_amount", "estimated_trip_cost"]
+    }
+  },
+  "automated_reports": [
+    {
+      "report_id": "weekly_performance_summary",
+      "report_name": "Weekly Trip Cancellation Performance Summary",
+      "schedule": "weekly",
+      "day_of_week": "monday",
+      "time": "09:00",
+      "recipients": ["marketing@elmaginsurance.com", "management@elmaginsurance.com"],
+      "format": "pdf",
+      "sections": [
+        "conversion_metrics",
+        "traffic_analytics",
+        "revenue_analytics"
+      ]
+    },
+    {
+      "report_id": "monthly_optimization_report",
+      "report_name": "Monthly Optimization & A/B Testing Report",
+      "schedule": "monthly",
+      "day_of_month": 1,
+      "time": "08:00",
+      "recipients": ["optimization@elmaginsurance.com", "analytics@elmaginsurance.com"],
+      "format": "pdf",
+      "sections": [
+        "ab_testing",
+        "performance_monitoring",
+        "competitive_analysis"
+      ]
+    }
+  ],
+  "data_filters": {
+    "exclude_internal_traffic": true,
+    "exclude_bot_traffic": true,
+    "include_only_trip_cancellation_pages": true,
+    "geographic_filters": {
+      "include_countries": ["US", "CA", "GB", "AU"],
+      "exclude_regions": []
+    },
+    "device_filters": {
+      "include_devices": ["desktop", "mobile", "tablet"],
+      "exclude_browsers": ["bot", "crawler"]
+    }
+  },
+  "performance_benchmarks": {
+    "conversion_rate": {
+      "excellent": 4.0,
+      "good": 3.2,
+      "average": 2.5,
+      "poor": 1.8
+    },
+    "page_load_time": {
+      "excellent": 2.0,
+      "good": 3.0,
+      "average": 4.0,
+      "poor": 5.0
+    },
+    "lead_quality_score": {
+      "excellent": 80,
+      "good": 65,
+      "average": 50,
+      "poor": 35
+    }
+  }
+}

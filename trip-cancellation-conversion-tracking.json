@@ -1,0 +1,538 @@
+{
+  "conversion_tracking_setup": {
+    "overview": {
+      "campaign_name": "Trip Cancellation Insurance Conversion Tracking",
+      "tracking_strategy": "multi_touch_attribution",
+      "primary_goal": "optimize_for_qualified_leads_and_revenue",
+      "attribution_window": "90_days_click_30_days_view",
+      "conversion_value_strategy": "dynamic_revenue_based"
+    },
+    "conversion_actions": [
+      {
+        "conversion_id": "TC_QUOTE_REQUEST",
+        "conversion_name": "Trip Cancellation Quote Request",
+        "conversion_category": "lead_generation",
+        "conversion_type": "form_submission",
+        "value_settings": {
+          "conversion_value": 180,
+          "value_currency": "USD",
+          "counting": "one_per_click",
+          "attribution_model": "data_driven",
+          "conversion_window": "30_days"
+        },
+        "tracking_setup": {
+          "tracking_method": "google_tag_manager",
+          "trigger_event": "form_submit",
+          "form_selectors": ["#trip-cancellation-quote-form", ".quote-request-form"],
+          "required_fields": ["trip_cost", "destination", "travel_date", "email"],
+          "tracking_code": "gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/TC_QUOTE_REQUEST', 'value': 180.0, 'currency': 'USD', 'transaction_id': ''});"
+        },
+        "lead_qualification": {
+          "minimum_trip_cost": 1000,
+          "valid_travel_dates": "future_dates_only",
+          "required_contact_info": true,
+          "spam_filtering": true
+        },
+        "performance_targets": {
+          "monthly_volume": 75,
+          "conversion_rate": 3.2,
+          "cost_per_conversion": 180,
+          "lead_quality_score": 65
+        }
+      },
+      {
+        "conversion_id": "TC_PHONE_CALL",
+        "conversion_name": "Trip Cancellation Phone Call",
+        "conversion_category": "phone_calls",
+        "conversion_type": "phone_call",
+        "value_settings": {
+          "conversion_value": 220,
+          "value_currency": "USD",
+          "counting": "one_per_click",
+          "attribution_model": "data_driven",
+          "minimum_call_duration": 60
+        },
+        "tracking_setup": {
+          "tracking_method": "google_call_tracking",
+          "phone_numbers": [
+            {
+              "display_number": "331-343-2584",
+              "tracking_number": "331-343-2585",
+              "location": "website_header"
+            },
+            {
+              "display_number": "331-343-2584",
+              "tracking_number": "331-343-2586",
+              "location": "landing_page_cta"
+            }
+          ],
+          "call_recording": true,
+          "call_transcription": true
+        },
+        "lead_qualification": {
+          "minimum_duration": 60,
+          "business_hours_weight": 1.2,
+          "repeat_caller_bonus": 1.1,
+          "quality_keywords": ["quote", "policy", "coverage", "premium", "buy"]
+        },
+        "performance_targets": {
+          "monthly_volume": 45,
+          "average_call_duration": 180,
+          "call_to_quote_rate": 75,
+          "cost_per_call": 220
+        }
+      },
+      {
+        "conversion_id": "TC_EMAIL_SIGNUP",
+        "conversion_name": "Trip Cancellation Email Signup",
+        "conversion_category": "signup",
+        "conversion_type": "email_subscription",
+        "value_settings": {
+          "conversion_value": 25,
+          "value_currency": "USD",
+          "counting": "many_per_click",
+          "attribution_model": "first_click",
+          "conversion_window": "7_days"
+        },
+        "tracking_setup": {
+          "tracking_method": "email_platform_integration",
+          "email_platform": "mailchimp",
+          "signup_forms": ["newsletter_signup", "travel_tips_signup", "quote_follow_up"],
+          "double_opt_in": true
+        },
+        "lead_nurturing": {
+          "welcome_series": 7,
+          "content_frequency": "weekly",
+          "personalization": "travel_type_based",
+          "automated_scoring": true
+        },
+        "performance_targets": {
+          "monthly_signups": 300,
+          "email_to_quote_rate": 12,
+          "list_growth_rate": 15,
+          "unsubscribe_rate": 2
+        }
+      },
+      {
+        "conversion_id": "TC_POLICY_PURCHASE",
+        "conversion_name": "Trip Cancellation Policy Purchase",
+        "conversion_category": "purchase",
+        "conversion_type": "ecommerce_purchase",
+        "value_settings": {
+          "conversion_value": "dynamic_revenue",
+          "value_currency": "USD",
+          "counting": "one_per_click",
+          "attribution_model": "data_driven",
+          "conversion_window": "90_days"
+        },
+        "tracking_setup": {
+          "tracking_method": "enhanced_ecommerce",
+          "purchase_confirmation": "order_confirmation_page",
+          "transaction_id": "policy_number",
+          "dynamic_values": true
+        },
+        "revenue_tracking": {
+          "average_policy_value": 750,
+          "commission_percentage": 15,
+          "lifetime_value": 850,
+          "repeat_purchase_rate": 35
+        },
+        "performance_targets": {
+          "monthly_purchases": 18,
+          "quote_to_purchase_rate": 24,
+          "average_order_value": 750,
+          "customer_lifetime_value": 850
+        }
+      },
+      {
+        "conversion_id": "TC_CALCULATOR_USAGE",
+        "conversion_name": "Trip Cancellation Calculator Usage",
+        "conversion_category": "engagement",
+        "conversion_type": "tool_interaction",
+        "value_settings": {
+          "conversion_value": 15,
+          "value_currency": "USD",
+          "counting": "one_per_session",
+          "attribution_model": "linear"
+        },
+        "tracking_setup": {
+          "tracking_method": "event_tracking",
+          "trigger_event": "calculator_completion",
+          "required_inputs": ["trip_cost", "trip_type", "destination"],
+          "completion_threshold": "all_fields_filled"
+        },
+        "engagement_metrics": {
+          "completion_rate": 45,
+          "calculator_to_quote_rate": 35,
+          "time_spent_threshold": 120,
+          "return_user_bonus": 1.3
+        }
+      },
+      {
+        "conversion_id": "TC_CONTENT_ENGAGEMENT",
+        "conversion_name": "Deep Content Engagement",
+        "conversion_category": "engagement",
+        "conversion_type": "content_consumption",
+        "value_settings": {
+          "conversion_value": 5,
+          "value_currency": "USD",
+          "counting": "one_per_session",
+          "attribution_model": "time_decay"
+        },
+        "tracking_setup": {
+          "tracking_method": "scroll_and_time_tracking",
+          "engagement_threshold": {
+            "time_on_page": 180,
+            "scroll_depth": 75,
+            "pages_per_session": 2
+          },
+          "content_types": ["blog_posts", "guides", "comparison_pages"]
+        },
+        "content_scoring": {
+          "educational_content": 1.0,
+          "comparison_content": 1.2,
+          "customer_stories": 1.1,
+          "tool_pages": 1.3
+        }
+      }
+    ],
+    "attribution_models": [
+      {
+        "model_name": "Primary Attribution Model",
+        "model_type": "data_driven",
+        "description": "Machine learning based attribution using Google's algorithm",
+        "use_case": "primary_conversion_optimization",
+        "lookback_window": "90_days",
+        "conversion_types": ["quote_request", "phone_call", "policy_purchase"]
+      },
+      {
+        "model_name": "First-Touch Attribution",
+        "model_type": "first_interaction",
+        "description": "100% credit to first touchpoint",
+        "use_case": "awareness_campaign_evaluation",
+        "lookback_window": "90_days",
+        "conversion_types": ["email_signup", "initial_engagement"]
+      },
+      {
+        "model_name": "Last-Touch Attribution",
+        "model_type": "last_interaction",
+        "description": "100% credit to last touchpoint before conversion",
+        "use_case": "closing_campaign_evaluation",
+        "lookback_window": "30_days",
+        "conversion_types": ["policy_purchase", "high_value_quote"]
+      },
+      {
+        "model_name": "Linear Attribution",
+        "model_type": "linear",
+        "description": "Equal credit distributed across all touchpoints",
+        "use_case": "full_funnel_analysis",
+        "lookback_window": "60_days",
+        "conversion_types": ["all_conversions"]
+      },
+      {
+        "model_name": "Time-Decay Attribution",
+        "model_type": "time_decay",
+        "description": "More credit to touchpoints closer to conversion",
+        "use_case": "nurturing_campaign_evaluation",
+        "lookback_window": "30_days",
+        "conversion_types": ["quote_request", "content_engagement"]
+      }
+    ],
+    "tracking_infrastructure": {
+      "google_analytics_4": {
+        "property_id": "GA4_PROPERTY_ID",
+        "measurement_id": "G-MEASUREMENT_ID",
+        "enhanced_ecommerce": true,
+        "custom_events": [
+          {
+            "event_name": "trip_cancellation_quote_start",
+            "parameters": ["trip_cost", "destination", "travel_date"]
+          },
+          {
+            "event_name": "trip_cancellation_form_submit",
+            "parameters": ["form_type", "trip_value", "user_segment"]
+          },
+          {
+            "event_name": "trip_cancellation_phone_click",
+            "parameters": ["page_location", "user_segment", "traffic_source"]
+          },
+          {
+            "event_name": "trip_cancellation_calculator_complete",
+            "parameters": ["calculated_cost", "trip_type", "coverage_type"]
+          }
+        ],
+        "custom_dimensions": [
+          {
+            "dimension_name": "trip_type",
+            "scope": "event",
+            "description": "Type of trip (cruise, international, domestic, business)"
+          },
+          {
+            "dimension_name": "user_segment",
+            "scope": "user",
+            "description": "User classification based on behavior and demographics"
+          },
+          {
+            "dimension_name": "lead_quality_score",
+            "scope": "event",
+            "description": "Calculated lead quality score 0-100"
+          },
+          {
+            "dimension_name": "content_category",
+            "scope": "event",
+            "description": "Content type that led to conversion"
+          }
+        ]
+      },
+      "google_tag_manager": {
+        "container_id": "GTM-XXXXXXXX",
+        "triggers": [
+          {
+            "trigger_name": "Quote Form Submission",
+            "trigger_type": "form_submit",
+            "form_selector": "#trip-cancellation-quote-form"
+          },
+          {
+            "trigger_name": "Phone Number Click",
+            "trigger_type": "click",
+            "element_selector": "a[href^='tel:']"
+          },
+          {
+            "trigger_name": "Email Signup",
+            "trigger_type": "form_submit",
+            "form_selector": ".email-signup-form"
+          },
+          {
+            "trigger_name": "Calculator Completion",
+            "trigger_type": "custom_event",
+            "event_name": "calculator_complete"
+          },
+          {
+            "trigger_name": "Deep Scroll",
+            "trigger_type": "scroll_depth",
+            "scroll_percentage": 75
+          }
+        ],
+        "variables": [
+          {
+            "variable_name": "Trip Cost Value",
+            "variable_type": "form_field",
+            "field_name": "trip_cost"
+          },
+          {
+            "variable_name": "User Segment",
+            "variable_type": "javascript",
+            "javascript_code": "function(){return window.userSegment || 'unknown';}"
+          },
+          {
+            "variable_name": "Lead Quality Score",
+            "variable_type": "javascript",
+            "javascript_code": "function(){return window.tripCancellationTracking?.getLeadScore() || 0;}"
+          }
+        ]
+      },
+      "facebook_pixel": {
+        "pixel_id": "FACEBOOK_PIXEL_ID",
+        "events": [
+          {
+            "event_name": "Lead",
+            "trigger": "quote_form_submission",
+            "value": 180,
+            "currency": "USD"
+          },
+          {
+            "event_name": "CompleteRegistration",
+            "trigger": "email_signup",
+            "value": 25,
+            "currency": "USD"
+          },
+          {
+            "event_name": "Purchase",
+            "trigger": "policy_purchase",
+            "value": "dynamic",
+            "currency": "USD"
+          },
+          {
+            "event_name": "ViewContent",
+            "trigger": "content_engagement",
+            "content_type": "trip_cancellation_content"
+          }
+        ],
+        "custom_audiences": [
+          {
+            "audience_name": "Trip Cancellation Page Visitors",
+            "retention_days": 30,
+            "description": "Users who visited trip cancellation pages"
+          },
+          {
+            "audience_name": "Quote Started Not Completed",
+            "retention_days": 45,
+            "description": "Users who started quote process but didn't complete"
+          },
+          {
+            "audience_name": "High Value Leads",
+            "retention_days": 60,
+            "description": "Users with lead quality score >70"
+          }
+        ]
+      }
+    },
+    "cross_platform_tracking": {
+      "user_identification": {
+        "method": "enhanced_measurement_protocol",
+        "user_id_sources": ["email", "phone", "customer_id"],
+        "cross_device_tracking": true,
+        "privacy_compliant": true
+      },
+      "data_unification": {
+        "crm_integration": {
+          "platform": "salesforce",
+          "sync_frequency": "real_time",
+          "matched_fields": ["email", "phone", "lead_source", "conversion_date"]
+        },
+        "email_platform_integration": {
+          "platform": "mailchimp",
+          "sync_frequency": "daily",
+          "tracked_events": ["email_open", "email_click", "unsubscribe"]
+        },
+        "phone_system_integration": {
+          "platform": "call_tracking_system",
+          "call_scoring": true,
+          "transcription_analysis": true
+        }
+      }
+    },
+    "conversion_optimization": {
+      "a_b_testing_integration": {
+        "testing_platform": "custom_ab_testing",
+        "conversion_tracking": "variant_specific",
+        "statistical_significance": 95,
+        "minimum_sample_size": 1000
+      },
+      "dynamic_conversion_values": {
+        "lead_scoring_integration": true,
+        "value_adjustment_factors": [
+          {
+            "factor": "trip_cost",
+            "multiplier": "0.02",
+            "description": "Higher trip cost increases lead value"
+          },
+          {
+            "factor": "user_segment",
+            "multiplier": {
+              "high_value_traveler": 1.3,
+              "frequent_traveler": 1.2,
+              "business_traveler": 1.1,
+              "budget_traveler": 0.9
+            }
+          },
+          {
+            "factor": "traffic_source",
+            "multiplier": {
+              "organic_search": 1.1,
+              "direct": 1.2,
+              "referral": 1.0,
+              "social": 0.9,
+              "paid_search": 1.0
+            }
+          }
+        ]
+      },
+      "real_time_optimization": {
+        "bid_adjustment_triggers": [
+          {
+            "condition": "conversion_rate > 4.5%",
+            "action": "increase_bids_by_15%"
+          },
+          {
+            "condition": "cost_per_conversion > $220",
+            "action": "decrease_bids_by_10%"
+          },
+          {
+            "condition": "lead_quality_score < 50",
+            "action": "pause_low_performing_keywords"
+          }
+        ]
+      }
+    },
+    "privacy_compliance": {
+      "gdpr_compliance": {
+        "consent_management": true,
+        "data_retention_policy": "26_months",
+        "user_data_deletion": "available_on_request",
+        "privacy_policy_link": "/privacy-policy"
+      },
+      "ccpa_compliance": {
+        "do_not_sell": true,
+        "opt_out_available": true,
+        "data_transparency": "full_disclosure",
+        "consumer_rights_page": "/ccpa-rights"
+      },
+      "cookie_management": {
+        "consent_banner": true,
+        "granular_consent": true,
+        "cookie_categories": ["necessary", "analytics", "marketing", "preferences"]
+      }
+    },
+    "reporting_and_analytics": {
+      "dashboard_setup": {
+        "primary_dashboard": "google_data_studio",
+        "update_frequency": "real_time",
+        "stakeholder_access": "role_based",
+        "mobile_responsive": true
+      },
+      "key_metrics": [
+        {
+          "metric": "Conversion Rate by Channel",
+          "calculation": "conversions / clicks * 100",
+          "target": "3.2%",
+          "alert_threshold": "2.5%"
+        },
+        {
+          "metric": "Cost Per Acquisition",
+          "calculation": "ad_spend / conversions",
+          "target": "$180",
+          "alert_threshold": "$220"
+        },
+        {
+          "metric": "Return on Ad Spend",
+          "calculation": "conversion_value / ad_spend * 100",
+          "target": "350%",
+          "alert_threshold": "280%"
+        },
+        {
+          "metric": "Lead Quality Score",
+          "calculation": "weighted_average_lead_score",
+          "target": "65+",
+          "alert_threshold": "55"
+        },
+        {
+          "metric": "Attribution Model Performance",
+          "calculation": "model_specific_roas_comparison",
+          "target": "data_driven_model_superiority",
+          "review_frequency": "monthly"
+        }
+      ],
+      "automated_reporting": [
+        {
+          "report_name": "Daily Conversion Summary",
+          "frequency": "daily",
+          "recipients": ["marketing_manager", "ppc_specialist"],
+          "metrics": ["conversions", "cost_per_conversion", "conversion_rate"]
+        },
+        {
+          "report_name": "Weekly Attribution Analysis",
+          "frequency": "weekly",
+          "recipients": ["marketing_director", "analytics_team"],
+          "metrics": ["multi_touch_attribution", "channel_performance", "conversion_path_analysis"]
+        },
+        {
+          "report_name": "Monthly ROI Analysis",
+          "frequency": "monthly",
+          "recipients": ["executive_team", "finance"],
+          "metrics": ["overall_roas", "ltv_analysis", "customer_acquisition_cost"]
+        }
+      ]
+    }
+  }
+}
