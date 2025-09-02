@@ -10,6 +10,13 @@ interface Props {
   locationData?: LocationData;
 }
 
+// Export the function so it can be reused
+export const handleZipCodeSubmit = (zipCode: string) => {
+  if (zipCode.length === 5) {
+    window.location.href = `/medicare-advantage/plans?zip=${zipCode}`;
+  }
+};
+
 export function MedicareAdvantageHero({ headline, subtitle, locationData }: Props) {
   const [zipCode, setZipCode] = useState('');
   const [isClient, setIsClient] = useState(false);
@@ -21,11 +28,9 @@ export function MedicareAdvantageHero({ headline, subtitle, locationData }: Prop
     }
   }, [locationData?.zipCode]);
 
-  const handleZipCodeSubmit = (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (zipCode.length === 5 && isClient) {
-      window.location.href = `/medicare-advantage/plans?zip=${zipCode}`;
-    }
+    handleZipCodeSubmit(zipCode);
   };
 
   return (
@@ -57,7 +62,7 @@ export function MedicareAdvantageHero({ headline, subtitle, locationData }: Prop
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form onSubmit={handleZipCodeSubmit} className="flex flex-col sm:flex-row gap-4">
+            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-4">
               <div className="flex-grow">
                 <label htmlFor="zipCode" className="sr-only">
                   Enter your ZIP code

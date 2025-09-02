@@ -1,4 +1,5 @@
 import { MedicareAdvantageHero } from '@/components/MedicareAdvantageHero';
+import { MedicareAdvantageZipSearch } from '@/components/MedicareAdvantageZipSearch';
 import Link from 'next/link';
 
 // Force dynamic rendering to prevent prerendering issues
@@ -6,29 +7,149 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default function HomePage() {
+
   return (
     <div className="bg-gray-50">
       {/* Hero Section */}
       <MedicareAdvantageHero headline="Find Your Perfect Medicare Plan" />
 
-      {/* Simplified Plan Comparison Section */}
-      <section className="py-16 bg-white">
+      {/* Enhanced Medicare Advantage Find Plans Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Compare Medicare Advantage Plans
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Find Your Perfect Medicare Advantage Plan
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Find the perfect Medicare Advantage plan with our interactive comparison tool. 
-              See plans, benefits, and costs side by side.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover Medicare Advantage plans with $0 premiums, dental, vision, and fitness benefits. 
+              Our expert agents help you compare plans and find the best coverage for your needs.
             </p>
-            <div className="mt-8">
+          </div>
+
+          {/* Find Plans Options */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            {/* ZIP Code Search */}
+            <MedicareAdvantageZipSearch />
+
+            {/* Popular Locations */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Popular Locations</h3>
+              <p className="text-gray-600 mb-6">
+                Browse Medicare Advantage plans in popular cities and counties
+              </p>
+              <div className="space-y-3">
+                <a href="/medicare-advantage/spring-tx" className="block text-green-700 hover:text-green-800 font-medium">
+                  Spring, Texas →
+                </a>
+                <a href="/medicare-advantage/miami-fl" className="block text-green-700 hover:text-green-800 font-medium">
+                  Miami, Florida →
+                </a>
+                <a href="/medicare-advantage/atlanta-ga" className="block text-green-700 hover:text-green-800 font-medium">
+                  Atlanta, Georgia →
+                </a>
+                <a href="/medicare-advantage/wake-forest-nc" className="block text-green-700 hover:text-green-800 font-medium">
+                  Wake Forest, NC →
+                </a>
+              </div>
+            </div>
+
+            {/* Expert Guidance */}
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Guidance</h3>
+              <p className="text-gray-600 mb-6">
+                Get personalized help from licensed Medicare specialists
+              </p>
+              <div className="space-y-3">
+                <a href="/contact" className="block bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                  Get Free Consultation
+                </a>
+                <a href="/team" className="block text-purple-700 hover:text-purple-800 font-medium">
+                  Meet Our Specialists →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Plan Comparison Tool Preview */}
+          <div className="bg-gray-50 rounded-xl p-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Compare Plans Side by Side
+            </h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Use our interactive comparison tool to see Medicare Advantage plans, benefits, and costs 
+              all in one place. Find the perfect plan for your budget and healthcare needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/medicare-advantage" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
               >
-                View Plans
+                Compare Plans
               </a>
+              <a 
+                href="/medicare-plan-comparison-tool" 
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
+              >
+                Advanced Comparison Tool
+              </a>
+            </div>
+          </div>
+
+          {/* Medicare Advantage Benefits Overview */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+              Why Choose Medicare Advantage?
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">$0 Premium Plans</h4>
+                <p className="text-sm text-gray-600">Many plans available with no monthly premium</p>
+              </div>
+              
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Extra Benefits</h4>
+                <p className="text-sm text-gray-600">Dental, vision, hearing, and fitness programs</p>
+              </div>
+              
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Cost Protection</h4>
+                <p className="text-sm text-gray-600">Maximum out-of-pocket limits for financial security</p>
+              </div>
+              
+              <div className="text-center p-6 bg-white rounded-lg shadow-sm border border-gray-100">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Expert Guidance</h4>
+                <p className="text-sm text-gray-600">Free help from licensed Medicare specialists</p>
+              </div>
             </div>
           </div>
         </div>
