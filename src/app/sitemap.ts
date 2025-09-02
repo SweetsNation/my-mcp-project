@@ -105,6 +105,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/emergency-evacuation-insurance`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/trip-cancellation-insurance`,
+      lastModified: '2025-01-22',
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
 
     {
       url: `${baseUrl}/about`,

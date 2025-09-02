@@ -41,6 +41,13 @@ export default function Navigation() {
         { title: 'Term Life Insurance', href: '/term-life-insurance', description: 'Affordable life insurance protection for your family' },
         { title: 'Final Expense', href: '/final-expense', description: 'Coverage for end-of-life expenses and funeral costs' },
       ]
+    },
+    {
+      title: 'Travel',
+      submenu: [
+        { title: 'Emergency Evacuation Insurance', href: '/emergency-evacuation-insurance', description: 'Medical evacuation and emergency travel protection' },
+        { title: 'Trip Cancellation Insurance', href: '/trip-cancellation-insurance', description: 'Protection against trip cancellations and interruptions' },
+      ]
     }
   ];
 
