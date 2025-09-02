@@ -29,7 +29,7 @@ export const event = (action: string, parameters?: Record<string, any>) => {
 };
 
 // Form submission tracking
-export const trackFormSubmission = (formType: 'contact' | 'quote', success: boolean) => {
+export const trackFormSubmission = (formType: string, success: boolean) => {
   try {
     event('form_submit', {
       form_type: formType,
@@ -84,7 +84,7 @@ export const trackResourceView = (resourceName: string, category: string) => {
 };
 
 // Calculator interaction tracking
-export const trackCalculatorUsage = (calculatorType: 'medicare' | 'health_insurance', inputData: Record<string, any>) => {
+export const trackCalculatorUsage = (calculatorType: string, inputData: Record<string, any>) => {
   try {
     event('calculator_used', {
       event_category: 'engagement',

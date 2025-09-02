@@ -186,7 +186,7 @@ export class FinalExpenseAnalyticsTracker {
   
   private trackFID() {
     const observer = new PerformanceObserver((list) => {
-      const firstEntry = list.getEntries()[0]
+      const firstEntry = list.getEntries()[0] as PerformanceEventTiming
       
       this.performanceMetrics.firstInputDelay = firstEntry.processingStart - firstEntry.startTime
       

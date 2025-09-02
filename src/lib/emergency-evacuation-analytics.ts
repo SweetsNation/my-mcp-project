@@ -177,8 +177,8 @@ class EmergencyEvacuationAnalyticsTracker {
     const loadMetrics = {
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-      timeToInteractive: navigation.domInteractive - navigation.navigationStart,
-      totalLoadTime: navigation.loadEventEnd - navigation.navigationStart
+      timeToInteractive: navigation.domInteractive - navigation.fetchStart,
+      totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
     };
 
     if (window.gtag) {

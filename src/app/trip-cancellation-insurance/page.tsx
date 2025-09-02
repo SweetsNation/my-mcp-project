@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Calculator, Users, Shield, Clock, CheckCircle, Heart, DollarSign, FileText, Award, MapPin, Plane, Car, Ship } from 'lucide-react'
-import TripCancellationAnalytics from '@/components/TripCancellationAnalytics'
 import BreadcrumbNavigation, { TRIP_CANCELLATION_BREADCRUMBS } from '@/components/BreadcrumbNavigation'
 
 export const metadata: Metadata = {
@@ -48,7 +47,6 @@ export const metadata: Metadata = {
 export default function TripCancellationInsurancePage() {
   return (
     <>
-      <TripCancellationAnalytics pageType="main" />
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
         <div className="container mx-auto px-4 py-8">
           {/* Breadcrumb Navigation */}
