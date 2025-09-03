@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { MedicarePlanFinder } from '@/components/MedicarePlanFinder';
 
 export const metadata: Metadata = {
   title: 'Medicare Supplement Plans | El-Mag Insurance',
@@ -33,6 +34,23 @@ export default function MedicareSupplementPage() {
               Learn About Plan G
             </Link>
           </div>
+        </section>
+
+        {/* Medicare Plan Finder */}
+        <section className="mb-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Find Medicare Supplement Plans in Your Area
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Compare Medigap plans side by side and find the perfect coverage for your needs.
+            </p>
+          </div>
+          <MedicarePlanFinder 
+            planType="Medigap"
+            title="Find Medicare Supplement Plans in Your Area"
+            subtitle="Compare Medigap plans side by side. Find the best coverage to fill gaps in Original Medicare with predictable costs and no network restrictions."
+          />
         </section>
 
         {/* Content */}

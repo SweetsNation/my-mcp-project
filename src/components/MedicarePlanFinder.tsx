@@ -25,9 +25,19 @@ interface Plan {
   };
 }
 
-export function MedicarePlanFinder() {
+interface MedicarePlanFinderProps {
+  planType?: 'all' | 'Medicare Advantage' | 'Part D' | 'Medigap';
+  title?: string;
+  subtitle?: string;
+}
+
+export function MedicarePlanFinder({ 
+  planType: defaultPlanType = 'all', 
+  title = 'Find Medicare Plans in Your Area',
+  subtitle = 'Compare Medicare Advantage, Part D, and Medigap plans side by side. Find the perfect plan for your healthcare needs and budget.'
+}: MedicarePlanFinderProps) {
   const [zipCode, setZipCode] = useState('');
-  const [planType, setPlanType] = useState<'all' | 'Medicare Advantage' | 'Part D' | 'Medigap'>('all');
+  const [planType, setPlanType] = useState<'all' | 'Medicare Advantage' | 'Part D' | 'Medigap'>(defaultPlanType);
   const [showResults, setShowResults] = useState(false);
   const [plans, setPlans] = useState<Plan[]>([]);
   const [loading, setLoading] = useState(false);
@@ -120,11 +130,10 @@ export function MedicarePlanFinder() {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Find Medicare Plans in Your Area
+          {title}
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Compare Medicare Advantage, Part D, and Medigap plans side by side. 
-          Find the perfect plan for your healthcare needs and budget.
+          {subtitle}
         </p>
       </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import RelatedServices from '@/components/RelatedServices';
 import ResourceLinks from '@/components/ResourceLinks';
+import { MedicarePlanFinder } from '@/components/MedicarePlanFinder';
 // import CrossServiceRecommendations from '@/components/CrossServiceRecommendations';
 // import ResourceLinking from '@/components/ResourceLinking';
 // import ToolLinking from '@/components/ToolLinking';
@@ -306,6 +307,25 @@ export default function MedicareAdvantagePage() {
                   331-E-HEALTH
                 </a>
               </div>
+            </div>
+          </section>
+
+          {/* Medicare Plan Finder */}
+          <section className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Find Medicare Advantage Plans in Your Area
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Use our comprehensive plan finder to compare Medicare Advantage plans, benefits, and costs side by side.
+                </p>
+              </div>
+              <MedicarePlanFinder 
+                planType="Medicare Advantage"
+                title="Find Medicare Advantage Plans in Your Area"
+                subtitle="Compare Medicare Advantage plans with dental, vision, and fitness benefits. Find $0 premium plans that fit your healthcare needs and budget."
+              />
             </div>
           </section>
 

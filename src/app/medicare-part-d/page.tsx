@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ClientOnly from '@/components/ClientOnly';
 import RelatedServices from '@/components/RelatedServices';
 import ResourceLinks from '@/components/ResourceLinks';
+import { MedicarePlanFinder } from '@/components/MedicarePlanFinder';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
@@ -225,6 +226,25 @@ export default function MedicarePartDPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Medicare Plan Finder */}
+          <section className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Find Medicare Part D Plans in Your Area
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Compare prescription drug plans side by side and find the best coverage for your medications.
+                </p>
+              </div>
+              <MedicarePlanFinder 
+                planType="Part D"
+                title="Find Medicare Part D Plans in Your Area"
+                subtitle="Compare prescription drug plans with the new $2,000 out-of-pocket cap for 2025. Find the best coverage for your medications and budget."
+              />
             </div>
           </section>
 

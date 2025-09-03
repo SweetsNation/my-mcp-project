@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { LocationData } from '@/lib/content-generator';
 
@@ -10,28 +9,7 @@ interface Props {
   locationData?: LocationData;
 }
 
-// Export the function so it can be reused
-export const handleZipCodeSubmit = (zipCode: string) => {
-  if (zipCode.length === 5) {
-    window.location.href = `/medicare-advantage/plans?zip=${zipCode}`;
-  }
-};
-
 export function MedicareAdvantageHero({ headline, subtitle, locationData }: Props) {
-  const [zipCode, setZipCode] = useState('');
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-    if (locationData?.zipCode) {
-      setZipCode(locationData.zipCode);
-    }
-  }, [locationData?.zipCode]);
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    handleZipCodeSubmit(zipCode);
-  };
 
   return (
     <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 py-20">
@@ -57,37 +35,27 @@ export function MedicareAdvantageHero({ headline, subtitle, locationData }: Prop
           </motion.p>
 
           <motion.div 
-            className="max-w-md mx-auto"
+            className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <form onSubmit={onSubmit} className="flex flex-col sm:flex-row gap-4">
-              <div className="flex-grow">
-                <label htmlFor="zipCode" className="sr-only">
-                  Enter your ZIP code
-                </label>
-                <input
-                  type="text"
-                  id="zipCode"
-                  placeholder="Enter your ZIP code"
-                  value={zipCode}
-                  onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
-                  className="w-full px-4 py-3 text-lg rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  maxLength={5}
-                  required
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-secondary-500 hover:bg-secondary-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 text-lg"
-                disabled={zipCode.length !== 5}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-secondary-500 hover:bg-secondary-600 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 text-lg text-center"
               >
-                Find Plans
-              </button>
-            </form>
-            <p className="text-primary-100 text-sm mt-2">
-              Enter your ZIP code to see available plans in your area
+                Get Free Consultation
+              </a>
+              <a
+                href="tel:331-343-2584"
+                className="bg-white text-primary-600 font-semibold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-lg text-center"
+              >
+                331-E-HEALTH
+              </a>
+            </div>
+            <p className="text-primary-100 text-sm mt-4 text-center">
+              Licensed agents available 7 days a week • No obligation • 100% free service
             </p>
           </motion.div>
 
