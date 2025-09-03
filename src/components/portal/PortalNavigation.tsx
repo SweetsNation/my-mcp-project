@@ -14,7 +14,9 @@ import {
   Bars3Icon,
   XMarkIcon,
   ChartBarIcon,
-  ClipboardDocumentListIcon
+  ClipboardDocumentListIcon,
+  MapPinIcon,
+  BellIcon
 } from '@heroicons/react/24/outline';
 
 interface NavigationItem {
@@ -48,6 +50,24 @@ const navigationItems: NavigationItem[] = [
     href: '/portal/plan-comparison',
     icon: ShieldCheckIcon,
     description: 'Compare Medicare plans side by side'
+  },
+  {
+    name: 'Provider Locator',
+    href: '/portal/provider-locator',
+    icon: MapPinIcon,
+    description: 'Find healthcare providers and facilities'
+  },
+  {
+    name: 'Analytics',
+    href: '/portal/analytics',
+    icon: ChartBarIcon,
+    description: 'View detailed analytics and insights'
+  },
+  {
+    name: 'Notifications',
+    href: '/portal/notifications',
+    icon: BellIcon,
+    description: 'Manage your notifications and alerts'
   },
   {
     name: 'Profile',

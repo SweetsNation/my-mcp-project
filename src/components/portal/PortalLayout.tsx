@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PortalNavigation from './PortalNavigation';
+import NotificationSystem from './NotificationSystem';
 
 interface PortalLayoutProps {
   children: React.ReactNode;
