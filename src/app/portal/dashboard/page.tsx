@@ -1,21 +1,20 @@
 'use client';
 
-import type { Metadata } from 'next';
 import { useState } from 'react';
 import Link from 'next/link';
+import { ProtectedRoute } from '@/components/auth/ProtectedRoute';
+import { useAuth } from '@/contexts/AuthContext';
 
-const metadata: Metadata = {
-  title: 'Dashboard - El-Mag Insurance Portal',
-  description: 'Manage your Medicare Advantage plan, view documents, claims, and access member resources.',
-};
+
 
 export default function DashboardPage() {
+  const { user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState('overview');
 
-  // Mock user data
+  // Use real user data from context
   const userData = {
-    name: 'John Smith',
-    memberNumber: 'ELM-12345-67890',
+    name: user ? `${user.firstName} ${user.lastName}` : 'Loading...',
+    memberNumber: user?.memberNumber || 'ELM-12345-67890',
     planName: 'BlueCare Medicare Advantage HMO',
     effectiveDate: '2024-01-01',
     primaryCare: 'Dr. Sarah Johnson',
@@ -34,31 +33,35 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-blue-600 mr-8">
-                El-Mag Insurance
-              </Link>
-              <h1 className="text-xl font-semibold text-gray-900">Member Portal</h1>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-gray-700">Welcome, {userData.name}</span>
-              <button className="text-gray-500 hover:text-gray-700">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5l-5-5h5v-5h0v5z" />
+    <ProtectedRoute>
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <header className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center py-4">
+              <div className="flex items-center">
+                <Link href="/" className="text-2xl font-bold text-blue-600 mr-8">
+                  El-Mag Insurance
+                </Link>
+                <h1 className="text-xl font-semibold text-gray-900">Member Portal</h1>
+              </div>
+              <div className="flex items-center space-x-4">
+                <span className="text-gray-700">Welcome, {userData.name}</span>
+                <button className="text-gray-500 hover:text-gray-700">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5l-5-5h5v-5h0v5z" />
                 </svg>
-              </button>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                Log Out
-              </button>
+                </button>
+                <button 
+                  onClick={logout}
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                >
+                  Log Out
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -309,7 +312,8 @@ export default function DashboardPage() {
             )}
           </div>
         </div>
+              </div>
       </div>
-    </div>
+    </ProtectedRoute>
   );
 }

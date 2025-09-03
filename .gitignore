@@ -103,3 +103,5 @@ temp/
 # Docker
 Dockerfile.local
 docker-compose.override.yml.env
+
+/generated/prisma

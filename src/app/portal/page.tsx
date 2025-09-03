@@ -1,17 +1,12 @@
 'use client';
 
-import type { Metadata } from 'next';
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useAuth } from '@/contexts/AuthContext';
 
-const metadata: Metadata = {
-  title: 'Client Portal - El-Mag Insurance',
-  description: 'Secure login to access your Medicare Advantage plan information, documents, and account details.',
-  keywords: 'client portal, Medicare account, login, plan documents, account access',
-};
+
 
 export default function ClientPortalPage() {
-  const router = useRouter();
+  const { login, register, user } = useAuth();
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: '',
@@ -40,24 +35,40 @@ export default function ClientPortalPage() {
     setError('');
 
     try {
-      if (!isLogin) {
+      if (isLogin) {
+        // Handle login
+        const result = await login(formData.email, formData.password);
+        if (result.success) {
+          // Redirect to dashboard on successful login
+          window.location.href = '/portal/dashboard';
+        } else {
+          setError(result.error || 'Login failed');
+        }
+      } else {
+        // Handle registration
         if (formData.password !== formData.confirmPassword) {
           setError('Passwords do not match');
           setIsSubmitting(false);
           return;
         }
-        if (formData.password.length < 8) {
-          setError('Password must be at least 8 characters long');
-          setIsSubmitting(false);
-          return;
+
+        const result = await register({
+          email: formData.email,
+          password: formData.password,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          phone: formData.phone,
+          dateOfBirth: formData.dateOfBirth,
+          memberNumber: formData.memberNumber,
+        });
+
+        if (result.success) {
+          // Redirect to dashboard on successful registration
+          window.location.href = '/portal/dashboard';
+        } else {
+          setError(result.error || 'Registration failed');
         }
       }
-
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // For demo purposes, redirect to a success page or dashboard
-      router.push('/portal/dashboard');
     } catch (error) {
       setError('An error occurred. Please try again.');
     }

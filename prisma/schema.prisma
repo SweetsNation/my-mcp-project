@@ -1,0 +1,348 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// AUTHENTICATION & USER MANAGEMENT MODELS
+// ============================================================================
+
+// User model for authentication
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  passwordHash    String
+  firstName       String
+  lastName        String
+  phone           String?
+  dateOfBirth     DateTime?
+  medicareNumber  String?
+  memberNumber    String?
+  planType        String?
+  isActive        Boolean   @default(true)
+  emailVerified   Boolean   @default(false)
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  lastLogin       DateTime?
+
+  // Relations
+  sessions        UserSession[]
+  insurancePlans  InsurancePlan[]
+  claims          Claim[]
+  documents       Document[]
+  // Note: We'll link leads to users through application logic, not database constraints
+
+  @@map("auth_users")
+}
+
+// User sessions for JWT management
+model UserSession {
+  id          String   @id @default(cuid())
+  userId      String
+  tokenHash   String
+  expiresAt   DateTime
+  createdAt   DateTime @default(now())
+
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("auth_user_sessions")
+}
+
+// Insurance plans for users (personal plans)
+model InsurancePlan {
+  id              String   @id @default(cuid())
+  userId          String
+  planName        String
+  planType        String
+  carrier         String
+  memberNumber    String
+  effectiveDate   DateTime
+  premium         Float
+  deductible      Float
+  maxOutOfPocket  Float
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("auth_insurance_plans")
+}
+
+// Claims for users
+model Claim {
+  id            String   @id @default(cuid())
+  userId        String
+  dateOfService DateTime
+  provider      String
+  service       String
+  amount        Float
+  status        ClaimStatus
+  processedDate DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("auth_claims")
+}
+
+// Documents for users
+model Document {
+  id          String   @id @default(cuid())
+  userId      String
+  fileName    String
+  fileType    String
+  fileSize    Int
+  fileUrl     String
+  category    DocumentCategory
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("auth_documents")
+}
+
+// ============================================================================
+// EXISTING MEDICARE DATA MODELS (from database introspection)
+// ============================================================================
+
+model carriers {
+  id             String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name           String           @unique @db.VarChar(255)
+  website        String?          @db.VarChar(500)
+  phone          String?          @db.VarChar(20)
+  am_best_rating String?          @db.VarChar(10)
+  created_at     DateTime?        @default(now()) @db.Timestamptz(6)
+  updated_at     DateTime?        @default(now()) @db.Timestamptz(6)
+  
+  medicare_plans medicare_plans[]
+}
+
+model plan_types {
+  id             String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  code           String           @unique @db.VarChar(20)
+  name           String           @db.VarChar(100)
+  description    String?
+  
+  medicare_plans medicare_plans[]
+}
+
+model medicare_plans {
+  id                   String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  carrier_id           String           @db.Uuid
+  plan_type_id         String           @db.Uuid
+  plan_id              String           @db.VarChar(50)
+  name                 String           @db.VarChar(255)
+  plan_year            Int
+  status               String?          @default("active") @db.VarChar(20)
+  premium              Decimal          @default(0.00) @db.Decimal(8, 2)
+  deductible           Decimal          @default(0.00) @db.Decimal(8, 2)
+  max_out_of_pocket    Decimal          @db.Decimal(8, 2)
+  doctor_copay         Decimal?         @default(0.00) @db.Decimal(6, 2)
+  specialist_copay     Decimal?         @default(0.00) @db.Decimal(6, 2)
+  hospital_copay       Decimal?         @default(0.00) @db.Decimal(6, 2)
+  urgent_care_copay    Decimal?         @default(0.00) @db.Decimal(6, 2)
+  emergency_room_copay Decimal?         @default(0.00) @db.Decimal(6, 2)
+  star_rating          Decimal?         @db.Decimal(2, 1)
+  includes_part_d      Boolean?         @default(true)
+  dental_coverage      Boolean?         @default(false)
+  dental_limit         Decimal?         @default(0.00) @db.Decimal(8, 2)
+  vision_coverage      Boolean?         @default(false)
+  vision_limit         Decimal?         @default(0.00) @db.Decimal(8, 2)
+  hearing_coverage     Boolean?         @default(false)
+  hearing_limit        Decimal?         @default(0.00) @db.Decimal(8, 2)
+  fitness_benefits     Boolean?         @default(false)
+  transportation       Boolean?         @default(false)
+  otc_benefits         Boolean?         @default(false)
+  otc_limit            Decimal?         @default(0.00) @db.Decimal(6, 2)
+  additional_benefits  Json?            @default("{}")
+  network_size         String?          @db.VarChar(20)
+  requires_referrals   Boolean?         @default(true)
+  created_at           DateTime?        @default(now()) @db.Timestamptz(6)
+  updated_at           DateTime?        @default(now()) @db.Timestamptz(6)
+
+  carriers             carriers         @relation(fields: [carrier_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  plan_types           plan_types       @relation(fields: [plan_type_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  formularies          formularies[]
+  plan_locations       plan_locations[]
+  plan_providers       plan_providers[]
+
+  @@unique([plan_id, plan_year])
+  @@index([dental_coverage, vision_coverage, hearing_coverage], map: "idx_medicare_plans_benefits")
+  @@index([carrier_id], map: "idx_medicare_plans_carrier")
+  @@index([carrier_id, plan_year], map: "idx_medicare_plans_carrier_year")
+  @@index([premium], map: "idx_medicare_plans_premium")
+  @@index([premium, star_rating], map: "idx_medicare_plans_premium_rating")
+  @@index([star_rating], map: "idx_medicare_plans_rating")
+  @@index([plan_type_id], map: "idx_medicare_plans_type")
+  @@index([plan_year], map: "idx_medicare_plans_year")
+}
+
+model formularies {
+  id                     String         @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  plan_id                String         @db.Uuid
+  drug_name              String         @db.VarChar(255)
+  generic_name           String?        @db.VarChar(255)
+  tier                   Int
+  copay_amount           Decimal?       @db.Decimal(6, 2)
+  coinsurance_percentage Decimal?       @db.Decimal(5, 2)
+  prior_authorization    Boolean?       @default(false)
+  step_therapy           Boolean?       @default(false)
+  quantity_limits        String?        @db.VarChar(100)
+  created_at             DateTime?      @default(now()) @db.Timestamptz(6)
+
+  medicare_plans         medicare_plans @relation(fields: [plan_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([drug_name], map: "idx_formularies_drug")
+  @@index([drug_name, tier], map: "idx_formularies_drug_tier")
+  @@index([plan_id], map: "idx_formularies_plan")
+}
+
+model locations {
+  id             String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  zip_code       String           @db.VarChar(10)
+  city           String           @db.VarChar(100)
+  state          String           @db.VarChar(50)
+  county         String           @db.VarChar(100)
+  latitude       Decimal?         @db.Decimal(10, 8)
+  longitude      Decimal?         @db.Decimal(11, 8)
+  population     Int?
+  created_at     DateTime?        @default(now()) @db.Timestamptz(6)
+  
+  plan_locations plan_locations[]
+
+  @@unique([zip_code, city, state])
+  @@index([city, state], map: "idx_locations_city_state")
+  @@index([zip_code], map: "idx_locations_zip")
+}
+
+model plan_locations {
+  id             String         @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  plan_id        String         @db.Uuid
+  location_id    String         @db.Uuid
+  created_at     DateTime?      @default(now()) @db.Timestamptz(6)
+  
+  locations      locations      @relation(fields: [location_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  medicare_plans medicare_plans @relation(fields: [plan_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([plan_id, location_id])
+  @@index([location_id], map: "idx_plan_locations_location")
+  @@index([plan_id], map: "idx_plan_locations_plan")
+  @@index([location_id], map: "idx_plan_locations_zip")
+}
+
+model providers {
+  id                     String           @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  npi                    String?          @unique @db.VarChar(20)
+  name                   String           @db.VarChar(255)
+  specialty              String?          @db.VarChar(100)
+  address_line1          String?          @db.VarChar(255)
+  address_line2          String?          @db.VarChar(255)
+  city                   String?          @db.VarChar(100)
+  state                  String?          @db.VarChar(50)
+  zip_code               String?          @db.VarChar(10)
+  phone                  String?          @db.VarChar(20)
+  accepting_new_patients Boolean?         @default(true)
+  created_at             DateTime?        @default(now()) @db.Timestamptz(6)
+  
+  plan_providers         plan_providers[]
+
+  @@index([city, state, zip_code], map: "idx_providers_location")
+  @@index([npi], map: "idx_providers_npi")
+}
+
+model plan_providers {
+  id             String         @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  plan_id        String         @db.Uuid
+  provider_id    String         @db.Uuid
+  network_tier   String?        @default("in-network") @db.VarChar(20)
+  created_at     DateTime?      @default(now()) @db.Timestamptz(6)
+  
+  medicare_plans medicare_plans @relation(fields: [plan_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  providers      providers      @relation(fields: [provider_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@unique([plan_id, provider_id])
+  @@index([plan_id], map: "idx_plan_providers_plan")
+  @@index([provider_id], map: "idx_plan_providers_provider")
+}
+
+model leads {
+  id                  String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  first_name          String?   @db.VarChar(100)
+  last_name           String?   @db.VarChar(100)
+  email               String?   @db.VarChar(255)
+  phone               String?   @db.VarChar(20)
+  zip_code            String?   @db.VarChar(10)
+  age                 Int?
+  interested_plans    String[]  @db.Uuid
+  contact_preferences Json?     @default("{}")
+  source              String?   @default("new") @db.VarChar(100)
+  status              String?   @default("new") @db.VarChar(20)
+  notes               String?
+  created_at          DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime? @default(now()) @db.Timestamptz(6)
+
+  // Note: We'll link leads to users through application logic, not database constraints
+
+  @@index([source, status], map: "idx_leads_source_status")
+  @@index([status], map: "idx_leads_status")
+  @@index([zip_code], map: "idx_leads_zip")
+}
+
+model plan_comparisons {
+  id              String       @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  session_id      String?      @db.Uuid
+  plan_ids        String[]     @db.Uuid
+  comparison_data Json?        @default("{}")
+  created_at      DateTime?    @default(now()) @db.Timestamptz(6)
+  
+  user_sessions   LegacyUserSession? @relation(fields: [session_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+}
+
+// Legacy UserSession model for plan comparisons (keeping existing data)
+model LegacyUserSession {
+  id               String             @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  session_id       String             @db.VarChar(255)
+  zip_code         String?            @db.VarChar(10)
+  preferences      Json?              @default("{}")
+  created_at       DateTime?          @default(now()) @db.Timestamptz(6)
+  expires_at       DateTime?          @default(dbgenerated("(now() + '7days'::interval)")) @db.Timestamptz(6)
+
+  plan_comparisons plan_comparisons[]
+
+  @@index([session_id], map: "idx_user_sessions_session")
+  @@map("user_sessions")
+}
+
+// ============================================================================
+// ENUMS
+// ============================================================================
+
+enum ClaimStatus {
+  PENDING
+  APPROVED
+  DENIED
+}
+
+enum DocumentCategory {
+  ID_CARD
+  BENEFITS_SUMMARY
+  CLAIM_FORM
+  EXPLANATION_OF_BENEFITS
+  OTHER
+}
