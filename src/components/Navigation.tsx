@@ -139,12 +139,6 @@ export default function Navigation() {
               >
                 Resources
               </Link>
-              <Link 
-                href="/portal" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Client Portal
-              </Link>
             </div>
           </div>
 
@@ -229,13 +223,6 @@ export default function Navigation() {
                 onClick={closeMenu}
               >
                 Resources
-              </Link>
-              <Link
-                href="/portal"
-                className="bg-blue-600 hover:bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-                onClick={closeMenu}
-              >
-                Client Portal
               </Link>
             </div>
           </div>

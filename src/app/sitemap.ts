@@ -166,12 +166,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.3,
     },
-    {
-      url: `${baseUrl}/portal`,
-      lastModified: '2025-01-15',
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
   ];
 
   // Resource pages
