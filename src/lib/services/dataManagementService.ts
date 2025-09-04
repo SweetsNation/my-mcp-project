@@ -120,7 +120,7 @@ export class DataManagementService {
   /**
    * Get all plan types
    */
-  static async getAllPlanTypes(): Promise<Array<{ id: string; code: string; name: string; description?: string }>> {
+  static async getAllPlanTypes(): Promise<Array<{ id: string; name: string; description?: string }>> {
     return MedicarePlanService.getPlanTypes();
   }
 

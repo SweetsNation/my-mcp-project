@@ -6,7 +6,6 @@ export interface CreateLeadData {
   email?: string;
   phone?: string;
   zipCode?: string;
-  age?: number;
   interestedPlans?: string[];
   contactPreferences?: Record<string, any>;
   source?: string;
@@ -24,7 +23,6 @@ export interface Lead {
   email?: string;
   phone?: string;
   zipCode?: string;
-  age?: number;
   interestedPlans: string[];
   contactPreferences: Record<string, any>;
   source?: string;
@@ -42,17 +40,14 @@ export class LeadService {
     try {
       const lead = await prisma.leads.create({
         data: {
-          first_name: leadData.firstName,
-          last_name: leadData.lastName,
-          email: leadData.email,
-          phone: leadData.phone,
-          zip_code: leadData.zipCode,
-          age: leadData.age,
-          interested_plans: leadData.interestedPlans || [],
-          contact_preferences: leadData.contactPreferences || {},
-          source: leadData.source || 'website',
+          first_name: leadData.firstName || '',
+          last_name: leadData.lastName || '',
+          email: leadData.email || '',
+          phone: leadData.phone || '',
+          zip_code: leadData.zipCode || '',
+          plan_type: leadData.interestedPlans?.[0] || null,
           status: 'new',
-          notes: leadData.notes,
+          notes: leadData.notes || '',
         },
       });
 
@@ -63,10 +58,9 @@ export class LeadService {
         email: lead.email || undefined,
         phone: lead.phone || undefined,
         zipCode: lead.zip_code || undefined,
-        age: lead.age || undefined,
-        interestedPlans: lead.interested_plans,
-        contactPreferences: lead.contact_preferences as Record<string, any>,
-        source: lead.source || undefined,
+        interestedPlans: lead.plan_type ? [lead.plan_type] : [],
+        contactPreferences: {},
+        source: 'website',
         status: lead.status || 'new',
         notes: lead.notes || undefined,
         createdAt: lead.created_at || new Date(),
@@ -98,10 +92,9 @@ export class LeadService {
         email: lead.email || undefined,
         phone: lead.phone || undefined,
         zipCode: lead.zip_code || undefined,
-        age: lead.age || undefined,
-        interestedPlans: lead.interested_plans,
-        contactPreferences: lead.contact_preferences as Record<string, any>,
-        source: lead.source || undefined,
+        interestedPlans: lead.plan_type ? [lead.plan_type] : [],
+        contactPreferences: {},
+        source: 'website',
         status: lead.status || 'new',
         notes: lead.notes || undefined,
         createdAt: lead.created_at || new Date(),
@@ -126,10 +119,7 @@ export class LeadService {
           email: updateData.email,
           phone: updateData.phone,
           zip_code: updateData.zipCode,
-          age: updateData.age,
-          interested_plans: updateData.interestedPlans,
-          contact_preferences: updateData.contactPreferences,
-          source: updateData.source,
+          plan_type: updateData.interestedPlans?.[0] || null,
           status: updateData.status,
           notes: updateData.notes,
           updated_at: new Date(),
@@ -143,10 +133,9 @@ export class LeadService {
         email: lead.email || undefined,
         phone: lead.phone || undefined,
         zipCode: lead.zip_code || undefined,
-        age: lead.age || undefined,
-        interestedPlans: lead.interested_plans,
-        contactPreferences: lead.contact_preferences as Record<string, any>,
-        source: lead.source || undefined,
+        interestedPlans: lead.plan_type ? [lead.plan_type] : [],
+        contactPreferences: {},
+        source: 'website',
         status: lead.status || 'new',
         notes: lead.notes || undefined,
         createdAt: lead.created_at || new Date(),
@@ -170,17 +159,16 @@ export class LeadService {
         skip: offset,
       });
 
-      return leads.map(lead => ({
+      return leads.map((lead: any) => ({
         id: lead.id,
         firstName: lead.first_name || undefined,
         lastName: lead.last_name || undefined,
         email: lead.email || undefined,
         phone: lead.phone || undefined,
         zipCode: lead.zip_code || undefined,
-        age: lead.age || undefined,
-        interestedPlans: lead.interested_plans,
-        contactPreferences: lead.contact_preferences as Record<string, any>,
-        source: lead.source || undefined,
+        interestedPlans: lead.plan_type ? [lead.plan_type] : [],
+        contactPreferences: {},
+        source: 'website',
         status: lead.status || 'new',
         notes: lead.notes || undefined,
         createdAt: lead.created_at || new Date(),
@@ -204,17 +192,16 @@ export class LeadService {
         skip: offset,
       });
 
-      return leads.map(lead => ({
+      return leads.map((lead: any) => ({
         id: lead.id,
         firstName: lead.first_name || undefined,
         lastName: lead.last_name || undefined,
         email: lead.email || undefined,
         phone: lead.phone || undefined,
         zipCode: lead.zip_code || undefined,
-        age: lead.age || undefined,
-        interestedPlans: lead.interested_plans,
-        contactPreferences: lead.contact_preferences as Record<string, any>,
-        source: lead.source || undefined,
+        interestedPlans: lead.plan_type ? [lead.plan_type] : [],
+        contactPreferences: {},
+        source: 'website',
         status: lead.status || 'new',
         notes: lead.notes || undefined,
         createdAt: lead.created_at || new Date(),
@@ -237,17 +224,16 @@ export class LeadService {
         skip: offset,
       });
 
-      return leads.map(lead => ({
+      return leads.map((lead: any) => ({
         id: lead.id,
         firstName: lead.first_name || undefined,
         lastName: lead.last_name || undefined,
         email: lead.email || undefined,
         phone: lead.phone || undefined,
         zipCode: lead.zip_code || undefined,
-        age: lead.age || undefined,
-        interestedPlans: lead.interested_plans,
-        contactPreferences: lead.contact_preferences as Record<string, any>,
-        source: lead.source || undefined,
+        interestedPlans: lead.plan_type ? [lead.plan_type] : [],
+        contactPreferences: {},
+        source: 'website',
         status: lead.status || 'new',
         notes: lead.notes || undefined,
         createdAt: lead.created_at || new Date(),
@@ -271,11 +257,11 @@ export class LeadService {
       const convertedLeads = await prisma.leads.count({ where: { status: 'converted' } });
       const lostLeads = await prisma.leads.count({ where: { status: 'lost' } });
 
-      // Get leads by source
-      const leadsBySource = await prisma.leads.groupBy({
-        by: ['source'],
-        _count: { source: true },
-        orderBy: { _count: { source: 'desc' } },
+      // Get leads by plan type
+      const leadsByPlanType = await prisma.leads.groupBy({
+        by: ['plan_type'],
+        _count: { plan_type: true },
+        orderBy: { _count: { plan_type: 'desc' } },
       });
 
       // Get leads by month (last 12 months)
@@ -302,11 +288,11 @@ export class LeadService {
           converted: convertedLeads,
           lost: lostLeads,
         },
-        bySource: leadsBySource.map(item => ({
-          source: item.source || 'unknown',
-          count: item._count.source,
+        bySource: leadsByPlanType.map((item: any) => ({
+          source: item.plan_type || 'unknown',
+          count: item._count.plan_type,
         })),
-        byMonth: leadsByMonth.map(item => ({
+        byMonth: leadsByMonth.map((item: any) => ({
           month: item.created_at,
           count: item._count.created_at,
         })),
