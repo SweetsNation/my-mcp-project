@@ -122,6 +122,12 @@ export default function Navigation() {
               ))}
 
               <Link 
+                href="/" 
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+              <Link 
                 href="/about" 
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
@@ -203,6 +209,13 @@ export default function Navigation() {
                 </div>
               ))}
 
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
