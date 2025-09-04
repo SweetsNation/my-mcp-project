@@ -1,6 +1,5 @@
-import { PrismaClient, $Enums } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { $Enums } from '@prisma/client';
+import { prisma } from '../database/client';
 
 // Use Prisma-generated enums
 export const SecurityEventType = $Enums.SecurityEventType;

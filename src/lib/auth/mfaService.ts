@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client';
 import crypto from 'crypto';
 import { authenticator } from 'otplib';
-
-const prisma = new PrismaClient();
+import { prisma } from '../database/client';
 
 export interface MFASecret {
   id: string;
