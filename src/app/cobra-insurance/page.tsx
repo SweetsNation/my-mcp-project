@@ -123,11 +123,10 @@ export default function CobraInsurancePage() {
   return (
     <>
       <LandingPageAnalytics
-        pageType="service"
+        pageType="regional"
         pageTitle="COBRA Insurance Coverage Guide"
         demographics={{
-          avgAge: 45,
-          targetAudience: 'Recently unemployed or life event affected'
+          avgAge: 45
         }}
         keyMetrics={{
           serviceType: 'COBRA_guidance',

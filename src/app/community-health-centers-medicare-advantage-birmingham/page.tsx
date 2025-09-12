@@ -138,7 +138,7 @@ export default function CommunityHealthCentersBirminghamPage() {
   return (
     <>
       <LandingPageAnalytics
-        pageType="specialty"
+        pageType="county"
         pageTitle="Community Health Centers Medicare Advantage Birmingham"
         county="Jefferson County"
         state="Alabama"
