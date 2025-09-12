@@ -171,7 +171,7 @@ export default function MedicareSupplementPlanFPage() {
           planType: 'Plan F',
           benefitCount: planFBenefits.length,
           costFactors: costFactors.length,
-          eligibilityRestricted: true,
+          eligibilityRestricted: 'true',
           comprehensiveLevel: 'Most Comprehensive'
         }}
       />

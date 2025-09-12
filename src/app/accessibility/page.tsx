@@ -70,7 +70,8 @@ const accessibilityData = {
 };
 
 export default function AccessibilityPage() {
-  const breadcrumbItems = generateMedicareBreadcrumbs('page', 'Accessibility Services');
+  const breadcrumbItems = generateMedicareBreadcrumbs('index');
+  breadcrumbItems.push({ label: 'Accessibility Services', current: true });
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
   return (
