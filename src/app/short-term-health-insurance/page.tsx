@@ -89,9 +89,9 @@ const faqSchema = {
 }
 
 const breadcrumbItems = [
-  { name: "Home", url: "/" },
-  { name: "Health Insurance", url: "/health-insurance" },
-  { name: "Short-Term Coverage", url: "/short-term-health-insurance" }
+  { label: "Home", url: "/" },
+  { label: "Health Insurance", url: "/health-insurance" },
+  { label: "Short-Term Coverage", url: "/short-term-health-insurance" }
 ]
 
 export default function ShortTermHealthInsurance() {
@@ -109,7 +109,21 @@ export default function ShortTermHealthInsurance() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbStructuredData(breadcrumbItems)) }}
       />
-      <LandingPageAnalytics data={analyticsData} />
+      <LandingPageAnalytics
+        pageType="regional"
+        pageTitle="Short-Term Health Insurance"
+        county=""
+        state=""
+        demographics={{
+          avgAge: 35,
+        }}
+        keyMetrics={{
+          averageCost: analyticsData.averageCost,
+          approvalTime: analyticsData.approvalTime,
+          coverageDuration: analyticsData.coverageDuration[0],
+          pageType: 'short_term_health_insurance'
+        }}
+      />
       <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
         {/* Breadcrumb Navigation */}
         <nav className="bg-white shadow-sm border-b" aria-label="Breadcrumb">

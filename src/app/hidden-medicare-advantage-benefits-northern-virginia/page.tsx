@@ -119,7 +119,21 @@ export default function HiddenMedicareAdvantageNorthernVirginia() {
 
   return (
     <>
-      <LandingPageAnalytics data={analyticsData} />
+      <LandingPageAnalytics
+        pageType="county"
+        pageTitle="Hidden Medicare Advantage Benefits Northern Virginia"
+        county="Northern Virginia"
+        state="Virginia"
+        demographics={{
+          avgAge: 68,
+        }}
+        keyMetrics={{
+          planCount: analyticsData.planCount,
+          zeroPremiumPlans: analyticsData.zeroPremiumPlans,
+          maPenetration: analyticsData.maPenetration,
+          pageType: 'hidden_benefits'
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -240,9 +240,7 @@ export default function HawaiiCountyPage() {
         pageType: 'island_healthcare',
         totalBeneficiaries: hawaiiCountyData.totalBeneficiaries,
         availablePlans: hawaiiCountyData.planCount,
-        specialMetrics: {
-          ruralPopulation: hawaiiCountyData.ruralPopulation
-        }
+        specialMetrics: {}
       },
       {
         city: 'Hilo',

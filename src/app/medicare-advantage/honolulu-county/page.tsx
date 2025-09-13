@@ -119,7 +119,22 @@ export default function HonoluluCountyMedicareAdvantage() {
 
   return (
     <>
-      <LandingPageAnalytics data={analyticsData} />
+      <LandingPageAnalytics
+        pageType="county"
+        pageTitle="Medicare Advantage Honolulu County"
+        county="Honolulu County"
+        state="Hawaii"
+        demographics={{
+          avgAge: analyticsData.medianAge,
+        }}
+        keyMetrics={{
+          planCount: analyticsData.planCount,
+          zeroPremiumPlans: analyticsData.zeroPremiumPlans,
+          maPenetration: analyticsData.maPenetration,
+          seniorPopulation: analyticsData.seniorPopulation,
+          pageType: 'honolulu_county'
+        }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -241,12 +241,10 @@ export default function OrangeCountyPage() {
     trackMedicareAdvancedPageView(
       'Medicare Advantage Orange County',
       {
-        pageType: 'premium_market',
+        pageType: 'county_market',
         totalBeneficiaries: orangeCountyData.totalBeneficiaries,
         availablePlans: orangeCountyData.planCount,
-        specialMetrics: {
-          affluenceIndex: orangeCountyData.affluenceIndex
-        }
+        specialMetrics: {}
       },
       {
         city: 'Anaheim',

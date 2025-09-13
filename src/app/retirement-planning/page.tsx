@@ -258,7 +258,7 @@ export default function RetirementPlanningPage() {
   return (
     <>
       <LandingPageAnalytics
-        pageType="service"
+        pageType="regional"
         pageTitle="Retirement Planning Services"
         county=""
         state=""
