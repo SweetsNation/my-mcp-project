@@ -281,7 +281,6 @@ export default function RaleighTechInnovationPage() {
         state="North Carolina"
         demographics={{
           avgAge: 69,
-          techAdoptionRate: raleighData.techAdoptionRate,
         }}
         keyMetrics={{
           totalBeneficiaries: raleighData.totalBeneficiaries,

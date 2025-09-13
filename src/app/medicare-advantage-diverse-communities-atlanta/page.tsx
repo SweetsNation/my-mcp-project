@@ -222,7 +222,6 @@ export default function DiverseCommunitiesAtlantaPage() {
         state="Georgia"
         demographics={{
           avgAge: 68,
-          diversePopulationRate: atlantaData.diversePopulation,
         }}
         keyMetrics={{
           totalBeneficiaries: atlantaData.totalBeneficiaries,

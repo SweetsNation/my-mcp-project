@@ -248,7 +248,6 @@ export default function TransportationBenefitsNashvillePage() {
         state="Tennessee"
         demographics={{
           avgAge: 67,
-          seniorPopulationRate: nashvilleData.seniorPopulation,
         }}
         keyMetrics={{
           totalBeneficiaries: nashvilleData.totalBeneficiaries,

@@ -246,7 +246,6 @@ export default function GradyHealthSystemPage() {
         state="Georgia"
         demographics={{
           avgAge: 68,
-          safetyNetPopulation: gradyData.safetyNetPopulation,
         }}
         keyMetrics={{
           totalBeneficiaries: gradyData.totalBeneficiaries,
