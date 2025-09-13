@@ -1,30 +1,57 @@
 // Advanced Medicare Advantage Landing Page Analytics Tracking
-// Comprehensive tracking for 7 specialized Medicare landing pages
+// Comprehensive tracking for 15 specialized Medicare and health insurance landing pages
 
 export interface MedicarePageMetrics {
-  pageType: 'diverse_communities' | 'transportation_benefits' | 'safety_net_provider' | 'county_market' | 'tech_innovation' | 'healthcare_comparison' | 'island_healthcare';
-  totalBeneficiaries: number;
-  availablePlans: number;
+  pageType: 'diverse_communities' | 'transportation_benefits' | 'safety_net_provider' | 'county_market' | 'tech_innovation' | 'healthcare_comparison' | 'island_healthcare' | 'hawaii_county' | 'bexar_county_texas' | 'orange_county' | 'miami_dade_county' | 'retirement_planning' | 'honolulu_county' | 'hidden_benefits_northern_virginia' | 'short_term_health_insurance';
+  totalBeneficiaries?: number;
+  availablePlans?: number;
   specialMetrics?: {
-    // Diverse Communities
+    // Original 7 pages
     diversePopulationRate?: number;
     multilingualPlans?: number;
-    // Transportation Benefits
     transportationPlans?: number;
     averageTransportationBenefit?: number;
-    // Safety Net Provider
     safetyNetPopulation?: number;
     gradyNetworkPlans?: number;
-    // County Market
     zeroPremiumPlans?: number;
     maPenetrationRate?: number;
-    // Tech Innovation
     techEnabledPlans?: number;
     techAdoptionRate?: number;
-    // Healthcare Comparison
     healthcareSystemCount?: number;
-    // Island Healthcare
     islandChallenges?: number;
+    // New 8 pages
+    // Hawaii County (Big Island)
+    telemedicineServices?: boolean;
+    ruralHealthcareAccess?: number;
+    interIslandTransportation?: boolean;
+    // Bexar County Texas (San Antonio)
+    hispanicPopulation?: number;
+    bilingualSupport?: boolean;
+    borderHealthcare?: boolean;
+    // Orange County (Premium market)
+    medianIncome?: number;
+    premiumPlans?: number;
+    highEndNetworks?: number;
+    // Miami-Dade County
+    multilingualServices?: number;
+    internationalPatients?: boolean;
+    tropicalMedicine?: boolean;
+    // Retirement Planning
+    medicareTransitionPlanning?: boolean;
+    annuityPlanning?: boolean;
+    healthcareCostProjections?: boolean;
+    // Honolulu County (Urban Hawaii)
+    urbanHealthcareAccess?: boolean;
+    multiculturalPrograms?: number;
+    publicTransportIntegration?: boolean;
+    // Hidden Benefits Northern Virginia
+    exclusiveBenefits?: number;
+    federalEmployeePrograms?: boolean;
+    premiumWellnessPrograms?: boolean;
+    // Short-term Health Insurance
+    cobralAlternative?: boolean;
+    temporaryCoverage?: boolean;
+    gapInsurance?: boolean;
   };
 }
 
@@ -131,6 +158,87 @@ function trackPageTypeSpecificMetrics(pageType: string, specialMetrics: any) {
           event_category: 'medicare_specialized',
           island_challenges: specialMetrics.islandChallenges,
           focus_area: 'geographic_specialty'
+        });
+        break;
+      
+      // New 8 landing pages
+      case 'hawaii_county':
+        (window as any).gtag('event', 'hawaii_county_metrics', {
+          event_category: 'medicare_geographic',
+          telemedicine_services: specialMetrics.telemedicineServices,
+          rural_healthcare_access: specialMetrics.ruralHealthcareAccess,
+          inter_island_transportation: specialMetrics.interIslandTransportation,
+          focus_area: 'rural_island_healthcare'
+        });
+        break;
+
+      case 'bexar_county_texas':
+        (window as any).gtag('event', 'bexar_county_metrics', {
+          event_category: 'medicare_geographic',
+          hispanic_population: specialMetrics.hispanicPopulation,
+          bilingual_support: specialMetrics.bilingualSupport,
+          border_healthcare: specialMetrics.borderHealthcare,
+          focus_area: 'hispanic_community_healthcare'
+        });
+        break;
+
+      case 'orange_county':
+        (window as any).gtag('event', 'orange_county_metrics', {
+          event_category: 'medicare_geographic',
+          median_income: specialMetrics.medianIncome,
+          premium_plans: specialMetrics.premiumPlans,
+          high_end_networks: specialMetrics.highEndNetworks,
+          focus_area: 'premium_healthcare_market'
+        });
+        break;
+
+      case 'miami_dade_county':
+        (window as any).gtag('event', 'miami_dade_metrics', {
+          event_category: 'medicare_geographic',
+          multilingual_services: specialMetrics.multilingualServices,
+          international_patients: specialMetrics.internationalPatients,
+          tropical_medicine: specialMetrics.tropicalMedicine,
+          focus_area: 'multicultural_urban_healthcare'
+        });
+        break;
+
+      case 'retirement_planning':
+        (window as any).gtag('event', 'retirement_planning_metrics', {
+          event_category: 'medicare_services',
+          medicare_transition_planning: specialMetrics.medicareTransitionPlanning,
+          annuity_planning: specialMetrics.annuityPlanning,
+          healthcare_cost_projections: specialMetrics.healthcareCostProjections,
+          focus_area: 'retirement_healthcare_planning'
+        });
+        break;
+
+      case 'honolulu_county':
+        (window as any).gtag('event', 'honolulu_county_metrics', {
+          event_category: 'medicare_geographic',
+          urban_healthcare_access: specialMetrics.urbanHealthcareAccess,
+          multicultural_programs: specialMetrics.multiculturalPrograms,
+          public_transport_integration: specialMetrics.publicTransportIntegration,
+          focus_area: 'urban_island_healthcare'
+        });
+        break;
+
+      case 'hidden_benefits_northern_virginia':
+        (window as any).gtag('event', 'hidden_benefits_metrics', {
+          event_category: 'medicare_specialized',
+          exclusive_benefits: specialMetrics.exclusiveBenefits,
+          federal_employee_programs: specialMetrics.federalEmployeePrograms,
+          premium_wellness_programs: specialMetrics.premiumWellnessPrograms,
+          focus_area: 'exclusive_medicare_benefits'
+        });
+        break;
+
+      case 'short_term_health_insurance':
+        (window as any).gtag('event', 'short_term_insurance_metrics', {
+          event_category: 'health_insurance_alternative',
+          cobra_alternative: specialMetrics.cobralAlternative,
+          temporary_coverage: specialMetrics.temporaryCoverage,
+          gap_insurance: specialMetrics.gapInsurance,
+          focus_area: 'temporary_health_coverage'
         });
         break;
     }
