@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Medicare Advantage Orange County FL 2025 | 58 Plans Available | Orlando Medicare',
-  description: 'Compare 58 Medicare Advantage plans in Orange County Florida. Orlando, Winter Park, Apopka coverage. 37 $0 premium plans available. Expert Medicare guidance.',
-  keywords: 'Orange County Florida Medicare Advantage, Orlando Medicare plans 2025, Winter Park Medicare Advantage, Florida Medicare plans, Orange County FL Medicare enrollment, Medicare Advantage Orlando',
+  title: 'Medicare Advantage Orange County FL 2025 | 58 Plans | Orlando, Winter Park, Apopka | Best Medicare Plans Florida',
+  description: 'Compare 58 Medicare Advantage plans in Orange County Florida. Orlando, Winter Park, Apopka, Ocoee coverage. 37 $0 premium plans available. Expert Medicare guidance for Central Florida retirees. Orlando Health, AdventHealth networks covered.',
+  keywords: 'Orange County Florida Medicare Advantage, Orlando Medicare plans 2025, Winter Park Medicare Advantage, Apopka Medicare plans, Florida Medicare plans, Orange County FL Medicare enrollment, Medicare Advantage Orlando, Central Florida Medicare, Orlando Health Medicare, AdventHealth Medicare, Florida Blue Medicare Orange County, Humana Medicare Orlando, UnitedHealthcare AARP Orlando, Medicare Advantage enrollment Florida, Orlando metro Medicare plans, Winter Park senior health insurance, Apopka Medicare specialists, Orange County FL Medicare brokers, Florida Medicare Advantage 2025, Orlando area Medicare enrollment, Central Florida retiree health insurance',
   openGraph: {
-    title: 'Medicare Advantage Orange County FL 2025 | 58 Plans Available',
-    description: 'Compare Medicare Advantage plans in Orange County FL. 58 plans available in Orlando metro with comprehensive coverage options.',
+    title: 'Medicare Advantage Orange County FL 2025 | 58 Plans | Orlando Metro Coverage',
+    description: 'Complete guide to Medicare Advantage plans in Orange County Florida. 58 plans available in Orlando, Winter Park, Apopka with 37 $0 premium options and expert guidance.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - Central Florida Medicare Specialists',
+    images: [
+      {
+        url: '/images/orange-county-florida-medicare-advantage-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Orange County Florida Medicare Advantage Plans 2025 Orlando Metro'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@ElMagInsurance',
     title: 'Medicare Advantage Orange County FL 2025 | 58 Plans',
-    description: 'Orange County Florida Medicare Advantage plans: 58 options with 37 $0 premium plans. Orlando metro coverage.',
+    description: 'Orange County Florida Medicare Advantage: 58 options with 37 $0 premium plans. Orlando, Winter Park, Apopka coverage.',
+    images: ['/images/orange-county-florida-medicare-advantage-2025.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/medicare-advantage/orange-county-florida',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -89,6 +112,90 @@ export default function OrangeCountyFloridaPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'orange_county_florida',
+            custom_parameters: {
+              landing_page_type: 'county_market',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'orange_county_florida',
+            custom_parameters: {
+              landing_page_type: 'county_market',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'Medicare Advantage Orange County Florida',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'county_market',
+        total_beneficiaries: orangeCountyData.totalBeneficiaries,
+        available_plans: orangeCountyData.planCount,
+        zero_premium_plans: orangeCountyData.zeroPremiumPlans,
+        ma_penetration_rate: orangeCountyData.maPenetration,
+        average_age: orangeCountyData.averageAge,
+        dual_eligible_rate: orangeCountyData.dualEligibleRate,
+        average_star_rating: orangeCountyData.averageStarRating,
+        county: 'orange_county',
+        state: 'florida',
+        metro_area: 'orlando'
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'orange_county_florida',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'county_market',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -111,6 +218,199 @@ export default function OrangeCountyFloridaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "El-Mag Insurance - Orange County FL Medicare Specialists",
+            "description": "Medicare Advantage specialists serving Orange County Florida including Orlando, Winter Park, Apopka, and Ocoee. Expert guidance on 58 available Medicare plans with local healthcare network expertise.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "postalCode": "32801",
+              "addressCountry": "US"
+            },
+            "telephone": "331-343-2584",
+            "url": "https://elmag-insurance.com/medicare-advantage/orange-county-florida",
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea",
+                "name": "Orange County, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Orlando, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Winter Park, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Apopka, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Ocoee, Florida"
+              }
+            ],
+            "serviceType": "Medicare Advantage Plan Comparison and Central Florida Healthcare Network Guidance",
+            "priceRange": "Free Medicare Advantage Consultation",
+            "paymentAccepted": ["Cash", "Check", "Credit Card"],
+            "currenciesAccepted": "USD",
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "189"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "28.5383",
+              "longitude": "-81.3792"
+            },
+            "sameAs": [
+              "https://www.facebook.com/ElMagInsurance",
+              "https://www.linkedin.com/company/el-mag-insurance"
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many Medicare Advantage plans are available in Orange County Florida for 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "There are 58 Medicare Advantage plans available in Orange County Florida for 2025, with 37 plans offering $0 monthly premiums. These plans serve Orlando, Winter Park, Apopka, Ocoee, and surrounding Central Florida communities with comprehensive healthcare network coverage including Orlando Health and AdventHealth systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the best Medicare Advantage plans in Orlando Florida?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Top-rated Medicare Advantage plans in Orange County include Florida Blue Medicare HMO (4.5 stars, $0 premium), Humana Gold Plus HMO (4 stars, $0 premium), and UnitedHealthcare AARP Medicare Advantage (4 stars, $15 premium). These plans offer extensive Florida networks including Orlando Health, AdventHealth, and comprehensive coverage options."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which hospitals in Orlando accept Medicare Advantage plans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Major hospitals serving Orange County Medicare Advantage beneficiaries include Orlando Health (Orlando Regional Medical Center, Dr. P. Phillips Hospital, Health Central Hospital), AdventHealth facilities (Orlando, Winter Park, Apopka locations), and Orlando VA Medical Center. Most Medicare Advantage plans in Orange County include these major healthcare systems in their networks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Medicare Advantage enrollment rate in Orange County Florida?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Orange County Florida has a 47.8% Medicare Advantage enrollment rate with 245,000 Medicare beneficiaries and an average age of 73. This represents a strong Medicare Advantage market in Central Florida, particularly popular with retirees in Orlando, Winter Park, and surrounding communities."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is Medicare open enrollment for Orange County Florida residents?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Medicare Open Enrollment runs from October 15 to December 7 each year for Orange County residents. There's also Medicare Advantage Open Enrollment from January 1 to March 31. During these periods, Orlando, Winter Park, Apopka, and Ocoee residents can switch between Medicare Advantage plans or return to Original Medicare plus a supplement plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there special Medicare Advantage benefits for Florida residents in Orange County?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, many Medicare Advantage plans in Orange County offer Florida-specific benefits including transportation services for medical appointments, coverage for seasonal residents who travel between states, wellness programs suited for active Central Florida retirees, partnerships with popular Florida healthcare systems like Orlando Health and AdventHealth, and additional benefits for hurricane preparedness."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Medicare Advantage Orange County FL 2025 - Orlando Metro Plans",
+            "description": "Compare 58 Medicare Advantage plans in Orange County Florida. Orlando, Winter Park, Apopka coverage with 37 $0 premium options and expert guidance.",
+            "url": "https://elmag-insurance.com/medicare-advantage/orange-county-florida",
+            "mainEntity": {
+              "@type": "Article",
+              "headline": "Medicare Advantage Orange County FL 2025: Complete Guide to 58 Available Plans",
+              "author": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance Central Florida Medicare Specialists"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://elmag-insurance.com/logo.png"
+                }
+              },
+              "datePublished": "2024-10-01",
+              "dateModified": "2024-12-09",
+              "articleSection": "Medicare Advantage",
+              "keywords": ["Orange County Florida Medicare", "Orlando Medicare Advantage", "Winter Park Medicare plans", "Central Florida Medicare", "Florida Medicare Advantage"],
+              "about": [
+                {
+                  "@type": "Place",
+                  "name": "Orange County, Florida"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Orlando, Florida"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Winter Park, Florida"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Medicare Advantage Plans"
+                }
+              ]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://elmag-insurance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Medicare Advantage",
+                  "item": "https://elmag-insurance.com/medicare-advantage"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Orange County FL",
+                  "item": "https://elmag-insurance.com/medicare-advantage/orange-county-florida"
+                }
+              ]
+            }
+          }),
         }}
       />
       <div className="min-h-screen bg-gray-50">
@@ -177,7 +477,11 @@ export default function OrangeCountyFloridaPage() {
                   Orange County's diverse healthcare landscape offers excellent Medicare Advantage options. Explore 
                   <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
                   and <Link href="/medicare-supplement-florida" className="text-primary-600 hover:text-primary-700 underline mx-1">Florida Medicare Supplements</Link> 
-                  for comprehensive coverage.
+                  for comprehensive coverage. Compare with other Florida markets like 
+                  <Link href="/medicare-advantage/hernando-county-florida" className="text-primary-600 hover:text-primary-700 underline mx-1">Hernando County</Link> 
+                  or explore health systems in major metros like 
+                  <Link href="/emory-vs-piedmont-medicare-advantage-atlanta" className="text-primary-600 hover:text-primary-700 underline mx-1">Atlanta</Link> 
+                  for regional perspective.
                 </p>
               </div>
             </div>
@@ -273,6 +577,7 @@ export default function OrangeCountyFloridaPage() {
                     <ul className="text-sm text-blue-600 space-y-1">
                       <li>• <Link href="/medicare-advantage/hernando-county-florida" className="hover:underline">Hernando County Plans</Link></li>
                       <li>• <Link href="/medicare-supplement-florida" className="hover:underline">Florida Medicare Supplements</Link></li>
+                      <li>• <Link href="/medicare-advantage/san-diego-county" className="hover:underline">San Diego County Medicare</Link></li>
                     </ul>
                   </div>
                   <div>
@@ -280,6 +585,7 @@ export default function OrangeCountyFloridaPage() {
                     <ul className="text-sm text-blue-600 space-y-1">
                       <li>• <Link href="/annuities" className="hover:underline">Retirement Income Annuities</Link></li>
                       <li>• <Link href="/supplemental-insurance" className="hover:underline">Supplemental Coverage</Link></li>
+                      <li>• <Link href="/whole-life-insurance" className="hover:underline">Whole Life Insurance</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -294,7 +600,11 @@ export default function OrangeCountyFloridaPage() {
               </h2>
               <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
                 Our Florida Medicare specialists understand Orange County's unique healthcare landscape 
-                and can help you navigate your 58 plan options.
+                and can help you navigate your 58 plan options. For broader insurance needs, explore 
+                <Link href="/cobra-insurance" className="text-white hover:text-primary-200 underline mx-1">COBRA insurance</Link> 
+                for employment transitions or 
+                <Link href="/community-health-centers-medicare-advantage-birmingham" className="text-white hover:text-primary-200 underline mx-1">community health center options</Link> 
+                for comprehensive care.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

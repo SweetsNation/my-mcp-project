@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Whole Life Insurance 2025 | Permanent Coverage & Cash Value Guide | Best Rates',
-  description: 'Comprehensive whole life insurance guide 2025. Compare rates, understand cash value benefits, and find the best permanent life insurance coverage for your needs.',
-  keywords: 'whole life insurance 2025, permanent life insurance, cash value life insurance, whole life insurance rates, life insurance comparison, best whole life insurance',
+  title: 'Whole Life Insurance 2025 | Permanent Coverage & Cash Value | Compare Best Rates | Life Insurance Guide',
+  description: 'Comprehensive whole life insurance guide 2025. Compare rates, understand cash value benefits, fixed premiums, and tax advantages. Find the best permanent life insurance coverage for estate planning, retirement supplement, and family protection. Expert guidance on mutual company dividends and borrowing options.',
+  keywords: 'whole life insurance 2025, permanent life insurance, cash value life insurance, whole life insurance rates, life insurance comparison, best whole life insurance, whole life vs term life, cash value growth, permanent coverage, fixed premiums life insurance, whole life insurance benefits, tax free death benefit, life insurance cash value, whole life insurance dividends, permanent life insurance rates, whole life insurance quotes, best whole life insurance companies, whole life insurance estate planning, cash value loan, whole life insurance retirement, guaranteed life insurance, mutual life insurance companies, life insurance tax advantages, whole life insurance riders',
   openGraph: {
-    title: 'Whole Life Insurance 2025 | Permanent Coverage Guide',
-    description: 'Complete whole life insurance guide covering benefits, cash value, and rate comparisons. Expert guidance on permanent life insurance.',
+    title: 'Whole Life Insurance 2025 | Permanent Coverage & Cash Value Guide',
+    description: 'Complete whole life insurance guide covering permanent coverage, cash value benefits, fixed premiums, and rate comparisons. Expert guidance on permanent life insurance options.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - Life Insurance Specialists',
+    images: [
+      {
+        url: '/images/whole-life-insurance-guide-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Whole Life Insurance 2025 Complete Guide Permanent Coverage Cash Value'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Whole Life Insurance 2025 | Complete Guide',
-    description: 'Whole life insurance explained: permanent coverage, cash value benefits, rates, and expert guidance for life insurance decisions.',
+    site: '@ElMagInsurance',
+    title: 'Whole Life Insurance 2025 | Complete Coverage Guide',
+    description: 'Whole life insurance explained: permanent coverage, cash value benefits, fixed premiums, and expert guidance for life insurance decisions.',
+    images: ['/images/whole-life-insurance-guide-2025.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/whole-life-insurance',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -165,6 +188,88 @@ export default function WholeLifeInsurancePage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'whole_life_insurance_guide',
+            custom_parameters: {
+              landing_page_type: 'insurance_education',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'whole_life_insurance_guide',
+            custom_parameters: {
+              landing_page_type: 'insurance_education',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'Whole Life Insurance 2025 Complete Guide',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'insurance_education',
+        service_type: 'whole_life_insurance',
+        coverage_type: 'permanent',
+        cash_value: 'yes',
+        premium_type: 'fixed',
+        education_sections: 6,
+        rate_table_included: 'yes',
+        comparison_chart_included: 'yes',
+        use_cases_covered: 4
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'whole_life_insurance_guide',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'insurance_education',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -255,7 +360,10 @@ export default function WholeLifeInsurancePage() {
               <div className="max-w-4xl mx-auto text-center mb-12">
                 <p className="text-xl text-gray-600 mb-6">
                   Whole life insurance provides permanent life insurance coverage with fixed premiums, 
-                  guaranteed cash value growth, and lifetime protection for your beneficiaries.
+                  guaranteed cash value growth, and lifetime protection for your beneficiaries. Unlike temporary coverage, 
+                  whole life offers financial security that extends beyond employment transitions where 
+                  <Link href="/cobra-insurance" className="text-primary-600 hover:text-primary-700 underline mx-1">COBRA insurance</Link> 
+                  might be needed, providing permanent family protection.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
@@ -476,6 +584,7 @@ export default function WholeLifeInsurancePage() {
                     <ul className="text-sm text-blue-600 space-y-1">
                       <li>• <Link href="/annuities" className="hover:underline">Retirement Annuities</Link> for guaranteed income</li>
                       <li>• <Link href="/social-security-analysis" className="hover:underline">Social Security optimization</Link></li>
+                      <li>• <Link href="/medicare-advantage/san-diego-county" className="hover:underline">Medicare planning by location</Link></li>
                     </ul>
                   </div>
                   <div>
@@ -483,6 +592,7 @@ export default function WholeLifeInsurancePage() {
                     <ul className="text-sm text-blue-600 space-y-1">
                       <li>• <Link href="/medicare-advantage" className="hover:underline">Medicare Advantage plans</Link></li>
                       <li>• <Link href="/supplemental-insurance" className="hover:underline">Supplemental insurance</Link></li>
+                      <li>• <Link href="/medicare-advantage/hernando-county-florida" className="hover:underline">Regional Medicare options</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -559,7 +669,10 @@ export default function WholeLifeInsurancePage() {
               </h2>
               <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
                 Whole life insurance provides permanent protection and financial flexibility. 
-                Get expert guidance to find the right coverage and build lasting financial security for your loved ones.
+                Get expert guidance to find the right coverage and build lasting financial security for your loved ones. 
+                Complement your life insurance with comprehensive healthcare planning like 
+                <Link href="/emory-vs-piedmont-medicare-advantage-atlanta" className="text-white hover:text-primary-200 underline mx-1">regional Medicare guidance</Link> 
+                for complete financial protection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

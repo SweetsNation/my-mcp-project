@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'COBRA Insurance 2025 | Continuation Coverage Guide | Eligibility & Alternatives',
-  description: 'Complete COBRA insurance guide 2025. Understand eligibility, costs, and alternatives to COBRA continuation coverage. Expert guidance on health insurance options after job loss.',
-  keywords: 'COBRA insurance 2025, COBRA continuation coverage, COBRA eligibility, COBRA alternatives, health insurance after job loss, COBRA cost, marketplace insurance vs COBRA',
+  title: 'COBRA Insurance 2025 | Complete Guide to Continuation Coverage | Costs, Eligibility & Alternatives | Expert Help',
+  description: 'Complete COBRA insurance guide 2025. Understand COBRA eligibility requirements, costs (102% + admin fees), qualifying events, and alternatives to continuation coverage. Expert guidance on health insurance options after job loss, divorce, or life changes. Compare COBRA vs marketplace plans.',
+  keywords: 'COBRA insurance 2025, COBRA continuation coverage, COBRA eligibility requirements, COBRA qualifying events, COBRA cost calculator, health insurance after job loss, COBRA alternatives, marketplace insurance vs COBRA, COBRA deadlines, COBRA premium cost, continuation coverage guide, how does COBRA work, COBRA enrollment period, COBRA vs ACA plans, health insurance gap coverage, post-employment health insurance, COBRA benefits explained, COBRA coverage duration, COBRA election notice, temporary health insurance, job loss health insurance, divorce health insurance, COBRA specialist, health insurance consultant',
   openGraph: {
-    title: 'COBRA Insurance 2025 | Complete Coverage Guide',
-    description: 'Comprehensive COBRA insurance guide covering eligibility, costs, and alternatives. Expert help navigating continuation coverage options.',
+    title: 'COBRA Insurance 2025 | Complete Continuation Coverage Guide',
+    description: 'Comprehensive COBRA insurance guide covering eligibility, qualifying events, costs, and alternatives. Expert help navigating continuation coverage decisions after job loss or life changes.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - COBRA Specialists',
+    images: [
+      {
+        url: '/images/cobra-insurance-guide-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'COBRA Insurance 2025 Complete Guide - Continuation Coverage Explained'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'COBRA Insurance 2025 | Coverage Guide',
-    description: 'COBRA continuation coverage explained: eligibility, costs, alternatives, and expert guidance for health insurance transitions.',
+    site: '@ElMagInsurance',
+    title: 'COBRA Insurance 2025 | Complete Coverage Guide',
+    description: 'COBRA continuation coverage explained: eligibility, qualifying events, costs, alternatives, and expert guidance for health insurance transitions.',
+    images: ['/images/cobra-insurance-guide-2025.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/cobra-insurance',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -120,6 +143,86 @@ export default function CobraInsurancePage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'cobra_insurance_guide',
+            custom_parameters: {
+              landing_page_type: 'insurance_education',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'cobra_insurance_guide',
+            custom_parameters: {
+              landing_page_type: 'insurance_education',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'COBRA Insurance Complete Guide 2025',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'insurance_education',
+        service_type: 'cobra_guidance',
+        coverage_duration: '18-36 months',
+        cost_factor: '102% + admin fees',
+        target_demographic: 'job_loss_divorce',
+        qualifying_events: 5,
+        alternatives_covered: 4
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'cobra_insurance_guide',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'insurance_education',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -147,16 +250,163 @@ export default function CobraInsurancePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "COBRA Insurance Guidance",
-            "description": "Expert guidance on COBRA continuation coverage, eligibility requirements, costs, and alternatives to help you make informed health insurance decisions.",
+            "name": "COBRA Insurance Guidance and Consultation",
+            "description": "Expert guidance on COBRA continuation coverage, eligibility requirements, costs, qualifying events, and alternatives. Professional help navigating health insurance options after job loss, divorce, or other life changes.",
             "provider": {
               "@type": "Organization",
               "name": "El-Mag Insurance",
+              "description": "Professional health insurance consultants specializing in COBRA and marketplace coverage",
               "telephone": "331-343-2584",
-              "url": "https://elmag-insurance.com"
+              "url": "https://elmag-insurance.com",
+              "sameAs": [
+                "https://www.facebook.com/ElMagInsurance",
+                "https://www.linkedin.com/company/el-mag-insurance"
+              ]
             },
             "areaServed": "United States",
-            "serviceType": "Health Insurance Consultation"
+            "serviceType": "COBRA and Health Insurance Consultation",
+            "offers": {
+              "@type": "Offer",
+              "description": "Free COBRA consultation and guidance",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does COBRA insurance cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "COBRA costs 102% of your previous group premium plus up to 2% administrative fee. Individual COBRA coverage typically ranges from $350-$700/month, while family coverage can cost $1,200-$2,200/month. This means you pay the full premium that your employer was contributing, plus administrative costs."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are COBRA qualifying events?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "COBRA qualifying events include: (1) Job loss or reduction in hours (18 months coverage), (2) Divorce or legal separation (36 months), (3) Death of covered employee (36 months), (4) Child aging out of coverage (36 months), and (5) Employee becoming Medicare eligible (36 months for family). Each event has specific coverage duration limits."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long do I have to elect COBRA coverage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You have 60 days to elect COBRA coverage from the later of: (1) the date you lose coverage, or (2) the date you receive your COBRA election notice. Missing this 60-day deadline means you lose your right to COBRA continuation coverage permanently."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is COBRA better than marketplace insurance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It depends on your situation. COBRA advantages: keep same doctors/plans, no medical underwriting, deductibles continue. Marketplace advantages: premium subsidies can significantly reduce costs, more plan options, cost-sharing reductions. People eligible for premium tax credits often find marketplace plans much cheaper than COBRA."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if I miss COBRA deadlines?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Missing COBRA deadlines means losing your right to continuation coverage. If you miss the 60-day election period, you cannot get COBRA for that qualifying event. If you miss premium payments, your COBRA coverage will be terminated. However, you may still be eligible for a special enrollment period to get marketplace insurance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I get COBRA if I quit my job?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, voluntary termination (quitting) is a qualifying event for COBRA, just like involuntary termination (being fired or laid off). Both situations typically qualify for 18 months of COBRA continuation coverage. The reason for leaving employment generally doesn't affect COBRA eligibility, as long as you weren't terminated for gross misconduct."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "COBRA Insurance 2025 Complete Guide - Continuation Coverage Explained",
+            "description": "Complete COBRA insurance guide covering eligibility, costs, qualifying events, and alternatives to continuation coverage. Expert guidance for health insurance transitions.",
+            "url": "https://elmag-insurance.com/cobra-insurance",
+            "mainEntity": {
+              "@type": "Article",
+              "headline": "COBRA Insurance 2025: Complete Guide to Continuation Coverage",
+              "author": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance Health Insurance Specialists"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://elmag-insurance.com/logo.png"
+                }
+              },
+              "datePublished": "2024-10-01",
+              "dateModified": "2024-12-09",
+              "articleSection": "Health Insurance",
+              "keywords": ["COBRA insurance", "continuation coverage", "health insurance after job loss", "COBRA alternatives", "marketplace vs COBRA"],
+              "about": [
+                {
+                  "@type": "Thing",
+                  "name": "COBRA Continuation Coverage"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Health Insurance Marketplace"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Job Loss Health Insurance"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Qualifying Life Events"
+                }
+              ]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://elmag-insurance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Health Insurance",
+                  "item": "https://elmag-insurance.com/health-insurance-marketplace"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "COBRA Insurance",
+                  "item": "https://elmag-insurance.com/cobra-insurance"
+                }
+              ]
+            },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", "h2", ".hero-description"]
+            }
           }),
         }}
       />
@@ -185,14 +435,38 @@ export default function CobraInsurancePage() {
                   <Link 
                     href="/contact" 
                     className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPageCTA?.('cobra_consultation', 'hero', '/contact')}
+                    onClick={() => {
+                      (window as any).trackLandingPageCTA?.('cobra_consultation', 'hero', '/contact');
+                      (window as any).gtag?.('event', 'cobra_consultation_click', {
+                        event_category: 'conversion',
+                        event_label: 'cobra_insurance_hero',
+                        page_location: window.location.href,
+                        custom_parameters: {
+                          landing_page_type: 'insurance_education',
+                          service_type: 'cobra_guidance',
+                          source_section: 'hero_cta'
+                        }
+                      });
+                    }}
                   >
                     Get COBRA Guidance
                   </Link>
                   <a 
                     href="tel:331-343-2584" 
                     className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPagePhoneCall?.('hero')}
+                    onClick={() => {
+                      (window as any).trackLandingPagePhoneCall?.('hero');
+                      (window as any).gtag?.('event', 'phone_call_click', {
+                        event_category: 'conversion',
+                        event_label: 'cobra_insurance_hero',
+                        page_location: window.location.href,
+                        custom_parameters: {
+                          phone_number: '331-343-2584',
+                          call_source: 'hero_section',
+                          service_type: 'cobra_guidance'
+                        }
+                      });
+                    }}
                   >
                     Call 331-E-HEALTH
                   </a>
@@ -210,7 +484,12 @@ export default function CobraInsurancePage() {
               <div className="max-w-4xl mx-auto text-center mb-12">
                 <p className="text-xl text-gray-600 mb-6">
                   COBRA (Consolidated Omnibus Budget Reconciliation Act) allows you to temporarily continue your employer's 
-                  health insurance after certain qualifying life events, typically for 18-36 months.
+                  health insurance after certain qualifying life events, typically for 18-36 months. For those approaching 
+                  Medicare eligibility, explore <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline">Medicare Advantage plans</Link> 
+                  as an alternative long-term solution. Compare healthcare systems in major metro areas like 
+                  <Link href="/emory-vs-piedmont-medicare-advantage-atlanta" className="text-primary-600 hover:text-primary-700 underline mx-1">Atlanta</Link> or 
+                  <Link href="/vanderbilt-vs-hca-medicare-advantage-nashville" className="text-primary-600 hover:text-primary-700 underline mx-1">Nashville</Link> 
+                  when evaluating your Medicare options.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
@@ -323,7 +602,9 @@ export default function CobraInsurancePage() {
                 <p className="text-gray-600 mb-4">
                   Exploring marketplace options? Our insurance specialists can help compare 
                   <Link href="/health-insurance-marketplace" className="text-primary-600 hover:text-primary-700 underline mx-1">Health Insurance Marketplace plans</Link> 
-                  with your COBRA options to find the best coverage for your situation.
+                  with your COBRA options to find the best coverage for your situation. Consider complementary protection with 
+                  <Link href="/whole-life-insurance" className="text-primary-600 hover:text-primary-700 underline mx-1">whole life insurance</Link> 
+                  during this transition period.
                 </p>
               </div>
             </div>
@@ -400,6 +681,9 @@ export default function CobraInsurancePage() {
                     </Link>
                     <Link href="/medicare-supplement-plan-f" className="block text-primary-600 hover:text-primary-700 underline text-sm">
                       • Learn About Medicare Supplements
+                    </Link>
+                    <Link href="/medicare-advantage/hernando-county-florida" className="block text-primary-600 hover:text-primary-700 underline text-sm">
+                      • Medicare Plans in Hernando County Florida
                     </Link>
                     <Link href="/medicare-enrollment-timeline" className="block text-primary-600 hover:text-primary-700 underline text-sm">
                       • Understand Medicare Enrollment Timing

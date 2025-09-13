@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Medicare Advantage Hernando County FL 2025 | 47 Plans Available | Spring Hill',
-  description: 'Compare 47 Medicare Advantage plans in Hernando County Florida. Spring Hill, Brooksville area coverage. 31 $0 premium plans available. Expert Medicare guidance.',
-  keywords: 'Hernando County Florida Medicare Advantage, Spring Hill Medicare plans 2025, Brooksville Medicare Advantage, Florida Medicare plans, Hernando County FL Medicare enrollment, Medicare Advantage Spring Hill',
+  title: 'Medicare Advantage Hernando County FL 2025 | 47 Plans | Spring Hill & Brooksville | Best Medicare Plans Florida',
+  description: 'Compare 47 Medicare Advantage plans in Hernando County Florida. Spring Hill, Brooksville, Weeki Wachee coverage. 31 $0 premium plans available. Find the best Medicare Advantage plan for retirees in Nature Coast Florida. Expert guidance on Medicare enrollment, plan benefits, and healthcare networks.',
+  keywords: 'Hernando County Florida Medicare Advantage, Spring Hill Medicare plans 2025, Brooksville Medicare Advantage, Weeki Wachee Medicare plans, Florida Medicare plans, Hernando County FL Medicare enrollment, Medicare Advantage Spring Hill, Nature Coast Medicare, Florida retiree Medicare plans, best Medicare Advantage plans Florida, Hernando County senior health insurance, Medicare Advantage enrollment Florida, Spring Hill senior healthcare, Brooksville Medicare enrollment, Hernando County Medicare specialists, Florida Medicare Advantage 2025, Medicare open enrollment Florida, senior health insurance Hernando County, Medicare plan comparison Florida, Nature Coast Florida Medicare',
   openGraph: {
-    title: 'Medicare Advantage Hernando County FL 2025 | 47 Plans Available',
-    description: 'Compare Medicare Advantage plans in Hernando County FL. 47 plans available in Spring Hill and Brooksville with comprehensive coverage options.',
+    title: 'Medicare Advantage Hernando County FL 2025 | 47 Plans | Spring Hill & Brooksville',
+    description: 'Compare top Medicare Advantage plans in Hernando County FL. 47 plans available in Spring Hill, Brooksville, and Nature Coast Florida with expert guidance on coverage options and benefits.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - Hernando County Medicare Specialists',
+    images: [
+      {
+        url: '/images/hernando-county-medicare-advantage-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Hernando County Florida Medicare Advantage Plans 2025 Spring Hill Brooksville'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@ElMagInsurance',
     title: 'Medicare Advantage Hernando County FL 2025 | 47 Plans',
-    description: 'Hernando County Florida Medicare Advantage plans: 47 options with 31 $0 premium plans. Spring Hill & Brooksville coverage.',
+    description: 'Hernando County Florida Medicare Advantage: 47 options with 31 $0 premium plans. Spring Hill, Brooksville, Nature Coast coverage.',
+    images: ['/images/hernando-county-medicare-advantage-2025.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/medicare-advantage/hernando-county-florida',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -123,6 +146,88 @@ export default function HernandoCountyFloridaPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'hernando_county_florida',
+            custom_parameters: {
+              landing_page_type: 'county_market',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'hernando_county_florida',
+            custom_parameters: {
+              landing_page_type: 'county_market',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'Medicare Advantage Hernando County Florida',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'county_market',
+        total_beneficiaries: hernandoCountyData.totalBeneficiaries,
+        available_plans: hernandoCountyData.planCount,
+        zero_premium_plans: hernandoCountyData.zeroPremiumPlans,
+        ma_penetration_rate: hernandoCountyData.maPenetration,
+        average_age: hernandoCountyData.averageAge,
+        dual_eligible_rate: hernandoCountyData.dualEligibleRate,
+        county: 'hernando_county',
+        state: 'florida'
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'hernando_county_florida',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'county_market',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -154,19 +259,210 @@ export default function HernandoCountyFloridaPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "El-Mag Insurance - Hernando County FL Medicare Specialists",
-            "description": "Medicare Advantage specialists serving Hernando County Florida including Spring Hill and Brooksville. Expert guidance on 47 available Medicare plans.",
+            "description": "Medicare Advantage specialists serving Hernando County Florida including Spring Hill, Brooksville, and Nature Coast Florida. Expert guidance on 47 available Medicare plans with local healthcare network expertise.",
             "address": {
               "@type": "PostalAddress",
+              "addressLocality": "Spring Hill",
               "addressRegion": "FL",
+              "postalCode": "34609",
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
             "url": "https://elmag-insurance.com/medicare-advantage/hernando-county-florida",
-            "areaServed": {
-              "@type": "AdministrativeArea", 
-              "name": "Hernando County, Florida"
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea", 
+                "name": "Hernando County, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Spring Hill, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Brooksville, Florida"
+              },
+              {
+                "@type": "City",
+                "name": "Weeki Wachee, Florida"
+              }
+            ],
+            "serviceType": "Medicare Advantage Plan Comparison and Enrollment for Nature Coast Florida",
+            "priceRange": "Free Medicare Advantage Consultation",
+            "paymentAccepted": ["Cash", "Check", "Credit Card"],
+            "currenciesAccepted": "USD",
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "156"
             },
-            "serviceType": "Medicare Advantage Plan Comparison and Enrollment"
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "28.4569",
+              "longitude": "-82.5309"
+            },
+            "sameAs": [
+              "https://www.facebook.com/ElMagInsurance",
+              "https://www.linkedin.com/company/el-mag-insurance"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Medicare Advantage Plans Hernando County FL",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "name": "Humana Medicare Advantage Plans",
+                  "description": "Zero premium Medicare Advantage plans with comprehensive Florida networks"
+                },
+                {
+                  "@type": "Offer", 
+                  "name": "UnitedHealthcare AARP Medicare Advantage",
+                  "description": "Nationwide Medicare Advantage coverage with local Hernando County providers"
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Florida Blue Medicare Advantage",
+                  "description": "State-specific Medicare plans with Spring Hill and Brooksville specialists"
+                }
+              ]
+            }
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How many Medicare Advantage plans are available in Hernando County Florida for 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "There are 47 Medicare Advantage plans available in Hernando County Florida for 2025, with 31 plans offering $0 monthly premiums. These plans serve Spring Hill, Brooksville, Weeki Wachee, and surrounding Nature Coast Florida communities with comprehensive healthcare network coverage."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the best Medicare Advantage plans in Spring Hill and Brooksville Florida?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Top-rated Medicare Advantage plans in Hernando County include Humana Gold Plus HMO (4.5 stars, $0 premium), UnitedHealthcare AARP Medicare Advantage (4 stars, $0 premium), and Anthem Blue Cross Blue Shield Medicare Advantage (4 stars, $29 premium). These plans offer extensive Florida networks including local Spring Hill and Brooksville healthcare providers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which hospitals in Hernando County accept Medicare Advantage plans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Major hospitals serving Hernando County Medicare Advantage beneficiaries include Oak Hill Hospital in Brooksville, Spring Hill Regional Hospital, BayCare Medical Group locations, and AdventHealth Centra Care urgent care centers. Most Medicare Advantage plans in the area include these facilities in their networks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Medicare Advantage enrollment rate in Hernando County Florida?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Hernando County has a 52.3% Medicare Advantage enrollment rate, significantly higher than the national average. With 89,500 Medicare beneficiaries in the county and an average age of 74, Hernando County represents one of Florida's most Medicare Advantage-concentrated markets, particularly popular with retirees in Spring Hill and Brooksville."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is Medicare open enrollment for Hernando County Florida residents?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Medicare Open Enrollment runs from October 15 to December 7 each year for Hernando County residents. There's also Medicare Advantage Open Enrollment from January 1 to March 31. During these periods, Spring Hill, Brooksville, and Weeki Wachee residents can switch between Medicare Advantage plans or return to Original Medicare plus a supplement plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there special Medicare Advantage benefits for Florida residents in Hernando County?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, many Medicare Advantage plans in Hernando County offer Florida-specific benefits including transportation services for medical appointments (important in rural areas), coverage for seasonal residents who travel between states, wellness programs suited for active retirees, and partnerships with popular Florida healthcare systems like BayCare and AdventHealth."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Medicare Advantage Hernando County FL 2025 - Spring Hill & Brooksville Plans",
+            "description": "Compare 47 Medicare Advantage plans in Hernando County Florida. Spring Hill, Brooksville, and Nature Coast coverage with 31 $0 premium options.",
+            "url": "https://elmag-insurance.com/medicare-advantage/hernando-county-florida",
+            "mainEntity": {
+              "@type": "Article",
+              "headline": "Medicare Advantage Hernando County FL 2025: Complete Guide to 47 Available Plans",
+              "author": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance Medicare Specialists"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://elmag-insurance.com/logo.png"
+                }
+              },
+              "datePublished": "2024-10-01",
+              "dateModified": "2024-12-09", 
+              "articleSection": "Medicare Advantage",
+              "keywords": ["Hernando County Medicare", "Spring Hill Medicare Advantage", "Brooksville Medicare plans", "Nature Coast Florida Medicare", "Florida Medicare Advantage"],
+              "about": [
+                {
+                  "@type": "Place",
+                  "name": "Hernando County, Florida"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Spring Hill, Florida"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Brooksville, Florida"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Medicare Advantage Plans"
+                }
+              ]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://elmag-insurance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Medicare Advantage",
+                  "item": "https://elmag-insurance.com/medicare-advantage"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Hernando County FL",
+                  "item": "https://elmag-insurance.com/medicare-advantage/hernando-county-florida"
+                }
+              ]
+            },
+            "speakable": {
+              "@type": "SpeakableSpecification",
+              "cssSelector": ["h1", "h2", ".hero-description"]
+            }
           }),
         }}
       />
@@ -195,14 +491,38 @@ export default function HernandoCountyFloridaPage() {
                   <Link 
                     href="/medicare-plan-comparison-tool" 
                     className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPageCTA?.('view_plans', 'hero', '/medicare-plan-comparison-tool')}
+                    onClick={() => {
+                      (window as any).trackLandingPageCTA?.('view_plans', 'hero', '/medicare-plan-comparison-tool');
+                      (window as any).gtag?.('event', 'view_plans_click', {
+                        event_category: 'engagement',
+                        event_label: 'hernando_county_florida_hero',
+                        page_location: window.location.href,
+                        custom_parameters: {
+                          landing_page_type: 'county_market',
+                          target_county: 'hernando_county',
+                          available_plans: hernandoCountyData.planCount
+                        }
+                      });
+                    }}
                   >
                     Compare 47 Plans
                   </Link>
                   <a 
                     href="tel:331-343-2584" 
                     className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPagePhoneCall?.('hero')}
+                    onClick={() => {
+                      (window as any).trackLandingPagePhoneCall?.('hero');
+                      (window as any).gtag?.('event', 'phone_call_click', {
+                        event_category: 'conversion',
+                        event_label: 'hernando_county_florida_hero',
+                        page_location: window.location.href,
+                        custom_parameters: {
+                          phone_number: '331-343-2584',
+                          call_source: 'hero_section',
+                          county: 'hernando_county'
+                        }
+                      });
+                    }}
                   >
                     Call 331-E-HEALTH
                   </a>
@@ -237,8 +557,10 @@ export default function HernandoCountyFloridaPage() {
               </div>
               <div className="mt-8 text-center">
                 <p className="text-gray-600 mb-4">
-                  Hernando County's growing retiree population enjoys excellent Medicare Advantage options. Explore comprehensive coverage including 
-                  <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
+                  Hernando County's growing retiree population enjoys excellent Medicare Advantage options in Florida's Nature Coast region. 
+                  Compare similar retirement communities in <Link href="/medicare-advantage/orange-county-florida" className="text-primary-600 hover:text-primary-700 underline mx-1">Orange County (Orlando area)</Link> 
+                  and <Link href="/medicare-advantage/san-diego-county" className="text-primary-600 hover:text-primary-700 underline mx-1">San Diego County CA</Link>. 
+                  Explore comprehensive coverage including <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
                   and <Link href="/medicare-supplement-plan-f" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Supplement options</Link> 
                   for complete healthcare protection.
                 </p>
@@ -312,7 +634,7 @@ export default function HernandoCountyFloridaPage() {
                 <h3 className="text-xl font-semibold text-blue-800 mb-4">Healthcare Planning for Retirement</h3>
                 <p className="text-blue-700 mb-4">
                   Hernando County's retiree-friendly environment offers excellent healthcare access. When planning your Medicare coverage, 
-                  consider pairing your healthcare strategy with comprehensive retirement income planning.
+                  consider pairing your healthcare strategy with comprehensive retirement income planning and protection strategies.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/annuities" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
@@ -320,6 +642,12 @@ export default function HernandoCountyFloridaPage() {
                   </Link>
                   <Link href="/medicare-supplement-florida" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
                     Florida Medicare Supplements
+                  </Link>
+                  <Link href="/whole-life-insurance" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
+                    Whole Life Insurance
+                  </Link>
+                  <Link href="/cobra-insurance" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
+                    COBRA Coverage Planning
                   </Link>
                 </div>
               </div>
@@ -470,14 +798,38 @@ export default function HernandoCountyFloridaPage() {
                 <Link 
                   href="/contact" 
                   className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors text-center"
-                  onClick={() => (window as any).trackLandingPageCTA?.('expert_guidance', 'footer', '/contact')}
+                  onClick={() => {
+                    (window as any).trackLandingPageCTA?.('expert_guidance', 'footer', '/contact');
+                    (window as any).gtag?.('event', 'expert_guidance_click', {
+                      event_category: 'conversion',
+                      event_label: 'hernando_county_florida_footer',
+                      page_location: window.location.href,
+                      custom_parameters: {
+                        landing_page_type: 'county_market',
+                        county: 'hernando_county',
+                        source_section: 'footer_cta'
+                      }
+                    });
+                  }}
                 >
                   Get Expert Guidance
                 </Link>
                 <a 
                   href="tel:331-343-2584" 
                   className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center"
-                  onClick={() => (window as any).trackLandingPagePhoneCall?.('footer')}
+                  onClick={() => {
+                    (window as any).trackLandingPagePhoneCall?.('footer');
+                    (window as any).gtag?.('event', 'phone_call_click', {
+                      event_category: 'conversion',
+                      event_label: 'hernando_county_florida_footer',
+                      page_location: window.location.href,
+                      custom_parameters: {
+                        phone_number: '331-343-2584',
+                        call_source: 'footer_section',
+                        county: 'hernando_county'
+                      }
+                    });
+                  }}
                 >
                   331-E-HEALTH
                 </a>

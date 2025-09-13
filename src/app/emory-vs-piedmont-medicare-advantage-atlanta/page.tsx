@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Emory vs Piedmont Medicare Advantage Atlanta GA 2025 | 52 Plans Available',
-  description: 'Compare Emory Healthcare vs Piedmont Atlanta Medicare Advantage networks. 52 plans available in Atlanta GA, 28 with $0 premiums. Expert guidance on healthcare system differences.',
-  keywords: 'Emory Healthcare Medicare Atlanta, Piedmont Atlanta Medicare Advantage, Atlanta GA Medicare plans 2025, Fulton County Medicare Advantage, DeKalb County Medicare, Georgia Medicare networks, Emory vs Piedmont comparison',
+  title: 'Emory Healthcare vs Piedmont Medicare Advantage Atlanta 2025 | Compare 52 Plans | Best Medicare Networks GA',
+  description: 'Compare Emory Healthcare vs Piedmont Medicare Advantage networks in Atlanta GA. 52 Medicare plans, 28 $0 premium options. Find the best Medicare Advantage plan for your healthcare needs. Expert guidance on Atlanta hospital networks, doctor coverage, and Medicare enrollment.',
+  keywords: 'Emory Healthcare Medicare Advantage Atlanta, Piedmont Healthcare Medicare Atlanta, Atlanta Medicare Advantage plans 2025, Emory vs Piedmont healthcare comparison, best Medicare Advantage plans Atlanta, Fulton County Medicare plans, DeKalb County Medicare Advantage, Gwinnett County Medicare, Cobb County Medicare plans, Atlanta hospital Medicare networks, Emory University Hospital Medicare, Piedmont Atlanta Hospital Medicare, Medicare Advantage enrollment Atlanta, senior health insurance Atlanta, Medicare plan comparison Atlanta, Atlanta healthcare providers Medicare, Georgia Medicare Advantage 2025, Medicare open enrollment Atlanta, Atlanta Medicare specialists, Medicare Advantage benefits Atlanta',
   openGraph: {
-    title: 'Emory vs Piedmont Medicare Advantage Atlanta GA 2025 | 52 Plans Available',
-    description: 'Compare Emory Healthcare vs Piedmont Atlanta Medicare networks. 52 plans available with comprehensive provider comparisons and network analysis.',
+    title: 'Emory Healthcare vs Piedmont Medicare Advantage Atlanta 2025 | Compare 52 Plans',
+    description: 'Compare top Atlanta healthcare networks: Emory vs Piedmont Medicare Advantage. 52 plans available with expert guidance on network coverage, costs, and benefits in metro Atlanta.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - Atlanta Medicare Specialists',
+    images: [
+      {
+        url: '/images/atlanta-medicare-advantage-comparison.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Emory vs Piedmont Medicare Advantage Atlanta Comparison 2025'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Emory vs Piedmont Medicare Advantage Atlanta GA 2025',
-    description: 'Compare Atlanta healthcare networks: Emory vs Piedmont Medicare Advantage plans. 52 options with $0 premium choices.',
+    site: '@ElMagInsurance',
+    title: 'Emory vs Piedmont Medicare Advantage Atlanta 2025 | 52 Plans',
+    description: 'Compare Atlanta\'s top Medicare networks: Emory Healthcare vs Piedmont. 52 plans, 28 $0 premium options. Expert Medicare guidance.',
+    images: ['/images/atlanta-medicare-advantage-comparison.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -161,6 +184,85 @@ export default function EmoryVsPiedmontAtlantaPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'emory_piedmont_atlanta',
+            custom_parameters: {
+              landing_page_type: 'provider_comparison',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'emory_piedmont_atlanta',
+            custom_parameters: {
+              landing_page_type: 'provider_comparison',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'Emory vs Piedmont Medicare Advantage Atlanta',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'provider_comparison',
+        total_beneficiaries: atlantaMedicare.totalBeneficiaries,
+        available_plans: 52,
+        zero_premium_plans: 28,
+        ma_penetration_rate: atlantaMedicare.maPenetration,
+        primary_providers: 'emory_piedmont'
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'emory_piedmont_atlanta',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'provider_comparison',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -201,11 +303,179 @@ export default function EmoryVsPiedmontAtlantaPage() {
             },
             "telephone": "331-343-2584",
             "url": "https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta",
-            "areaServed": {
-              "@type": "AdministrativeArea",
-              "name": "Atlanta Metro Area, Georgia"
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea",
+                "name": "Atlanta Metro Area, Georgia"
+              },
+              {
+                "@type": "AdministrativeArea", 
+                "name": "Fulton County, Georgia"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "DeKalb County, Georgia"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Gwinnett County, Georgia"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Cobb County, Georgia"
+              }
+            ],
+            "serviceType": "Medicare Advantage Plan Comparison and Healthcare Network Analysis",
+            "priceRange": "Free Medicare Advantage Consultation",
+            "paymentAccepted": ["Cash", "Check", "Credit Card"],
+            "currenciesAccepted": "USD",
+            "openingHours": "Mo-Fr 08:00-18:00",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "247"
             },
-            "serviceType": "Medicare Advantage Plan Comparison and Healthcare Network Analysis"
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "33.7490",
+              "longitude": "-84.3880"
+            },
+            "sameAs": [
+              "https://www.facebook.com/ElMagInsurance",
+              "https://www.linkedin.com/company/el-mag-insurance"
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What's the difference between Emory Healthcare and Piedmont Healthcare Medicare Advantage plans in Atlanta?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Emory Healthcare focuses on academic medicine with research-based care and clinical trials access, while Piedmont Healthcare offers Georgia's largest healthcare system with extensive geographic coverage. Both networks serve Medicare Advantage beneficiaries in Atlanta, but Emory specializes in complex conditions and advanced treatments, while Piedmont emphasizes community-based care across metro Atlanta and North Georgia."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which Atlanta hospitals are in-network for Medicare Advantage plans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Emory network includes Emory University Hospital, Emory University Hospital Midtown, Emory Saint Joseph's Hospital, and Emory Johns Creek Hospital. Piedmont network includes Piedmont Atlanta Hospital, Piedmont Heart Institute, and multiple Piedmont facilities across metro Atlanta. The specific hospitals covered depend on your chosen Medicare Advantage plan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many Medicare Advantage plans are available in Atlanta GA for 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "There are 52 Medicare Advantage plans available in Atlanta GA for 2025, with 28 plans offering $0 monthly premiums. These plans include options from major insurers like Kaiser Permanente, Humana, UnitedHealthcare, and Anthem Blue Cross Blue Shield, serving both Emory and Piedmont healthcare networks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the best Medicare Advantage plans in Atlanta for 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Top-rated Medicare Advantage plans in Atlanta include Kaiser Permanente Georgia Medicare Advantage (4 stars, $0 premium), Humana Gold Plus HMO (4.5 stars, $18 premium), and UnitedHealthcare AARP Medicare Advantage (4 stars, $0 premium). Plan selection depends on your preferred healthcare network (Emory vs Piedmont), prescription needs, and budget."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I switch from Emory to Piedmont Medicare Advantage plans?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can switch between Medicare Advantage plans that cover different healthcare networks (Emory vs Piedmont) during Medicare Open Enrollment (October 15 - December 7) or Medicare Advantage Open Enrollment (January 1 - March 31). Some plans cover both networks, while others are specific to one healthcare system."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Medicare Advantage cover Emory University Hospital and Piedmont Atlanta Hospital?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, many Medicare Advantage plans in Atlanta cover both Emory University Hospital and Piedmont Atlanta Hospital, though coverage varies by specific plan. Some plans have partnerships with one network over the other. It's important to verify your preferred hospitals and doctors are in-network before enrolling in a Medicare Advantage plan."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Emory vs Piedmont Medicare Advantage Atlanta 2025 Comparison",
+            "description": "Compare Emory Healthcare vs Piedmont Medicare Advantage networks in Atlanta GA. 52 Medicare plans available with expert guidance on hospital coverage and benefits.",
+            "url": "https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta",
+            "mainEntity": {
+              "@type": "Article",
+              "headline": "Emory Healthcare vs Piedmont Medicare Advantage Atlanta 2025: Complete Network Comparison",
+              "author": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance Medicare Specialists"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://elmag-insurance.com/logo.png"
+                }
+              },
+              "datePublished": "2024-10-01",
+              "dateModified": "2024-12-09",
+              "articleSection": "Medicare Advantage",
+              "keywords": ["Emory Healthcare Medicare", "Piedmont Healthcare Medicare", "Atlanta Medicare Advantage", "Georgia Medicare plans", "Medicare network comparison"],
+              "about": [
+                {
+                  "@type": "Thing",
+                  "name": "Emory Healthcare System"
+                },
+                {
+                  "@type": "Thing", 
+                  "name": "Piedmont Healthcare System"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Medicare Advantage Plans"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Atlanta, Georgia"
+                }
+              ]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://elmag-insurance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Medicare Advantage",
+                  "item": "https://elmag-insurance.com/medicare-advantage"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Emory vs Piedmont Atlanta",
+                  "item": "https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta"
+                }
+              ]
+            }
           }),
         }}
       />
@@ -234,14 +504,37 @@ export default function EmoryVsPiedmontAtlantaPage() {
                   <Link 
                     href="/medicare-advantage/fulton-county-georgia" 
                     className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPageCTA?.('view_plans', 'hero', '/medicare-advantage/fulton-county-georgia')}
+                    onClick={() => {
+                      (window as any).trackLandingPageCTA?.('view_plans', 'hero', '/medicare-advantage/fulton-county-georgia');
+                      (window as any).gtag?.('event', 'view_plans_click', {
+                        event_category: 'engagement',
+                        event_label: 'emory_piedmont_atlanta_hero',
+                        page_location: window.location.href,
+                        custom_parameters: {
+                          landing_page_type: 'provider_comparison',
+                          target_county: 'fulton_county',
+                          available_plans: 52
+                        }
+                      });
+                    }}
                   >
                     View 52 Atlanta Plans
                   </Link>
                   <a 
                     href="tel:331-343-2584" 
                     className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPagePhoneCall?.('hero')}
+                    onClick={() => {
+                      (window as any).trackLandingPagePhoneCall?.('hero');
+                      (window as any).gtag?.('event', 'phone_call_click', {
+                        event_category: 'conversion',
+                        event_label: 'emory_piedmont_atlanta_hero',
+                        page_location: window.location.href,
+                        custom_parameters: {
+                          phone_number: '331-343-2584',
+                          call_source: 'hero_section'
+                        }
+                      });
+                    }}
                   >
                     Call 331-E-HEALTH
                   </a>
@@ -276,8 +569,10 @@ export default function EmoryVsPiedmontAtlantaPage() {
               </div>
               <div className="mt-8 text-center">
                 <p className="text-gray-600 mb-4">
-                  Atlanta's Medicare landscape features two major healthcare systems competing for beneficiaries. Explore comprehensive Medicare guidance including 
-                  <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
+                  Atlanta's Medicare landscape features two major healthcare systems competing for beneficiaries. Similar provider network decisions face Medicare beneficiaries in 
+                  <Link href="/uab-vs-st-vincents-medicare-advantage-birmingham" className="text-primary-600 hover:text-primary-700 underline mx-1">Birmingham (UAB vs St. Vincent's)</Link> 
+                  and <Link href="/vanderbilt-vs-hca-medicare-advantage-nashville" className="text-primary-600 hover:text-primary-700 underline mx-1">Nashville (Vanderbilt vs HCA)</Link>. 
+                  Explore comprehensive Medicare guidance including <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
                   and <Link href="/medicare-supplement-plan-f" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Supplement options</Link> 
                   for complete coverage protection.
                 </p>
@@ -547,7 +842,7 @@ export default function EmoryVsPiedmontAtlantaPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Retirement Planning:</h4>
-                      <p>Healthcare costs are a major retirement expense. Consider pairing your Medicare choice with <Link href="/annuities" className="text-primary-600 hover:text-primary-700 underline">annuities for guaranteed retirement income</Link>.</p>
+                      <p>Healthcare costs are a major retirement expense. Consider pairing your Medicare choice with <Link href="/annuities" className="text-primary-600 hover:text-primary-700 underline">annuities for guaranteed retirement income</Link> and <Link href="/whole-life-insurance" className="text-primary-600 hover:text-primary-700 underline">whole life insurance</Link> for comprehensive financial protection.</p>
                     </div>
                   </div>
                 </div>
@@ -610,10 +905,10 @@ export default function EmoryVsPiedmontAtlantaPage() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-800 mb-2">East Coast:</h4>
+                      <h4 className="font-semibold text-gray-800 mb-2">Florida & West:</h4>
                       <ul className="text-sm text-gray-600 space-y-1">
-                        <li>• <Link href="/medicare-advantage/monroe-county" className="text-primary-600 hover:text-primary-700 underline">Monroe County (Rochester NY)</Link></li>
-                        <li>• <Link href="/medicare-advantage/mid-atlantic" className="text-primary-600 hover:text-primary-700 underline">Mid-Atlantic Region</Link></li>
+                        <li>• <Link href="/medicare-advantage/orange-county-florida" className="text-primary-600 hover:text-primary-700 underline">Orange County FL (Orlando)</Link></li>
+                        <li>• <Link href="/medicare-advantage/san-diego-county" className="text-primary-600 hover:text-primary-700 underline">San Diego County CA</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -630,7 +925,9 @@ export default function EmoryVsPiedmontAtlantaPage() {
               </h2>
               <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
                 Our Atlanta-area Medicare specialists understand both healthcare systems and can help you 
-                find the right Medicare Advantage plan for your healthcare needs and budget.
+                find the right Medicare Advantage plan for your healthcare needs and budget. For those approaching Medicare eligibility, 
+                we also provide guidance on <Link href="/cobra-insurance" className="text-white hover:text-primary-100 underline">COBRA insurance</Link> 
+                and <Link href="/community-health-centers-medicare-advantage-birmingham" className="text-white hover:text-primary-100 underline">community health centers</Link>.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 

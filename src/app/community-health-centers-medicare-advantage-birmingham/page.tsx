@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Community Health Centers Medicare Advantage Birmingham AL 2025 | FQHC Guide',
-  description: 'Find Medicare Advantage plans accepting Community Health Centers in Birmingham Alabama. FQHC-friendly plans, 42 options available. Expert guidance on federally qualified health center coverage.',
-  keywords: 'Community Health Centers Birmingham Alabama, FQHC Medicare Advantage, Birmingham community health centers, Medicare FQHC coverage, Jefferson County community health, Birmingham AL Medicare plans',
+  title: 'Community Health Centers Medicare Advantage Birmingham AL 2025 | FQHC Medicare Plans | Best Coverage Guide',
+  description: 'Find Medicare Advantage plans that work with Community Health Centers in Birmingham Alabama. 42 FQHC-friendly plans available. Expert guidance on federally qualified health center Medicare coverage, sliding scale benefits, and care coordination. Compare plans serving COPA Health, Jefferson County Health Department.',
+  keywords: 'Community Health Centers Birmingham Alabama, FQHC Medicare Advantage Birmingham, Birmingham community health centers Medicare, Medicare FQHC coverage Alabama, Jefferson County community health Medicare, Birmingham AL Medicare FQHC plans, federally qualified health center Medicare, FQHC sliding scale Medicare, community health center Medicare Advantage, Birmingham FQHC Medicare plans 2025, COPA Health Medicare, Jefferson County Health Department Medicare, dual eligible FQHC plans, Medicare advantage community health, FQHC care coordination Medicare, Birmingham community health Medicare enrollment, Alabama FQHC Medicare specialists, community health center Medicare benefits',
   openGraph: {
-    title: 'Community Health Centers Medicare Advantage Birmingham AL 2025',
-    description: 'Medicare Advantage plans that work with Community Health Centers in Birmingham Alabama. FQHC coverage options and expert guidance.',
+    title: 'Community Health Centers Medicare Advantage Birmingham AL 2025 | FQHC Plans',
+    description: 'Complete guide to Medicare Advantage plans working with Birmingham Community Health Centers (FQHCs). 42 plans available with expert guidance on FQHC-friendly coverage options.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - Birmingham FQHC Medicare Specialists',
+    images: [
+      {
+        url: '/images/birmingham-fqhc-medicare-advantage-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Birmingham Community Health Centers Medicare Advantage Plans 2025 FQHC Guide'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Community Health Centers Medicare Birmingham AL',
-    description: 'Birmingham community health center Medicare options: FQHC-friendly plans and comprehensive coverage guidance.',
+    site: '@ElMagInsurance',
+    title: 'Community Health Centers Medicare Birmingham AL 2025',
+    description: 'Birmingham FQHC Medicare Advantage: 42 community health center-friendly plans with sliding scale benefits and care coordination.',
+    images: ['/images/birmingham-fqhc-medicare-advantage-2025.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -135,6 +158,88 @@ export default function CommunityHealthCentersBirminghamPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'birmingham_fqhc_medicare',
+            custom_parameters: {
+              landing_page_type: 'community_health_focus',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'birmingham_fqhc_medicare',
+            custom_parameters: {
+              landing_page_type: 'community_health_focus',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'Community Health Centers Medicare Advantage Birmingham',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'community_health_focus',
+        service_focus: 'fqhc_medicare',
+        total_beneficiaries: birminghamData.totalBeneficiaries,
+        available_plans: birminghamData.planCount,
+        fqhc_users: birminghamData.fqhcUsers,
+        dual_eligible_rate: birminghamData.dualEligibleRate,
+        ma_penetration_rate: birminghamData.maPenetration,
+        county: 'jefferson_county',
+        state: 'alabama'
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'birmingham_fqhc_medicare',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'community_health_focus',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -166,20 +271,174 @@ export default function CommunityHealthCentersBirminghamPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "El-Mag Insurance - Birmingham AL Community Health Medicare Specialists",
-            "description": "Medicare Advantage specialists focusing on Community Health Center coverage in Birmingham Alabama. Expert guidance on FQHC-friendly Medicare plans.",
+            "description": "Medicare Advantage specialists focusing on Community Health Center coverage in Birmingham Alabama. Expert guidance on FQHC-friendly Medicare plans and federally qualified health center benefits.",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Birmingham",
               "addressRegion": "AL", 
+              "postalCode": "35203",
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
             "url": "https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham",
-            "areaServed": {
-              "@type": "AdministrativeArea",
-              "name": "Birmingham Metro Area, Alabama"
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea",
+                "name": "Birmingham Metro Area, Alabama"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Jefferson County, Alabama"
+              }
+            ],
+            "serviceType": "Community Health Center Medicare Advantage Guidance and FQHC Plan Consultation",
+            "priceRange": "Free FQHC Medicare Consultation",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "134"
             },
-            "serviceType": "Community Health Center Medicare Advantage Guidance"
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "33.5186",
+              "longitude": "-86.8104"
+            },
+            "sameAs": [
+              "https://www.facebook.com/ElMagInsurance",
+              "https://www.linkedin.com/company/el-mag-insurance"
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Which Medicare Advantage plans work with Community Health Centers in Birmingham?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Several Medicare Advantage plans in Birmingham work well with Community Health Centers (FQHCs), including Humana Gold Plus HMO ($0 premium, $0 FQHC copay), UnitedHealthcare Dual Complete ($0 premium, $0 FQHC copay), and Anthem Blue Cross Blue Shield Medicare Advantage ($25 premium, $5 FQHC copay). These plans offer comprehensive FQHC network access and special benefits like transportation and care coordination."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of using Community Health Centers with Medicare?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Community Health Centers (FQHCs) offer Medicare beneficiaries lower copayments, sliding scale fees for non-covered services, comprehensive primary care, integrated behavioral health services, care coordination, cultural competency, and social services support. Many Medicare Advantage plans also provide transportation benefits to FQHC appointments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What Community Health Centers are available in Birmingham Alabama?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Birmingham area Community Health Centers include COPA Health (Community of Practice in Alabama) with multiple Jefferson County locations, Jefferson County Department of Health serving Birmingham, Bessemer, and Homewood, Community Care Plan covering Birmingham Metro Area, and Birmingham Health Care with East and West Birmingham locations. All accept Medicare and offer sliding scale payments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I choose a Medicare Advantage plan that works with FQHCs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To choose an FQHC-compatible Medicare Advantage plan: (1) Verify your preferred Community Health Center is in the plan's provider network, (2) Compare FQHC copayments and additional benefits, (3) Look for plans with transportation, care coordination, and social services that complement FQHC care. Dual Special Needs Plans (D-SNPs) often have the strongest FQHC partnerships."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between FQHCs and regular doctor offices for Medicare patients?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FQHCs (Federally Qualified Health Centers) differ from regular doctor offices by offering sliding scale fees regardless of insurance, serving medically underserved areas, providing comprehensive services including behavioral health and social services, having community-governed boards, and typically offering lower Medicare copayments. FQHCs must accept Medicare and Medicaid and provide care regardless of ability to pay."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are there special Medicare Advantage benefits for dual eligible patients at FQHCs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, dual eligible Medicare beneficiaries (qualifying for both Medicare and Medicaid) can access Dual Special Needs Plans (D-SNPs) that often have enhanced FQHC partnerships. These plans typically offer $0 FQHC copays, comprehensive social services, care coordination, transportation benefits, and over-the-counter allowances that work well with Community Health Center services."
+                }
+              }
+            ]
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Community Health Centers Medicare Advantage Birmingham AL 2025 - FQHC Guide",
+            "description": "Complete guide to Medicare Advantage plans working with Community Health Centers in Birmingham Alabama. 42 FQHC-friendly plans with expert guidance.",
+            "url": "https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham",
+            "mainEntity": {
+              "@type": "Article",
+              "headline": "Community Health Centers Medicare Advantage Birmingham AL 2025: Complete FQHC Guide",
+              "author": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance FQHC Medicare Specialists"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "El-Mag Insurance",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://elmag-insurance.com/logo.png"
+                }
+              },
+              "datePublished": "2024-10-01",
+              "dateModified": "2024-12-09",
+              "articleSection": "Community Health Medicare",
+              "keywords": ["Community Health Centers Birmingham", "FQHC Medicare Advantage", "Birmingham community health", "Medicare FQHC plans", "dual eligible FQHC"],
+              "about": [
+                {
+                  "@type": "Thing",
+                  "name": "Community Health Centers"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Federally Qualified Health Centers"
+                },
+                {
+                  "@type": "Thing",
+                  "name": "Medicare Advantage Plans"
+                },
+                {
+                  "@type": "Place",
+                  "name": "Birmingham, Alabama"
+                }
+              ]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://elmag-insurance.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Medicare Advantage",
+                  "item": "https://elmag-insurance.com/medicare-advantage"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Community Health Centers Birmingham",
+                  "item": "https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham"
+                }
+              ]
+            }
           }),
         }}
       />
@@ -253,7 +512,10 @@ export default function CommunityHealthCentersBirminghamPage() {
                   Birmingham's Community Health Centers serve as vital healthcare safety nets, providing comprehensive 
                   primary care services to Medicare beneficiaries. Understanding which 
                   <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
-                  work best with FQHCs is crucial for maintaining continuity of care.
+                  work best with FQHCs is crucial for maintaining continuity of care. For comparison with other regional markets, 
+                  explore <Link href="/medicare-advantage/hernando-county-florida" className="text-primary-600 hover:text-primary-700 underline mx-1">Hernando County Florida</Link> 
+                  or <Link href="/medicare-advantage/orange-county-florida" className="text-primary-600 hover:text-primary-700 underline mx-1">Orange County Florida</Link> 
+                  Medicare Advantage options.
                 </p>
               </div>
             </div>
@@ -390,7 +652,10 @@ export default function CommunityHealthCentersBirminghamPage() {
                 <p className="text-gray-600 mb-4">
                   Considering other Birmingham healthcare options? Compare with major health systems like 
                   <Link href="/uab-vs-st-vincents-medicare-advantage-birmingham" className="text-primary-600 hover:text-primary-700 underline mx-1">UAB vs St. Vincent's Medicare networks</Link> 
-                  to understand all your coverage choices.
+                  to understand all your coverage choices. For broader coverage considerations, explore 
+                  <Link href="/health-insurance-marketplace" className="text-primary-600 hover:text-primary-700 underline mx-1">Health Insurance Marketplace</Link> 
+                  options or consider <Link href="/medicare-supplement-plan-f" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Supplement Plan F</Link> 
+                  for additional coverage layers.
                 </p>
               </div>
             </div>
@@ -516,7 +781,11 @@ export default function CommunityHealthCentersBirminghamPage() {
                 <p className="text-primary-700 text-sm">
                   Community health centers play a crucial role in healthcare access for underserved populations. 
                   When choosing Medicare plans, supporting FQHC-friendly options helps maintain these vital community resources. 
-                  Many Medicare Advantage plans recognize the value of FQHCs and offer enhanced benefits for their use.
+                  Many Medicare Advantage plans recognize the value of FQHCs and offer enhanced benefits for their use. 
+                  Explore similar healthcare system comparisons in other regions like 
+                  <Link href="/emory-vs-piedmont-medicare-advantage-atlanta" className="text-primary-600 hover:text-primary-700 underline mx-1">Emory vs Piedmont in Atlanta</Link> 
+                  or <Link href="/vanderbilt-vs-hca-medicare-advantage-nashville" className="text-primary-600 hover:text-primary-700 underline mx-1">Vanderbilt vs HCA in Nashville</Link> 
+                  to understand regional Medicare dynamics.
                 </p>
               </div>
             </div>

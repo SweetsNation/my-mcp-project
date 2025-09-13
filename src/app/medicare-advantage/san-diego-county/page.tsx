@@ -1,25 +1,48 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 
 export const metadata: Metadata = {
-  title: 'Medicare Advantage San Diego County CA 2025 | 67 Plans Available | San Diego Medicare',
-  description: 'Compare 67 Medicare Advantage plans in San Diego County California. San Diego, Chula Vista, Oceanside coverage. 42 $0 premium plans available. Expert Medicare guidance.',
-  keywords: 'San Diego County Medicare Advantage, San Diego Medicare plans 2025, California Medicare Advantage, San Diego CA Medicare enrollment, Medicare Advantage San Diego County, Chula Vista Medicare',
+  title: 'Medicare Advantage San Diego County CA 2025 | 67 Plans | Kaiser, Sharp, Scripps | Best Medicare Plans California',
+  description: 'Compare 67 Medicare Advantage plans in San Diego County California. San Diego, Chula Vista, Oceanside, Carlsbad, Encinitas coverage. 42 $0 premium plans available. Kaiser Permanente, Sharp Health, Scripps Health, UCSD networks. Expert Medicare guidance for Southern California retirees.',
+  keywords: 'San Diego County Medicare Advantage, San Diego Medicare plans 2025, California Medicare Advantage, San Diego CA Medicare enrollment, Medicare Advantage San Diego County, Chula Vista Medicare, Oceanside Medicare plans, Carlsbad Medicare Advantage, Encinitas Medicare plans, Kaiser Permanente Medicare San Diego, Sharp Health Plan Medicare, Scripps Health Medicare, UC San Diego Health Medicare, California Medicare Advantage 2025, San Diego metro Medicare plans, North County San Diego Medicare, South Bay Medicare plans, East County San Diego Medicare, San Diego senior health insurance, California Medicare specialists, Medicare Advantage enrollment California',
   openGraph: {
-    title: 'Medicare Advantage San Diego County CA 2025 | 67 Plans Available',
-    description: 'Compare Medicare Advantage plans in San Diego County CA. 67 plans available with comprehensive coverage options throughout San Diego metro.',
+    title: 'Medicare Advantage San Diego County CA 2025 | 67 Plans | Kaiser, Sharp, Scripps',
+    description: 'Complete guide to Medicare Advantage plans in San Diego County CA. 67 plans available with Kaiser, Sharp, Scripps, and UCSD networks. 42 $0 premium options with expert guidance.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'El-Mag Insurance - Southern California Medicare Specialists',
+    images: [
+      {
+        url: '/images/san-diego-county-medicare-advantage-2025.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'San Diego County California Medicare Advantage Plans 2025 Kaiser Sharp Scripps'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Medicare Advantage San Diego County CA 2025',
-    description: 'San Diego County Medicare Advantage plans: 67 options with 42 $0 premium plans. Comprehensive coverage guide.',
+    site: '@ElMagInsurance',
+    title: 'Medicare Advantage San Diego County CA 2025 | 67 Plans',
+    description: 'San Diego County Medicare Advantage: 67 options with 42 $0 premium plans. Kaiser, Sharp, Scripps, UCSD networks.',
+    images: ['/images/san-diego-county-medicare-advantage-2025.jpg']
   },
   alternates: {
     canonical: 'https://elmag-insurance.com/medicare-advantage/san-diego-county',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -126,6 +149,91 @@ export default function SanDiegoCountyPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Track scroll depth and time on page
+  React.useEffect(() => {
+    let scrollDepth = 0;
+    let timeOnPage = Date.now();
+    let hasTrackedMidpoint = false;
+    let hasTrackedCompletion = false;
+    
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentDepth = Math.round((scrollTop / documentHeight) * 100);
+      
+      if (currentDepth > scrollDepth) {
+        scrollDepth = currentDepth;
+        
+        // Track 50% scroll depth
+        if (scrollDepth >= 50 && !hasTrackedMidpoint) {
+          hasTrackedMidpoint = true;
+          (window as any).gtag?.('event', 'scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: 'san_diego_county_california',
+            custom_parameters: {
+              landing_page_type: 'county_market',
+              time_to_midpoint: Date.now() - timeOnPage
+            }
+          });
+        }
+        
+        // Track 90% scroll depth (content completion)
+        if (scrollDepth >= 90 && !hasTrackedCompletion) {
+          hasTrackedCompletion = true;
+          (window as any).gtag?.('event', 'content_completion', {
+            event_category: 'engagement',
+            event_label: 'san_diego_county_california',
+            custom_parameters: {
+              landing_page_type: 'county_market',
+              total_time_on_page: Date.now() - timeOnPage,
+              final_scroll_depth: scrollDepth
+            }
+          });
+        }
+      }
+    };
+
+    // Track page view and initial metrics
+    (window as any).gtag?.('event', 'page_view', {
+      page_title: 'Medicare Advantage San Diego County California',
+      page_location: window.location.href,
+      custom_parameters: {
+        landing_page_type: 'county_market',
+        total_beneficiaries: sanDiegoCountyData.totalBeneficiaries,
+        available_plans: sanDiegoCountyData.planCount,
+        zero_premium_plans: sanDiegoCountyData.zeroPremiumPlans,
+        ma_penetration_rate: sanDiegoCountyData.maPenetration,
+        average_age: sanDiegoCountyData.averageAge,
+        dual_eligible_rate: sanDiegoCountyData.dualEligibleRate,
+        average_star_rating: sanDiegoCountyData.averageStarRating,
+        county: 'san_diego_county',
+        state: 'california',
+        metro_area: 'san_diego',
+        healthcare_systems: 'kaiser_sharp_scripps_ucsd'
+      }
+    });
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      
+      // Track time on page when component unmounts
+      const finalTimeOnPage = Date.now() - timeOnPage;
+      if (finalTimeOnPage > 30000) { // Only track if user spent more than 30 seconds
+        (window as any).gtag?.('event', 'time_on_page', {
+          event_category: 'engagement',
+          event_label: 'san_diego_county_california',
+          value: Math.round(finalTimeOnPage / 1000), // Convert to seconds
+          custom_parameters: {
+            landing_page_type: 'county_market',
+            final_scroll_depth: scrollDepth
+          }
+        });
+      }
+    };
+  }, []);
+
   return (
     <>
       <LandingPageAnalytics
@@ -214,7 +322,11 @@ export default function SanDiegoCountyPage() {
                   San Diego County leads California in Medicare Advantage adoption. Explore comprehensive options including 
                   <Link href="/medicare-advantage" className="text-primary-600 hover:text-primary-700 underline mx-1">Medicare Advantage plans</Link> 
                   and <Link href="/medicare-supplement-california" className="text-primary-600 hover:text-primary-700 underline mx-1">California Medicare Supplements</Link> 
-                  for complete healthcare coverage.
+                  for complete healthcare coverage. Compare with other major markets like 
+                  <Link href="/medicare-advantage/orange-county-florida" className="text-primary-600 hover:text-primary-700 underline mx-1">Orange County Florida</Link> 
+                  or explore hospital system comparisons like 
+                  <Link href="/emory-vs-piedmont-medicare-advantage-atlanta" className="text-primary-600 hover:text-primary-700 underline mx-1">Emory vs Piedmont in Atlanta</Link> 
+                  for regional perspective.
                 </p>
               </div>
             </div>
@@ -343,6 +455,7 @@ export default function SanDiegoCountyPage() {
                     <ul className="text-sm text-blue-600 space-y-1">
                       <li>• <Link href="/medicare-advantage/los-angeles-county-california" className="hover:underline">Los Angeles County Plans</Link></li>
                       <li>• <Link href="/medicare-advantage/west-coast" className="hover:underline">West Coast Regional Options</Link></li>
+                      <li>• <Link href="/medicare-advantage/hernando-county-florida" className="hover:underline">Hernando County Florida</Link></li>
                     </ul>
                   </div>
                   <div>
@@ -350,6 +463,7 @@ export default function SanDiegoCountyPage() {
                     <ul className="text-sm text-blue-600 space-y-1">
                       <li>• <Link href="/annuities" className="hover:underline">California Retirement Annuities</Link></li>
                       <li>• <Link href="/medicare-supplement-california" className="hover:underline">CA Medicare Supplements</Link></li>
+                      <li>• <Link href="/whole-life-insurance" className="hover:underline">Whole Life Insurance</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -364,7 +478,11 @@ export default function SanDiegoCountyPage() {
               </h2>
               <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
                 Our California Medicare specialists understand San Diego County's unique healthcare landscape 
-                and can help you navigate your 67 plan options with confidence.
+                and can help you navigate your 67 plan options with confidence. For broader insurance coverage, 
+                explore <Link href="/cobra-insurance" className="text-white hover:text-primary-200 underline mx-1">COBRA insurance</Link> 
+                for employment transitions or 
+                <Link href="/community-health-centers-medicare-advantage-birmingham" className="text-white hover:text-primary-200 underline mx-1">community health centers</Link> 
+                for comprehensive care approaches.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
