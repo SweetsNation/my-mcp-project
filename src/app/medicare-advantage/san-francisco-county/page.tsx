@@ -102,7 +102,11 @@ export default function SanFranciscoCountyMedicareAdvantage() {
         pageTitle="San Francisco County Medicare Advantage Plans"
         county="San Francisco County"
         state="California"
-        demographics={sanFranciscoData.demographics}
+        demographics={{
+          avgAge: sanFranciscoData.demographics.medianAge,
+          hispanicPopulation: sanFranciscoData.demographics.hispanic,
+          maPenetrationRate: sanFranciscoData.maPenetration,
+        }}
         keyMetrics={{
           planCount: sanFranciscoData.planCount,
           zeroPremiumPlans: sanFranciscoData.zeroPremiumPlans,

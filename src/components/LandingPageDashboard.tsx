@@ -80,10 +80,10 @@ export default function LandingPageDashboard({
 
   const totalMetrics = filteredData.reduce((acc, data) => ({
     pageViews: acc.pageViews + data.metrics.pageViews,
-    phoneCall: acc.phoneCall + data.metrics.phoneCall,
+    phoneCalls: acc.phoneCalls + data.metrics.phoneCalls,
     ctaClicks: acc.ctaClicks + data.metrics.ctaClicks,
     avgConversionRate: acc.avgConversionRate + data.metrics.conversionRate,
-  }), { pageViews: 0, phoneCall: 0, ctaClicks: 0, avgConversionRate: 0 });
+  }), { pageViews: 0, phoneCalls: 0, ctaClicks: 0, avgConversionRate: 0 });
 
   const avgConversionRate = filteredData.length > 0
     ? totalMetrics.avgConversionRate / filteredData.length
@@ -141,7 +141,7 @@ export default function LandingPageDashboard({
             <div className="text-blue-800 text-sm">Total Page Views</div>
           </div>
           <div className="bg-green-50 p-4 rounded-lg">
-            <div className="text-2xl font-bold text-green-600">{totalMetrics.phoneCall}</div>
+            <div className="text-2xl font-bold text-green-600">{totalMetrics.phoneCalls}</div>
             <div className="text-green-800 text-sm">Phone Call Conversions</div>
           </div>
           <div className="bg-purple-50 p-4 rounded-lg">
@@ -189,10 +189,10 @@ export default function LandingPageDashboard({
                 </div>
               </div>
               <div>
-                <div className="text-lg font-semibold text-gray-900">{data.metrics.phoneCall}</div>
+                <div className="text-lg font-semibold text-gray-900">{data.metrics.phoneCalls}</div>
                 <div className="text-sm text-gray-600">Phone Calls</div>
                 <div className="text-xs text-green-600">
-                  ${(data.metrics.phoneCall * data.config.trackingGoals.phoneCallValue).toLocaleString()} value
+                  ${(data.metrics.phoneCalls * data.config.trackingGoals.phoneCallValue).toLocaleString()} value
                 </div>
               </div>
               <div>

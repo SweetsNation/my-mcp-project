@@ -341,7 +341,7 @@ export const exportKeywordResearch = (pageKey: string) => {
 // Get all page marketing strategies
 export const getAllMarketingStrategies = () => {
   return Object.keys(marketingStrategies).map(pageKey => ({
-    pageKey,
-    ...marketingStrategies[pageKey]
+    ...marketingStrategies[pageKey],
+    pageKey
   }));
 };

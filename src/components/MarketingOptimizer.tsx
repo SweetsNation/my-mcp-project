@@ -260,7 +260,7 @@ export default function MarketingOptimizer({
   const injectSchema = (id: string, schema: any) => {
     if (typeof window === 'undefined') return;
 
-    let schemaScript = document.getElementById(id);
+    let schemaScript = document.getElementById(id) as HTMLScriptElement;
     if (!schemaScript) {
       schemaScript = document.createElement('script');
       schemaScript.id = id;
