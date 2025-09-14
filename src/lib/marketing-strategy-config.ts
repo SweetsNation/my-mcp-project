@@ -1188,6 +1188,868 @@ export const marketingStrategies: Record<string, MarketingStrategy> = {
         'Missing Plan N enrollment timing guidance'
       ]
     }
+  },
+
+  // NEW LANDING PAGES MARKETING STRATEGIES
+
+  'medicare-advantage-maui-county-hawaii': {
+    pageKey: 'medicare-advantage-maui-county-hawaii',
+    pageName: 'Medicare Advantage Plans Maui County Hawaii',
+    primaryAudience: ['hawaiian_residents', 'mainland_retirees', 'snowbirds', 'native_hawaiian_pacific_islander'],
+    keywordStrategy: {
+      primary: [
+        'Medicare Advantage Maui County',
+        'Medicare plans Hawaii',
+        'Kaiser Permanente Medicare Hawaii',
+        'HMSA Medicare Advantage'
+      ],
+      secondary: [
+        'Hawaii Medicare enrollment',
+        'Maui healthcare plans',
+        'Medicare Advantage inter island coverage',
+        'Native Hawaiian Medicare benefits'
+      ],
+      longTail: [
+        'best Medicare plans Maui retirees',
+        'Medicare Advantage inter island coverage Hawaii',
+        'Native Hawaiian Medicare benefits',
+        'Kaiser vs HMSA Medicare Hawaii comparison'
+      ],
+      local: [
+        'Medicare Kahului HI',
+        'Medicare Lahaina Hawaii',
+        'Medicare Kihei HI',
+        'Medicare Haleakala Hawaii'
+      ],
+      competitor: [
+        'Kaiser Permanente Hawaii direct',
+        'HMSA direct enrollment',
+        'UnitedHealthcare Hawaii'
+      ],
+      searchVolume: {
+        high: ['Medicare plans Hawaii'],
+        medium: ['Medicare Advantage Maui County', 'Kaiser Medicare Hawaii'],
+        low: ['Medicare inter island coverage', 'Native Hawaiian Medicare']
+      },
+      intent: {
+        commercial: ['best Medicare Advantage Maui', 'Kaiser vs HMSA Medicare'],
+        informational: ['Medicare inter island coverage', 'Hawaii Medicare benefits'],
+        navigational: ['Medicare agent Maui', 'Kaiser Medicare Hawaii'],
+        transactional: ['enroll Medicare Hawaii', 'get Hawaii Medicare quote']
+      }
+    },
+    contentStrategy: {
+      heroMessage: 'Comprehensive Medicare Advantage plans designed for island living with inter-island coverage and access to Hawaii\'s premier healthcare networks',
+      valuePropositions: [
+        'Inter-island emergency transportation coverage',
+        'Kaiser Permanente and HMSA network access',
+        'Cultural competency for Native Hawaiian communities',
+        'Specialized care for island residents and mainland retirees'
+      ],
+      trustSignals: [
+        'Licensed Hawaii Medicare specialist',
+        'Partnerships with Kaiser Permanente Hawaii and HMSA',
+        'Native Hawaiian community advocacy',
+        '15+ years serving Hawaii Medicare beneficiaries'
+      ],
+      urgencyFactors: [
+        'Limited network capacity on outer islands',
+        'Inter-island coverage enrollment deadlines',
+        'Hawaii Medicare Advantage market competitiveness',
+        'Seasonal enrollment for snowbirds'
+      ]
+    },
+    ctaStrategy: {
+      primary: 'Get Hawaii Medicare Quote',
+      secondary: 'Compare Island Plans',
+      phoneCallCTA: 'Hawaii Medicare Expert: 331-343-2584',
+      formCTA: 'Free Maui County Medicare Consultation'
+    },
+    seoOptimizations: {
+      titleOptimization: 'Medicare Advantage Maui County Hawaii | Kaiser HMSA Networks | Inter-Island Coverage 2025',
+      metaDescription: 'Find the best Medicare Advantage plans in Maui County, Hawaii. Compare Kaiser Permanente and HMSA networks with inter-island coverage for island residents.',
+      headerStrategy: [
+        'H1: Medicare Advantage Plans Maui County, Hawaii 2025',
+        'H2: Island Healthcare Excellence in Maui County',
+        'H2: Kaiser Permanente vs HMSA Medicare Networks',
+        'H2: Inter-Island Coverage and Travel Benefits'
+      ],
+      internalLinking: [
+        'Medicare Cost Calculator - Calculate Your Maui Medicare Costs',
+        'Medicare Advantage Broward County Florida - Snowbird Medicare: Florida Coverage Options',
+        'Disability Insurance - Protect Your Island Income with Disability Insurance',
+        'Medicare Advantage Cobb County Georgia - Compare: Hawaii vs Georgia Medicare Benefits'
+      ]
+    },
+    paidAdStrategy: {
+      adGroups: [
+        'Maui Medicare Plans',
+        'Hawaii Inter-Island Coverage',
+        'Kaiser HMSA Comparison',
+        'Native Hawaiian Medicare'
+      ],
+      adCopy: [
+        'Maui County Medicare Plans | Kaiser & HMSA Networks Available',
+        'Inter-Island Medicare Coverage | Comprehensive Hawaii Plans',
+        'Native Hawaiian Medicare Benefits | Cultural Competency Care'
+      ],
+      landingPageAlignment: [
+        'Island lifestyle integration',
+        'Inter-island travel emphasis',
+        'Cultural competency messaging',
+        'Premier healthcare network access'
+      ]
+    },
+    socialMediaStrategy: {
+      platforms: ['Facebook', 'Nextdoor', 'YouTube', 'Instagram'],
+      contentPillars: [
+        'Island healthcare updates',
+        'Native Hawaiian health programs',
+        'Inter-island medical services',
+        'Hawaii Medicare education'
+      ],
+      hashtags: [
+        '#MauiMedicare',
+        '#HawaiiMedicare',
+        '#InterIslandCoverage',
+        '#NativeHawaiianHealth',
+        '#KaiserHMSA'
+      ]
+    },
+    competitorAnalysis: {
+      mainCompetitors: [
+        'Kaiser Permanente Hawaii direct',
+        'HMSA direct enrollment',
+        'Hawaii Medicare brokers'
+      ],
+      differentiators: [
+        'Multi-carrier island network access',
+        'Inter-island coverage expertise',
+        'Native Hawaiian cultural competency',
+        'Mainland retiree specialization'
+      ],
+      opportunityGaps: [
+        'Limited inter-island coverage education',
+        'Insufficient Native Hawaiian Medicare content',
+        'Lack of island lifestyle integration',
+        'Missing seasonal resident solutions'
+      ]
+    }
+  },
+
+  'medicare-advantage-cobb-county-georgia': {
+    pageKey: 'medicare-advantage-cobb-county-georgia',
+    pageName: 'Medicare Advantage Plans Cobb County Georgia',
+    primaryAudience: ['affluent_suburban', 'atlanta_metro', 'corporate_retirees', 'healthcare_conscious'],
+    keywordStrategy: {
+      primary: [
+        'Medicare Advantage Cobb County Georgia',
+        'Medicare plans Marietta GA',
+        'Wellstar Medicare Advantage',
+        'Northside Hospital Medicare'
+      ],
+      secondary: [
+        'Atlanta Medicare plans',
+        'Emory Medicare Advantage',
+        'Cobb County Medicare enrollment',
+        'premium Medicare plans Atlanta suburbs'
+      ],
+      longTail: [
+        'best Medicare plans affluent seniors Cobb County',
+        'Medicare Advantage Kennesaw Marietta',
+        'premium Medicare plans Atlanta suburbs',
+        'corporate retiree Medicare Cobb County'
+      ],
+      local: [
+        'Medicare Marietta GA',
+        'Medicare Kennesaw Georgia',
+        'Medicare Smyrna GA',
+        'Medicare Acworth Georgia'
+      ],
+      competitor: [
+        'Humana Cobb County',
+        'UnitedHealthcare Atlanta',
+        'Aetna Georgia Medicare'
+      ],
+      searchVolume: {
+        high: ['Medicare plans Georgia', 'Atlanta Medicare plans'],
+        medium: ['Medicare Advantage Cobb County', 'Wellstar Medicare'],
+        low: ['affluent Medicare plans', 'corporate retiree Medicare']
+      },
+      intent: {
+        commercial: ['best Medicare Advantage Cobb County', 'premium Medicare plans'],
+        informational: ['Medicare benefits Cobb County', 'Wellstar vs Northside Medicare'],
+        navigational: ['Medicare agent Marietta', 'Cobb County Medicare office'],
+        transactional: ['enroll Medicare Cobb County', 'get premium Medicare quote']
+      }
+    },
+    contentStrategy: {
+      heroMessage: 'Premium Medicare Advantage plans tailored for Cobb County\'s affluent communities with access to Atlanta\'s finest healthcare networks',
+      valuePropositions: [
+        'Access to Wellstar, Northside, and Emory healthcare networks',
+        'Premium benefits for affluent suburban communities',
+        'Corporate retiree benefit coordination',
+        'Atlanta metro convenience with suburban care'
+      ],
+      trustSignals: [
+        'Serving Atlanta metro for 20+ years',
+        'Partnerships with Wellstar and Northside systems',
+        'Certified Georgia Medicare specialist',
+        'A+ Better Business Bureau rating'
+      ],
+      urgencyFactors: [
+        'Limited premium network capacity',
+        'Corporate benefit coordination deadlines',
+        'Competitive Atlanta Medicare market',
+        'Executive health program integration'
+      ]
+    },
+    ctaStrategy: {
+      primary: 'Get Cobb County Medicare Quote',
+      secondary: 'Compare Premium Networks',
+      phoneCallCTA: 'Atlanta Medicare Expert: 331-343-2584',
+      formCTA: 'Free Cobb County Medicare Consultation'
+    },
+    seoOptimizations: {
+      titleOptimization: 'Medicare Advantage Cobb County Georgia | Marietta Kennesaw | Wellstar Northside Networks 2025',
+      metaDescription: 'Find premium Medicare Advantage plans in Cobb County, GA. Access Wellstar, Northside, and Emory networks. Expert guidance for affluent Atlanta suburbs.',
+      headerStrategy: [
+        'H1: Medicare Advantage Plans Cobb County, Georgia 2025',
+        'H2: Premium Healthcare Networks in Cobb County',
+        'H2: Medicare Plans for Atlanta Metro Suburbs',
+        'H2: Corporate Retiree Medicare Benefits'
+      ],
+      internalLinking: [
+        'Medicare Cost Calculator - Calculate Your Cobb County Medicare Costs',
+        'Disability Insurance - Executive Income Protection in Georgia',
+        'Medicare Advantage Fresno County California - Compare: Georgia vs California Medicare',
+        'Medicare Advantage Broward County Florida - Compare: Georgia vs Florida Medicare for Retirees'
+      ]
+    },
+    paidAdStrategy: {
+      adGroups: [
+        'Cobb County Medicare',
+        'Premium Network Access',
+        'Corporate Retiree Plans',
+        'Atlanta Suburban Medicare'
+      ],
+      adCopy: [
+        'Cobb County Medicare Plans | Wellstar & Northside Networks',
+        'Premium Medicare for Atlanta Suburbs | Executive Benefits',
+        'Corporate Retiree Medicare | Seamless Benefit Transition'
+      ],
+      landingPageAlignment: [
+        'Affluent community messaging',
+        'Premium healthcare emphasis',
+        'Atlanta metro convenience',
+        'Corporate benefit integration'
+      ]
+    },
+    socialMediaStrategy: {
+      platforms: ['LinkedIn', 'Facebook', 'Nextdoor', 'YouTube'],
+      contentPillars: [
+        'Atlanta healthcare updates',
+        'Corporate retirement planning',
+        'Premium healthcare benefits',
+        'Cobb County health resources'
+      ],
+      hashtags: [
+        '#CobbCountyMedicare',
+        '#AtlantaMedicare',
+        '#WellstarMedicare',
+        '#PremiumHealthcare',
+        '#CorporateRetirement'
+      ]
+    },
+    competitorAnalysis: {
+      mainCompetitors: [
+        'Humana Georgia',
+        'UnitedHealthcare Atlanta',
+        'Local premium brokers'
+      ],
+      differentiators: [
+        'Affluent community specialization',
+        'Multi-network premium access',
+        'Corporate benefit expertise',
+        'Atlanta metro market knowledge'
+      ],
+      opportunityGaps: [
+        'Limited premium Medicare content',
+        'Insufficient corporate retiree guidance',
+        'Lack of affluent community focus',
+        'Missing executive health integration'
+      ]
+    }
+  },
+
+  'medicare-advantage-fresno-county-california': {
+    pageKey: 'medicare-advantage-fresno-county-california',
+    pageName: 'Medicare Advantage Plans Fresno County California',
+    primaryAudience: ['hispanic_community', 'agricultural_workers', 'central_valley_residents', 'bilingual_preferred'],
+    keywordStrategy: {
+      primary: [
+        'Medicare Advantage Fresno County',
+        'Medicare plans Central Valley CA',
+        'Medicare en español Fresno',
+        'bilingual Medicare help Fresno'
+      ],
+      secondary: [
+        'Fresno Medicare enrollment',
+        'Medicare plans Hispanic community',
+        'agricultural worker Medicare',
+        'community health centers Medicare Fresno'
+      ],
+      longTail: [
+        'Medicare plans for farm workers California',
+        'bilingual Medicare help Fresno County',
+        'community health centers Medicare Fresno',
+        'Hispanic Medicare benefits Central Valley'
+      ],
+      local: [
+        'Medicare Fresno CA',
+        'Medicare Clovis California',
+        'Medicare Selma CA',
+        'Medicare Reedley California'
+      ],
+      competitor: [
+        'Health Net Central Valley',
+        'Molina Healthcare Fresno',
+        'Anthem Blue Cross Central Valley'
+      ],
+      searchVolume: {
+        high: ['Medicare Fresno', 'Medicare Central Valley'],
+        medium: ['Medicare en español', 'bilingual Medicare help'],
+        low: ['agricultural worker Medicare', 'community health Medicare']
+      },
+      intent: {
+        commercial: ['best Medicare Fresno', 'Medicare plans Hispanic community'],
+        informational: ['Medicare en español', 'agricultural worker benefits'],
+        navigational: ['Medicare agent Fresno', 'bilingual Medicare help'],
+        transactional: ['enroll Medicare Fresno', 'get bilingual Medicare help']
+      }
+    },
+    contentStrategy: {
+      heroMessage: 'Comprehensive Medicare Advantage plans for Fresno County with bilingual services and community health center integration for Central Valley families',
+      valuePropositions: [
+        'Bilingual Medicare services in Spanish and English',
+        'Community health center network integration',
+        'Agricultural worker benefit specialization',
+        'Cultural competency for Hispanic communities'
+      ],
+      trustSignals: [
+        'Certified bilingual Medicare specialist',
+        'Partnerships with Fresno community health centers',
+        'Hispanic Chamber of Commerce member',
+        '10+ years serving Central Valley communities'
+      ],
+      urgencyFactors: [
+        'Limited bilingual Medicare assistance',
+        'Community health center enrollment periods',
+        'Agricultural season coverage timing',
+        'Hispanic community outreach programs'
+      ]
+    },
+    ctaStrategy: {
+      primary: 'Get Fresno Medicare Quote',
+      secondary: 'Ayuda en Español',
+      phoneCallCTA: 'Bilingual Medicare Expert: 331-343-2584',
+      formCTA: 'Free Bilingual Medicare Consultation'
+    },
+    seoOptimizations: {
+      titleOptimization: 'Medicare Advantage Fresno County California | Bilingual Services | Community Health Centers 2025',
+      metaDescription: 'Find Medicare Advantage plans in Fresno County, CA with bilingual services and community health center access. Hispanic community Medicare specialists.',
+      headerStrategy: [
+        'H1: Medicare Advantage Plans Fresno County, California 2025',
+        'H2: Bilingual Healthcare Services in Fresno County',
+        'H2: Community Health Center Medicare Integration',
+        'H2: Medicare Benefits for Agricultural Communities'
+      ],
+      internalLinking: [
+        'Medicare Cost Calculator - Calculadora de Costos Medicare California',
+        'Disability Insurance - Seguro de Discapacidad para Trabajadores Agrícolas',
+        'Medicare Advantage Broward County Florida - Compare: California vs Florida Medicare Bilingüe',
+        'Medicare Advantage Cobb County Georgia - Comparar: Medicare California vs Georgia'
+      ]
+    },
+    paidAdStrategy: {
+      adGroups: [
+        'Fresno Medicare Plans',
+        'Bilingual Medicare Help',
+        'Hispanic Medicare Services',
+        'Agricultural Worker Benefits'
+      ],
+      adCopy: [
+        'Fresno Medicare Plans | Bilingual Services Available',
+        'Medicare en Español | Ayuda para la Comunidad Hispana',
+        'Agricultural Worker Medicare | Community Health Integration'
+      ],
+      landingPageAlignment: [
+        'Bilingual service emphasis',
+        'Community health integration',
+        'Agricultural worker focus',
+        'Hispanic cultural competency'
+      ]
+    },
+    socialMediaStrategy: {
+      platforms: ['Facebook', 'Instagram', 'YouTube', 'WhatsApp'],
+      contentPillars: [
+        'Bilingual health education',
+        'Community health resources',
+        'Agricultural worker benefits',
+        'Hispanic Medicare success stories'
+      ],
+      hashtags: [
+        '#FresnoMedicare',
+        '#MedicareBilingue',
+        '#CentralValleyHealth',
+        '#CommunityHealthCenters',
+        '#HispanicMedicare'
+      ]
+    },
+    competitorAnalysis: {
+      mainCompetitors: [
+        'Health Net Community Solutions',
+        'Molina Healthcare',
+        'Local community health centers'
+      ],
+      differentiators: [
+        'Comprehensive bilingual services',
+        'Agricultural community specialization',
+        'Community health center partnerships',
+        'Hispanic cultural competency expertise'
+      ],
+      opportunityGaps: [
+        'Limited bilingual Medicare education',
+        'Insufficient agricultural worker content',
+        'Lack of community health integration',
+        'Missing Hispanic cultural competency'
+      ]
+    }
+  },
+
+  'medicare-cost-calculator': {
+    pageKey: 'medicare-cost-calculator',
+    pageName: 'Medicare Cost Calculator',
+    primaryAudience: ['cost_researchers', 'comparison_shoppers', 'budget_conscious', 'planning_ahead'],
+    keywordStrategy: {
+      primary: [
+        'Medicare cost calculator',
+        'Medicare Advantage cost estimator',
+        'Medicare premium calculator',
+        'Medicare out of pocket calculator'
+      ],
+      secondary: [
+        'Medicare deductible calculator',
+        'Medicare savings calculator',
+        'Medicare cost comparison tool',
+        'estimate Medicare expenses'
+      ],
+      longTail: [
+        'how much does Medicare Advantage cost per month',
+        'Medicare cost comparison tool',
+        'estimate Medicare expenses 2025',
+        'Medicare budget planning calculator'
+      ],
+      competitor: [
+        'Medicare.gov Plan Finder',
+        'AARP Medicare calculator',
+        'eHealth Medicare estimator'
+      ],
+      searchVolume: {
+        high: ['Medicare cost calculator', 'Medicare premium calculator'],
+        medium: ['Medicare Advantage cost estimator', 'Medicare out of pocket calculator'],
+        low: ['Medicare budget calculator', 'Medicare cost planning tool']
+      },
+      intent: {
+        commercial: ['Medicare cost comparison', 'Medicare savings calculator'],
+        informational: ['how much does Medicare cost', 'Medicare cost breakdown'],
+        navigational: ['Medicare cost calculator tool', 'Medicare.gov calculator'],
+        transactional: ['calculate Medicare costs', 'get Medicare cost estimate']
+      }
+    },
+    contentStrategy: {
+      heroMessage: 'Free Medicare cost calculator - Get personalized estimates for premiums, deductibles, and out-of-pocket costs to make informed healthcare decisions',
+      valuePropositions: [
+        'Instant Medicare cost calculations',
+        'Compare multiple plan scenarios',
+        'No personal information required',
+        'Educational cost-saving tips included'
+      ],
+      trustSignals: [
+        'Updated with 2025 Medicare rates',
+        'Certified Medicare cost analysis',
+        'Unbiased calculation methodology',
+        'Trusted by 50,000+ Medicare shoppers'
+      ],
+      urgencyFactors: [
+        'Medicare costs change annually',
+        'Enrollment period deadlines',
+        'Plan comparison timing critical',
+        'Cost optimization opportunities'
+      ]
+    },
+    ctaStrategy: {
+      primary: 'Calculate Medicare Costs',
+      secondary: 'Get Personalized Quote',
+      phoneCallCTA: 'Medicare Cost Expert: 331-343-2584',
+      formCTA: 'Free Medicare Cost Analysis'
+    },
+    seoOptimizations: {
+      titleOptimization: 'Medicare Cost Calculator 2025 | Free Premium & Out-of-Pocket Estimator | Compare Plans',
+      metaDescription: 'Free Medicare cost calculator for 2025. Estimate premiums, deductibles, and out-of-pocket costs. Compare Medicare Advantage and supplement plans.',
+      headerStrategy: [
+        'H1: Medicare Cost Calculator 2025 | Free Estimator',
+        'H2: How to Use the Medicare Cost Calculator',
+        'H2: Understanding Medicare Cost Components',
+        'H2: Medicare Cost Comparison Tips'
+      ],
+      internalLinking: [
+        'Medicare Advantage Maui County Hawaii - Find Hawaii Medicare Plans',
+        'Medicare Advantage Cobb County Georgia - Find Georgia Medicare Plans',
+        'Medicare Advantage Fresno County California - Find California Medicare Plans',
+        'Medicare Advantage Broward County Florida - Find Florida Medicare Plans',
+        'Disability Insurance - Protect Your Income Before Retirement'
+      ]
+    },
+    paidAdStrategy: {
+      adGroups: [
+        'Medicare Cost Calculator',
+        'Medicare Cost Planning',
+        'Medicare Budget Tools',
+        'Medicare Cost Comparison'
+      ],
+      adCopy: [
+        'Free Medicare Cost Calculator | Instant Results & No Sign-Up',
+        'Calculate Your Medicare Costs | Compare Plans & Save Money',
+        'Medicare Budget Planning | Free Cost Calculator & Expert Help'
+      ],
+      landingPageAlignment: [
+        'Free tool emphasis',
+        'Instant results messaging',
+        'Cost savings focus',
+        'Educational approach'
+      ]
+    },
+    socialMediaStrategy: {
+      platforms: ['Facebook', 'YouTube', 'LinkedIn', 'Pinterest'],
+      contentPillars: [
+        'Medicare cost education',
+        'Cost calculator demonstrations',
+        'Money-saving tips',
+        'Plan comparison guidance'
+      ],
+      hashtags: [
+        '#MedicareCostCalculator',
+        '#MedicareCosts',
+        '#MedicarePlanning',
+        '#MedicareSavings',
+        '#HealthcareBudgeting'
+      ]
+    },
+    competitorAnalysis: {
+      mainCompetitors: [
+        'Medicare.gov Plan Finder',
+        'AARP Medicare tools',
+        'eHealth calculators'
+      ],
+      differentiators: [
+        'Advanced calculation features',
+        'Educational content integration',
+        'No registration required',
+        'Comprehensive cost breakdowns'
+      ],
+      opportunityGaps: [
+        'Advanced Medicare cost calculators',
+        'State-specific cost variations',
+        'Long-term cost projections',
+        'Retirement budget integration'
+      ]
+    }
+  },
+
+  'medicare-advantage-broward-county-florida': {
+    pageKey: 'medicare-advantage-broward-county-florida',
+    pageName: 'Medicare Advantage Plans Broward County Florida',
+    primaryAudience: ['south_florida_retirees', 'snowbirds', 'hispanic_community', 'beach_communities'],
+    keywordStrategy: {
+      primary: [
+        'Medicare Advantage Broward County Florida',
+        'Medicare plans Fort Lauderdale',
+        'South Florida Medicare Advantage',
+        'snowbird Medicare Florida'
+      ],
+      secondary: [
+        'Medicare plans Hollywood Florida',
+        'Pembroke Pines Medicare',
+        'bilingual Medicare help Broward County',
+        'Medicare plans for seasonal residents Florida'
+      ],
+      longTail: [
+        'Medicare plans for seasonal residents Florida',
+        'bilingual Medicare help Broward County',
+        'Medicare Advantage beach communities Florida',
+        'snowbird Medicare coordination Florida'
+      ],
+      local: [
+        'Medicare Fort Lauderdale FL',
+        'Medicare Hollywood Florida',
+        'Medicare Pembroke Pines FL',
+        'Medicare Coral Springs Florida'
+      ],
+      competitor: [
+        'Humana South Florida',
+        'UnitedHealthcare Florida',
+        'Florida Blue Medicare'
+      ],
+      searchVolume: {
+        high: ['Medicare Florida', 'South Florida Medicare'],
+        medium: ['Medicare Advantage Broward County', 'Fort Lauderdale Medicare'],
+        low: ['snowbird Medicare', 'seasonal resident Medicare']
+      },
+      intent: {
+        commercial: ['best Medicare Broward County', 'South Florida Medicare plans'],
+        informational: ['snowbird Medicare options', 'seasonal resident coverage'],
+        navigational: ['Medicare agent Fort Lauderdale', 'Broward Medicare office'],
+        transactional: ['enroll Medicare Broward County', 'get Florida Medicare quote']
+      }
+    },
+    contentStrategy: {
+      heroMessage: 'Comprehensive Medicare Advantage plans for Broward County with specialized services for snowbirds, beach communities, and multilingual populations',
+      valuePropositions: [
+        'Seasonal resident and snowbird coordination',
+        'Beach lifestyle health and wellness programs',
+        'Multilingual services for diverse communities',
+        'Hurricane and disaster preparedness support'
+      ],
+      trustSignals: [
+        'Licensed Florida Medicare specialist',
+        'Partnerships with Broward Health and Memorial Healthcare',
+        'Seasonal resident coordination expertise',
+        '12+ years serving South Florida'
+      ],
+      urgencyFactors: [
+        'Seasonal enrollment timing for snowbirds',
+        'Hurricane season preparation deadlines',
+        'Limited beach community provider capacity',
+        'Multilingual service availability'
+      ]
+    },
+    ctaStrategy: {
+      primary: 'Get Broward County Medicare Quote',
+      secondary: 'Snowbird Medicare Help',
+      phoneCallCTA: 'South Florida Medicare Expert: 331-343-2584',
+      formCTA: 'Free Broward County Medicare Consultation'
+    },
+    seoOptimizations: {
+      titleOptimization: 'Medicare Advantage Broward County Florida | Fort Lauderdale Hollywood | Snowbird Plans 2025',
+      metaDescription: 'Find Medicare Advantage plans in Broward County, FL. Specialized services for Fort Lauderdale, Hollywood, snowbirds, and beach communities.',
+      headerStrategy: [
+        'H1: Medicare Advantage Plans Broward County, Florida 2025',
+        'H2: South Florida Healthcare Networks',
+        'H2: Snowbird and Seasonal Resident Medicare',
+        'H2: Beach Community Health and Wellness'
+      ],
+      internalLinking: [
+        'Medicare Cost Calculator - Calculate Your Broward County Medicare Costs',
+        'Medicare Advantage Maui County Hawaii - Snowbird Medicare: Florida to Hawaii Coverage',
+        'Medicare Advantage Fresno County California - Compare: Florida vs California Medicare Bilingüe',
+        'Disability Insurance - Protect Your Beach Retirement Income'
+      ]
+    },
+    paidAdStrategy: {
+      adGroups: [
+        'Broward County Medicare',
+        'Snowbird Medicare Plans',
+        'South Florida Retirees',
+        'Beach Community Medicare'
+      ],
+      adCopy: [
+        'Broward County Medicare | Fort Lauderdale & Hollywood Networks',
+        'Snowbird Medicare Plans | Florida Seasonal Resident Coverage',
+        'South Florida Medicare | Beach Lifestyle Health Programs'
+      ],
+      landingPageAlignment: [
+        'South Florida lifestyle focus',
+        'Seasonal resident emphasis',
+        'Beach community integration',
+        'Multilingual service availability'
+      ]
+    },
+    socialMediaStrategy: {
+      platforms: ['Facebook', 'Instagram', 'YouTube', 'Nextdoor'],
+      contentPillars: [
+        'South Florida healthcare updates',
+        'Snowbird lifestyle and health',
+        'Beach community wellness',
+        'Hurricane preparedness health'
+      ],
+      hashtags: [
+        '#BrowardCountyMedicare',
+        '#SouthFloridaMedicare',
+        '#SnowbirdMedicare',
+        '#BeachCommunityHealth',
+        '#FortLauderdaleMedicare'
+      ]
+    },
+    competitorAnalysis: {
+      mainCompetitors: [
+        'Humana Florida',
+        'Florida Blue Medicare',
+        'Local South Florida brokers'
+      ],
+      differentiators: [
+        'Snowbird specialization',
+        'Beach community focus',
+        'Multilingual service expertise',
+        'Hurricane preparedness integration'
+      ],
+      opportunityGaps: [
+        'Limited snowbird Medicare content',
+        'Insufficient beach community focus',
+        'Lack of hurricane preparedness',
+        'Missing seasonal coordination'
+      ]
+    }
+  },
+
+  'disability-insurance': {
+    pageKey: 'disability-insurance',
+    pageName: 'Disability Insurance Coverage',
+    primaryAudience: ['income_protectors', 'high_earners', 'self_employed', 'family_providers'],
+    keywordStrategy: {
+      primary: [
+        'disability insurance',
+        'short term disability insurance',
+        'long term disability insurance',
+        'income protection insurance'
+      ],
+      secondary: [
+        'individual disability insurance',
+        'disability insurance cost',
+        'group vs individual disability insurance',
+        'disability insurance for self employed'
+      ],
+      longTail: [
+        'disability insurance for self employed',
+        'group vs individual disability insurance',
+        'how much disability insurance do I need',
+        'disability insurance high income earners'
+      ],
+      competitor: [
+        'Guardian disability insurance',
+        'Northwestern Mutual disability',
+        'MetLife disability insurance'
+      ],
+      searchVolume: {
+        high: ['disability insurance', 'long term disability insurance'],
+        medium: ['short term disability insurance', 'income protection insurance'],
+        low: ['disability insurance self employed', 'high income disability insurance']
+      },
+      intent: {
+        commercial: ['best disability insurance', 'disability insurance quotes'],
+        informational: ['what is disability insurance', 'disability insurance explained'],
+        navigational: ['disability insurance companies', 'disability insurance agent'],
+        transactional: ['buy disability insurance', 'apply disability insurance']
+      }
+    },
+    contentStrategy: {
+      heroMessage: 'Protect your most valuable asset - your income - with comprehensive disability insurance that replaces up to 70% of your earnings when you cannot work',
+      valuePropositions: [
+        'Income replacement up to 70% of earnings',
+        'Protection against both illness and injury',
+        'Short-term and long-term coverage options',
+        'Tax-free benefits when you pay premiums'
+      ],
+      trustSignals: [
+        'Certified disability insurance specialist',
+        'Partnerships with top-rated carriers',
+        'Unbiased multi-carrier approach',
+        '25+ years in income protection planning'
+      ],
+      urgencyFactors: [
+        '1 in 4 workers become disabled before retirement',
+        'Disability can happen to anyone at any age',
+        'Social Security disability approval rate only 34%',
+        'Earlier application means lower premiums'
+      ]
+    },
+    ctaStrategy: {
+      primary: 'Get Disability Insurance Quote',
+      secondary: 'Calculate Coverage Need',
+      phoneCallCTA: 'Disability Insurance Expert: 331-343-2584',
+      formCTA: 'Free Income Protection Analysis'
+    },
+    seoOptimizations: {
+      titleOptimization: 'Disability Insurance Coverage | Income Protection | Short & Long-Term Benefits 2025',
+      metaDescription: 'Protect your income with disability insurance. Compare short-term and long-term coverage options. Get quotes from top-rated carriers.',
+      headerStrategy: [
+        'H1: Disability Insurance Coverage | Protect Your Income',
+        'H2: Short-Term vs Long-Term Disability Insurance',
+        'H2: Group vs Individual Disability Coverage',
+        'H2: How Much Disability Insurance Do You Need?'
+      ],
+      internalLinking: [
+        'Medicare Cost Calculator - Plan Your Future Medicare Costs',
+        'Medicare Advantage Cobb County Georgia - Executive Medicare Planning Georgia',
+        'Medicare Advantage Maui County Hawaii - Retirement Planning: Income to Medicare Hawaii',
+        'Medicare Advantage Fresno County California - Agricultural Worker Medicare Planning'
+      ]
+    },
+    paidAdStrategy: {
+      adGroups: [
+        'Disability Insurance',
+        'Income Protection',
+        'Self-Employed Insurance',
+        'Professional Disability Coverage'
+      ],
+      adCopy: [
+        'Disability Insurance | Protect 70% of Your Income | Free Quote',
+        'Income Protection for Professionals | Disability Insurance Experts',
+        'Self-Employed Disability Insurance | Don\'t Risk Your Income'
+      ],
+      landingPageAlignment: [
+        'Income protection emphasis',
+        'Professional targeting',
+        'Risk education focus',
+        'Family security messaging'
+      ]
+    },
+    socialMediaStrategy: {
+      platforms: ['LinkedIn', 'Facebook', 'YouTube', 'Twitter'],
+      contentPillars: [
+        'Income protection education',
+        'Disability statistics and awareness',
+        'Professional risk management',
+        'Family financial security'
+      ],
+      hashtags: [
+        '#DisabilityInsurance',
+        '#IncomeProtection',
+        '#ProfessionalInsurance',
+        '#FinancialPlanning',
+        '#RiskManagement'
+      ]
+    },
+    competitorAnalysis: {
+      mainCompetitors: [
+        'Guardian Life',
+        'Northwestern Mutual',
+        'MetLife',
+        'Principal Financial'
+      ],
+      differentiators: [
+        'Unbiased multi-carrier approach',
+        'Specialized high-income planning',
+        'Self-employed expertise',
+        'Comprehensive risk analysis'
+      ],
+      opportunityGaps: [
+        'Limited high-income disability content',
+        'Insufficient self-employed guidance',
+        'Lack of industry-specific risk analysis',
+        'Missing women-focused disability planning'
+      ]
+    }
   }
 };
 

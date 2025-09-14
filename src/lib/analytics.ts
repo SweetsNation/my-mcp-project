@@ -276,3 +276,157 @@ export const trackBlogFilter = (
     console.warn('Failed to track blog filter:', error);
   }
 };
+
+// County-specific page tracking
+export const trackCountyPageEngagement = (
+  county: string,
+  state: string,
+  engagementType: 'provider_click' | 'plan_comparison' | 'demographic_view' | 'city_section_view',
+  additionalData?: Record<string, any>
+) => {
+  try {
+    event('county_page_engagement', {
+      event_category: 'location_engagement',
+      event_label: `${county}_${state}_${engagementType}`,
+      county: county,
+      state: state,
+      engagement_type: engagementType,
+      ...additionalData,
+    });
+  } catch (error) {
+    console.warn('Failed to track county page engagement:', error);
+  }
+};
+
+// Disability insurance specific tracking
+export const trackDisabilityInsuranceInteraction = (
+  interactionType: 'income_calculator' | 'coverage_comparison' | 'myth_debunking' | 'employer_vs_individual',
+  userInputs?: Record<string, any>
+) => {
+  try {
+    event('disability_insurance_interaction', {
+      event_category: 'product_engagement',
+      event_label: `disability_${interactionType}`,
+      interaction_type: interactionType,
+      value: interactionType === 'income_calculator' ? 15 : 5,
+      ...userInputs,
+    });
+  } catch (error) {
+    console.warn('Failed to track disability insurance interaction:', error);
+  }
+};
+
+// Interactive calculator enhanced tracking
+export const trackCalculatorInteraction = (
+  calculatorType: 'medicare_cost' | 'disability_coverage',
+  interactionType: 'input_change' | 'result_view' | 'section_expand' | 'tip_view',
+  interactionData?: Record<string, any>
+) => {
+  try {
+    event('calculator_interaction', {
+      event_category: 'tool_engagement',
+      event_label: `${calculatorType}_${interactionType}`,
+      calculator_type: calculatorType,
+      interaction_type: interactionType,
+      ...interactionData,
+    });
+  } catch (error) {
+    console.warn('Failed to track calculator interaction:', error);
+  }
+};
+
+// Bilingual content engagement tracking
+export const trackBilingualContentEngagement = (
+  language: 'english' | 'spanish',
+  contentSection: string,
+  county?: string
+) => {
+  try {
+    event('bilingual_content_engagement', {
+      event_category: 'accessibility',
+      event_label: `${language}_${contentSection}`,
+      language: language,
+      content_section: contentSection,
+      county: county || '',
+    });
+  } catch (error) {
+    console.warn('Failed to track bilingual content engagement:', error);
+  }
+};
+
+// Island-specific tracking (for Hawaii pages)
+export const trackIslandSpecificEngagement = (
+  island: string,
+  engagementType: 'inter_island_coverage' | 'provider_network' | 'travel_benefits',
+  additionalData?: Record<string, any>
+) => {
+  try {
+    event('island_specific_engagement', {
+      event_category: 'geographic_engagement',
+      event_label: `${island}_${engagementType}`,
+      island: island,
+      engagement_type: engagementType,
+      ...additionalData,
+    });
+  } catch (error) {
+    console.warn('Failed to track island-specific engagement:', error);
+  }
+};
+
+// Premium plan comparison tracking
+export const trackPremiumPlanComparison = (
+  planType: 'low_cost' | 'balanced' | 'premium',
+  comparisonData: Record<string, any>
+) => {
+  try {
+    event('premium_plan_comparison', {
+      event_category: 'plan_research',
+      event_label: `${planType}_plan_selected`,
+      plan_type: planType,
+      value: planType === 'premium' ? 10 : planType === 'balanced' ? 7 : 3,
+      ...comparisonData,
+    });
+  } catch (error) {
+    console.warn('Failed to track premium plan comparison:', error);
+  }
+};
+
+// Regional network provider tracking
+export const trackNetworkProviderInteraction = (
+  networkName: string,
+  interactionType: 'view_details' | 'find_doctor' | 'coverage_check',
+  location?: string
+) => {
+  try {
+    event('network_provider_interaction', {
+      event_category: 'provider_engagement',
+      event_label: `${networkName}_${interactionType}`,
+      network_name: networkName,
+      interaction_type: interactionType,
+      location: location || '',
+      value: interactionType === 'find_doctor' ? 20 : 5,
+    });
+  } catch (error) {
+    console.warn('Failed to track network provider interaction:', error);
+  }
+};
+
+// Enrollment period tracking
+export const trackEnrollmentPeriodInteraction = (
+  periodType: 'open_enrollment' | 'special_enrollment' | 'initial_enrollment',
+  actionTaken: 'date_check' | 'eligibility_verify' | 'start_process',
+  userContext?: Record<string, any>
+) => {
+  try {
+    event('enrollment_period_interaction', {
+      event_category: 'enrollment',
+      event_label: `${periodType}_${actionTaken}`,
+      period_type: periodType,
+      action_taken: actionTaken,
+      value: actionTaken === 'start_process' ? 25 : 5,
+      ...userContext,
+    });
+  } catch (error) {
+    console.warn('Failed to track enrollment period interaction:', error);
+  }
+};

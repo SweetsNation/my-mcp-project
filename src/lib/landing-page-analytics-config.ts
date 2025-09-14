@@ -123,6 +123,91 @@ export const landingPageAnalyticsConfig: Record<string, LandingPageConfig> = {
     },
     keyMetrics: ['costComparison', 'benefitAnalysis', 'planNSpecificEngagement'],
     audienceSegments: ['cost_conscious', 'comprehensive_coverage_seekers', 'plan_g_alternatives', 'copay_tolerant']
+  },
+
+  // New landing pages configurations
+  'medicare-advantage-maui-county-hawaii': {
+    pageName: 'Medicare Advantage Plans Maui County Hawaii',
+    pageType: 'county',
+    primaryConversions: ['phone_call', 'get_quote', 'provider_search'],
+    trackingGoals: {
+      phoneCallValue: 95, // High value for Hawaii's unique market
+      formSubmissionValue: 70,
+      quoteCTAValue: 50,
+      contentEngagementThreshold: 100, // Island-specific content engagement
+    },
+    keyMetrics: ['totalBeneficiaries', 'maPenetration', 'islandAccessibility', 'interIslandCoverage'],
+    audienceSegments: ['hawaiian_residents', 'mainland_retirees', 'snowbirds', 'native_hawaiian_pacific_islander']
+  },
+
+  'medicare-advantage-cobb-county-georgia': {
+    pageName: 'Medicare Advantage Plans Cobb County Georgia',
+    pageType: 'county',
+    primaryConversions: ['phone_call', 'get_quote', 'network_search'],
+    trackingGoals: {
+      phoneCallValue: 80, // High value for affluent Atlanta suburb
+      formSubmissionValue: 55,
+      quoteCTAValue: 35,
+      contentEngagementThreshold: 90,
+    },
+    keyMetrics: ['totalBeneficiaries', 'maPenetration', 'affluenceIndex', 'atlantaMetroAccess'],
+    audienceSegments: ['affluent_suburban', 'atlanta_metro', 'corporate_retirees', 'healthcare_conscious']
+  },
+
+  'medicare-advantage-fresno-county-california': {
+    pageName: 'Medicare Advantage Plans Fresno County California',
+    pageType: 'county',
+    primaryConversions: ['phone_call', 'get_quote', 'bilingual_support'],
+    trackingGoals: {
+      phoneCallValue: 75,
+      formSubmissionValue: 50,
+      quoteCTAValue: 30,
+      contentEngagementThreshold: 95, // Bilingual content consideration
+    },
+    keyMetrics: ['totalBeneficiaries', 'hispanicPopulation', 'bilingualServices', 'agriculturalCommunity'],
+    audienceSegments: ['hispanic_community', 'agricultural_workers', 'central_valley_residents', 'bilingual_preferred']
+  },
+
+  'medicare-cost-calculator': {
+    pageName: 'Medicare Cost Calculator',
+    pageType: 'product',
+    primaryConversions: ['calculator_completion', 'phone_call', 'get_personalized_quote'],
+    trackingGoals: {
+      phoneCallValue: 85, // High value for calculator users
+      formSubmissionValue: 60,
+      quoteCTAValue: 40,
+      contentEngagementThreshold: 150, // Interactive tool engagement
+    },
+    keyMetrics: ['calculatorUsage', 'resultGeneration', 'costEstimateRanges', 'followUpActions'],
+    audienceSegments: ['cost_researchers', 'comparison_shoppers', 'budget_conscious', 'planning_ahead']
+  },
+
+  'medicare-advantage-broward-county-florida': {
+    pageName: 'Medicare Advantage Plans Broward County Florida',
+    pageType: 'county',
+    primaryConversions: ['phone_call', 'get_quote', 'florida_specialist'],
+    trackingGoals: {
+      phoneCallValue: 78, // High value for South Florida market
+      formSubmissionValue: 52,
+      quoteCTAValue: 33,
+      contentEngagementThreshold: 85,
+    },
+    keyMetrics: ['totalBeneficiaries', 'maPenetration', 'retireeInflux', 'multilingualServices'],
+    audienceSegments: ['south_florida_retirees', 'snowbirds', 'hispanic_community', 'beach_communities']
+  },
+
+  'disability-insurance': {
+    pageName: 'Disability Insurance Coverage',
+    pageType: 'product',
+    primaryConversions: ['phone_call', 'get_quote', 'coverage_calculator'],
+    trackingGoals: {
+      phoneCallValue: 120, // Very high value for disability insurance
+      formSubmissionValue: 95,
+      quoteCTAValue: 70,
+      contentEngagementThreshold: 180, // Complex product requiring education
+    },
+    keyMetrics: ['incomeProtectionCalculation', 'benefitComparison', 'employerVsIndividual', 'riskAssessment'],
+    audienceSegments: ['income_protectors', 'high_earners', 'self_employed', 'family_providers']
   }
 };
 
