@@ -751,16 +751,16 @@ Welcome to our comprehensive ${serviceArea.primaryCounty}, ${serviceArea.state} 
 ## Local Service Areas
 
 We proudly serve the following communities in ${serviceArea.primaryCounty}:
-${serviceArea.cities.map(city => `- ${city}, ${serviceArea.state}`).join('\n')}
+${serviceArea.cities.map((city: string) => `- ${city}, ${serviceArea.state}`).join('\n')}
 
 ${serviceArea.neighborhoods.length > 0 ? `
 ### Neighborhood Coverage
-${serviceArea.neighborhoods.map(neighborhood => `- ${neighborhood}`).join('\n')}
+${serviceArea.neighborhoods.map((neighborhood: string) => `- ${neighborhood}`).join('\n')}
 ` : ''}
 
 ## Local Healthcare Network
 
-${locationPage.localContent.map(content => `- ${content}`).join('\n')}
+${locationPage.localContent.map((content: string) => `- ${content}`).join('\n')}
 
 ## Contact Our Local Team
 
@@ -801,7 +801,7 @@ Ready to explore your Medicare options in ${serviceArea.primaryCounty}? Our loca
         '@type': 'Organization',
         name: config.businessName
       },
-      areaServed: config.serviceArea.cities.map(city => ({
+      areaServed: config.serviceArea.cities.map((city: string) => ({
         '@type': 'City',
         name: city,
         containedInPlace: {

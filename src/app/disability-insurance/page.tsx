@@ -87,7 +87,7 @@ export default function DisabilityInsurancePage() {
   return (
     <>
       <LandingPageAnalytics
-        pageType="service"
+        pageType="accessibility"
         pageTitle="Disability Insurance Coverage"
         county=""
         state=""
