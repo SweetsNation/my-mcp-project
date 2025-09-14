@@ -447,6 +447,12 @@ export default function MedicareSupplementPlanNPage() {
                 <Link href="/medicare-supplement-plan-f" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
                   Medicare Supplement Plan F
                 </Link>
+                <Link href="/medicare-cost-calculator" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
+                  Medicare Cost Calculator
+                </Link>
+                <Link href="/medicare-disability-insurance" className="bg-blue-100 text-blue-800 px-3 py-2 rounded text-sm hover:bg-blue-200 transition-colors">
+                  Disability Medicare
+                </Link>
               </div>
             </div>
           </div>

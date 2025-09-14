@@ -181,6 +181,7 @@ export default function MedicareCostCalculatorPage() {
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
               Get a personalized estimate of your Medicare Advantage costs and discover potential savings opportunities.
+              Compare costs for Medicare Advantage plans, Medicare Supplement Plan N, or disability Medicare coverage.
             </p>
             
             <div className="bg-green-500 text-green-100 rounded-lg p-4 max-w-2xl mx-auto">
@@ -620,6 +621,49 @@ export default function MedicareCostCalculatorPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Out-of-Pocket Max</h3>
               <p className="text-sm text-gray-600">Maximum amount you'll pay per year for covered services</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Regional Medicare Options */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Calculate Medicare Costs by Location
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-blue-700 mb-3">Hawaii Medicare Costs</h3>
+                <p className="text-gray-600 mb-4 text-sm">Calculate costs for Maui County Medicare Advantage plans with island-specific benefits.</p>
+                <a href="/medicare-advantage-maui-county" className="text-blue-600 hover:text-blue-800 font-medium text-sm">Maui County →</a>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-blue-700 mb-3">Georgia Medicare Costs</h3>
+                <p className="text-gray-600 mb-4 text-sm">Calculate costs for Cobb County Medicare plans with WellStar network access.</p>
+                <a href="/medicare-advantage-cobb-county-georgia" className="text-blue-600 hover:text-blue-800 font-medium text-sm">Cobb County →</a>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-blue-700 mb-3">California Medicare Costs</h3>
+                <p className="text-gray-600 mb-4 text-sm">Calculate costs for Fresno County Central Valley Medicare Advantage plans.</p>
+                <a href="/medicare-advantage-fresno-county" className="text-blue-600 hover:text-blue-800 font-medium text-sm">Fresno County →</a>
+              </div>
+              <div className="bg-gray-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-blue-700 mb-3">Florida Medicare Costs</h3>
+                <p className="text-gray-600 mb-4 text-sm">Calculate costs for Broward County South Florida Medicare Advantage plans.</p>
+                <a href="/medicare-advantage-broward-county" className="text-blue-600 hover:text-blue-800 font-medium text-sm">Broward County →</a>
+              </div>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-2xl mx-auto">
+              <div className="bg-blue-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-blue-700 mb-3">Medicare Supplement Plan N</h3>
+                <p className="text-gray-600 mb-4 text-sm">Calculate costs for Medicare Supplement Plan N with predictable copays.</p>
+                <a href="/medicare-supplement-plan-n" className="text-blue-600 hover:text-blue-800 font-medium text-sm">Plan N Costs →</a>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-lg text-center">
+                <h3 className="text-lg font-semibold text-blue-700 mb-3">Disability Medicare</h3>
+                <p className="text-gray-600 mb-4 text-sm">Calculate Medicare costs for disabled beneficiaries under 65.</p>
+                <a href="/medicare-disability-insurance" className="text-blue-600 hover:text-blue-800 font-medium text-sm">Disability Medicare →</a>
+              </div>
             </div>
           </div>
         </section>
