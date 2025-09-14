@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { event, trackButtonClick, trackCTAClick, trackPhoneCall, trackPageScroll } from '@/lib/analytics';
+import { initializeLandingPageTracking } from '@/lib/landing-page-analytics-config';
 
 interface LandingPageAnalyticsProps {
   pageType: 'accessibility' | 'regional' | 'county' | 'state';
@@ -186,6 +187,18 @@ export default function LandingPageAnalytics({
     
     return score;
   };
+
+  // Initialize advanced tracking configuration
+  useEffect(() => {
+    // Extract page key from pathname for configuration
+    const pathParts = pathname.split('/').filter(Boolean);
+    const pageKey = pathParts.length > 0 ? pathParts[pathParts.length - 1] : '';
+
+    // Initialize page-specific tracking if configuration exists
+    if (pageKey) {
+      initializeLandingPageTracking(pageKey);
+    }
+  }, [pathname]);
 
   // Expose tracking functions globally for use in components
   useEffect(() => {

@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs, generateMedicareBreadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
-import LocationPageAnalytics from '@/components/LocationPageAnalytics';
+import LandingPageAnalytics from '@/components/LandingPageAnalytics';
+import MarketingOptimizer from '@/components/MarketingOptimizer';
+import InternalLinksSection, { PrimaryLinksSection, ContextualLinksSection, CrossSellSection } from '@/components/InternalLinksSection';
 
 export const metadata: Metadata = {
   title: 'Best Medicare Advantage Plans Gwinnett County GA 2025 | Lawrenceville Atlanta Suburbs | Family-Oriented Hispanic Asian Communities',
@@ -209,23 +211,33 @@ export default function GwinnettCountyMedicareAdvantagePage() {
   return (
     <div className="bg-white">
       {/* Analytics Tracking */}
-      <LocationPageAnalytics 
+      <LandingPageAnalytics
+        pageType="county"
+        pageTitle="Medicare Advantage Plans Gwinnett County Georgia"
         county={gwinnettCountyData.county}
         state={gwinnettCountyData.state}
-        serviceType="Medicare Advantage"
-        totalEnrollment={gwinnettCountyData.totalEnrollment}
-        maPenetrationRate={gwinnettCountyData.maPenetrationRate}
-        phoneNumber="331-343-2584"
-        demographicProfile={{
+        demographics={{
           avgAge: gwinnettCountyData.demographics.avgAge,
-          diversityIndex: diversityIndex,
-          primaryCommunities: ['Lawrenceville', 'Duluth', 'Norcross', 'Buford', 'Snellville', 'Lilburn']
+          hispanicPopulation: gwinnettCountyData.demographics.raceDistribution.hispanic,
+          dualEligibleRate: gwinnettCountyData.dualEligibleRate,
+          maPenetrationRate: gwinnettCountyData.maPenetrationRate
         }}
-        marketMetrics={{
+        keyMetrics={{
+          totalEnrollment: gwinnettCountyData.totalEnrollment,
           opportunityScore: gwinnettCountyData.opportunityScore,
+          addressableMarket: gwinnettCountyData.addressableMarket,
+          potentialRevenue: gwinnettCountyData.potentialRevenue,
+          pageType: 'medicare_advantage_county',
           competitionLevel: gwinnettCountyData.competitionLevel,
-          addressableMarket: gwinnettCountyData.addressableMarket
+          diversityIndex: diversityIndex
         }}
+      />
+
+      {/* Marketing Strategy Implementation */}
+      <MarketingOptimizer
+        pageKey="gwinnett-county-georgia"
+        enableDynamicOptimization={true}
+        trackKeywordPerformance={true}
       />
 
       {/* Structured Data */}
@@ -301,7 +313,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
 
         {/* Market Overview */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Gwinnett County Medicare Market</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Medicare Advantage Market Overview</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             <div className="bg-emerald-50 rounded-xl p-8">
@@ -350,7 +362,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
           </div>
 
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">🏘️ Why Gwinnett County is a Premier Growing Medicare Market</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Gwinnett County is a Premier Growing Medicare Market</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <ul className="space-y-3">
                 {gwinnettCountyData.keyFeatures.slice(0, 3).map((feature, index) => (
@@ -374,7 +386,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
 
         {/* Community Breakdown */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Gwinnett County Communities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Major Cities and Communities</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-emerald-50 border border-emerald-200 p-6 rounded-lg">
@@ -441,13 +453,13 @@ export default function GwinnettCountyMedicareAdvantagePage() {
 
         {/* Growing Community Focus */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Serving Gwinnett County's Growing Communities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Healthcare Services for Growing Communities</h2>
           
           <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-8 mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Family-Oriented & Multicultural Healthcare</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">Family-Oriented and Multicultural Healthcare</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-gray-800 mb-4">🏘️ Suburban Family Focus</h4>
+                <h4 className="font-semibold text-gray-800 mb-4">Suburban Family Focus</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-emerald-500 mr-2">•</span>
@@ -469,7 +481,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
               </div>
               
               <div>
-                <h4 className="font-semibold text-gray-800 mb-4">🌍 Multicultural Suburban Services</h4>
+                <h4 className="font-semibold text-gray-800 mb-4">Multicultural Suburban Services</h4>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-teal-500 mr-2">•</span>
@@ -495,11 +507,11 @@ export default function GwinnettCountyMedicareAdvantagePage() {
 
         {/* Healthcare Network */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Gwinnett County Healthcare Network</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Healthcare Networks and Providers</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-emerald-600 mb-4">🏥 Major Healthcare Systems</h3>
+              <h3 className="text-xl font-semibold text-emerald-600 mb-4">Major Healthcare Systems</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-emerald-500 mr-2">🏥</span>
@@ -525,7 +537,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
             </div>
             
             <div className="bg-teal-50 border border-teal-200 rounded-xl p-6">
-              <h3 className="text-xl font-semibold text-teal-600 mb-4">🎯 Network Advantages</h3>
+              <h3 className="text-xl font-semibold text-teal-600 mb-4">Network Advantages</h3>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-teal-500 mr-2">✓</span>
@@ -552,7 +564,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
           </div>
           
           <div className="mt-8 bg-emerald-50 border-l-4 border-emerald-400 p-6 rounded">
-            <h4 className="font-semibold text-emerald-800 mb-2">🏘️ Gwinnett County Healthcare Growth:</h4>
+            <h4 className="font-semibold text-emerald-800 mb-2">Gwinnett County Healthcare Growth</h4>
             <p className="text-emerald-700">
               Gwinnett County offers Medicare Advantage members access to Georgia's most rapidly expanding suburban healthcare ecosystem. 
               With Northside Hospital Gwinnett, Gwinnett Medical Center, and modern specialty facilities leading suburban medical excellence, 
@@ -565,7 +577,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
         {/* Strategic Marketing Section - Growth Focus */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🏘️ Why Gwinnett County Residents Choose Medicare Advantage</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Gwinnett County Residents Choose Medicare Advantage</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
@@ -594,7 +606,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-emerald-200">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">🏘️ Special Services for Growing Communities</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Special Services for Growing Communities</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
@@ -623,7 +635,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
           {/* Community-Specific Benefits */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-emerald-50 p-6 rounded-lg border border-emerald-200">
-              <h4 className="font-semibold text-emerald-800 mb-3">📍 Lawrenceville Area Plans</h4>
+              <h4 className="font-semibold text-emerald-800 mb-3">Lawrenceville Area Plans</h4>
               <p className="text-emerald-700 text-sm mb-3">63,200+ Medicare beneficiaries in Lawrenceville and surrounding areas have access to Northside Gwinnett and comprehensive suburban healthcare networks.</p>
               <ul className="text-sm text-emerald-600 space-y-1">
                 <li>• Premier suburban healthcare</li>
@@ -633,7 +645,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
             </div>
             
             <div className="bg-teal-50 p-6 rounded-lg border border-teal-200">
-              <h4 className="font-semibold text-teal-800 mb-3">📍 North Gwinnett Communities</h4>
+              <h4 className="font-semibold text-teal-800 mb-3">North Gwinnett Communities</h4>
               <p className="text-teal-700 text-sm mb-3">46,500+ Medicare enrollees in Duluth, Buford, and surrounding areas benefit from affluent community healthcare and modern medical facilities.</p>
               <ul className="text-sm text-teal-600 space-y-1">
                 <li>• Affluent community care</li>
@@ -643,7 +655,7 @@ export default function GwinnettCountyMedicareAdvantagePage() {
             </div>
             
             <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-              <h4 className="font-semibold text-green-800 mb-3">📍 South/Central Gwinnett</h4>
+              <h4 className="font-semibold text-green-800 mb-3">South and Central Gwinnett</h4>
               <p className="text-green-700 text-sm mb-3">32,300+ Medicare beneficiaries in Norcross, Snellville, and Lilburn enjoy multicultural healthcare services with language accessibility and cultural competency.</p>
               <ul className="text-sm text-green-600 space-y-1">
                 <li>• Multicultural services</li>
@@ -654,13 +666,79 @@ export default function GwinnettCountyMedicareAdvantagePage() {
           </div>
         </section>
 
+        {/* Primary Internal Links */}
+        <section className="mb-16">
+          <PrimaryLinksSection
+            currentPageKey="gwinnett-county-georgia"
+            className="bg-white p-8 rounded-lg shadow-sm"
+          />
+        </section>
+
+        {/* Related Topics and Cross-Sells */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Compare Similar Growing Communities</h2>
+          <div className="mb-8">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Related Medicare Markets</h3>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <div className="space-y-4">
+                <Link href="/medicare-advantage/san-francisco-county" className="block group">
+                  <div className="flex items-center justify-between p-4 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+                    <div>
+                      <h4 className="font-medium text-gray-900 group-hover:text-blue-600">San Francisco County Medicare Advantage</h4>
+                      <p className="text-sm text-gray-600">Premium urban networks with tech-savvy features</p>
+                    </div>
+                    <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+                <Link href="/medicare-advantage/duval-county-florida" className="block group">
+                  <div className="flex items-center justify-between p-4 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+                    <div>
+                      <h4 className="font-medium text-gray-900 group-hover:text-blue-600">Duval County Florida Medicare Advantage</h4>
+                      <p className="text-sm text-gray-600">Jacksonville retirement communities with Mayo Clinic access</p>
+                    </div>
+                    <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+                <Link href="/duke-vs-unc-rex-medicare-advantage-wake-county" className="block group">
+                  <div className="flex items-center justify-between p-4 bg-white rounded-lg border hover:border-blue-300 transition-colors">
+                    <div>
+                      <h4 className="font-medium text-gray-900 group-hover:text-blue-600">Duke vs UNC REX Wake County</h4>
+                      <p className="text-sm text-gray-600">Compare top academic medical center networks</p>
+                    </div>
+                    <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+              </div>
+            </div>
+
+            <CrossSellSection
+              currentPageKey="gwinnett-county-georgia"
+              className="bg-blue-50 p-6 rounded-lg"
+            />
+          </div>
+        </section>
+
+        {/* Contextual Links */}
+        <section className="mb-16">
+          <ContextualLinksSection
+            currentPageKey="gwinnett-county-georgia"
+            className=""
+          />
+        </section>
+
         {/* Call to Action */}
         <section className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-8 rounded-lg">
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">🏘️ Get Expert Gwinnett County Medicare Guidance</h2>
+            <h2 className="text-3xl font-bold mb-4">Get Expert Gwinnett County Medicare Guidance</h2>
             <p className="text-emerald-100 mb-6 max-w-3xl mx-auto">
-              Navigate Georgia's fastest-growing suburban healthcare landscape with family-oriented Medicare Advantage coverage. 
-              Get personalized Georgia Medicare expertise from licensed agents who understand growing diverse communities, 
+              Navigate Georgia's fastest-growing suburban healthcare landscape with family-oriented Medicare Advantage coverage.
+              Get personalized Georgia Medicare expertise from licensed agents who understand growing diverse communities,
               suburban family needs, and multicultural healthcare access requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
