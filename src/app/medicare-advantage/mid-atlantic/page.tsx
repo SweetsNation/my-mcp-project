@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find & compare top Medicare Advantage plans in VA, MD, DC, DE, PA. $0 premium options with 4-5 star ratings available. Licensed agents help you choose the best plan for your needs during 2025 open enrollment.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/mid-atlantic',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mid-atlantic',
   },
 };
 
@@ -169,7 +169,7 @@ export default function MidAtlanticPage() {
     "@type": "InsuranceAgency",
     "name": "El-Mag Insurance - Medicare Advantage Mid-Atlantic",
     "description": "Licensed Medicare insurance agency serving Virginia, Maryland, DC, Delaware, and Pennsylvania with Medicare Advantage plan enrollment and consultation services.",
-    "url": "https://elmag-insurance.com/medicare-advantage/mid-atlantic",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mid-atlantic",
     "telephone": "331-343-2584",
     "areaServed": [
       "Virginia", "Maryland", "Washington DC", "Delaware", "Pennsylvania"

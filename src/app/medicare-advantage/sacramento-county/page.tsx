@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/sacramento-county-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/sacramento-county',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county',
   },
   robots: {
     index: true,

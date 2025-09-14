@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find top-rated Medicare Advantage plans in Mecklenburg County, NC with $0 premiums and comprehensive Charlotte metro networks. Free expert guidance from licensed agents.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina',
       name: 'Medicare Advantage Plans Mecklenburg County North Carolina 2025',
       description: 'Compare Medicare Advantage plans in Mecklenburg County, North Carolina with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina/#product',
       name: 'Best Medicare Advantage Plans Mecklenburg County North Carolina 2025',
       category: 'Health Insurance',
       description: 'Top-rated Medicare Advantage plans in Mecklenburg County, NC with 5-star provider networks, $0 premium options, and comprehensive benefits serving Charlotte, Matthews, Huntersville metro area with culturally competent healthcare and expert enrollment assistance.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'NC',
@@ -173,7 +173,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/mecklenburg-county-north-carolina/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina/#service',
       name: 'El-Mag Insurance Medicare Services - Mecklenburg County',
       description: 'Medicare Advantage plan consultation services for Mecklenburg County, North Carolina residents',
       telephone: '331-343-2584',

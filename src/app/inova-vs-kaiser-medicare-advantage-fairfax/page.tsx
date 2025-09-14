@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/fairfax-medicare-advantage-comparison.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/inova-vs-kaiser-medicare-advantage-fairfax',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/inova-vs-kaiser-medicare-advantage-fairfax',
   },
   robots: {
     index: true,

@@ -44,7 +44,7 @@ export default function HiddenMedicareAdvantageNorthernVirginia() {
     "@type": "LocalBusiness",
     "name": "Northern Virginia Hidden Medicare Advantage Benefits Specialists",
     "description": "Discover $10,400+ in hidden Medicare Advantage benefits for Northern Virginia seniors. Federal employee exclusive perks, wellness programs, and concierge medicine access.",
-    "url": "https://elmag-insurance.com/hidden-medicare-advantage-benefits-northern-virginia",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/hidden-medicare-advantage-benefits-northern-virginia",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

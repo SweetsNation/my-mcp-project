@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage networks in Nashville: HCA vs Vanderbilt. 46 plans available with 20 $0 premium options.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/vanderbilt-vs-hca-medicare-advantage-nashville',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/vanderbilt-vs-hca-medicare-advantage-nashville',
   },
 };
 
@@ -191,9 +191,9 @@ export default function VanderbiltvsHCANashvillePage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/vanderbilt-vs-hca-medicare-advantage-nashville",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/vanderbilt-vs-hca-medicare-advantage-nashville",
             "sameAs": [
-              "https://elmag-insurance.com"
+              "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app"
             ],
             "areaServed": {
               "@type": "AdministrativeArea",
@@ -211,7 +211,7 @@ export default function VanderbiltvsHCANashvillePage() {
             "@type": "WebPage",
             "name": "Medicare Advantage Nashville TN 2025 | 46 Plans Available | Vanderbilt vs HCA",
             "description": "Compare Medicare Advantage plans in Nashville TN. 46 plans available, 20 with $0 premiums. 57.11% enrollment rate. Vanderbilt network changes, HCA extensive coverage.",
-            "url": "https://elmag-insurance.com/vanderbilt-vs-hca-medicare-advantage-nashville",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/vanderbilt-vs-hca-medicare-advantage-nashville",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [

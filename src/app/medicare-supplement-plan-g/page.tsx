@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/medicare-supplement-plan-g',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-g',
   },
   twitter: {
     card: 'summary_large_image',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'Most popular Medigap plan! Only $240 deductible, then 100% coverage. No networks, see any doctor. Get free quotes.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-supplement-plan-g',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-g',
   },
 }
 
@@ -42,7 +42,7 @@ const structuredData = {
   '@type': 'WebPage',
   name: 'Medicare Supplement Plan G 2025',
   description: 'Medicare Supplement Plan G: Most popular Medigap choice with only $240 deductible, then 100% coverage. No networks, see any doctor.',
-  url: 'https://elmag-insurance.com/medicare-supplement-plan-g',
+  url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-g',
   datePublished: '2024-08-27',
   dateModified: '2024-08-27',
   inLanguage: 'en-US',
@@ -60,7 +60,7 @@ const structuredData = {
   provider: {
     '@type': 'Organization',
     name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
     telephone: '331-343-2584',
     email: 'support@elmaginsurance.com',
     address: {

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/whole-life-insurance-guide-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/whole-life-insurance',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/whole-life-insurance',
   },
   robots: {
     index: true,
@@ -303,7 +303,7 @@ export default function WholeLifeInsurancePage() {
               "@type": "Organization",
               "name": "El-Mag Insurance",
               "telephone": "331-343-2584",
-              "url": "https://elmag-insurance.com"
+              "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app"
             },
             "areaServed": "United States",
             "serviceType": "Life Insurance Consultation"

@@ -2,14 +2,30 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Ask AI Medicare Questions - Get Instant Expert Answers | Free Medicare AI Help',
-  description: 'Ask any Medicare question and get instant AI-powered expert answers. Free Medicare help available 24/7. No appointments needed - just ask and get answers immediately.',
-  keywords: 'ask AI Medicare questions, Medicare AI help, AI Medicare answers, free Medicare questions, AI health insurance help, automated Medicare guidance',
+  title: 'Ask AI Medicare Questions 2025 - Get Instant Expert Answers Free | Medicare AI Assistant',
+  description: 'Ask any Medicare question and get instant AI-powered expert answers. Free Medicare help available 24/7 - Medicare guidance, plan comparison, enrollment help. No appointments needed - get Medicare answers immediately!',
+  keywords: 'ask AI Medicare questions, Medicare AI help, AI Medicare answers, free Medicare questions, Medicare guidance, Medicare advice, Medicare assistant, AI health insurance help, automated Medicare guidance, Medicare questions and answers, Medicare help free, Medicare confusing help, Medicare made simple, Medicare chatbot, turning 65 Medicare questions',
   openGraph: {
-    title: 'Ask AI Medicare Questions - Instant Expert Answers 24/7',
-    description: 'Get immediate answers to any Medicare question using AI technology. Free, fast, and available anytime.',
+    title: 'Ask AI Medicare Questions 2025 - Instant Expert Answers 24/7',
+    description: 'Get immediate answers to any Medicare question using AI technology. Free Medicare guidance, plan comparison, and enrollment help. Available 24/7!',
     type: 'article',
+    url: 'https://el-mag.com/ask-ai-medicare-questions',
+    siteName: 'El-Mag Medicare Insurance',
+    images: [{
+      url: 'https://el-mag.com/images/ask-ai-medicare-questions-og.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Ask AI Medicare Questions - Get Instant Expert Answers'
+    }]
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ask AI Medicare Questions - Free 24/7 Help',
+    description: 'Get instant AI-powered answers to any Medicare question. Free guidance, plan comparison, and enrollment help available 24/7.',
+  },
+  alternates: {
+    canonical: 'https://el-mag.com/ask-ai-medicare-questions'
+  }
 }
 
 const qnaStructuredData = {
@@ -97,18 +113,22 @@ export default function AskAIMedicareQuestionsPage() {
             <span className="font-bold">💬 Ask AI Anything About Medicare</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Ask AI Medicare Questions - Get Instant Answers
+            Ask AI Medicare Questions 2025 - Get Instant Expert Answers | Free Medicare Help
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Have a Medicare question? Ask our AI assistant and get expert-level answers instantly. 
-            Available 24/7, completely free, and designed to help you make informed Medicare decisions.
+            Have a Medicare question? Ask our AI Medicare assistant and get expert-level answers instantly.
+            Free Medicare help available 24/7 - Medicare guidance, plan comparison, enrollment assistance.
+            No appointments needed, no confusing websites - just ask and get clear Medicare answers immediately.
           </p>
+          <div className="bg-green-50 border border-green-200 p-4 rounded-lg mt-4">
+            <p className="text-green-800 font-semibold">🎯 Medicare Made Simple: Over 10,000+ Medicare questions answered by AI. Trusted by seniors nationwide!</p>
+          </div>
         </div>
 
         {/* Quick Start Section */}
         <section className="bg-blue-50 border border-blue-200 p-8 rounded-lg mb-12">
           <div className="text-center mb-6">
-            <h2 className="text-2xl font-bold text-blue-800 mb-2">🚀 Start Asking Questions Now</h2>
+            <h2 className="text-2xl font-bold text-blue-800 mb-2">🚀 How to Ask AI Medicare Questions - Start Now</h2>
             <p className="text-blue-700">Type your Medicare question just like you'd ask a friend. Our AI understands natural language!</p>
           </div>
           
@@ -350,6 +370,14 @@ export default function AskAIMedicareQuestionsPage() {
                 <li>• "Can I get help paying for medications?"</li>
                 <li>• "What if my drug isn't covered?"</li>
               </ul>
+              <div className="mt-4 p-3 bg-purple-50 border border-purple-200 rounded">
+                <p className="text-purple-800 text-sm">
+                  💡 <strong>Want to save even more on prescriptions?</strong> You might qualify for Medicare Extra Help.
+                  <Link href="/medicare-extra-help-qualification-quiz" className="text-purple-700 hover:text-purple-900 underline font-semibold ml-1">
+                    Take our free quiz to see if you can save $5,000+ annually
+                  </Link>
+                </p>
+              </div>
             </div>
 
             <div className="bg-white border border-gray-200 p-6 rounded-lg">
@@ -361,6 +389,14 @@ export default function AskAIMedicareQuestionsPage() {
                 <li>• "Do I qualify for Medicare financial help?"</li>
                 <li>• "What's IRMAA and do I pay it?"</li>
               </ul>
+              <div className="mt-4 p-3 bg-orange-50 border border-orange-200 rounded">
+                <p className="text-orange-800 text-sm">
+                  💰 <strong>Looking for financial assistance?</strong> You might qualify for Medicare Extra Help.
+                  <Link href="/medicare-extra-help-qualification-quiz" className="text-orange-700 hover:text-orange-900 underline font-semibold ml-1">
+                    Check eligibility and save thousands
+                  </Link>
+                </p>
+              </div>
             </div>
 
             <div className="bg-white border border-gray-200 p-6 rounded-lg">
@@ -522,6 +558,6 @@ export default function AskAIMedicareQuestionsPage() {
           </div>
         </section>
       </div>
-    </main>
+      </main>
   )
 }

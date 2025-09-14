@@ -2,14 +2,30 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Medicare Extra Help Qualification Quiz - Am I Eligible? | Free Assessment',
-  description: 'Take our free Medicare Extra Help qualification quiz to see if you qualify for prescription drug cost assistance. Get instant results and learn about your benefits.',
-  keywords: 'Medicare Extra Help qualification quiz, am I eligible for Extra Help, Medicare LIS quiz, do I qualify for Extra Help, Medicare prescription assistance eligibility',
+  title: 'Medicare Extra Help Eligibility Quiz 2025 - Am I Eligible? Save $5,000+ on Prescriptions',
+  description: 'Take our free Medicare Extra Help qualification quiz to see if you qualify for prescription drug cost assistance. Get instant results - save up to $5,000+ annually on Medicare Part D. Check your eligibility now!',
+  keywords: 'Medicare Extra Help eligibility, Medicare LIS qualification, Medicare prescription assistance, Medicare Part D Extra Help, Medicare Low Income Subsidy, am I eligible for Medicare Extra Help, Medicare prescription drug help, free Medicare prescription assistance, Medicare Extra Help income limits 2025, do I qualify for Medicare prescription help',
   openGraph: {
-    title: 'Medicare Extra Help Qualification Quiz - Check Your Eligibility',
-    description: 'Free quiz to determine if you qualify for Medicare Extra Help prescription drug assistance. Get instant results and next steps.',
+    title: 'Medicare Extra Help Qualification Quiz 2025 - Save $5,000+ on Prescriptions',
+    description: 'Free Medicare Extra Help eligibility quiz. Find out if you qualify for prescription drug cost assistance and save thousands annually. Instant results!',
     type: 'article',
+    url: 'https://el-mag.com/medicare-extra-help-qualification-quiz',
+    siteName: 'El-Mag Medicare Insurance',
+    images: [{
+      url: 'https://el-mag.com/images/medicare-extra-help-quiz-og.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Medicare Extra Help Qualification Quiz - Save on Prescription Costs'
+    }]
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Medicare Extra Help Quiz - Save $5,000+ on Prescriptions',
+    description: 'Free eligibility quiz for Medicare prescription drug assistance. Check if you qualify for Extra Help and save thousands on medication costs.',
+  },
+  alternates: {
+    canonical: 'https://el-mag.com/medicare-extra-help-qualification-quiz'
+  }
 }
 
 const quizStructuredData = {
@@ -47,27 +63,34 @@ const quizStructuredData = {
 export default function ExtraHelpQuizPage() {
   return (
     <main className="min-h-screen">
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(quizStructuredData)
-        }}
-      />
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(quizStructuredData)
+          }}
+        />
+        <div className="container mx-auto px-4 py-8 max-w-4xl">
         <div className="mb-8">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-lg inline-block mb-4">
+            <span className="font-bold">🎯 Free Medicare Extra Help Eligibility Quiz 2025</span>
+          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Medicare Extra Help Qualification Quiz
+            Medicare Extra Help Eligibility Quiz 2025 - Am I Eligible for Prescription Drug Assistance?
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed">
-            Answer a few simple questions to find out if you qualify for Medicare Extra Help (Low Income Subsidy) 
-            and could save thousands on prescription drug costs.
+            Take our free Medicare Extra Help qualification quiz to see if you qualify for Low Income Subsidy (LIS) benefits.
+            Find out if you're eligible for prescription drug cost assistance and could save up to $5,000+ annually on Medicare Part D costs.
+            Have questions about Extra Help or Medicare? <Link href="/ask-ai-medicare-questions" className="text-blue-600 hover:text-blue-800 underline">Ask our AI Medicare assistant</Link> for instant expert answers.
           </p>
+          <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mt-4">
+            <p className="text-yellow-800 font-semibold">⏰ Don't miss out! Over 12 million Medicare beneficiaries qualify for Extra Help but many don't apply.</p>
+          </div>
         </div>
 
         {/* Benefits Overview */}
-        <div className="bg-blue-50 p-6 rounded-lg mb-8">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">What You Could Save with Extra Help</h2>
+        <section className="bg-blue-50 p-6 rounded-lg mb-8">
+          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Medicare Extra Help Savings: What You Could Save</h2>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600">$0</div>
@@ -82,7 +105,7 @@ export default function ExtraHelpQuizPage() {
               <div className="text-blue-700 text-sm">Average Annual Savings</div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Quiz Section */}
         <section className="mb-12">
@@ -442,9 +465,22 @@ export default function ExtraHelpQuizPage() {
                 Do I need to reapply every year?
               </h3>
               <p className="text-gray-700">
-                No, Extra Help benefits continue automatically as long as you remain eligible. Social Security 
+                No, Extra Help benefits continue automatically as long as you remain eligible. Social Security
                 may periodically review your eligibility and ask for updated information.
               </p>
+            </div>
+
+            <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                Have More Medicare Questions?
+              </h3>
+              <p className="text-blue-700 mb-3">
+                Get instant answers to any Medicare question with our AI assistant. Available 24/7 for free guidance
+                on Medicare plans, costs, enrollment, and more.
+              </p>
+              <Link href="/ask-ai-medicare-questions" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold">
+                Ask AI Your Medicare Questions →
+              </Link>
             </div>
           </div>
         </section>
@@ -474,24 +510,48 @@ export default function ExtraHelpQuizPage() {
 
         {/* Related Resources */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Resources</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Related Medicare Resources & Tools</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/medicare-extra-help" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">Extra Help Program Guide</h3>
+            <Link href="/ask-ai-medicare-questions" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">Ask AI Medicare Questions</h3>
               <p className="text-gray-600 text-sm">
-                Complete guide to Medicare Extra Help benefits and application process
+                Get instant answers to any Medicare question with our AI assistant available 24/7
               </p>
             </Link>
-            <Link href="/medicare-lis-program" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">Medicare LIS Program</h3>
+            <Link href="/medicare-cost-calculator" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">Medicare Cost Calculator</h3>
               <p className="text-gray-600 text-sm">
-                Understanding the Low Income Subsidy program and qualification requirements
+                Calculate your Medicare costs including potential Extra Help savings
               </p>
             </Link>
-            <Link href="/medicare-part-d" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
-              <h3 className="text-lg font-semibold text-blue-600 mb-2">Part D Plans</h3>
+            <Link href="/d-snp-plans-davidson-county-dual-eligible-benefits" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">D-SNP Plans for Dual Eligible</h3>
               <p className="text-gray-600 text-sm">
-                Learn about Medicare Part D prescription drug plans and coverage options
+                Enhanced benefits if you qualify for both Medicare and Medicaid
+              </p>
+            </Link>
+            <Link href="/medicare-disability-insurance" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">Disability Medicare Coverage</h3>
+              <p className="text-gray-600 text-sm">
+                Special Medicare considerations for those eligible due to disability
+              </p>
+            </Link>
+            <Link href="/medicare-supplement-plan-n" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">Medicare Supplement Plan N</h3>
+              <p className="text-gray-600 text-sm">
+                Alternative to Medicare Advantage with predictable copays and costs
+              </p>
+            </Link>
+            <Link href="/medicare-advantage-maui-county" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">Regional Medicare Options</h3>
+              <p className="text-gray-600 text-sm">
+                Explore Medicare Advantage plans by location with Extra Help coordination
+              </p>
+            </Link>
+            <Link href="/medicare-advantage-broward-county" className="bg-white border border-gray-200 p-6 rounded-lg hover:shadow-md transition-shadow">
+              <h3 className="text-lg font-semibold text-blue-600 mb-2">South Florida Medicare</h3>
+              <p className="text-gray-600 text-sm">
+                Medicare Advantage plans in Broward County with snowbird benefits
               </p>
             </Link>
           </div>
@@ -502,7 +562,7 @@ export default function ExtraHelpQuizPage() {
             ← Back to Medicare Extra Help
           </Link>
         </nav>
-      </div>
-    </main>
+        </div>
+      </main>
   )
 }

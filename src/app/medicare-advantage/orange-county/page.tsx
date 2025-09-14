@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/orange-county-california-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/orange-county',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/orange-county',
   },
   robots: {
     index: true,
@@ -164,7 +164,7 @@ export default function OrangeCountyPage() {
     "@type": "LocalBusiness",
     "name": "Orange County Premium Medicare Advantage Specialists",
     "description": "Premium Medicare Advantage plans for Orange County California affluent seniors. Expert guidance for luxury healthcare coverage with concierge medicine options.",
-    "url": "https://elmag-insurance.com/medicare-advantage/orange-county",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/orange-county",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

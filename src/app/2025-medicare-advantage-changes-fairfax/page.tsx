@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Get the latest updates on 2025 Medicare Advantage changes for Fairfax VA. 36 plans with new benefits and expanded networks.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/2025-medicare-advantage-changes-fairfax',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/2025-medicare-advantage-changes-fairfax',
   },
 };
 
@@ -121,9 +121,9 @@ export default function Medicare2025ChangesFairfaxPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/2025-medicare-advantage-changes-fairfax",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/2025-medicare-advantage-changes-fairfax",
             "sameAs": [
-              "https://elmag-insurance.com"
+              "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app"
             ],
             "areaServed": {
               "@type": "AdministrativeArea",
@@ -141,7 +141,7 @@ export default function Medicare2025ChangesFairfaxPage() {
             "@type": "WebPage",
             "name": "2025 Medicare Advantage Changes Fairfax VA | 36 Plans Available",
             "description": "Discover the latest 2025 Medicare Advantage changes in Fairfax VA. 36 plans available, 15 with $0 premiums. New Inova network expansions and enhanced benefits.",
-            "url": "https://elmag-insurance.com/2025-medicare-advantage-changes-fairfax",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/2025-medicare-advantage-changes-fairfax",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [

@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://elmag-insurance.com';
+const baseUrl = 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app';
 
 // Medicare Advantage county pages
 const locations = [

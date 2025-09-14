@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/cobra-insurance-guide-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/cobra-insurance',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/cobra-insurance',
   },
   robots: {
     index: true,
@@ -257,7 +257,7 @@ export default function CobraInsurancePage() {
               "name": "El-Mag Insurance",
               "description": "Professional health insurance consultants specializing in COBRA and marketplace coverage",
               "telephone": "331-343-2584",
-              "url": "https://elmag-insurance.com",
+              "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app",
               "sameAs": [
                 "https://www.facebook.com/ElMagInsurance",
                 "https://www.linkedin.com/company/el-mag-insurance"
@@ -341,7 +341,7 @@ export default function CobraInsurancePage() {
             "@type": "WebPage",
             "name": "COBRA Insurance 2025 Complete Guide - Continuation Coverage Explained",
             "description": "Complete COBRA insurance guide covering eligibility, costs, qualifying events, and alternatives to continuation coverage. Expert guidance for health insurance transitions.",
-            "url": "https://elmag-insurance.com/cobra-insurance",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/cobra-insurance",
             "mainEntity": {
               "@type": "Article",
               "headline": "COBRA Insurance 2025: Complete Guide to Continuation Coverage",
@@ -354,7 +354,7 @@ export default function CobraInsurancePage() {
                 "name": "El-Mag Insurance",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://elmag-insurance.com/logo.png"
+                  "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png"
                 }
               },
               "datePublished": "2024-10-01",
@@ -387,19 +387,19 @@ export default function CobraInsurancePage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://elmag-insurance.com/"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Health Insurance",
-                  "item": "https://elmag-insurance.com/health-insurance-marketplace"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/health-insurance-marketplace"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "COBRA Insurance",
-                  "item": "https://elmag-insurance.com/cobra-insurance"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/cobra-insurance"
                 }
               ]
             },

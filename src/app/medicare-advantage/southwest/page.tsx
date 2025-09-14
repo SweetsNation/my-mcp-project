@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find & compare top Medicare Advantage plans in TX, AZ, NM, NV, CO. $0 premium options with bilingual Spanish support available. Licensed agents help during 2025 open enrollment.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/southwest',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/southwest',
   },
 };
 
@@ -192,7 +192,7 @@ export default function SouthwestPage() {
     "@type": "InsuranceAgency",
     "name": "El-Mag Insurance - Medicare Advantage Southwest",
     "description": "Licensed Medicare insurance agency serving Texas, Arizona, New Mexico, Nevada, and Colorado with bilingual Medicare Advantage plan enrollment and consultation services.",
-    "url": "https://elmag-insurance.com/medicare-advantage/southwest",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/southwest",
     "telephone": "331-343-2584",
     "areaServed": [
       "Texas", "Arizona", "New Mexico", "Nevada", "Colorado"

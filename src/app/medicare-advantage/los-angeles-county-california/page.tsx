@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find & compare top Medicare Advantage plans in Los Angeles County, CA. $0 premium options with bilingual support and multicultural services. Licensed agents help during 2025 open enrollment.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/los-angeles-county-california',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/los-angeles-county-california',
   },
 };
 
@@ -200,7 +200,7 @@ export default function LosAngelesCountyCaliforniaPage() {
     "@type": "InsuranceAgency",
     "name": "El-Mag Insurance - Medicare Advantage Los Angeles County",
     "description": "Licensed Medicare insurance agency serving Los Angeles County, California with multicultural Medicare Advantage plan enrollment and consultation services.",
-    "url": "https://elmag-insurance.com/medicare-advantage/los-angeles-county-california",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/los-angeles-county-california",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "AdministrativeArea",

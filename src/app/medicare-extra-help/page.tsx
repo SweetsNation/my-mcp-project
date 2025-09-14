@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/medicare-extra-help',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-extra-help',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Get FREE Medicare prescription drug coverage with Extra Help! $0 premiums, low copays. Check if you qualify instantly.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-extra-help',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-extra-help',
   },
 };
 
@@ -32,7 +32,7 @@ const structuredData = {
   '@type': 'WebPage',
   name: 'Medicare Extra Help 2025 | Low Income Subsidy Program',
   description: 'Complete guide to Medicare Extra Help (Low Income Subsidy) program. Check eligibility, learn benefits, and get help applying for free prescription drug coverage.',
-  url: 'https://elmag-insurance.com/medicare-extra-help',
+  url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-extra-help',
   datePublished: '2024-08-24',
   dateModified: '2024-08-24',
   inLanguage: 'en-US',
@@ -49,7 +49,7 @@ const structuredData = {
   provider: {
     '@type': 'Organization',
     name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
     telephone: '331-343-2584',
     email: 'support@elmaginsurance.com',
     address: {

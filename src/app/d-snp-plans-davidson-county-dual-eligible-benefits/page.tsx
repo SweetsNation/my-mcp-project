@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'D-SNP Plans Davidson County TN - Dual Eligible Special Needs Plans 2025',
   description: 'Find Dual Special Needs Plans (D-SNP) in Davidson County TN. Medicare & Medicaid coordination, enhanced benefits for dual eligible members, Vanderbilt network access.',
-  keywords: 'D-SNP plans Davidson County, dual eligible special needs plans Tennessee, Medicare Medicaid Nashville, Vanderbilt dual eligible benefits'
+  keywords: 'D-SNP plans Davidson County, dual eligible special needs plans Tennessee, Medicare Medicaid Nashville, Vanderbilt dual eligible benefits',
+  alternates: {
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/d-snp-plans-davidson-county-dual-eligible-benefits',
+  },
 };
 
 export default function DSNPPlansDavidsonCountyDualEligibleBenefits() {

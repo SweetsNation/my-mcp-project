@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find & compare top Medicare Advantage plans in CA, OR, WA. $0 premium options with innovative telehealth and world-class providers available. Licensed agents help during 2025 open enrollment.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/west-coast',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/west-coast',
   },
 };
 
@@ -200,7 +200,7 @@ export default function WestCoastPage() {
     "@type": "InsuranceAgency",
     "name": "El-Mag Insurance - Medicare Advantage West Coast",
     "description": "Licensed Medicare insurance agency serving California, Oregon, and Washington with innovative Medicare Advantage plan enrollment and consultation services.",
-    "url": "https://elmag-insurance.com/medicare-advantage/west-coast",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/west-coast",
     "telephone": "331-343-2584",
     "areaServed": [
       "California", "Oregon", "Washington"

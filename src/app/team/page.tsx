@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team',
   },
   twitter: {
     card: 'summary_large_image',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Licensed insurance specialists with expertise across all major insurance types. Get expert guidance for your insurance needs.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team',
   },
 }
 
@@ -31,7 +31,7 @@ const teamStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'El-Mag Insurance Team',
-  url: 'https://elmag-insurance.com/team',
+  url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team',
   description: 'Professional insurance agency with licensed specialists in Medicare, health insurance, life insurance, disability insurance, business insurance, and auto insurance.',
   telephone: '331-343-2584',
   email: 'support@elmaginsurance.com',
@@ -52,42 +52,42 @@ const teamStructuredData = {
       '@type': 'Person',
       name: 'Elsa Galicia-Lona',
       jobTitle: 'Senior Insurance Specialist',
-      url: 'https://elmag-insurance.com/team/elsa-galicia-lona',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
       knowsAbout: ['Medicare Advantage', 'Health Insurance Marketplace', 'International Health Insurance']
     },
     {
       '@type': 'Person',
       name: 'Magdalena Salinas',
       jobTitle: 'Social Security Advisor & Medicare Specialist',
-      url: 'https://elmag-insurance.com/team/magdalena-salinas',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
       knowsAbout: ['Social Security Benefits', 'Medicare Advantage', 'Supplemental Health Insurance', 'Health Insurance Marketplace']
     },
     {
       '@type': 'Person',
       name: 'Eric Salinas',
       jobTitle: 'Medicare Specialist',
-      url: 'https://elmag-insurance.com/team/eric-salinas',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas',
       knowsAbout: ['Medicare Supplement Plans', 'Medicare Part D', 'Medicare Advantage Plans', 'Hospital Indemnity Insurance']
     },
     {
       '@type': 'Person',
       name: 'Junior Goulbourne',
       jobTitle: 'Insurance Specialist',
-      url: 'https://elmag-insurance.com/team/junior-goulbourne',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne',
       knowsAbout: ['Medicare Advantage Plans', 'Final Expense Insurance', 'Life Insurance', 'Health Insurance Marketplace', 'Employee Benefits']
     },
     {
       '@type': 'Person',
       name: 'Yaissa Acosta',
       jobTitle: 'Insurance Specialist',
-      url: 'https://elmag-insurance.com/team/yaissa-acosta',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta',
       knowsAbout: ['Health Insurance Marketplace', 'Medicare Advantage Plans', 'Life Insurance', 'Supplemental Health Insurance']
     },
     {
       '@type': 'Person',
       name: 'Marcia Zulema Cordero Rizo',
       jobTitle: 'Insurance Specialist',
-      url: 'https://elmag-insurance.com/team/marcia-cordero',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero',
       knowsAbout: ['Health Insurance Marketplace', 'Life Insurance', 'Final Expense Insurance', 'Medicare Advantage', 'Health Discount Plans']
     }
   ]

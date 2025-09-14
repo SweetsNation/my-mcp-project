@@ -44,7 +44,7 @@ export default function HonoluluCountyMedicareAdvantage() {
     "@type": "LocalBusiness",
     "name": "Honolulu County Medicare Advantage Specialists | Multicultural Hawaii Healthcare",
     "description": "Urban Hawaii Medicare Advantage plans for Honolulu County multicultural communities. Expert guidance for Asian Pacific Islander Medicare with multilingual services on Oahu.",
-    "url": "https://elmag-insurance.com/medicare-advantage/honolulu-county",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/honolulu-county",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

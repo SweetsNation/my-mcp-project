@@ -13,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         '/static/',
       ],
     },
-    sitemap: 'https://elmag-insurance.com/sitemap.xml',
+    sitemap: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/sitemap.xml',
   };
 }

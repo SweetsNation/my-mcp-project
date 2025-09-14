@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare affordable Medicare Advantage plans in Guilford County, NC with expert guidance. Low-cost options for working-class retirees in Greensboro-High Point area.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina',
       name: 'Medicare Advantage Plans Guilford County North Carolina 2025',
       description: 'Compare Medicare Advantage plans in Guilford County, North Carolina with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina/#product',
       name: 'Affordable Medicare Advantage Plans Guilford County North Carolina 2025',
       category: 'Health Insurance',
       description: 'Low-cost Medicare Advantage plans in Guilford County, NC with affordable provider networks serving Greensboro, High Point, Jamestown, and Triad communities with accessible healthcare for working-class retirees and manufacturing heritage families.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'NC',
@@ -170,7 +170,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/guilford-county-north-carolina/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina/#service',
       name: 'El-Mag Insurance Medicare Services - Guilford County',
       description: 'Medicare Advantage plan consultation services for Guilford County, North Carolina residents',
       telephone: '331-343-2584',

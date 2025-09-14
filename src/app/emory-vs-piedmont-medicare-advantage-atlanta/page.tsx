@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/atlanta-medicare-advantage-comparison.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/emory-vs-piedmont-medicare-advantage-atlanta',
   },
   robots: {
     index: true,
@@ -302,7 +302,7 @@ export default function EmoryVsPiedmontAtlantaPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/emory-vs-piedmont-medicare-advantage-atlanta",
             "areaServed": [
               {
                 "@type": "AdministrativeArea",
@@ -414,7 +414,7 @@ export default function EmoryVsPiedmontAtlantaPage() {
             "@type": "WebPage",
             "name": "Emory vs Piedmont Medicare Advantage Atlanta 2025 Comparison",
             "description": "Compare Emory Healthcare vs Piedmont Medicare Advantage networks in Atlanta GA. 52 Medicare plans available with expert guidance on hospital coverage and benefits.",
-            "url": "https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/emory-vs-piedmont-medicare-advantage-atlanta",
             "mainEntity": {
               "@type": "Article",
               "headline": "Emory Healthcare vs Piedmont Medicare Advantage Atlanta 2025: Complete Network Comparison",
@@ -427,7 +427,7 @@ export default function EmoryVsPiedmontAtlantaPage() {
                 "name": "El-Mag Insurance",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://elmag-insurance.com/logo.png"
+                  "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png"
                 }
               },
               "datePublished": "2024-10-01",
@@ -460,19 +460,19 @@ export default function EmoryVsPiedmontAtlantaPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://elmag-insurance.com/"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Medicare Advantage",
-                  "item": "https://elmag-insurance.com/medicare-advantage"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Emory vs Piedmont Atlanta",
-                  "item": "https://elmag-insurance.com/emory-vs-piedmont-medicare-advantage-atlanta"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/emory-vs-piedmont-medicare-advantage-atlanta"
                 }
               ]
             }

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Medicare Plan F costs and benefits for 2025. Most comprehensive Medigap coverage available.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-supplement-plan-f',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-f',
   },
 };
 
@@ -189,7 +189,7 @@ export default function MedicareSupplementPlanFPage() {
             "@type": "FinancialService",
             "name": "El-Mag Insurance - Medicare Plan F Cost 2025",
             "description": "Medicare Supplement Plan F costs $227.83/month average in 2025. High-deductible Plan F only $82.50/month. Most comprehensive Medigap coverage available.",
-            "url": "https://elmag-insurance.com/medicare-supplement-plan-f",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-f",
             "telephone": "331-343-2584",
             "serviceType": "Medicare Supplement Plan F",
             "areaServed": {
@@ -229,7 +229,7 @@ export default function MedicareSupplementPlanFPage() {
             "@type": "WebPage",
             "name": "Medicare Plan F Cost 2025 | $227.83/Month Average | Medigap Plan F Benefits",
             "description": "Medicare Supplement Plan F costs $227.83/month average in 2025. High-deductible Plan F only $82.50/month. 36% market share. Pre-2020 Medicare eligibility required.",
-            "url": "https://elmag-insurance.com/medicare-supplement-plan-f",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-f",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [

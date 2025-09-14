@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/birmingham-fqhc-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/community-health-centers-medicare-advantage-birmingham',
   },
   robots: {
     index: true,
@@ -280,7 +280,7 @@ export default function CommunityHealthCentersBirminghamPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/community-health-centers-medicare-advantage-birmingham",
             "areaServed": [
               {
                 "@type": "AdministrativeArea",
@@ -377,7 +377,7 @@ export default function CommunityHealthCentersBirminghamPage() {
             "@type": "WebPage",
             "name": "Community Health Centers Medicare Advantage Birmingham AL 2025 - FQHC Guide",
             "description": "Complete guide to Medicare Advantage plans working with Community Health Centers in Birmingham Alabama. 42 FQHC-friendly plans with expert guidance.",
-            "url": "https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/community-health-centers-medicare-advantage-birmingham",
             "mainEntity": {
               "@type": "Article",
               "headline": "Community Health Centers Medicare Advantage Birmingham AL 2025: Complete FQHC Guide",
@@ -390,7 +390,7 @@ export default function CommunityHealthCentersBirminghamPage() {
                 "name": "El-Mag Insurance",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://elmag-insurance.com/logo.png"
+                  "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png"
                 }
               },
               "datePublished": "2024-10-01",
@@ -423,19 +423,19 @@ export default function CommunityHealthCentersBirminghamPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://elmag-insurance.com/"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Medicare Advantage",
-                  "item": "https://elmag-insurance.com/medicare-advantage"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Community Health Centers Birmingham",
-                  "item": "https://elmag-insurance.com/community-health-centers-medicare-advantage-birmingham"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/community-health-centers-medicare-advantage-birmingham"
                 }
               ]
             }

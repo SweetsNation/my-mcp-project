@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in DeKalb County, GA with expert guidance. Diverse community specialists and Atlanta metro healthcare with cultural competency for African American and multicultural seniors.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia',
   },
 };
 
@@ -76,24 +76,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia',
       name: 'Medicare Advantage Plans DeKalb County Georgia 2025',
       description: 'Compare Medicare Advantage plans in DeKalb County, Georgia with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia/#product',
       name: 'Best Medicare Advantage Plans DeKalb County Georgia 2025',
       category: 'Health Insurance',
       description: 'Top-rated Medicare Advantage plans in DeKalb County, GA with diverse community focus, Emory Healthcare access, cultural competency services, and multicultural provider networks serving Atlanta metro area including Decatur, Tucker, Stone Mountain, and surrounding diverse communities with African American senior focus and language accessibility.',
@@ -123,9 +123,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'GA',
@@ -171,7 +171,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/dekalb-county-georgia/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dekalb-county-georgia/#service',
       name: 'El-Mag Insurance Medicare Services - DeKalb County',
       description: 'Medicare Advantage plan consultation services for DeKalb County, Georgia residents',
       telephone: '331-343-2584',

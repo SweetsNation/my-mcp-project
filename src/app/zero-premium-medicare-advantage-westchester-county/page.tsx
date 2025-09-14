@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Zero Premium Medicare Advantage Plans Westchester County NY 2025',
   description: 'Find $0 premium Medicare Advantage plans in Westchester County NY. NewYork-Presbyterian network, White Plains & Yonkers providers, NYC access included. Get your free quote.',
-  keywords: 'zero premium Medicare Advantage Westchester County, $0 premium Medicare plans New York, NewYork-Presbyterian Medicare, White Plains Medicare Advantage'
+  keywords: 'zero premium Medicare Advantage Westchester County, $0 premium Medicare plans New York, NewYork-Presbyterian Medicare, White Plains Medicare Advantage',
+  alternates: {
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/zero-premium-medicare-advantage-westchester-county',
+  },
 };
 
 export default function ZeroPremiumMedicareAdvantageWestchesterCounty() {

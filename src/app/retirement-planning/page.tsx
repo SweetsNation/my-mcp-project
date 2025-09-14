@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/retirement-planning-services-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/retirement-planning',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/retirement-planning',
   },
   robots: {
     index: true,
@@ -180,7 +180,7 @@ export default function RetirementPlanningPage() {
     "@type": "LocalBusiness",
     "name": "Retirement Planning Services | Medicare Transition Specialists",
     "description": "Expert retirement planning services including Medicare transition at 65, healthcare cost planning, annuity income strategies, and comprehensive retirement financial planning.",
-    "url": "https://elmag-insurance.com/retirement-planning",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/retirement-planning",
     "telephone": "331-343-2584",
     "serviceType": "Retirement Planning Services",
     "hasOfferCatalog": {

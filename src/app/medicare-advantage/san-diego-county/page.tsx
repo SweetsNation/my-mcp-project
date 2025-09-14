@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/san-diego-county-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/san-diego-county',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county',
   },
   robots: {
     index: true,

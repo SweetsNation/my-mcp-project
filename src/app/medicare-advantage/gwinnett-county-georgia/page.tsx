@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Gwinnett County, GA with expert guidance. Family-oriented suburban communities and Atlanta metro healthcare specialists serving Hispanic, Asian American, and multicultural families.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia',
   },
 };
 
@@ -77,24 +77,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia',
       name: 'Medicare Advantage Plans Gwinnett County Georgia 2025',
       description: 'Compare Medicare Advantage plans in Gwinnett County, Georgia with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia/#product',
       name: 'Best Medicare Advantage Plans Gwinnett County Georgia 2025',
       category: 'Health Insurance',
       description: 'Top-rated Medicare Advantage plans in Gwinnett County, GA with growing suburban community focus, family-oriented care, and modern healthcare networks serving Atlanta metro suburbs including Lawrenceville, Duluth, Norcross, and surrounding diverse suburban communities with Hispanic, Asian American, and multicultural family services.',
@@ -124,9 +124,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'GA',
@@ -172,7 +172,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/gwinnett-county-georgia/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/gwinnett-county-georgia/#service',
       name: 'El-Mag Insurance Medicare Services - Gwinnett County',
       description: 'Medicare Advantage plan consultation services for Gwinnett County, Georgia residents',
       telephone: '331-343-2584',

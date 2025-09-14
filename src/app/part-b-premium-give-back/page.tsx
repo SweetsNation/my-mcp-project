@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Part B Premium Give Back Medicare Advantage Plans 2025',
   description: 'Find Medicare Advantage plans with Part B premium give back benefits. Reduce your monthly Medicare costs with give back plans. Get your free savings estimate today.',
-  keywords: 'Part B premium give back, Medicare Advantage give back benefits, Medicare premium reduction, Part B give back plans'
+  keywords: 'Part B premium give back, Medicare Advantage give back benefits, Medicare premium reduction, Part B give back plans',
+  alternates: {
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/part-b-premium-give-back',
+  },
 };
 
 export default function PartBPremiumGiveBack() {

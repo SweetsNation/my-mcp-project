@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/orange-county-florida-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/orange-county-florida',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/orange-county-florida',
   },
   robots: {
     index: true,
@@ -236,7 +236,7 @@ export default function OrangeCountyFloridaPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/medicare-advantage/orange-county-florida",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/orange-county-florida",
             "areaServed": [
               {
                 "@type": "AdministrativeArea",
@@ -348,7 +348,7 @@ export default function OrangeCountyFloridaPage() {
             "@type": "WebPage",
             "name": "Medicare Advantage Orange County FL 2025 - Orlando Metro Plans",
             "description": "Compare 58 Medicare Advantage plans in Orange County Florida. Orlando, Winter Park, Apopka coverage with 37 $0 premium options and expert guidance.",
-            "url": "https://elmag-insurance.com/medicare-advantage/orange-county-florida",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/orange-county-florida",
             "mainEntity": {
               "@type": "Article",
               "headline": "Medicare Advantage Orange County FL 2025: Complete Guide to 58 Available Plans",
@@ -361,7 +361,7 @@ export default function OrangeCountyFloridaPage() {
                 "name": "El-Mag Insurance",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://elmag-insurance.com/logo.png"
+                  "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png"
                 }
               },
               "datePublished": "2024-10-01",
@@ -394,19 +394,19 @@ export default function OrangeCountyFloridaPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://elmag-insurance.com/"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Medicare Advantage",
-                  "item": "https://elmag-insurance.com/medicare-advantage"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Orange County FL",
-                  "item": "https://elmag-insurance.com/medicare-advantage/orange-county-florida"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/orange-county-florida"
                 }
               ]
             }

@@ -25,7 +25,8 @@ export default function Navigation() {
         { title: 'Medicare Advantage', href: '/medicare-advantage', description: 'Comprehensive health plans with additional benefits' },
         { title: 'Medicare Supplement', href: '/medicare-supplement', description: 'Fill gaps in Original Medicare coverage' },
         { title: 'Medicare Part D', href: '/medicare-part-d', description: 'Prescription drug coverage plans' },
-        { title: 'Social Security Analysis', href: '/social-security-analysis', description: 'Maximize your Social Security benefits' },
+        { title: 'Part B Premium Give Back', href: '/part-b-premium-give-back', description: 'Medicare plans that reduce your Part B premium costs' },
+        { title: 'Long Term Care Insurance', href: '/long-term-care-insurance', description: 'Coverage for extended care services and nursing home costs' },
       ]
     },
     {
@@ -39,7 +40,9 @@ export default function Navigation() {
       title: 'Finance',
       submenu: [
         { title: 'Term Life Insurance', href: '/term-life-insurance', description: 'Affordable life insurance protection for your family' },
+        { title: 'Whole Life Insurance', href: '/whole-life-insurance', description: 'Permanent life insurance with cash value and investment component' },
         { title: 'Final Expense', href: '/final-expense', description: 'Coverage for end-of-life expenses and funeral costs' },
+        { title: 'Social Security Analysis', href: '/social-security-analysis', description: 'Maximize your Social Security benefits' },
       ]
     },
     {
@@ -78,6 +81,14 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
+              {/* Home Link - First in navigation */}
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+
               {/* Dropdown Menus */}
               {menuItems.map((item) => (
                 <div key={item.title} className="relative">
@@ -121,14 +132,8 @@ export default function Navigation() {
                 </div>
               ))}
 
-              <Link 
-                href="/" 
-                className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Home
-              </Link>
-              <Link 
-                href="/about" 
+              <Link
+                href="/about"
                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 About
@@ -173,6 +178,15 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+              {/* Home Link - First in mobile navigation */}
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+                onClick={closeMenu}
+              >
+                Home
+              </Link>
+
               {/* Mobile Dropdown Menus */}
               {menuItems.map((item) => (
                 <div key={item.title} className="space-y-1">
@@ -209,13 +223,6 @@ export default function Navigation() {
                 </div>
               ))}
 
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
               <Link
                 href="/about"
                 className="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"

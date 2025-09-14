@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Mobile County, AL with expert guidance. Gulf Coast maritime industry and hurricane-prepared healthcare specialists serving coastal communities.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama',
       name: 'Medicare Advantage Plans Mobile County Alabama 2025',
       description: 'Compare Medicare Advantage plans in Mobile County, Alabama with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama/#product',
       name: 'Best Medicare Advantage Plans Mobile County Alabama 2025',
       category: 'Health Insurance',
       description: 'Top-rated Medicare Advantage plans in Mobile County, AL with Gulf Coast healthcare networks, port city medical facilities, and coastal community services serving maritime workers, coastal residents, and Gulf Coast retirees with culturally competent healthcare and hurricane-prepared medical infrastructure.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'AL',
@@ -170,7 +170,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/mobile-county-alabama/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama/#service',
       name: 'El-Mag Insurance Medicare Services - Mobile County',
       description: 'Medicare Advantage plan consultation services for Mobile County, Alabama residents',
       telephone: '331-343-2584',

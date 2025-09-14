@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Medicare Advantage Enrollment Guide Research Triangle NC 2025',
   description: 'Complete Medicare Advantage enrollment guide for Research Triangle NC. Raleigh-Durham-Chapel Hill Medicare plans, Duke Health & UNC network coverage. Get expert help enrolling.',
-  keywords: 'Medicare Advantage enrollment Research Triangle, Raleigh Durham Chapel Hill Medicare, Duke Health Medicare, UNC Health Medicare Advantage'
+  keywords: 'Medicare Advantage enrollment Research Triangle, Raleigh Durham Chapel Hill Medicare, Duke Health Medicare, UNC Health Medicare Advantage',
+  alternates: {
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage-enrollment-guide-research-triangle',
+  },
 };
 
 export default function MedicareAdvantageEnrollmentGuideResearchTriangle() {

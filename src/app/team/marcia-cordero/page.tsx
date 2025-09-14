@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team/marcia-cordero',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Expert Health Insurance Marketplace & Life Insurance guidance. Affordable health insurance, ACA plans, term life insurance. Bilingual service.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team/marcia-cordero',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero',
   },
 }
 
@@ -30,24 +30,24 @@ const marciaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://elmag-insurance.com/team/marcia-cordero#person',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero#person',
     name: 'Marcia Zulema Cordero Rizo',
     givenName: 'Marcia Zulema',
     familyName: 'Cordero Rizo',
     jobTitle: 'Health Insurance Marketplace Expert & Life Insurance Specialist',
     description: 'Bilingual Health Insurance Marketplace & Life Insurance expert with 1+ years experience serving Florida families. Specializes in ACA plans, premium tax credits, and life insurance solutions.',
-    url: 'https://elmag-insurance.com/team/marcia-cordero',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero',
     sameAs: [
-      'https://elmag-insurance.com/team/marcia-cordero',
+      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero',
       'https://www.linkedin.com/in/marcia-cordero-insurance'
     ],
     email: 'marcia@elmag-insurance.com',
     telephone: '+1-786-569-7713',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://elmag-insurance.com#organization',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       telephone: '786-569-7713',
       email: 'info@elmag-insurance.com'
     },
@@ -160,11 +160,11 @@ const marciaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://elmag-insurance.com/team/marcia-cordero#services',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero#services',
     name: 'Health Insurance Marketplace & Life Insurance Services',
     description: 'Professional health insurance marketplace and life insurance services in Florida, including ACA plan enrollment, premium tax credit optimization, and comprehensive life insurance solutions.',
     provider: {
-      '@id': 'https://elmag-insurance.com/team/marcia-cordero#person'
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero#person'
     },
     areaServed: {
       '@type': 'State',
@@ -214,7 +214,7 @@ const marciaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPoint',
-    '@id': 'https://elmag-insurance.com/team/marcia-cordero#contact',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero#contact',
     contactType: 'customer service',
     telephone: '+1-786-569-7713',
     email: 'marcia@elmag-insurance.com',

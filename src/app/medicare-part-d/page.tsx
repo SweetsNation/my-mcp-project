@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/medicare-part-d',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-part-d',
   },
   twitter: {
     card: 'summary_large_image',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'New $2,000 out-of-pocket maximum for Medicare Part D! Compare prescription drug plans and avoid late penalties. Free expert help.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-part-d',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-part-d',
   },
 };
 
@@ -36,7 +36,7 @@ const structuredData = {
   '@type': 'WebPage',
   name: 'Medicare Part D Plans 2025 | Prescription Drug Coverage',
   description: 'Find the best Medicare Part D prescription drug plans for 2025 with new $2,000 out-of-pocket cap. Compare plans and avoid late enrollment penalties.',
-  url: 'https://elmag-insurance.com/medicare-part-d',
+  url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-part-d',
   datePublished: '2024-08-24',
   dateModified: '2024-08-24',
   inLanguage: 'en-US',
@@ -49,12 +49,12 @@ const structuredData = {
   provider: {
     '@type': 'Organization',
     name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
     telephone: '331-343-2584',
     email: 'support@elmaginsurance.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elmag-insurance.com/logo.png'
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png'
     },
     address: {
       '@type': 'PostalAddress',

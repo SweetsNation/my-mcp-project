@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Atlanta & Fulton County, Georgia with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/fulton-county-georgia',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/fulton-county-georgia',
   },
 };
 

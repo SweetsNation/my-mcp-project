@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare affordable Medicare Advantage plans in Hamilton County, TN with expert guidance. Tennessee River Valley industrial heritage and Southeast Tennessee healthcare specialists.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee',
       name: 'Medicare Advantage Plans Hamilton County Tennessee 2025',
       description: 'Compare Medicare Advantage plans in Hamilton County, Tennessee with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee/#product',
       name: 'Affordable Medicare Advantage Plans Hamilton County Tennessee 2025',
       category: 'Health Insurance',
       description: 'Affordable Medicare Advantage plans in Hamilton County, TN with Tennessee River Valley industrial heritage focus, CHI Memorial and Erlanger healthcare networks serving Chattanooga, Hixson, East Ridge, and Southeast Tennessee communities with manufacturing and logistics worker understanding.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'TN',
@@ -170,7 +170,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/hamilton-county-tennessee/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hamilton-county-tennessee/#service',
       name: 'El-Mag Insurance Medicare Services - Hamilton County',
       description: 'Medicare Advantage plan consultation services for Hamilton County, Tennessee residents',
       telephone: '331-343-2584',

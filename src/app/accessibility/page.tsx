@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'WCAG 2.1 AA compliant Medicare services with screen reader support and multi-language options.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/accessibility',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/accessibility',
   },
 };
 

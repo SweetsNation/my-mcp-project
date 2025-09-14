@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team/elsa-galicia-lona',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Save on ACA marketplace plans & Medicare in Florida. Bilingual expert helps with premium tax credits, affordable health insurance options. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team/elsa-galicia-lona',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
   },
 }
 
@@ -30,24 +30,24 @@ const elsaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#person',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#person',
     name: 'Elsa Galicia-Lona',
     givenName: 'Elsa',
     familyName: 'Galicia-Lona',
     jobTitle: 'Health Insurance Marketplace Expert & International Health Specialist',
     description: 'Bilingual Health Insurance Marketplace expert with over 15 years of experience and international finance background. Specializes in ACA plans, international health coverage, Medicare Advantage enrollment, and comprehensive health insurance solutions for multicultural Florida communities.',
-    url: 'https://elmag-insurance.com/team/elsa-galicia-lona',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
     sameAs: [
-      'https://elmag-insurance.com/team/elsa-galicia-lona',
+      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
       'https://www.linkedin.com/in/elsa-galicia-lona-insurance'
     ],
     email: 'elsa@elmag-insurance.com',
     telephone: '+1-954-240-7777',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://elmag-insurance.com#organization',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       telephone: '954-240-7777',
       email: 'info@elmag-insurance.com'
     },
@@ -178,11 +178,11 @@ const elsaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#services',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#services',
     name: 'Health Insurance Marketplace & International Health Specialist Services',
     description: 'Professional Health Insurance Marketplace and international health coverage services in Florida, including ACA plans, international health insurance, global travel coverage, and specialized solutions for multicultural communities.',
     provider: {
-      '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#person'
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#person'
     },
     areaServed: {
       '@type': 'State',
@@ -243,7 +243,7 @@ const elsaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPoint',
-    '@id': 'https://elmag-insurance.com/team/elsa-galicia-lona#contact',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#contact',
     contactType: 'customer service',
     telephone: '+1-954-240-7777',
     email: 'elsa@elmag-insurance.com',

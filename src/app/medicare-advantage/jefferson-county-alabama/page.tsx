@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Jefferson County, Alabama with local Birmingham providers.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/jefferson-county-alabama',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/jefferson-county-alabama',
   },
 };
 

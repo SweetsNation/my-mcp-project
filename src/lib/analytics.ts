@@ -430,3 +430,127 @@ export const trackEnrollmentPeriodInteraction = (
     console.warn('Failed to track enrollment period interaction:', error);
   }
 };
+
+// Medicare Extra Help Quiz specific tracking
+export const trackExtraHelpQuizInteraction = (
+  interactionType: 'quiz_start' | 'question_answered' | 'quiz_completed' | 'result_viewed' | 'cta_clicked',
+  questionNumber?: number,
+  answer?: string,
+  quizResult?: 'likely_eligible' | 'not_eligible' | 'needs_review',
+  ctaType?: string
+) => {
+  try {
+    event('extra_help_quiz_interaction', {
+      event_category: 'medicare_tools',
+      event_label: `extra_help_${interactionType}`,
+      interaction_type: interactionType,
+      question_number: questionNumber || 0,
+      quiz_answer: answer || '',
+      quiz_result: quizResult || '',
+      cta_type: ctaType || '',
+      value: interactionType === 'quiz_completed' ? 20 : interactionType === 'cta_clicked' ? 15 : 5,
+    });
+  } catch (error) {
+    console.warn('Failed to track Extra Help quiz interaction:', error);
+  }
+};
+
+// Ask AI Medicare Questions specific tracking
+export const trackAIQuestionInteraction = (
+  interactionType: 'question_asked' | 'ai_response_viewed' | 'follow_up_question' | 'expert_contact_requested' | 'example_question_clicked',
+  questionCategory?: 'getting_started' | 'plan_comparison' | 'prescription' | 'cost' | 'timing' | 'coverage',
+  questionText?: string,
+  responseHelpful?: boolean,
+  contactMethod?: 'phone' | 'chat' | 'form'
+) => {
+  try {
+    event('ai_question_interaction', {
+      event_category: 'ai_assistance',
+      event_label: `ai_medicare_${interactionType}`,
+      interaction_type: interactionType,
+      question_category: questionCategory || '',
+      question_length: questionText?.length || 0,
+      response_helpful: responseHelpful,
+      contact_method: contactMethod || '',
+      value: interactionType === 'expert_contact_requested' ? 25 : interactionType === 'question_asked' ? 10 : 3,
+    });
+  } catch (error) {
+    console.warn('Failed to track AI question interaction:', error);
+  }
+};
+
+// Medicare quiz performance tracking
+export const trackQuizPerformance = (
+  quizType: 'extra_help' | 'plan_finder' | 'eligibility',
+  completionRate: number,
+  timeSpent: number,
+  questionsAnswered: number,
+  totalQuestions: number,
+  userPath: string[]
+) => {
+  try {
+    event('quiz_performance', {
+      event_category: 'quiz_analytics',
+      event_label: `${quizType}_performance`,
+      quiz_type: quizType,
+      completion_rate: completionRate,
+      time_spent: timeSpent,
+      questions_answered: questionsAnswered,
+      total_questions: totalQuestions,
+      user_path: userPath.join(','),
+      value: completionRate > 80 ? 20 : completionRate > 50 ? 10 : 5,
+    });
+  } catch (error) {
+    console.warn('Failed to track quiz performance:', error);
+  }
+};
+
+// AI interaction quality tracking
+export const trackAIInteractionQuality = (
+  sessionId: string,
+  questionsAsked: number,
+  averageResponseTime: number,
+  userSatisfaction: 'helpful' | 'somewhat_helpful' | 'not_helpful',
+  expertReferralRequested: boolean,
+  topicsCovered: string[]
+) => {
+  try {
+    event('ai_interaction_quality', {
+      event_category: 'ai_performance',
+      event_label: `ai_session_${userSatisfaction}`,
+      session_id: sessionId,
+      questions_asked: questionsAsked,
+      avg_response_time: averageResponseTime,
+      user_satisfaction: userSatisfaction,
+      expert_referral: expertReferralRequested,
+      topics_covered: topicsCovered.join(','),
+      value: userSatisfaction === 'helpful' ? 15 : userSatisfaction === 'somewhat_helpful' ? 8 : 2,
+    });
+  } catch (error) {
+    console.warn('Failed to track AI interaction quality:', error);
+  }
+};
+
+// Medicare resource conversion tracking
+export const trackMedicareResourceConversion = (
+  resourceType: 'quiz' | 'ai_chat' | 'calculator' | 'comparison_tool',
+  entryPoint: string,
+  conversionAction: 'phone_call' | 'form_submit' | 'expert_request' | 'plan_selection',
+  userJourney: string[],
+  timeToConversion: number
+) => {
+  try {
+    event('medicare_resource_conversion', {
+      event_category: 'conversion',
+      event_label: `${resourceType}_to_${conversionAction}`,
+      resource_type: resourceType,
+      entry_point: entryPoint,
+      conversion_action: conversionAction,
+      user_journey: userJourney.join(' > '),
+      time_to_conversion: timeToConversion,
+      value: conversionAction === 'phone_call' ? 50 : conversionAction === 'expert_request' ? 40 : 25,
+    });
+  } catch (error) {
+    console.warn('Failed to track Medicare resource conversion:', error);
+  }
+};

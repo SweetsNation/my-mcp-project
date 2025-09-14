@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/grady-health-system-medicare-advantage-atlanta-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/grady-health-system-medicare-advantage-atlanta',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/grady-health-system-medicare-advantage-atlanta',
   },
   robots: {
     index: true,

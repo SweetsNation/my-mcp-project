@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Knox County, TN with UT Medical Center access. Expert guidance for university community and East Tennessee retirees.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee',
       name: 'Medicare Advantage Plans Knox County Tennessee 2025',
       description: 'Compare Medicare Advantage plans in Knox County, Tennessee with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee/#product',
       name: 'Best Medicare Advantage Plans Knox County Tennessee 2025',
       category: 'Health Insurance',
       description: 'Top-rated Medicare Advantage plans in Knox County, TN with University of Tennessee community focus, UT Medical Center access, and 5-star regional healthcare networks serving Knoxville, Farragut, Powell, and East Tennessee academic communities with research hospital excellence.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'TN',
@@ -170,7 +170,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/knox-county-tennessee/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/knox-county-tennessee/#service',
       name: 'El-Mag Insurance Medicare Services - Knox County',
       description: 'Medicare Advantage plan consultation services for Knox County, Tennessee residents',
       telephone: '331-343-2584',

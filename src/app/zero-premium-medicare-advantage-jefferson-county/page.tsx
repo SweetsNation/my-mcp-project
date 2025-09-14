@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Zero Premium Medicare Advantage Plans Jefferson County Alabama 2025',
   description: 'Find $0 premium Medicare Advantage plans in Jefferson County AL. UAB Medicine network, Birmingham area providers, prescription coverage included. Get your free quote today.',
-  keywords: 'zero premium Medicare Advantage Jefferson County, $0 premium Medicare plans Alabama, UAB Medicine Medicare, Birmingham Medicare Advantage'
+  keywords: 'zero premium Medicare Advantage Jefferson County, $0 premium Medicare plans Alabama, UAB Medicine Medicare, Birmingham Medicare Advantage',
+  alternates: {
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/zero-premium-medicare-advantage-jefferson-county',
+  },
 };
 
 export default function ZeroPremiumMedicareAdvantageJeffersonCounty() {

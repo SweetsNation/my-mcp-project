@@ -84,7 +84,7 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       description: content.metaDescription,
     },
     alternates: {
-      canonical: `https://elmag-insurance.com/medicare-advantage/${params.location}${searchParams.keyword ? `?keyword=${encodeURIComponent(searchParams.keyword)}` : ''}`,
+      canonical: `https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/${params.location}${searchParams.keyword ? `?keyword=${encodeURIComponent(searchParams.keyword)}` : ''}`,
     },
   };
 }
@@ -108,7 +108,7 @@ export default function LocationMedicareAdvantagePage({ params, searchParams }: 
     provider: {
       '@type': 'Organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       address: {
         '@type': 'PostalAddress',
         addressLocality: locationData.city,

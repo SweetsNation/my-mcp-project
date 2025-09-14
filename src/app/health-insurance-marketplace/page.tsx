@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/health-insurance-marketplace',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/health-insurance-marketplace',
   },
   twitter: {
     card: 'summary_large_image',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: 'Save $2,400+ per year with ACA subsidies and premium tax credits. Get expert help enrolling in Marketplace health insurance.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/health-insurance-marketplace',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/health-insurance-marketplace',
   },
 }
 
@@ -43,7 +43,7 @@ const structuredData = {
   '@type': 'WebPage',
   name: 'Health Insurance Marketplace 2025',
   description: 'Get affordable health insurance through the ACA Marketplace with subsidies up to $2,400/year. Expert guidance for enrollment and plan selection.',
-  url: 'https://elmag-insurance.com/health-insurance-marketplace',
+  url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/health-insurance-marketplace',
   datePublished: '2024-08-27',
   dateModified: '2024-08-27',
   inLanguage: 'en-US',
@@ -56,12 +56,12 @@ const structuredData = {
   provider: {
     '@type': 'Organization',
     name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
     telephone: '331-343-2584',
     email: 'support@elmaginsurance.com',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://elmag-insurance.com/logo.png'
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png'
     },
     address: {
       '@type': 'PostalAddress',

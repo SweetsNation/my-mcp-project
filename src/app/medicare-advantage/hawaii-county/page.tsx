@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/hawaii-county-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/hawaii-county',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hawaii-county',
   },
   robots: {
     index: true,
@@ -160,7 +160,7 @@ export default function HawaiiCountyPage() {
     "@type": "LocalBusiness",
     "name": "Hawaii County Medicare Advantage Specialists",
     "description": "Specialized Medicare Advantage plans for Hawaii County (Big Island) residents. Expert guidance for rural Hawaii healthcare coverage.",
-    "url": "https://elmag-insurance.com/medicare-advantage/hawaii-county",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hawaii-county",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

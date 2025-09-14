@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Rochester NY with expert guidance. $0 premium options available.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/monroe-county',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county',
   },
 };
 
@@ -143,9 +143,9 @@ export default function MonroeCountyPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/medicare-advantage/monroe-county",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county",
             "sameAs": [
-              "https://elmag-insurance.com"
+              "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app"
             ],
             "areaServed": {
               "@type": "AdministrativeArea",
@@ -164,7 +164,7 @@ export default function MonroeCountyPage() {
             "@type": "WebPage",
             "name": "Medicare Advantage Rochester NY 2025 | 24 Plans Available",
             "description": "Compare 24 Medicare Advantage plans in Rochester NY & Monroe County. 8 plans with $0 premiums available. 73.8% enrollment rate.",
-            "url": "https://elmag-insurance.com/medicare-advantage/monroe-county",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/supplemental-insurance',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/supplemental-insurance',
   },
   twitter: {
     card: 'summary_large_image',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Fill health insurance gaps with hospital indemnity plans, critical illness coverage, cancer insurance coverage, and accident insurance for families.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/supplemental-insurance',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/supplemental-insurance',
   },
 };
 

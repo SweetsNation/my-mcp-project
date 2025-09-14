@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage networks: UAB Medicine vs St. Vincent\'s in Birmingham AL. 42 plans available.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/uab-vs-st-vincents-medicare-advantage-birmingham',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/uab-vs-st-vincents-medicare-advantage-birmingham',
   },
 };
 
@@ -190,9 +190,9 @@ export default function UABvsStVincentsBirminghamPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/uab-vs-st-vincents-medicare-advantage-birmingham",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/uab-vs-st-vincents-medicare-advantage-birmingham",
             "sameAs": [
-              "https://elmag-insurance.com"
+              "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app"
             ],
             "areaServed": {
               "@type": "AdministrativeArea",
@@ -210,7 +210,7 @@ export default function UABvsStVincentsBirminghamPage() {
             "@type": "WebPage",
             "name": "UAB vs St. Vincent's Medicare Advantage Birmingham AL 2025 | 42 Plans Available",
             "description": "Compare UAB Medicine and St. Vincent's Medicare Advantage plans in Birmingham AL. 42 plans available, Viva Health 5-star rated, Blue Cross 38,524 enrolled.",
-            "url": "https://elmag-insurance.com/uab-vs-st-vincents-medicare-advantage-birmingham",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/uab-vs-st-vincents-medicare-advantage-birmingham",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [

@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Zero Premium Medicare Advantage Plans Kauai County Hawaii 2025',
   description: 'Find $0 premium Medicare Advantage plans in Kauai County HI. Kaiser Permanente network, island healthcare providers, travel coverage included. Get your free quote today.',
-  keywords: 'zero premium Medicare Advantage Kauai County, $0 premium Medicare plans Hawaii, Kaiser Permanente Medicare, Kauai Medicare Advantage'
+  keywords: 'zero premium Medicare Advantage Kauai County, $0 premium Medicare plans Hawaii, Kaiser Permanente Medicare, Kauai Medicare Advantage',
+  alternates: {
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/zero-premium-medicare-advantage-kauai-county',
+  },
 };
 
 export default function ZeroPremiumMedicareAdvantageKauaiCounty() {

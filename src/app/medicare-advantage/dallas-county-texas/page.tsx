@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find & compare top Medicare Advantage plans in Dallas County, TX. $0 premium options with bilingual support and DFW provider access. Licensed agents help during 2025 open enrollment.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/dallas-county-texas',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dallas-county-texas',
   },
 };
 
@@ -216,7 +216,7 @@ export default function DallasCountyTexasPage() {
     "@type": "InsuranceAgency",
     "name": "El-Mag Insurance - Medicare Advantage Dallas County",
     "description": "Licensed Medicare insurance agency serving Dallas County, Texas with bilingual Medicare Advantage plan enrollment and consultation services.",
-    "url": "https://elmag-insurance.com/medicare-advantage/dallas-county-texas",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/dallas-county-texas",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "AdministrativeArea",

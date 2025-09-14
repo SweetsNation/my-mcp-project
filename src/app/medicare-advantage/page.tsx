@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans with expert guidance across multiple states.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage',
   },
 };
 
@@ -48,7 +48,7 @@ const structuredData = {
   provider: {
     '@type': 'Organization',
     name: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
   },
   mainEntity: {
     '@type': 'FAQPage',

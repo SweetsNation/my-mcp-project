@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Discover the best annuities for 2025 with guaranteed retirement income and rates up to 6.80%.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/annuities',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/annuities',
   },
 };
 
@@ -148,7 +148,7 @@ export default function AnnuitiesPage() {
             "@type": "FinancialService",
             "name": "El-Mag Insurance - Best Annuities 2025",
             "description": "Discover the best annuities for 2025 with fixed rates up to 6.80%. Compare retirement annuities, immediate annuities, and MYGAs for guaranteed retirement income.",
-            "url": "https://elmag-insurance.com/annuities",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/annuities",
             "telephone": "331-343-2584",
             "serviceType": "Annuity Services",
             "areaServed": {
@@ -196,7 +196,7 @@ export default function AnnuitiesPage() {
             "@type": "WebPage",
             "name": "Best Annuities 2025 | Fixed Annuity Rates up to 6.80%",
             "description": "Discover the best annuities for 2025. Fixed annuity rates up to 6.80% - highest in over a decade. Compare immediate annuities, MYGAs & indexed annuities.",
-            "url": "https://elmag-insurance.com/annuities",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/annuities",
             "mainEntity": {
               "@type": "FAQPage",
               "mainEntity": [

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Davidson County & Nashville, Tennessee with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/davidson-county-tennessee',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/davidson-county-tennessee',
   },
 };
 

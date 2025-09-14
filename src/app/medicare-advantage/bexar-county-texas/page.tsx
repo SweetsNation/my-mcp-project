@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/bexar-county-texas-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/bexar-county-texas',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/bexar-county-texas',
   },
   robots: {
     index: true,
@@ -160,7 +160,7 @@ export default function BexarCountyTexasPage() {
     "@type": "LocalBusiness",
     "name": "Bexar County Texas Medicare Advantage Specialists",
     "description": "Bilingual Medicare Advantage plans for Bexar County (San Antonio) Hispanic community. Expert guidance for South Texas healthcare coverage with Spanish-speaking agents.",
-    "url": "https://elmag-insurance.com/medicare-advantage/bexar-county-texas",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/bexar-county-texas",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

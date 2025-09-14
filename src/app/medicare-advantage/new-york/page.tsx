@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare NY Medicare Advantage plans with $0 premiums and 5-star ratings. NewYork-Presbyterian, Mount Sinai access.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/new-york',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/new-york',
   },
 };
 
@@ -241,7 +241,7 @@ export default function NewYorkPage() {
     "@type": "LocalBusiness",
     "name": "El-Mag Insurance - Medicare Advantage Plans New York",
     "description": "Medicare Advantage plan comparison and enrollment services for New York State residents",
-    "url": "https://elmag-insurance.com/medicare-advantage/new-york",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/new-york",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

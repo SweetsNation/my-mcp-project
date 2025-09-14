@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/hernando-county-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/hernando-county-florida',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hernando-county-florida',
   },
   robots: {
     index: true,
@@ -268,7 +268,7 @@ export default function HernandoCountyFloridaPage() {
               "addressCountry": "US"
             },
             "telephone": "331-343-2584",
-            "url": "https://elmag-insurance.com/medicare-advantage/hernando-county-florida",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hernando-county-florida",
             "areaServed": [
               {
                 "@type": "AdministrativeArea", 
@@ -397,7 +397,7 @@ export default function HernandoCountyFloridaPage() {
             "@type": "WebPage",
             "name": "Medicare Advantage Hernando County FL 2025 - Spring Hill & Brooksville Plans",
             "description": "Compare 47 Medicare Advantage plans in Hernando County Florida. Spring Hill, Brooksville, and Nature Coast coverage with 31 $0 premium options.",
-            "url": "https://elmag-insurance.com/medicare-advantage/hernando-county-florida",
+            "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hernando-county-florida",
             "mainEntity": {
               "@type": "Article",
               "headline": "Medicare Advantage Hernando County FL 2025: Complete Guide to 47 Available Plans",
@@ -410,7 +410,7 @@ export default function HernandoCountyFloridaPage() {
                 "name": "El-Mag Insurance",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://elmag-insurance.com/logo.png"
+                  "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/logo.png"
                 }
               },
               "datePublished": "2024-10-01",
@@ -443,19 +443,19 @@ export default function HernandoCountyFloridaPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://elmag-insurance.com/"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Medicare Advantage",
-                  "item": "https://elmag-insurance.com/medicare-advantage"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": "Hernando County FL",
-                  "item": "https://elmag-insurance.com/medicare-advantage/hernando-county-florida"
+                  "item": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/hernando-county-florida"
                 }
               ]
             },

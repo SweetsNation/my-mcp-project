@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/monroe-county-florida-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/monroe-county-florida',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida',
   },
   robots: {
     index: true,

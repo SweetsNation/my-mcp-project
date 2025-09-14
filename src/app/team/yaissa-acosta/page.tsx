@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team/yaissa-acosta',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Expert Health Insurance Marketplace & ACA guidance. Affordable health insurance, premium tax credits, subsidy optimization. Bilingual service.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team/yaissa-acosta',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta',
   },
 }
 
@@ -30,24 +30,24 @@ const yaissaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://elmag-insurance.com/team/yaissa-acosta#person',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta#person',
     name: 'Yaissa Acosta',
     givenName: 'Yaissa',
     familyName: 'Acosta',
     jobTitle: 'Health Insurance Marketplace Expert & ACA Specialist',
     description: 'Bilingual Health Insurance Marketplace specialist with over 2 years of experience and healthcare field background. Specializes in ACA plans, premium tax credits, Medicare Advantage enrollment, and comprehensive health insurance solutions for Florida families.',
-    url: 'https://elmag-insurance.com/team/yaissa-acosta',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta',
     sameAs: [
-      'https://elmag-insurance.com/team/yaissa-acosta',
+      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta',
       'https://www.linkedin.com/in/yaissa-acosta-insurance'
     ],
     email: 'yaissa@elmag-insurance.com',
     telephone: '+1-786-378-3921',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://elmag-insurance.com#organization',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       telephone: '786-378-3921',
       email: 'info@elmag-insurance.com'
     },
@@ -178,11 +178,11 @@ const yaissaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://elmag-insurance.com/team/yaissa-acosta#services',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta#services',
     name: 'Health Insurance Marketplace & ACA Specialist Services',
     description: 'Professional Health Insurance Marketplace and ACA plan services in Florida, including premium tax credits optimization, subsidy analysis, Medicare Advantage enrollment, and comprehensive health insurance solutions.',
     provider: {
-      '@id': 'https://elmag-insurance.com/team/yaissa-acosta#person'
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta#person'
     },
     areaServed: {
       '@type': 'State',
@@ -243,7 +243,7 @@ const yaissaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPoint',
-    '@id': 'https://elmag-insurance.com/team/yaissa-acosta#contact',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta#contact',
     contactType: 'customer service',
     telephone: '+1-786-378-3921',
     email: 'yaissa@elmag-insurance.com',

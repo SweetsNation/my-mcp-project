@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Madison County, AL with expert guidance. Huntsville Research Triangle and aerospace industry healthcare specialists.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama',
       name: 'Medicare Advantage Plans Madison County Alabama 2025',
       description: 'Compare Medicare Advantage plans in Madison County, Alabama with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama/#product',
       name: 'Best Medicare Advantage Plans Madison County Alabama 2025',
       category: 'Health Insurance',
       description: 'Top-rated Medicare Advantage plans in Madison County, AL with Huntsville Research Triangle technology focus, high-tech healthcare networks, and modern aerospace industry medical facilities serving technology professionals, engineers, and educated retirees with research-integrated healthcare services.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'AL',
@@ -170,7 +170,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/madison-county-alabama/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama/#service',
       name: 'El-Mag Insurance Medicare Services - Madison County',
       description: 'Medicare Advantage plan consultation services for Madison County, Alabama residents',
       telephone: '331-343-2584',

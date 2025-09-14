@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team/junior-goulbourne',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Expert Medicare Advantage & Life Insurance guidance. Medicare plans, term life, final expense, employee benefits. 11+ years experience. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team/junior-goulbourne',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne',
   },
 }
 
@@ -30,24 +30,24 @@ const juniorStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://elmag-insurance.com/team/junior-goulbourne#person',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne#person',
     name: 'Junior Goulbourne',
     givenName: 'Junior',
     familyName: 'Goulbourne',
     jobTitle: 'Medicare Advantage Expert & Life Insurance Specialist',
     description: 'Insurance specialist with over 11 years of experience and law enforcement background. Specializes in Medicare Advantage plans, Life Insurance solutions, Final Expense coverage, and comprehensive Employee Benefits packages serving Florida families and businesses.',
-    url: 'https://elmag-insurance.com/team/junior-goulbourne',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne',
     sameAs: [
-      'https://elmag-insurance.com/team/junior-goulbourne',
+      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne',
       'https://www.linkedin.com/in/junior-goulbourne-insurance'
     ],
     email: 'junior@elmag-insurance.com',
     telephone: '+1-786-515-3808',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://elmag-insurance.com#organization',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       telephone: '786-515-3808',
       email: 'info@elmag-insurance.com'
     },
@@ -174,11 +174,11 @@ const juniorStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://elmag-insurance.com/team/junior-goulbourne#services',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne#services',
     name: 'Medicare Advantage & Life Insurance Specialist Services',
     description: 'Comprehensive insurance services in Florida including Medicare Advantage plans, Life Insurance solutions, Final Expense coverage, Health Insurance Marketplace enrollment, and Employee Benefits packages for individuals, families, and businesses.',
     provider: {
-      '@id': 'https://elmag-insurance.com/team/junior-goulbourne#person'
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne#person'
     },
     areaServed: {
       '@type': 'State',
@@ -240,7 +240,7 @@ const juniorStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPoint',
-    '@id': 'https://elmag-insurance.com/team/junior-goulbourne#contact',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne#contact',
     contactType: 'customer service',
     telephone: '+1-786-515-3808',
     email: 'junior@elmag-insurance.com',

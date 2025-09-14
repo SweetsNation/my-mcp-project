@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Prince William County, VA with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia',
       name: 'Medicare Advantage Plans Prince William County Virginia 2025',
       description: 'Compare Medicare Advantage plans in Prince William County, Virginia with expert guidance from licensed agents.',
-      url: 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia/#product',
       name: 'Medicare Advantage Plans Prince William County Virginia',
       category: 'Health Insurance',
       description: 'Military-friendly Medicare Advantage plans in Prince William County, VA with Spanish-speaking agents and diverse provider networks serving Woodbridge, Manassas, and Dale City communities.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'VA',
@@ -173,7 +173,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/prince-william-county-virginia/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia/#service',
       name: 'El-Mag Insurance Medicare Services - Prince William County',
       description: 'Medicare Advantage plan consultation services for Prince William County, Virginia residents',
       telephone: '331-343-2584',

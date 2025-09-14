@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Loudoun County, VA with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia',
   },
 };
 
@@ -75,24 +75,24 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'WebPage',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia',
       name: 'Premium Medicare Advantage Plans Loudoun County Virginia 2025',
       description: 'Discover premium Medicare Advantage plans in Loudoun County, Virginia with concierge-level care and executive healthcare services.',
-      url: 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia',
       inLanguage: 'en-US',
       isPartOf: {
-        '@id': 'https://elmag-insurance.com/#website'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website'
       },
       about: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia/#product'
       },
       mainEntity: {
-        '@id': 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia/#product'
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia/#product'
       }
     },
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia/#product',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia/#product',
       name: 'Premium Medicare Advantage Plans Loudoun County Virginia',
       category: 'Premium Health Insurance',
       description: 'Executive-level Medicare Advantage plans in Loudoun County, VA with concierge services, technology integration, and premium healthcare networks serving Ashburn, Leesburg, and Sterling professionals.',
@@ -122,9 +122,9 @@ const structuredData = {
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        '@id': 'https://elmag-insurance.com/#organization',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#organization',
         telephone: '331-343-2584',
-        url: 'https://elmag-insurance.com',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
         address: {
           '@type': 'PostalAddress',
           addressRegion: 'VA',
@@ -178,7 +178,7 @@ const structuredData = {
     },
     {
       '@type': 'LocalBusiness',
-      '@id': 'https://elmag-insurance.com/medicare-advantage/loudoun-county-virginia/#service',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/loudoun-county-virginia/#service',
       name: 'El-Mag Insurance Premium Medicare Services - Loudoun County',
       description: 'Premium Medicare Advantage plan consultation services for Loudoun County, Virginia executives and affluent professionals',
       telephone: '331-343-2584',

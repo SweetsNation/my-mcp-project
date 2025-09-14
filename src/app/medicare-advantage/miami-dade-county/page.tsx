@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: ['/images/miami-dade-county-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/medicare-advantage/miami-dade-county',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/miami-dade-county',
   },
   robots: {
     index: true,
@@ -104,7 +104,7 @@ export default function MiamiDadeCountyPage() {
     "@type": "LocalBusiness",
     "name": "Miami-Dade County Bilingual Medicare Advantage Specialists",
     "description": "Bilingual Medicare Advantage plans for Miami-Dade County Hispanic community. Expert Spanish-speaking guidance for South Florida healthcare coverage with cultural competency.",
-    "url": "https://elmag-insurance.com/medicare-advantage/miami-dade-county",
+    "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/miami-dade-county",
     "telephone": "331-343-2584",
     "areaServed": {
       "@type": "State",

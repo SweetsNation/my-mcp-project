@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team/magdalena-salinas',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Maximize Social Security benefits & get optimal Medicare Supplement coverage. Expert retirement planning & benefit optimization across 7 states. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team/magdalena-salinas',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
   },
 }
 
@@ -30,24 +30,24 @@ const magdalenaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://elmag-insurance.com/team/magdalena-salinas#person',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas#person',
     name: 'Magdalena Salinas',
     givenName: 'Magdalena',
     familyName: 'Salinas',
     jobTitle: 'Social Security Optimization Expert & Medicare Supplement Specialist',
     description: 'Bilingual Social Security Advisor and Medicare specialist with over 11 years of experience and treasury management background. Specializes in Social Security benefit optimization, Medicare Supplement plans, and comprehensive retirement planning across 7 states.',
-    url: 'https://elmag-insurance.com/team/magdalena-salinas',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
     sameAs: [
-      'https://elmag-insurance.com/team/magdalena-salinas',
+      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
       'https://www.linkedin.com/in/magdalena-salinas-insurance'
     ],
     email: 'magdalena@elmag-insurance.com',
     telephone: '+1-954-668-1970',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://elmag-insurance.com#organization',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       telephone: '954-668-1970',
       email: 'info@elmag-insurance.com'
     },
@@ -202,11 +202,11 @@ const magdalenaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://elmag-insurance.com/team/magdalena-salinas#services',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas#services',
     name: 'Social Security Optimization & Medicare Specialist Services',
     description: 'Professional Social Security benefits optimization and Medicare insurance services across 7 states, including claiming strategy analysis, Medicare Supplement plans, and comprehensive retirement planning.',
     provider: {
-      '@id': 'https://elmag-insurance.com/team/magdalena-salinas#person'
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas#person'
     },
     areaServed: [
       {
@@ -293,7 +293,7 @@ const magdalenaStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPoint',
-    '@id': 'https://elmag-insurance.com/team/magdalena-salinas#contact',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas#contact',
     contactType: 'customer service',
     telephone: '+1-954-668-1970',
     email: 'magdalena@elmag-insurance.com',

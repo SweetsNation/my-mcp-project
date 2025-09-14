@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-    url: 'https://elmag-insurance.com/team/eric-salinas',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas',
   },
   twitter: {
     card: 'summary_large_image',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Expert Medicare Supplement & Part D guidance. Medigap insurance, prescription drug coverage, Medicare enrollment. Bilingual service. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmag-insurance.com/team/eric-salinas',
+    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas',
   },
 }
 
@@ -30,24 +30,24 @@ const ericStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    '@id': 'https://elmag-insurance.com/team/eric-salinas#person',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas#person',
     name: 'Eric Salinas',
     givenName: 'Eric',
     familyName: 'Salinas',
     jobTitle: 'Medicare Supplement & Part D Expert',
     description: 'Bilingual Medicare specialist with over 10 years of experience and Information Technology background. Specializes in Medicare Supplement plans, Medicare Part D prescription coverage, Hospital Indemnity plans, and Security Evacuation services across 5 states.',
-    url: 'https://elmag-insurance.com/team/eric-salinas',
+    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas',
     sameAs: [
-      'https://elmag-insurance.com/team/eric-salinas',
+      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas',
       'https://www.linkedin.com/in/eric-salinas-medicare'
     ],
     email: 'eric@elmag-insurance.com',
     telephone: '+1-954-665-7228',
     worksFor: {
       '@type': 'Organization',
-      '@id': 'https://elmag-insurance.com#organization',
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
       name: 'El-Mag Insurance',
-      url: 'https://elmag-insurance.com',
+      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
       telephone: '954-665-7228',
       email: 'info@elmag-insurance.com'
     },
@@ -184,11 +184,11 @@ const ericStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    '@id': 'https://elmag-insurance.com/team/eric-salinas#services',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas#services',
     name: 'Medicare Supplement & Part D Specialist Services',
     description: 'Professional Medicare Supplement and Medicare Part D prescription drug coverage services across 5 states, including Medigap insurance, Hospital Indemnity plans, and comprehensive Medicare enrollment assistance.',
     provider: {
-      '@id': 'https://elmag-insurance.com/team/eric-salinas#person'
+      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas#person'
     },
     areaServed: [
       {
@@ -267,7 +267,7 @@ const ericStructuredData = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPoint',
-    '@id': 'https://elmag-insurance.com/team/eric-salinas#contact',
+    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas#contact',
     contactType: 'customer service',
     telephone: '+1-954-665-7228',
     email: 'eric@elmag-insurance.com',
