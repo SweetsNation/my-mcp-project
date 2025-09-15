@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Find top-rated Medicare Advantage plans in Mecklenburg County, NC with $0 premiums and comprehensive Charlotte metro networks. Free expert guidance from licensed agents.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mecklenburg-county-north-carolina',
+    canonical: 'https://elmaginsurance.com/medicare-advantage/mecklenburg-county-north-carolina',
   },
 };
 

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Medicare Enrollment Periods Explained - El-Mag Insurance',
   description: 'Complete guide to Medicare enrollment periods including Annual Open Enrollment, Special Enrollment Periods, and when you can make changes to your coverage.',
   keywords: 'Medicare enrollment periods, Annual Open Enrollment, Special Enrollment Period, Medicare deadlines, when to enroll',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/resources/enrollment-periods-explained',
+  },
 };
 
 export default function EnrollmentPeriodsExplainedPage() {

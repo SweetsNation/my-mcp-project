@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Compare all Medicare plans available in your area. Side-by-side comparison of costs, benefits, and coverage options.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-plan-comparison-tool',
+  },
 }
 
 export default function MedicarePlanComparisonToolPage() {

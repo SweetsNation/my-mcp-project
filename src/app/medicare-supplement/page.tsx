@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Medicare Supplement Plans | El-Mag Insurance',
   description: 'Compare Medicare Supplement (Medigap) plans to fill gaps in Original Medicare coverage. Get quotes and expert guidance.',
   keywords: 'Medicare Supplement, Medigap, Medicare Gap Insurance, Medicare coverage',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-supplement',
+  },
 };
 
 export default function MedicareSupplementPage() {

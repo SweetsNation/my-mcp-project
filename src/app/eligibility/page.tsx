@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Medicare & Health Insurance Eligibility Assessment | Check Your Coverage Options | El-Mag Insurance',
   description: 'Complete eligibility assessment for Medicare and health insurance services. Check your qualification for Medicare Advantage, Medicare Supplement, Health Marketplace, and other programs based on age, income, and circumstances.',
   keywords: 'Medicare eligibility, health insurance eligibility, Medicare qualification, eligibility assessment, Medicare Advantage eligibility, Medicare Supplement eligibility, Health Marketplace eligibility',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/eligibility',
+  },
 };
 
 export default function EligibilityPage() {

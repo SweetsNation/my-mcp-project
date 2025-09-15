@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'en_US',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-supplement-texas',
+  },
 }
 
 export default function TexasMedicareSupplementPage() {

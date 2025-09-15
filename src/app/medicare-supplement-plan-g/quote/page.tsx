@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Get instant Plan G quotes from top insurance companies. Compare rates and find the best Medicare Supplement coverage.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-supplement-plan-g/quote',
+  },
 }
 
 export default function PlanGQuotePage() {

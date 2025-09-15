@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Medicare Disability Insurance 2025 - Coverage for Under 65 Disability Benefits',
   description: 'Find Medicare disability insurance for those under 65. SSDI Medicare eligibility, 24-month waiting period, Medicare Advantage & Supplement options for disabled beneficiaries.',
-  keywords: 'Medicare disability insurance, Medicare under 65, SSDI Medicare eligibility, disability Medicare benefits, Medicare for disabled'
+  keywords: 'Medicare disability insurance, Medicare under 65, SSDI Medicare eligibility, disability Medicare benefits, Medicare for disabled',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-disability-insurance',
+  },
 };
 
 export default function MedicareDisabilityInsurance() {

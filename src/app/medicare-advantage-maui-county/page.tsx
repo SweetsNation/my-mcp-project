@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Medicare Advantage Plans Maui County Hawaii 2025 - Valley Isle Coverage',
   description: 'Find Medicare Advantage plans in Maui County HI. Kaiser Permanente network, Maui Memorial Medical Center access, island healthcare providers. Get your free quote today.',
-  keywords: 'Medicare Advantage Maui County, Valley Isle Medicare plans, Kaiser Permanente Maui, Maui Memorial Medical Center Medicare'
+  keywords: 'Medicare Advantage Maui County, Valley Isle Medicare plans, Kaiser Permanente Maui, Maui Memorial Medical Center Medicare',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-advantage-maui-county',
+  },
 };
 
 export default function MedicareAdvantageMauiCounty() {

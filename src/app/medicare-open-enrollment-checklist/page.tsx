@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Essential checklist for Medicare Open Enrollment 2025. Don\'t miss these critical steps before the December 7 deadline.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-open-enrollment-checklist',
+  },
 }
 
 export default function MedicareOpenEnrollmentChecklistPage() {

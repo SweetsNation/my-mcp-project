@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Medicare Resources & Education - El-Mag Insurance',
   description: 'Learn about Medicare Advantage plans, enrollment periods, benefits, and more with our comprehensive educational resources.',
   keywords: 'Medicare education, Medicare Advantage resources, Medicare guide, enrollment help, benefits explanation',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/resources',
+  },
 };
 
 const articles = [

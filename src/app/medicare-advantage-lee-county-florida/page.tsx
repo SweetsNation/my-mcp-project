@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Medicare Advantage Plans Lee County Florida 2025 - Fort Myers Coverage',
   description: 'Find the best Medicare Advantage plans in Lee County FL. Fort Myers healthcare coverage, Lee Health network, snowbird benefits, zero premium options available.',
-  keywords: 'Medicare Advantage Lee County Florida, Fort Myers Medicare plans, Lee Health network Medicare, Florida snowbird Medicare coverage'
+  keywords: 'Medicare Advantage Lee County Florida, Fort Myers Medicare plans, Lee Health network Medicare, Florida snowbird Medicare coverage',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-advantage-lee-county-florida',
+  },
 };
 
 export default function MedicareAdvantageLeeCountyFlorida() {

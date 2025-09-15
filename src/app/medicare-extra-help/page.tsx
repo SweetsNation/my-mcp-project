@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Get FREE Medicare prescription drug coverage with Extra Help! $0 premiums, low copays. Check if you qualify instantly.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-extra-help',
+    canonical: 'https://elmaginsurance.com/medicare-extra-help',
   },
 };
 

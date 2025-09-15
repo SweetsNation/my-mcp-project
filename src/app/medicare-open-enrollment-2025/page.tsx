@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Medicare Open Enrollment period is October 15 - December 7, 2025. Review your coverage and make necessary changes before the deadline.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-open-enrollment-2025',
+  },
 }
 
 export default function MedicareOpenEnrollment2025Page() {

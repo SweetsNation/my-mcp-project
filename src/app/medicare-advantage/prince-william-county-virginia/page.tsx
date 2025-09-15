@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Prince William County, VA with expert guidance.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/prince-william-county-virginia',
+    canonical: 'https://elmaginsurance.com/medicare-advantage/prince-william-county-virginia',
   },
 };
 

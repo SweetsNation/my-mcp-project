@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Medicare & Health Insurance Enrollment Timeline | Key Dates & Deadlines | El-Mag Insurance',
   description: 'Complete enrollment timeline for Medicare and health insurance programs. Track key dates, deadlines, and enrollment periods for Medicare Advantage, Medicare Supplement, Health Marketplace, and other coverage options.',
   keywords: 'enrollment timeline, Medicare enrollment periods, health insurance deadlines, enrollment dates, Medicare AEP, Open Enrollment, Special Enrollment Periods',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/enrollment-timeline',
+  },
 };
 
 export default function EnrollmentTimelinePage() {

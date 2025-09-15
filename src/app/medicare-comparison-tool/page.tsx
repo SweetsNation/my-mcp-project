@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     description: 'Interactive tool compares Medicare Advantage vs Medicare Supplement plans. Get personalized recommendations in minutes.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-comparison-tool',
+  },
 }
 
 const comparisonStructuredData = {

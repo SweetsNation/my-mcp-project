@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Medicare Prescription Drug Coverage Guide - El-Mag Insurance',
   description: 'Complete guide to Medicare Part D prescription drug coverage, formularies, and costs. Expert guidance from El-Mag Insurance.',
   keywords: 'Medicare Part D, prescription drug coverage, formulary, drug costs, Medicare Advantage drug benefits',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/resources/prescription-drug-coverage',
+  },
 };
 
 export default function PrescriptionDrugCoveragePage() {

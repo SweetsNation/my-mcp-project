@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Maximize Social Security benefits & get optimal Medicare Supplement coverage. Expert retirement planning & benefit optimization across 7 states. Free consultation.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
+    canonical: 'https://elmaginsurance.com/team/magdalena-salinas',
   },
 }
 

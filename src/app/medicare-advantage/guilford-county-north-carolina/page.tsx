@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare affordable Medicare Advantage plans in Guilford County, NC with expert guidance. Low-cost options for working-class retirees in Greensboro-High Point area.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/guilford-county-north-carolina',
+    canonical: 'https://elmaginsurance.com/medicare-advantage/guilford-county-north-carolina',
   },
 };
 

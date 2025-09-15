@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Medicare Star Ratings Guide - El-Mag Insurance',
   description: 'Understand Medicare Star Ratings and how to use them to choose the best Medicare Advantage plan. Expert guidance from El-Mag Insurance.',
   keywords: 'Medicare Star Ratings, plan quality, Medicare Advantage ratings, CMS ratings, plan performance',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/resources/star-ratings-guide',
+  },
 };
 
 export default function StarRatingsGuidePage() {

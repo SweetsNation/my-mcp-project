@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Insurance Blog & Educational Resources | Medicare, Health Insurance & More | El-Mag Insurance',
   description: 'Expert insurance blog with educational articles on Medicare, health insurance, ACA Marketplace, and more. Get informed with our comprehensive guides and resources.',
   keywords: 'insurance blog, Medicare articles, health insurance guides, ACA Marketplace blog, insurance education, Medicare Advantage blog, Medicare Supplement articles',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/blog',
+  },
 };
 
 export default function BlogPage() {

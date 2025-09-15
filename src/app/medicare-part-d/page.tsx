@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: 'New $2,000 out-of-pocket maximum for Medicare Part D! Compare prescription drug plans and avoid late penalties. Free expert help.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-part-d',
+    canonical: 'https://elmaginsurance.com/medicare-part-d',
   },
 };
 

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Madison County, AL with expert guidance. Huntsville Research Triangle and aerospace industry healthcare specialists.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/madison-county-alabama',
+    canonical: 'https://elmaginsurance.com/medicare-advantage/madison-county-alabama',
   },
 };
 

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans with expert guidance across multiple states.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage',
+    canonical: 'https://elmaginsurance.com/medicare-advantage',
   },
 };
 

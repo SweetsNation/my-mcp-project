@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Final warning: Medicare Open Enrollment deadline is December 7, 2025. Don\'t get locked into bad coverage for 2025!',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-deadline-december-7',
+  },
 }
 
 export default function MedicareDeadlineDecember7Page() {

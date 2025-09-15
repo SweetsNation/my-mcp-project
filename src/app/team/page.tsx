@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Licensed insurance specialists with expertise across all major insurance types. Get expert guidance for your insurance needs.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team',
+    canonical: 'https://elmaginsurance.com/team',
   },
 }
 

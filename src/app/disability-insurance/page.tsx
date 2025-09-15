@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Comprehensive disability insurance to protect your income and financial security when you cannot work.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/disability-insurance',
+  },
 }
 
 const disabilityData = {

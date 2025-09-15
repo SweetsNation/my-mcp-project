@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Complete guide to checking Medicare Part D drug coverage using formulary lookup tools. Ensure your medications are covered before choosing a plan.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-part-d-formulary-lookup',
+  },
 }
 
 export default function PartDFormularyLookupPage() {

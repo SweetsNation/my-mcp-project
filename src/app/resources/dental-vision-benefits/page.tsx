@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Medicare Advantage Dental & Vision Benefits - El-Mag Insurance',
   description: 'Complete guide to dental and vision benefits in Medicare Advantage plans. Learn about coverage options and costs with El-Mag Insurance.',
   keywords: 'Medicare Advantage dental, vision benefits, Medicare dental coverage, Medicare vision coverage, supplemental benefits',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/resources/dental-vision-benefits',
+  },
 };
 
 export default function DentalVisionBenefitsPage() {

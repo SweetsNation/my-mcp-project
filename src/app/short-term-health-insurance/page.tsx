@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Affordable short-term health insurance for coverage gaps. Compare temporary medical plans with instant approval and flexible terms.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/short-term-health-insurance',
+  },
 }
 
 const analyticsData = {

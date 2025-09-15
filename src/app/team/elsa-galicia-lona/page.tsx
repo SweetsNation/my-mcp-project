@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Save on ACA marketplace plans & Medicare in Florida. Bilingual expert helps with premium tax credits, affordable health insurance options. Free consultation.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
+    canonical: 'https://elmaginsurance.com/team/elsa-galicia-lona',
   },
 }
 

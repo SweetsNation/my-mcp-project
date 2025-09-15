@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Everything Harris County residents need to know about health insurance, subsidies, and Houston healthcare access.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/blog/health-insurance-harris-county-guide',
+  },
 }
 
 export default function HarrisCountyHealthInsuranceGuidePage() {

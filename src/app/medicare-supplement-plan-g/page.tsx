@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description: 'Most popular Medigap plan! Only $240 deductible, then 100% coverage. No networks, see any doctor. Get free quotes.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-g',
+    canonical: 'https://elmaginsurance.com/medicare-supplement-plan-g',
   },
 }
 

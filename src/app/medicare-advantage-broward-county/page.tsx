@@ -4,7 +4,10 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Medicare Advantage Plans Broward County Florida 2025 - Fort Lauderdale Coverage',
   description: 'Find Medicare Advantage plans in Broward County FL. Memorial Healthcare System network, Fort Lauderdale & Hollywood providers, South Florida coverage. Get your free quote.',
-  keywords: 'Medicare Advantage Broward County Florida, Fort Lauderdale Medicare plans, Memorial Healthcare System Medicare, Hollywood Florida Medicare'
+  keywords: 'Medicare Advantage Broward County Florida, Fort Lauderdale Medicare plans, Memorial Healthcare System Medicare, Hollywood Florida Medicare',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-advantage-broward-county',
+  },
 };
 
 export default function MedicareAdvantageBrowardCounty() {

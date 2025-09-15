@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Compare Plan G benefits, costs, and coverage with other Medicare options. Find the best plan for your healthcare needs.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-supplement-plan-g/comparison',
+  },
 }
 
 export default function PlanGComparisonPage() {

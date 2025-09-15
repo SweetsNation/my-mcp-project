@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     description: 'Major Medicare changes for 2025 including the new $2,000 Part D out-of-pocket cap and other benefit updates.',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/medicare-2025-changes',
+  },
 }
 
 const changesStructuredData = {

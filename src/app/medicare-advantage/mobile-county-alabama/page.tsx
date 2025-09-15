@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Mobile County, AL with expert guidance. Gulf Coast maritime industry and hurricane-prepared healthcare specialists serving coastal communities.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/mobile-county-alabama',
+    canonical: 'https://elmaginsurance.com/medicare-advantage/mobile-county-alabama',
   },
 };
 

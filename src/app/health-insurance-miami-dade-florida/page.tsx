@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     type: 'article',
     locale: 'en_US',
   },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/miami-dade-florida',
+  },
 }
 
 const miamiDadeStructuredData = {

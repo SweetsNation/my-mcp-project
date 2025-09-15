@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Get affordable term life insurance for your family. Compare life insurance quotes, calculate coverage needs, protect your loved ones.',
   },
   alternates: {
-    canonical: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/term-life-insurance',
+    canonical: 'https://elmaginsurance.com/term-life-insurance',
   },
 };
 

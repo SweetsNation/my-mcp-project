@@ -17,7 +17,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Final Expense Insurance & Burial Insurance Quotes',
     description: 'Get affordable final expense insurance quotes. No medical exam required. Starting at $10/month.',
-  }
+  },
+  alternates: {
+    canonical: 'https://elmaginsurance.com/final-expense',
+  },
 };
 
 export default function FinalExpensePage() {

@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy - El-Mag Insurance',
   description: 'Learn how El-Mag Insurance protects your personal information and privacy when you use our Medicare Advantage services.',
   keywords: 'privacy policy, data protection, HIPAA compliance, personal information security',
+  alternates: {
+    canonical: 'https://elmaginsurance.com/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {
