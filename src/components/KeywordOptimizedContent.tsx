@@ -164,16 +164,17 @@ export default function KeywordOptimizedContent({
   const renderContent = () => {
     switch (contentType) {
       case 'hero':
+        const heroContent = content as { headline: string; subheadline: string; keywords: string[]; cta: string };
         return (
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              {content.headline}
+              {heroContent.headline}
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-              {content.subheadline}
+              {heroContent.subheadline}
             </p>
             <div className="flex flex-wrap justify-center gap-2 mb-8">
-              {content.keywords.map((keyword, index) => (
+              {heroContent.keywords.map((keyword, index) => (
                 <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                   {keyword}
                 </span>
@@ -183,19 +184,20 @@ export default function KeywordOptimizedContent({
               href="/contact"
               className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors inline-block"
             >
-              {content.cta}
+              {heroContent.cta}
             </Link>
           </div>
         )
 
       case 'features':
+        const featuresContent = content as { title: string; content: { title: string; description: string; keywords: string[]; }[] };
         return (
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              {content.title}
+              {featuresContent.title}
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {content.content.map((feature, index) => (
+              {featuresContent.content.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm border">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -217,16 +219,17 @@ export default function KeywordOptimizedContent({
         )
 
       case 'comparison':
+        const comparisonContent = content as { title: string; intro: string; keywords: string[] };
         return (
           <div className="bg-gray-50 p-8 rounded-lg">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">
-              {content.title}
+              {comparisonContent.title}
             </h2>
             <p className="text-lg text-gray-700 text-center mb-6">
-              {content.intro}
+              {comparisonContent.intro}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
-              {content.keywords.map((keyword, index) => (
+              {comparisonContent.keywords.map((keyword, index) => (
                 <span key={index} className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
                   {keyword}
                 </span>
@@ -236,13 +239,14 @@ export default function KeywordOptimizedContent({
         )
 
       case 'faq':
+        const faqContent = content as { title: string; questions: { question: string; answer: string; keywords: string[]; }[] };
         return (
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              {content.title}
+              {faqContent.title}
             </h2>
             <div className="space-y-6">
-              {content.questions.map((faq, index) => (
+              {faqContent.questions.map((faq, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">
                     {faq.question}
@@ -264,19 +268,20 @@ export default function KeywordOptimizedContent({
         )
 
       case 'cta':
+        const ctaContent = content as { headline: string; description: string; urgency: string; keywords: string[]; cta: string };
         return (
           <div className="bg-gradient-to-r from-blue-600 to-indigo-700 p-8 rounded-lg text-white text-center">
             <h2 className="text-3xl font-bold mb-4">
-              {content.headline}
+              {ctaContent.headline}
             </h2>
             <p className="text-xl text-blue-100 mb-2">
-              {content.description}
+              {ctaContent.description}
             </p>
             <p className="text-lg text-yellow-200 mb-6 font-semibold">
-              {content.urgency}
+              {ctaContent.urgency}
             </p>
             <div className="flex flex-wrap justify-center gap-2 mb-6">
-              {content.keywords.map((keyword, index) => (
+              {ctaContent.keywords.map((keyword, index) => (
                 <span key={index} className="bg-white bg-opacity-20 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {keyword}
                 </span>
