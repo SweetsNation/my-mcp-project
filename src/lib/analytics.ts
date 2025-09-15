@@ -554,3 +554,179 @@ export const trackMedicareResourceConversion = (
     console.warn('Failed to track Medicare resource conversion:', error);
   }
 };
+
+// Whole Life Insurance specific tracking
+export const trackWholeLifeInsuranceInteraction = (
+  interactionType: 'page_view' | 'quote_request' | 'coverage_calculator' | 'comparison_view' | 'rate_table_view' | 'benefit_exploration' | 'phone_call' | 'form_submission',
+  coverageAmount?: number,
+  userAge?: number,
+  premiumRange?: string,
+  comparisonType?: 'whole_vs_term' | 'whole_vs_universal' | 'carrier_comparison',
+  contentSection?: string
+) => {
+  try {
+    event('whole_life_insurance_interaction', {
+      event_category: 'life_insurance',
+      event_label: `whole_life_${interactionType}`,
+      interaction_type: interactionType,
+      coverage_amount: coverageAmount || 0,
+      user_age: userAge || 0,
+      premium_range: premiumRange || '',
+      comparison_type: comparisonType || '',
+      content_section: contentSection || '',
+      product_type: 'whole_life_insurance',
+      insurance_category: 'permanent_life',
+      value: interactionType === 'phone_call' ? 75 : interactionType === 'quote_request' ? 50 : interactionType === 'form_submission' ? 60 : 10,
+    });
+  } catch (error) {
+    console.warn('Failed to track whole life insurance interaction:', error);
+  }
+};
+
+// Long Term Care Insurance specific tracking
+export const trackLongTermCareInteraction = (
+  interactionType: 'page_view' | 'cost_calculator' | 'coverage_explorer' | 'benefit_period_selection' | 'care_setting_info' | 'premium_estimate' | 'phone_call' | 'quote_request',
+  dailyBenefitAmount?: number,
+  benefitPeriod?: string,
+  careType?: 'nursing_home' | 'assisted_living' | 'home_care' | 'memory_care' | 'comprehensive',
+  userAge?: number,
+  premiumEstimate?: number,
+  policyType?: 'traditional' | 'hybrid_life' | 'hybrid_annuity'
+) => {
+  try {
+    event('long_term_care_interaction', {
+      event_category: 'ltc_insurance',
+      event_label: `ltc_${interactionType}`,
+      interaction_type: interactionType,
+      daily_benefit_amount: dailyBenefitAmount || 0,
+      benefit_period: benefitPeriod || '',
+      care_type: careType || '',
+      user_age: userAge || 0,
+      premium_estimate: premiumEstimate || 0,
+      policy_type: policyType || '',
+      product_type: 'long_term_care_insurance',
+      insurance_category: 'health_care_planning',
+      value: interactionType === 'phone_call' ? 85 : interactionType === 'quote_request' ? 65 : interactionType === 'premium_estimate' ? 35 : 12,
+    });
+  } catch (error) {
+    console.warn('Failed to track long term care interaction:', error);
+  }
+};
+
+// Insurance quote funnel tracking
+export const trackInsuranceQuoteFunnel = (
+  insuranceType: 'whole_life' | 'long_term_care' | 'term_life' | 'final_expense',
+  funnelStep: 'landing' | 'info_gathering' | 'quote_generation' | 'quote_review' | 'contact_request' | 'application_start',
+  stepData?: {
+    coverageAmount?: number;
+    userAge?: number;
+    premiumBudget?: string;
+    healthStatus?: string;
+    timeSpent?: number;
+  }
+) => {
+  try {
+    event('insurance_quote_funnel', {
+      event_category: 'funnel_tracking',
+      event_label: `${insuranceType}_${funnelStep}`,
+      insurance_type: insuranceType,
+      funnel_step: funnelStep,
+      coverage_amount: stepData?.coverageAmount || 0,
+      user_age: stepData?.userAge || 0,
+      premium_budget: stepData?.premiumBudget || '',
+      health_status: stepData?.healthStatus || '',
+      time_spent: stepData?.timeSpent || 0,
+      step_completion: true,
+      value: funnelStep === 'contact_request' ? 60 : funnelStep === 'quote_review' ? 40 : funnelStep === 'quote_generation' ? 30 : 8,
+    });
+  } catch (error) {
+    console.warn('Failed to track insurance quote funnel:', error);
+  }
+};
+
+// Insurance content engagement tracking
+export const trackInsuranceContentEngagement = (
+  insuranceType: 'whole_life' | 'long_term_care',
+  contentType: 'rate_table' | 'comparison_chart' | 'benefit_explanation' | 'cost_breakdown' | 'use_case_scenario' | 'faq_section',
+  engagementMetrics: {
+    timeSpent: number;
+    scrollDepth: number;
+    interactionCount: number;
+    sectionCompletion: boolean;
+  },
+  contentValue?: string
+) => {
+  try {
+    event('insurance_content_engagement', {
+      event_category: 'content_engagement',
+      event_label: `${insuranceType}_${contentType}`,
+      insurance_type: insuranceType,
+      content_type: contentType,
+      time_spent: engagementMetrics.timeSpent,
+      scroll_depth: engagementMetrics.scrollDepth,
+      interaction_count: engagementMetrics.interactionCount,
+      section_completion: engagementMetrics.sectionCompletion,
+      content_value: contentValue || '',
+      value: engagementMetrics.sectionCompletion ? 15 : engagementMetrics.timeSpent > 30 ? 10 : 5,
+    });
+  } catch (error) {
+    console.warn('Failed to track insurance content engagement:', error);
+  }
+};
+
+// Insurance lead quality scoring
+export const trackInsuranceLeadQuality = (
+  insuranceType: 'whole_life' | 'long_term_care',
+  leadData: {
+    sourceChannel: string;
+    pageViews: number;
+    timeOnSite: number;
+    contentEngagement: number;
+    quotesRequested: number;
+    contactMethod: 'phone' | 'form' | 'chat';
+    urgencyLevel: 'immediate' | 'researching' | 'future_planning';
+  },
+  qualityScore: number
+) => {
+  try {
+    event('insurance_lead_quality', {
+      event_category: 'lead_scoring',
+      event_label: `${insuranceType}_quality_${qualityScore >= 80 ? 'high' : qualityScore >= 60 ? 'medium' : 'low'}`,
+      insurance_type: insuranceType,
+      source_channel: leadData.sourceChannel,
+      page_views: leadData.pageViews,
+      time_on_site: leadData.timeOnSite,
+      content_engagement: leadData.contentEngagement,
+      quotes_requested: leadData.quotesRequested,
+      contact_method: leadData.contactMethod,
+      urgency_level: leadData.urgencyLevel,
+      quality_score: qualityScore,
+      value: qualityScore >= 80 ? 100 : qualityScore >= 60 ? 60 : 25,
+    });
+  } catch (error) {
+    console.warn('Failed to track insurance lead quality:', error);
+  }
+};
+
+// Insurance cross-sell tracking
+export const trackInsuranceCrossSell = (
+  primaryProduct: 'whole_life' | 'long_term_care',
+  crossSellProduct: 'term_life' | 'final_expense' | 'medicare_supplement' | 'social_security_analysis',
+  crossSellAction: 'view' | 'click' | 'quote_request' | 'conversion',
+  crossSellContext: string
+) => {
+  try {
+    event('insurance_cross_sell', {
+      event_category: 'cross_sell',
+      event_label: `${primaryProduct}_to_${crossSellProduct}`,
+      primary_product: primaryProduct,
+      cross_sell_product: crossSellProduct,
+      cross_sell_action: crossSellAction,
+      cross_sell_context: crossSellContext,
+      product_combination: `${primaryProduct}+${crossSellProduct}`,
+      value: crossSellAction === 'conversion' ? 80 : crossSellAction === 'quote_request' ? 45 : crossSellAction === 'click' ? 15 : 5,
+    });
+  } catch (error) {
+    console.warn('Failed to track insurance cross-sell:', error);
+  }
+};

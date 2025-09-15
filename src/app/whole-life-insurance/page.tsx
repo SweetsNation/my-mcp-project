@@ -3,6 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
+import InsurancePageAnalytics from '@/components/InsurancePageAnalytics';
+import InsuranceMarketingStrategy from '@/components/InsuranceMarketingStrategy';
+import KeywordOptimizedContent from '@/components/KeywordOptimizedContent';
 
 export const metadata: Metadata = {
   title: 'Whole Life Insurance 2025 | Permanent Coverage & Cash Value | Compare Best Rates | Life Insurance Guide',
@@ -271,7 +274,7 @@ export default function WholeLifeInsurancePage() {
   }, []);
 
   return (
-    <>
+    <InsurancePageAnalytics insuranceType="whole_life">
       <LandingPageAnalytics
         pageType="regional"
         pageTitle="Whole Life Insurance Coverage Guide"
@@ -323,47 +326,26 @@ export default function WholeLifeInsurancePage() {
           {/* Hero Section */}
           <section className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="max-w-4xl">
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                  Whole Life Insurance 2025: Permanent Coverage & Cash Value Guide
-                </h1>
-                <p className="text-xl md:text-2xl text-primary-100 mb-8">
-                  Discover the benefits of whole life insurance with permanent coverage, guaranteed cash value growth, 
-                  and fixed premiums. Compare rates and find the best whole life insurance for your needs.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link 
-                    href="/contact" 
-                    className="bg-white text-primary-600 font-semibold px-8 py-3 rounded-md hover:bg-gray-100 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPageCTA?.('whole_life_quote', 'hero', '/contact')}
-                  >
-                    Get Whole Life Quote
-                  </Link>
-                  <a 
-                    href="tel:331-343-2584" 
-                    className="border-2 border-white text-white font-semibold px-8 py-3 rounded-md hover:bg-white hover:text-primary-600 transition-colors text-center"
-                    onClick={() => (window as any).trackLandingPagePhoneCall?.('hero')}
-                  >
-                    Call 331-E-HEALTH
-                  </a>
-                </div>
-              </div>
+              <KeywordOptimizedContent
+                insuranceType="whole_life"
+                contentType="hero"
+              />
             </div>
           </section>
 
           {/* Whole Life Basics */}
           <section className="py-12 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
-                What is Whole Life Insurance?
-              </h2>
+              <h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-8">
+                Whole Life Insurance 2025: Complete Coverage Guide
+              </h1>
               <div className="max-w-4xl mx-auto text-center mb-12">
                 <p className="text-xl text-gray-600 mb-6">
-                  Whole life insurance provides permanent life insurance coverage with fixed premiums, 
-                  guaranteed cash value growth, and lifetime protection for your beneficiaries. Unlike temporary coverage, 
-                  whole life offers financial security that extends beyond employment transitions where 
-                  <Link href="/cobra-insurance" className="text-primary-600 hover:text-primary-700 underline mx-1">COBRA insurance</Link> 
-                  might be needed, providing permanent family protection.
+                  Whole life insurance provides permanent life insurance coverage with fixed premiums,
+                  guaranteed cash value growth, and lifetime protection for your beneficiaries. Unlike temporary coverage,
+                  whole life offers financial security that extends beyond employment transitions. As you age, consider pairing
+                  whole life insurance with <Link href="/long-term-care-insurance" className="text-primary-600 hover:text-primary-700 underline font-medium">long-term care insurance</Link>
+                  to protect both your family and your retirement savings from unexpected care costs.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
@@ -394,20 +376,10 @@ export default function WholeLifeInsurancePage() {
           {/* Benefits of Whole Life */}
           <section className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-                Benefits of Whole Life Insurance
-              </h2>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {wholeLifeBenefits.map((benefit, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                    <div className="text-center mb-4">
-                      <span className="text-4xl mb-3 block">{benefit.icon}</span>
-                      <h3 className="text-lg font-semibold text-gray-900">{benefit.benefit}</h3>
-                    </div>
-                    <p className="text-gray-600 text-sm text-center">{benefit.description}</p>
-                  </div>
-                ))}
-              </div>
+              <KeywordOptimizedContent
+                insuranceType="whole_life"
+                contentType="features"
+              />
               <div className="mt-12 bg-white p-6 rounded-lg shadow-sm">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">How Cash Value Works</h3>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -438,7 +410,7 @@ export default function WholeLifeInsurancePage() {
           <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-                Whole Life vs Other Life Insurance Types
+                Whole Life Insurance vs Term Life and Universal Life
               </h2>
               <div className="overflow-x-auto">
                 <table className="w-full bg-white rounded-lg shadow-sm">
@@ -573,12 +545,12 @@ export default function WholeLifeInsurancePage() {
                 ))}
               </div>
               <div className="mt-12 bg-blue-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-blue-800 mb-4">Integration with Retirement Planning</h3>
+                <h3 className="text-xl font-semibold text-blue-800 mb-4">Integration with Comprehensive Financial Planning</h3>
                 <p className="text-blue-700 mb-4">
-                  Whole life insurance can complement your retirement strategy by providing tax-advantaged cash value growth 
-                  and potential income through policy loans. Consider how it fits with other retirement vehicles:
+                  Whole life insurance can complement your retirement strategy by providing tax-advantaged cash value growth
+                  and potential income through policy loans. Consider how it fits with other retirement and protection vehicles:
                 </p>
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-3 gap-4">
                   <div>
                     <h4 className="font-semibold text-blue-800 mb-2">Retirement Income:</h4>
                     <ul className="text-sm text-blue-600 space-y-1">
@@ -595,13 +567,42 @@ export default function WholeLifeInsurancePage() {
                       <li>• <Link href="/medicare-advantage/hernando-county-florida" className="hover:underline">Regional Medicare options</Link></li>
                     </ul>
                   </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-800 mb-2">Long-Term Protection:</h4>
+                    <ul className="text-sm text-blue-600 space-y-1">
+                      <li>• <Link href="/long-term-care-insurance" className="hover:underline">Long-term care insurance</Link> to protect savings</li>
+                      <li>• <Link href="/final-expense" className="hover:underline">Final expense insurance</Link> for burial costs</li>
+                      <li>• <Link href="/term-life-insurance" className="hover:underline">Term life insurance</Link> for temporary needs</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="mt-4 p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded-r">
+                  <p className="text-sm text-yellow-800">
+                    <strong>Pro Tip:</strong> Many financial advisors recommend combining whole life insurance with
+                    <Link href="/long-term-care-insurance" className="text-yellow-700 hover:underline font-medium mx-1">long-term care insurance</Link>
+                    to create a comprehensive protection strategy that covers both death benefits and potential care costs in retirement.
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Getting Started */}
+          {/* Marketing Strategy Section */}
           <section className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <InsuranceMarketingStrategy
+                insuranceType="whole_life"
+                targetDemographics={{
+                  primaryAge: "45-65",
+                  incomeLevel: "middle-to-high",
+                  lifeStage: "pre-retirement"
+                }}
+              />
+            </div>
+          </section>
+
+          {/* Getting Started */}
+          <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
                 Getting Started with Whole Life Insurance
@@ -616,7 +617,7 @@ export default function WholeLifeInsurancePage() {
                       <h3 className="text-lg font-semibold text-gray-900 mb-3">Assess Your Needs</h3>
                       <p className="text-gray-600 text-sm">Determine your coverage amount, financial goals, and budget for permanent life insurance.</p>
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-bold text-primary-600">2</span>
@@ -624,7 +625,7 @@ export default function WholeLifeInsurancePage() {
                       <h3 className="text-lg font-semibold text-gray-900 mb-3">Compare Options</h3>
                       <p className="text-gray-600 text-sm">Review different whole life policies, carriers, and riders to find the best fit.</p>
                     </div>
-                    
+
                     <div className="text-center">
                       <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-bold text-primary-600">3</span>
@@ -637,19 +638,19 @@ export default function WholeLifeInsurancePage() {
                 <div className="mt-8 bg-primary-50 p-6 rounded-lg text-center">
                   <h3 className="text-lg font-semibold text-primary-800 mb-3">Ready to Explore Whole Life Insurance?</h3>
                   <p className="text-primary-700 mb-4">
-                    Our life insurance specialists can help you understand whole life insurance options, 
+                    Our life insurance specialists can help you understand whole life insurance options,
                     compare rates from top carriers, and find the right permanent coverage for your needs and budget.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link 
-                      href="/contact" 
+                    <Link
+                      href="/contact"
                       className="bg-primary-600 text-white px-6 py-2 rounded-md hover:bg-primary-700 transition-colors"
                       onClick={() => (window as any).trackLandingPageCTA?.('whole_life_consultation', 'content', '/contact')}
                     >
                       Get Personalized Quote
                     </Link>
-                    <a 
-                      href="tel:331-343-2584" 
+                    <a
+                      href="tel:331-343-2584"
                       className="border border-primary-600 text-primary-600 px-6 py-2 rounded-md hover:bg-primary-50 transition-colors"
                       onClick={() => (window as any).trackLandingPagePhoneCall?.('content')}
                     >
@@ -694,6 +695,6 @@ export default function WholeLifeInsurancePage() {
           </section>
         </main>
       </div>
-    </>
+    </InsurancePageAnalytics>
   );
 }

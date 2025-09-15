@@ -1,6 +1,9 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import LandingPageAnalytics from '@/components/LandingPageAnalytics'
+import InsurancePageAnalytics from '@/components/InsurancePageAnalytics'
+import InsuranceMarketingStrategy from '@/components/InsuranceMarketingStrategy'
+import KeywordOptimizedContent from '@/components/KeywordOptimizedContent'
 import MarketingOptimizer from '@/components/MarketingOptimizer'
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs'
 import { PrimaryLinksSection, ContextualLinksSection, CrossSellSection } from '@/components/InternalLinksSection'
@@ -106,7 +109,7 @@ const breadcrumbItems = [
 
 export default function LongTermCareInsurance() {
   return (
-    <>
+    <InsurancePageAnalytics insuranceType="long_term_care">
       <LandingPageAnalytics
         pageType="regional"
         pageTitle="Long-Term Care Insurance"
@@ -151,24 +154,11 @@ export default function LongTermCareInsurance() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-r from-purple-600 to-indigo-800 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                  Long-Term Care Insurance<br />
-                  <span className="text-purple-200">Protect Your Retirement Savings</span>
-                </h1>
-                <p className="text-xl md:text-2xl mb-8 text-purple-100">
-                  Comprehensive coverage for nursing homes, assisted living, and in-home care. Don't let long-term care costs devastate your family's finances.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors">
-                    Get LTC Quote
-                  </button>
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors">
-                    Calculate Care Costs
-                  </button>
-                </div>
-              </div>
+            <KeywordOptimizedContent
+              insuranceType="long_term_care"
+              contentType="hero"
+            />
+            <div className="mt-12 grid lg:grid-cols-2 gap-12 items-center">
               <div className="bg-white/10 backdrop-blur rounded-lg p-8">
                 <h3 className="text-lg font-semibold text-yellow-200 mb-2">Long-Term Care Costs 2025</h3>
                 <div className="space-y-3 text-purple-100">
@@ -197,10 +187,21 @@ export default function LongTermCareInsurance() {
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
+          {/* Page Title */}
+          <section className="mb-16 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              Long-Term Care Insurance 2025: Complete Guide to Nursing Home and Home Care Coverage
+            </h1>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Protect your retirement savings from devastating long-term care costs. Learn about comprehensive coverage options,
+              costs, and how to choose the right long-term care insurance policy for your needs.
+            </p>
+          </section>
+
           {/* Cost Reality Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              The Reality of Long-Term Care Costs
+              2025 Long-Term Care Costs: What You Need to Know
             </h2>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="bg-white rounded-lg shadow-lg p-8 text-center border-l-4 border-red-500">
@@ -236,20 +237,38 @@ export default function LongTermCareInsurance() {
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-orange-600 mb-2">$0</div>
-                  <div>Medicare coverage for most long-term care</div>
+                  <div>
+                    <Link href="/medicare-advantage" className="hover:text-orange-800 underline">Medicare</Link> coverage for most long-term care
+                  </div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-purple-600 mb-2">91%</div>
                   <div>Want to remain in their own home</div>
                 </div>
               </div>
+              <div className="mt-6 p-4 bg-white rounded-lg">
+                <p className="text-gray-700 text-sm">
+                  While <Link href="/medicare-advantage" className="text-orange-600 hover:text-orange-800 underline">Medicare Advantage plans</Link> may offer
+                  limited long-term care benefits, traditional Medicare provides minimal coverage for custodial care needs.
+                  Consider pairing LTC insurance with <Link href="/whole-life-insurance" className="text-purple-600 hover:text-purple-800 underline">whole life insurance</Link>
+                  for comprehensive family financial protection.
+                </p>
+              </div>
             </div>
+          </section>
+
+          {/* LTC Insurance Features */}
+          <section className="mb-16">
+            <KeywordOptimizedContent
+              insuranceType="long_term_care"
+              contentType="features"
+            />
           </section>
 
           {/* LTC Insurance Types */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
-              Types of Long-Term Care Insurance
+              Types of Long-Term Care Insurance Policies
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -284,7 +303,7 @@ export default function LongTermCareInsurance() {
                   Hybrid Life-LTC Policies
                 </h3>
                 <div className="space-y-2 text-gray-700 text-sm">
-                  <div>" Life insurance + LTC benefits</div>
+                  <div>" <Link href="/whole-life-insurance" className="text-green-600 hover:text-green-800 underline">Life insurance</Link> + LTC benefits</div>
                   <div>" Return of premium guarantee</div>
                   <div>" Death benefit if care not needed</div>
                   <div>" Single or flexible premiums</div>
@@ -292,6 +311,9 @@ export default function LongTermCareInsurance() {
                 </div>
                 <div className="mt-4 text-green-600 font-semibold">
                   Starting at $300-600/month
+                </div>
+                <div className="mt-2 text-xs text-gray-600">
+                  Combines benefits of <Link href="/whole-life-insurance" className="text-green-600 hover:underline">permanent life insurance</Link> with long-term care coverage
                 </div>
               </div>
 
@@ -476,44 +498,22 @@ export default function LongTermCareInsurance() {
 
           {/* FAQ Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              Frequently Asked Questions About Long-Term Care Insurance
-            </h2>
-            <div className="space-y-8">
-              {[
-                {
-                  question: "What is long-term care insurance and what does it cover?",
-                  answer: "Long-term care insurance covers the costs of extended care services including nursing homes, assisted living facilities, adult day care, and in-home care. It helps protect your retirement savings from the high costs of long-term care, which average $108,405 annually for nursing home care."
-                },
-                {
-                  question: "When should I buy long-term care insurance?",
-                  answer: "The ideal time to purchase long-term care insurance is between ages 50-65 when you're healthy and premiums are most affordable. Waiting until you're older or have health issues can result in higher premiums or denial of coverage."
-                },
-                {
-                  question: "How much does long-term care insurance cost?",
-                  answer: "Long-term care insurance premiums vary based on age, health, coverage amount, and benefit period. Annual premiums typically range from $1,500-$5,000, with an average of $2,800 for comprehensive coverage purchased in your 50s."
-                },
-                {
-                  question: "What triggers long-term care insurance benefits?",
-                  answer: "Benefits typically trigger when you cannot perform 2 out of 6 activities of daily living (ADLs) - bathing, dressing, eating, transferring, toileting, and continence - or have a cognitive impairment requiring substantial supervision."
-                },
-                {
-                  question: "Does Medicare cover long-term care?",
-                  answer: "Medicare provides very limited long-term care coverage, mainly for skilled nursing care following a hospital stay for up to 100 days. Medicare does not cover custodial care, which represents the majority of long-term care needs."
-                },
-                {
-                  question: "What's the difference between traditional and hybrid LTC policies?",
-                  answer: "Traditional LTC insurance is pure long-term care coverage with lower premiums but use-it-or-lose-it structure. Hybrid policies combine life insurance or annuities with LTC benefits, offering return of premium guarantees but higher costs."
-                }
-              ].map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-700">{faq.answer}</p>
-                </div>
-              ))}
-            </div>
+            <KeywordOptimizedContent
+              insuranceType="long_term_care"
+              contentType="faq"
+            />
+          </section>
+
+          {/* Marketing Strategy Section */}
+          <section className="mb-16">
+            <InsuranceMarketingStrategy
+              insuranceType="long_term_care"
+              targetDemographics={{
+                primaryAge: "50-70",
+                incomeLevel: "middle-to-high",
+                lifeStage: "pre-retirement-to-early-retirement"
+              }}
+            />
           </section>
 
           {/* Primary Links Section */}
@@ -534,6 +534,44 @@ export default function LongTermCareInsurance() {
             className="py-12 bg-gray-50"
           />
 
+          {/* Comprehensive Planning Section */}
+          <section className="mb-16 bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Complete Your Financial Protection Strategy
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Life Insurance Protection</h3>
+                <p className="text-gray-600 mb-4">
+                  Protect your family with life insurance that complements your long-term care coverage:
+                </p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• <Link href="/whole-life-insurance" className="text-blue-600 hover:text-blue-800 underline">Whole life insurance</Link> for permanent protection with cash value</li>
+                  <li>• <Link href="/term-life-insurance" className="text-blue-600 hover:text-blue-800 underline">Term life insurance</Link> for temporary high-coverage needs</li>
+                  <li>• <Link href="/final-expense" className="text-blue-600 hover:text-blue-800 underline">Final expense insurance</Link> to cover burial and funeral costs</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Healthcare Coverage</h3>
+                <p className="text-gray-600 mb-4">
+                  Ensure comprehensive healthcare coverage as you age:
+                </p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• <Link href="/medicare-advantage" className="text-purple-600 hover:text-purple-800 underline">Medicare Advantage plans</Link> for comprehensive health coverage</li>
+                  <li>• <Link href="/supplemental-insurance" className="text-purple-600 hover:text-purple-800 underline">Medicare supplement insurance</Link> for gap coverage</li>
+                  <li>• <Link href="/social-security-analysis" className="text-purple-600 hover:text-purple-800 underline">Social Security optimization</Link> for retirement income</li>
+                </ul>
+              </div>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-gray-700 text-sm">
+                <strong>Expert Tip:</strong> The most comprehensive retirement protection combines
+                <Link href="/whole-life-insurance" className="text-blue-600 hover:underline mx-1">permanent life insurance</Link>
+                with long-term care insurance to protect both your family and your savings from unexpected care costs.
+              </p>
+            </div>
+          </section>
+
           {/* CTA Section */}
           <section className="text-center py-16 bg-gradient-to-r from-purple-600 to-indigo-800 rounded-lg text-white">
             <h2 className="text-3xl font-bold mb-6">
@@ -553,6 +591,6 @@ export default function LongTermCareInsurance() {
           </section>
         </main>
       </div>
-    </>
+    </InsurancePageAnalytics>
   )
 }
