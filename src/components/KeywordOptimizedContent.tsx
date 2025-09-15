@@ -144,12 +144,11 @@ export default function KeywordOptimizedContent({
           const rect = element.getBoundingClientRect()
           if (rect.top < window.innerHeight && rect.bottom > 0) {
             setVisibilityTracked(true)
-            trackInsuranceContentEngagement(insuranceType, 'keyword_optimized_content', {
+            trackInsuranceContentEngagement(insuranceType, 'benefit_explanation', {
               timeSpent: Date.now(),
               scrollDepth: Math.round((window.pageYOffset / document.documentElement.scrollHeight) * 100),
               interactionCount: 0,
-              sectionCompletion: true,
-              contentType: contentType
+              sectionCompletion: true
             })
           }
         }

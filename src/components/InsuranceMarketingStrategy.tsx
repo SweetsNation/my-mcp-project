@@ -107,7 +107,7 @@ export default function InsuranceMarketingStrategy({
 
   // Track marketing strategy engagement
   useEffect(() => {
-    trackInsuranceContentEngagement(insuranceType, 'marketing_strategy', {
+    trackInsuranceContentEngagement(insuranceType, 'benefit_explanation', {
       timeSpent: Date.now(),
       scrollDepth: 0,
       interactionCount: 0,
@@ -117,20 +117,18 @@ export default function InsuranceMarketingStrategy({
 
   const handleStrategyClick = (strategy: string) => {
     setActiveStrategy(strategy)
-    trackInsuranceContentEngagement(insuranceType, 'strategy_selection', {
+    trackInsuranceContentEngagement(insuranceType, 'use_case_scenario', {
       timeSpent: Date.now(),
       scrollDepth: 0,
       interactionCount: 1,
-      sectionCompletion: true,
-      strategyType: strategy
+      sectionCompletion: true
     })
   }
 
   const handleCTAClick = (ctaType: string, destination: string) => {
     trackCTAClick(ctaType, window.location.pathname, destination)
-    trackInsuranceQuoteFunnel(insuranceType, 'marketing_conversion', {
-      source: 'marketing_strategy',
-      ctaType: ctaType
+    trackInsuranceQuoteFunnel(insuranceType, 'contact_request', {
+      timeSpent: Date.now()
     })
   }
 

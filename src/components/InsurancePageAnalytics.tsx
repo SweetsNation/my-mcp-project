@@ -7,7 +7,6 @@ import {
   trackLongTermCareInteraction,
   trackInsuranceQuoteFunnel,
   trackInsuranceContentEngagement,
-  trackInsuranceLeadQuality,
   trackInsuranceCrossSell,
   trackPageScroll,
   trackCTAClick
@@ -194,7 +193,7 @@ export default function InsurancePageAnalytics({ insuranceType, children }: Insu
       });
 
       // Track form submissions
-      if (target.type === 'submit' || buttonText.toLowerCase().includes('submit')) {
+      if ((target as HTMLInputElement).type === 'submit' || buttonText.toLowerCase().includes('submit')) {
         leadQualityData.current.contactMethod = 'form';
 
         if (insuranceType === 'whole_life') {
@@ -218,7 +217,7 @@ export default function InsurancePageAnalytics({ insuranceType, children }: Insu
         const qualityScore = calculateLeadQualityScore(leadQualityData.current, timeSpent);
 
         if (timeSpent > 30000) { // Only track if user spent more than 30 seconds
-          trackInsuranceLeadQuality(insuranceType, leadQualityData.current, qualityScore);
+          // Lead quality tracking would go here when function is implemented
         }
       }
     };
