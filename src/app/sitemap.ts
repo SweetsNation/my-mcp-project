@@ -169,18 +169,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Medicare Supplement regional/county pages
   const medicareSupplementRegionalPages: MetadataRoute.Sitemap = [
+    // State pages
     { url: `${baseUrl}/medicare-supplement-florida`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-california`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-new-york`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-hawaii`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-guide-hawaii`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    // Texas counties (high priority - new content with enhanced schema)
+    { url: `${baseUrl}/medicare-supplement-tarrant-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/medicare-supplement-dallas-county-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    { url: `${baseUrl}/medicare-supplement-harris-county-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    // Florida counties (high priority - new content with FAQ schema)
+    { url: `${baseUrl}/medicare-supplement-hernando-county-florida`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/medicare-supplement-monroe-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    // Other county pages
     { url: `${baseUrl}/medicare-supplement-maui-county-hawaii`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-los-angeles-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-orange-county-california`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-nassau-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${baseUrl}/medicare-supplement-dallas-county-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${baseUrl}/medicare-supplement-harris-county-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    // Community pages
     { url: `${baseUrl}/medicare-supplement-hispanic-latino-community`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
   ];
 
@@ -204,7 +212,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/zero-premium-medicare-advantage-jefferson-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/zero-premium-medicare-advantage-plans-jefferson-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/zero-premium-medicare-advantage-westchester-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${baseUrl}/2025-medicare-advantage-changes-fairfax`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-advantage-diverse-communities-atlanta`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-advantage-enrollment-guide-research-triangle`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-advantage-transportation-benefits-nashville`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
@@ -212,14 +219,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/d-snp-plans-davidson-county-dual-eligible-benefits`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
   ];
 
-  // Hospital comparison landing pages
+  // Hospital comparison landing pages (kept for backwards compatibility)
   const hospitalComparisonPages: MetadataRoute.Sitemap = [
-    { url: `${baseUrl}/uab-vs-st-vincents-medicare-advantage-birmingham`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/vanderbilt-vs-hca-medicare-advantage-nashville`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/emory-vs-piedmont-medicare-advantage-atlanta`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/inova-vs-kaiser-medicare-advantage-fairfax`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/duke-vs-unc-rex-medicare-advantage-wake-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/community-health-centers-medicare-advantage-birmingham`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/grady-health-system-medicare-advantage-atlanta`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/raleigh-tech-innovation-medicare-advantage`, lastModified: today, changeFrequency: 'weekly', priority: 0.7 },
   ];
@@ -288,6 +291,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog pages
   const blogPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/blog`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    // Hospital comparison blogs (high priority - new content)
+    { url: `${baseUrl}/blog/uab-vs-st-vincents-medicare-advantage-birmingham`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/blog/vanderbilt-vs-hca-medicare-advantage-nashville`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/blog/emory-vs-piedmont-medicare-advantage-atlanta`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    // Medicare Advantage updates & community access
+    { url: `${baseUrl}/blog/2025-medicare-advantage-changes-fairfax`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/blog/community-health-centers-medicare-advantage-birmingham`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    // Health insurance guides
     { url: `${baseUrl}/blog/miami-dade-health-insurance-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/blog/health-insurance-harris-county-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.7 },
   ];
