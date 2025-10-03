@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LandingPageAnalytics from '@/components/LandingPageAnalytics'
-import { generateBlogPostSchema } from '@/lib/schema'
+import { generateBlogPostSchema } from '@/lib/schema/blog-schema'
 
 const blogPostData = {
   title: 'Raleigh Tech Workers & Medicare Advantage: Coverage for Research Triangle Park Professionals 2025',

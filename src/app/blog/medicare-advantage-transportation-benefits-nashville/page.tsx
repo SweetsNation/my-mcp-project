@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LandingPageAnalytics from '@/components/LandingPageAnalytics'
-import { generateBlogPostSchema } from '@/lib/schema'
+import { generateBlogPostSchema } from '@/lib/schema/blog-schema'
 
 const blogPostData = {
   title: 'Medicare Advantage Transportation Benefits in Nashville 2025: Free Rides to Doctor Appointments',

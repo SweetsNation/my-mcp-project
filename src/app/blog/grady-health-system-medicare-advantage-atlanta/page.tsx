@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import LandingPageAnalytics from '@/components/LandingPageAnalytics'
-import { generateBlogPostSchema } from '@/lib/schema'
+import { generateBlogPostSchema } from '@/lib/schema/blog-schema'
 
 const blogPostData = {
   title: 'Grady Health System Medicare Advantage Plans Atlanta 2025: Coverage for Georgia\'s Safety-Net Hospital',
