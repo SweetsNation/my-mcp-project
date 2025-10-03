@@ -180,10 +180,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/medicare-supplement-tarrant-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/medicare-supplement-dallas-county-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
     { url: `${baseUrl}/medicare-supplement-harris-county-texas`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
-    // Florida counties (high priority - new content with FAQ schema)
+    // Florida counties (HIGHEST PRIORITY - comprehensive schema markup with FAQs)
+    { url: `${baseUrl}/medicare-supplement-miami-dade-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.90 },
+    { url: `${baseUrl}/medicare-supplement-broward-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.90 },
+    { url: `${baseUrl}/medicare-supplement-palm-beach-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.90 },
+    { url: `${baseUrl}/medicare-supplement-monroe-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.90 },
     { url: `${baseUrl}/medicare-supplement-orange-county-florida`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/medicare-supplement-hernando-county-florida`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${baseUrl}/medicare-supplement-monroe-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
+    { url: `${baseUrl}/medicare-part-d-miami-dade-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.80 },
+    { url: `${baseUrl}/medicare-part-d-broward-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/medicare-part-d-palm-beach-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/medicare-advantage-palm-beach-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/health-insurance-marketplace-miami-dade-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/health-insurance-marketplace-broward-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/health-insurance-marketplace-palm-beach-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
     // California counties (high priority - new content with FAQ schema)
     { url: `${baseUrl}/medicare-supplement-san-diego-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/medicare-supplement-sacramento-county`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
@@ -291,7 +301,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog pages
   const blogPages: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/blog`, lastModified: today, changeFrequency: 'weekly', priority: 0.75 },
-    // Hospital comparison blogs (high priority - new content)
+    // Hospital comparison blogs (HIGHEST PRIORITY - comprehensive schema markup)
+    { url: `${baseUrl}/blog/inova-vs-kaiser-medicare-advantage-fairfax`, lastModified: today, changeFrequency: 'weekly', priority: 0.90 },
     { url: `${baseUrl}/blog/uab-vs-st-vincents-medicare-advantage-birmingham`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/blog/vanderbilt-vs-hca-medicare-advantage-nashville`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/blog/emory-vs-piedmont-medicare-advantage-atlanta`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
