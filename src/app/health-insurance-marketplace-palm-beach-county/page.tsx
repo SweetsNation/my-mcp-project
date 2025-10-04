@@ -192,7 +192,6 @@ export default function PalmBeachMarketplacePage() {
         state="Florida"
         demographics={{
           avgAge: 48,
-          householdIncome: 72500,
         }}
         keyMetrics={{
           totalBeneficiaries: palmBeachMarketplaceData.marketplaceEnrollees,

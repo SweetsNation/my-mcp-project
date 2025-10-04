@@ -56,7 +56,6 @@ export default function MiamiDadeMarketplacePage() {
         state="Florida"
         demographics={{
           avgAge: 40,
-          householdIncome: 58500,
         }}
         keyMetrics={{
           totalBeneficiaries: miamiDadeMarketplaceData.marketplaceEnrollees,

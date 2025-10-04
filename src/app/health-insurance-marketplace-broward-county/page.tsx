@@ -192,7 +192,6 @@ export default function BrowardMarketplacePage() {
         state="Florida"
         demographics={{
           avgAge: 42,
-          householdIncome: 61500,
         }}
         keyMetrics={{
           totalBeneficiaries: browardMarketplaceData.marketplaceEnrollees,
