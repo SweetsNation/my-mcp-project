@@ -200,7 +200,6 @@ export default function PalmBeachCountyMedicarePartDPage() {
         state="Florida"
         demographics={{
           avgAge: 72,
-          householdIncome: 68500,
         }}
         keyMetrics={{
           totalBeneficiaries: palmBeachPartDData.partDEnrollment,
