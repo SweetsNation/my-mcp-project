@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const baseUrl = 'https://elmaginsurance.com';
+const baseUrl = 'https://www.elmaginsurance.com';
 const today = new Date().toISOString().split('T')[0];
 
 export default function sitemap(): MetadataRoute.Sitemap {
