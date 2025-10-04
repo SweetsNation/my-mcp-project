@@ -21,7 +21,7 @@ export default function SacramentoCountyMedicareSupplementPage() {
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Analytics Tracking */}
       <LandingPageAnalytics
-        pageType="landing"
+        pageType="county"
         pageTitle="Sacramento County Medicare Supplement"
         county="Sacramento County"
         state="California"
