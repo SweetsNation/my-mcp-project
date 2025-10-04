@@ -42,7 +42,7 @@ export default function GradyHealthSystemMedicareAdvantageAtlantaPage() {
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Analytics Tracking */}
       <LandingPageAnalytics
-        pageType="blog"
+        pageType="county"
         pageTitle="Grady Health System Medicare Advantage Atlanta"
         county="Fulton County"
         state="Georgia"

@@ -42,7 +42,7 @@ export default function MedicareAdvantageTransportationBenefitsNashvillePage() {
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* Analytics Tracking */}
       <LandingPageAnalytics
-        pageType="blog"
+        pageType="county"
         pageTitle="Medicare Advantage Transportation Benefits Nashville"
         county="Davidson County"
         state="Tennessee"
