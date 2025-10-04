@@ -126,7 +126,7 @@ export const trackCostBenefitAnalysis = (
   timeSpent?: number
 ) => {
   const scenarioValues = {
-    light_year: { ma_cost: 1400, medigap_cost: 1980, ma_advantage: 580 },
+    light_year: { ma_cost: 1400, medigap_cost: 1980, medigap_saves: -580 },
     mainland_care: { ma_cost: 5800, medigap_cost: 2220, medigap_saves: 3580 },
     hurricane_evacuation: { ma_cost: 10400, medigap_cost: 2220, medigap_saves: 8180 }
   };
@@ -137,7 +137,7 @@ export const trackCostBenefitAnalysis = (
     time_spent_seconds: timeSpent,
     ma_cost: scenarioValues[scenario].ma_cost,
     medigap_cost: scenarioValues[scenario].medigap_cost,
-    potential_savings: scenarioValues[scenario].medigap_saves || 0,
+    potential_savings: scenarioValues[scenario].medigap_saves,
     high_engagement: timeSpent && timeSpent > 60,
     value: 35
   });
