@@ -9,50 +9,50 @@ const structuredData = {
     // WebPage Schema
     {
       '@type': 'WebPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-orange-county-florida',
-      url: 'https://elmaginsurance.com/medicare-supplement-orange-county-florida',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida',
       name: 'Medicare Supplement Plans Orange County FL 2025 | Medigap Coverage Orlando, Winter Park',
       description: 'Compare Medicare Supplement (Medigap) plans in Orange County, Florida. Plans F, G, N coverage for Orlando, Winter Park, Apopka seniors. Free quotes, expert guidance for 265,000+ beneficiaries.',
       inLanguage: 'en-US',
       breadcrumb: {
-        '@id': 'https://elmaginsurance.com/medicare-supplement-orange-county-florida#breadcrumb'
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida#breadcrumb'
       }
     },
     // BreadcrumbList Schema
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-orange-county-florida#breadcrumb',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://elmaginsurance.com'
+          item: 'https://www.elmaginsurance.com'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Medicare Supplement',
-          item: 'https://elmaginsurance.com/medicare-supplement'
+          item: 'https://www.elmaginsurance.com/medicare-supplement'
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Orange County Florida',
-          item: 'https://elmaginsurance.com/medicare-supplement-orange-county-florida'
+          item: 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida'
         }
       ]
     },
     // FinancialProduct Schema for Medicare Supplement Plans
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-orange-county-florida#product',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida#product',
       name: 'Medicare Supplement Plans - Orange County, Florida',
       description: 'Medicare Supplement (Medigap) insurance plans for Orange County seniors, including Orlando, Winter Park, and Apopka with AdventHealth and Orlando Health network access.',
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        url: 'https://elmaginsurance.com'
+        url: 'https://www.elmaginsurance.com'
       },
       category: 'Medicare Supplement Insurance',
       areaServed: {
@@ -86,7 +86,7 @@ const structuredData = {
     // FAQPage Schema
     {
       '@type': 'FAQPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-orange-county-florida#faq',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -141,10 +141,10 @@ const structuredData = {
     // InsuranceAgency Schema for Service Area
     {
       '@type': 'InsuranceAgency',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-orange-county-florida#business',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida#business',
       name: 'El-Mag Insurance - Orange County Medicare Supplement',
       description: 'Medicare Supplement (Medigap) insurance specialists serving Orange County, Florida, including Orlando, Winter Park, Apopka, and Central Florida communities.',
-      url: 'https://elmaginsurance.com/medicare-supplement-orange-county-florida',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida',
       telephone: '+1-331-343-2584',
       areaServed: {
         '@type': 'Place',
@@ -194,7 +194,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-orange-county-florida',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-orange-county-florida',
   },
 }
 

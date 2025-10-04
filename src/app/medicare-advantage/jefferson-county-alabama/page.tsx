@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Jefferson County, Alabama with local Birmingham providers.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
   },
 };
 
@@ -102,29 +102,29 @@ export default function JeffersonCountyAlabamaPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
-        url: 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
+        url: 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
         name: 'Medicare Advantage Plans Jefferson County Alabama 2025 | $0 Premium Options',
         description: 'Find Medicare Advantage plans in Jefferson County, Alabama with $0 premiums. 42% penetration rate offers better plan choices. Birmingham area Medicare specialists.',
         inLanguage: 'en-US',
-        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
-        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama#breadcrumb' }
+        isPartOf: { '@id': 'https://www.elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama#breadcrumb' }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama#breadcrumb',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
-          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
-          { '@type': 'ListItem', position: 3, name: 'Jefferson County, Alabama', item: 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://www.elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Jefferson County, Alabama', item: 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama' }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/jefferson-county-alabama#service',
         name: 'Jefferson County Alabama Medicare Advantage Plans',
         description: 'Medicare Advantage (Part C) plans for Jefferson County and Birmingham residents with 42% penetration rate and dual-eligible options.',
-        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://www.elmaginsurance.com' },
         areaServed: {
           '@type': 'County',
           name: 'Jefferson County, Alabama',

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Expert Health Insurance Marketplace & Life Insurance guidance. Affordable health insurance, ACA plans, term life insurance. Bilingual service.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/team/marcia-cordero',
+    canonical: 'https://www.elmaginsurance.com/team/marcia-cordero',
   },
 }
 

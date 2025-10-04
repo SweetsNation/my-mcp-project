@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Terms and conditions for using El-Mag Insurance services and website for Medicare Advantage plan assistance.',
   keywords: 'terms of service, terms and conditions, user agreement, service terms',
   alternates: {
-    canonical: 'https://elmaginsurance.com/terms-of-service',
+    canonical: 'https://www.elmaginsurance.com/terms-of-service',
   },
 };
 

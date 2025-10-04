@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-miami-dade-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-miami-dade-county',
   },
 }
 

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Atlanta & Fulton County, Georgia with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia',
   },
 };
 
@@ -104,29 +104,29 @@ export default function FultonCountyGeorgiaPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia',
-        url: 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia',
+        url: 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia',
         name: 'Medicare Advantage Plans Fulton County Georgia 2025 | Atlanta Medicare Plans',
         description: 'Compare Medicare Advantage plans in Fulton County & Atlanta, Georgia. 60% penetration rate with $0 premium options. Dual-eligible specialized benefits available.',
         inLanguage: 'en-US',
-        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
-        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia#breadcrumb' }
+        isPartOf: { '@id': 'https://www.elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia#breadcrumb' }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia#breadcrumb',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
-          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
-          { '@type': 'ListItem', position: 3, name: 'Fulton County, Georgia', item: 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://www.elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Fulton County, Georgia', item: 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia' }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/fulton-county-georgia#service',
         name: 'Fulton County Georgia Medicare Advantage Plans',
         description: 'Medicare Advantage (Part C) plans for Fulton County and Atlanta residents with 60% penetration rate and diverse community support.',
-        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://www.elmaginsurance.com' },
         areaServed: {
           '@type': 'County',
           name: 'Fulton County, Georgia',

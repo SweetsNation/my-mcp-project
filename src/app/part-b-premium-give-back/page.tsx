@@ -17,51 +17,51 @@ export default function PartBPremiumGiveBack() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/part-b-premium-give-back',
-        url: 'https://elmaginsurance.com/part-b-premium-give-back',
+        '@id': 'https://www.elmaginsurance.com/part-b-premium-give-back',
+        url: 'https://www.elmaginsurance.com/part-b-premium-give-back',
         name: 'Part B Premium Give Back Medicare Advantage Plans 2025',
         description: 'Find Medicare Advantage plans with Part B premium give back benefits. Reduce your monthly Medicare costs with give back plans.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         },
         breadcrumb: {
-          '@id': 'https://elmaginsurance.com/part-b-premium-give-back#breadcrumb'
+          '@id': 'https://www.elmaginsurance.com/part-b-premium-give-back#breadcrumb'
         }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/part-b-premium-give-back#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/part-b-premium-give-back#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Medicare Advantage',
-            item: 'https://elmaginsurance.com/medicare-advantage'
+            item: 'https://www.elmaginsurance.com/medicare-advantage'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Part B Premium Give Back',
-            item: 'https://elmaginsurance.com/part-b-premium-give-back'
+            item: 'https://www.elmaginsurance.com/part-b-premium-give-back'
           }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/part-b-premium-give-back#service',
+        '@id': 'https://www.elmaginsurance.com/part-b-premium-give-back#service',
         name: 'Part B Premium Give Back Medicare Advantage Plans',
         description: 'Medicare Advantage plans that reduce or eliminate your Medicare Part B premium through give back benefits, providing monthly savings.',
         provider: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         serviceType: 'Medicare Advantage with Part B Premium Reduction',
         areaServed: {
@@ -101,7 +101,7 @@ export default function PartBPremiumGiveBack() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/part-b-premium-give-back#faq',
+        '@id': 'https://www.elmaginsurance.com/part-b-premium-give-back#faq',
         mainEntity: [
           {
             '@type': 'Question',

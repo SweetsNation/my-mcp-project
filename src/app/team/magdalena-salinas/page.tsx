@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Maximize Social Security benefits & get optimal Medicare Supplement coverage. Expert retirement planning & benefit optimization across 7 states. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/team/magdalena-salinas',
+    canonical: 'https://www.elmaginsurance.com/team/magdalena-salinas',
   },
 }
 

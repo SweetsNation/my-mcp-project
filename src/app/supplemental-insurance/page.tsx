@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: 'Fill health insurance gaps with hospital indemnity plans, critical illness coverage, cancer insurance coverage, and accident insurance for families.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/supplemental-insurance',
+    canonical: 'https://www.elmaginsurance.com/supplemental-insurance',
   },
 };
 

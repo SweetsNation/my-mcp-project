@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in DeKalb County, GA with expert guidance. Diverse community specialists and Atlanta metro healthcare with cultural competency for African American and multicultural seniors.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/dekalb-county-georgia',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/dekalb-county-georgia',
   },
 };
 

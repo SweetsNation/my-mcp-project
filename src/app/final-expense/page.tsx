@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Final Expense Insurance & Burial Insurance Quotes | Guaranteed Acceptance',
     description: 'Protect your family with affordable final expense insurance. Get burial insurance quotes with guaranteed acceptance and no medical exam required.',
-    url: 'https://elmaginsurance.com/final-expense',
+    url: 'https://www.elmaginsurance.com/final-expense',
     siteName: 'El-Mag Insurance',
     type: 'website',
   },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Get affordable final expense insurance quotes. No medical exam required. Starting at $10/month.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/final-expense',
+    canonical: 'https://www.elmaginsurance.com/final-expense',
   },
 };
 

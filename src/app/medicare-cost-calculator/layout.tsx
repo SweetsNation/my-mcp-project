@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-cost-calculator',
+    canonical: 'https://www.elmaginsurance.com/medicare-cost-calculator',
   },
 }
 

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Find Medicare disability insurance for those under 65. SSDI Medicare eligibility, 24-month waiting period, Medicare Advantage & Supplement options for disabled beneficiaries.',
   keywords: 'Medicare disability insurance, Medicare under 65, SSDI Medicare eligibility, disability Medicare benefits, Medicare for disabled',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-disability-insurance',
+    canonical: 'https://www.elmaginsurance.com/medicare-disability-insurance',
   },
 };
 

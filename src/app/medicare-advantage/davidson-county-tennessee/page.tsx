@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Davidson County & Nashville, Tennessee with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
   },
 };
 
@@ -104,29 +104,29 @@ export default function DavidsonCountyTennesseePage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
-        url: 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
+        url: 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
         name: 'Medicare Advantage Plans Davidson County Tennessee 2025 | Nashville Medicare',
         description: 'Find Medicare Advantage plans in Davidson County & Nashville, TN. 45% penetration rate with $0 premium options. Dual-eligible specialized benefits available.',
         inLanguage: 'en-US',
-        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
-        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee#breadcrumb' }
+        isPartOf: { '@id': 'https://www.elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee#breadcrumb' }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee#breadcrumb',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
-          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
-          { '@type': 'ListItem', position: 3, name: 'Davidson County, Tennessee', item: 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://www.elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Davidson County, Tennessee', item: 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee' }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/davidson-county-tennessee#service',
         name: 'Davidson County Tennessee Medicare Advantage Plans',
         description: 'Medicare Advantage (Part C) plans for Davidson County and Nashville residents with 45% penetration rate and dual-eligible options.',
-        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://www.elmaginsurance.com' },
         areaServed: {
           '@type': 'County',
           name: 'Davidson County, Tennessee',

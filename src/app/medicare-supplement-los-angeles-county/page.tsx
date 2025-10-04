@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert Medicare Supplement (Medigap) guidance for Los Angeles County. Compare plans, save on premiums with California community rating, and get personalized help navigating LA healthcare networks. Serving 1.8M+ Medicare beneficiaries across LA County.',
   keywords: 'Los Angeles Medicare Supplement, LA County Medigap, Medicare Supplement Los Angeles, Medigap LA County, Medicare Supplement insurance California, Los Angeles Medicare plans, LA Medicare coverage, community rating California, Medicare Supplement Plan G Los Angeles',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-los-angeles-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county',
   },
 };
 
@@ -20,51 +20,51 @@ export default function LACountyMedicareSupplementPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-los-angeles-county',
-        url: 'https://elmaginsurance.com/medicare-supplement-los-angeles-county',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county',
+        url: 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county',
         name: 'Los Angeles County Medicare Supplement Insurance | Medigap Plans 2025',
         description: 'Expert Medicare Supplement (Medigap) guidance for Los Angeles County. Compare plans, save on premiums with California community rating, and get personalized help navigating LA healthcare networks.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         },
         breadcrumb: {
-          '@id': 'https://elmaginsurance.com/medicare-supplement-los-angeles-county#breadcrumb'
+          '@id': 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county#breadcrumb'
         }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-los-angeles-county#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Medicare Supplement',
-            item: 'https://elmaginsurance.com/medicare-supplement'
+            item: 'https://www.elmaginsurance.com/medicare-supplement'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Los Angeles County',
-            item: 'https://elmaginsurance.com/medicare-supplement-los-angeles-county'
+            item: 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county'
           }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-los-angeles-county#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county#service',
         name: 'Los Angeles County Medicare Supplement Insurance',
         description: 'Medicare Supplement (Medigap) insurance services for Los Angeles County residents with California community rating and comprehensive coverage options.',
         provider: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         areaServed: {
           '@type': 'County',
@@ -129,7 +129,7 @@ export default function LACountyMedicareSupplementPage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-los-angeles-county#faq',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-los-angeles-county#faq',
         mainEntity: [
           {
             '@type': 'Question',

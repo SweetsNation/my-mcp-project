@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-tarrant-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county',
   },
 }
 
@@ -39,50 +39,50 @@ const tarrantStructuredData = {
     // WebPage Schema
     {
       '@type': 'WebPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-tarrant-county',
-      url: 'https://elmaginsurance.com/medicare-supplement-tarrant-county',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county',
       name: 'Tarrant County Medicare Supplement Plans 2025 - Fort Worth Medigap Coverage',
       description: 'Tarrant County Medicare Supplement guide: Navigate Fort Worth & Arlington healthcare with Medigap plans for 339,000+ beneficiaries. Texas Health Resources & JPS Health network access.',
       inLanguage: 'en-US',
       breadcrumb: {
-        '@id': 'https://elmaginsurance.com/medicare-supplement-tarrant-county#breadcrumb'
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county#breadcrumb'
       }
     },
     // BreadcrumbList Schema
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-tarrant-county#breadcrumb',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://elmaginsurance.com'
+          item: 'https://www.elmaginsurance.com'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Medicare Supplement',
-          item: 'https://elmaginsurance.com/medicare-supplement'
+          item: 'https://www.elmaginsurance.com/medicare-supplement'
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Tarrant County Texas',
-          item: 'https://elmaginsurance.com/medicare-supplement-tarrant-county'
+          item: 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county'
         }
       ]
     },
     // FinancialProduct Schema for Medicare Supplement Plans
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-tarrant-county#product',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county#product',
       name: 'Medicare Supplement Plans - Tarrant County, Texas',
       description: 'Medicare Supplement (Medigap) insurance plans for Tarrant County seniors, including Fort Worth and Arlington coverage with Texas Health Resources and JPS Health network access.',
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        url: 'https://elmaginsurance.com'
+        url: 'https://www.elmaginsurance.com'
       },
       category: 'Medicare Supplement Insurance',
       areaServed: {
@@ -112,10 +112,10 @@ const tarrantStructuredData = {
     // InsuranceAgency Schema for Service Area
     {
       '@type': 'InsuranceAgency',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-tarrant-county#business',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county#business',
       name: 'El-Mag Insurance - Tarrant County Medicare Supplement',
       description: 'Medicare Supplement (Medigap) insurance specialists serving Tarrant County, Texas, including Fort Worth and Arlington with bilingual support.',
-      url: 'https://elmaginsurance.com/medicare-supplement-tarrant-county',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-tarrant-county',
       telephone: '+1-331-343-2584',
       areaServed: {
         '@type': 'Place',

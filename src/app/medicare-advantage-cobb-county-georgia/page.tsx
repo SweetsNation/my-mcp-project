@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Find Medicare Advantage plans in Cobb County GA. WellStar Health System network, Marietta & Kennesaw providers, Atlanta metro access. Get your free quote today.',
   keywords: 'Medicare Advantage Cobb County Georgia, Marietta Medicare plans, WellStar Health System Medicare, Kennesaw Medicare Advantage',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage-cobb-county-georgia',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage-cobb-county-georgia',
   },
 };
 

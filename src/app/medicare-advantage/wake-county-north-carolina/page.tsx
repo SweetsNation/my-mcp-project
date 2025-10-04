@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Wake County & Raleigh, North Carolina with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
   },
 };
 
@@ -104,29 +104,29 @@ export default function WakeCountyNorthCarolinaPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
-        url: 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
+        url: 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
         name: 'Medicare Advantage Plans Wake County North Carolina 2025 | Raleigh Medicare',
         description: 'Compare Medicare Advantage plans in Wake County & Raleigh, NC. 55% penetration rate offers growth opportunity. Top healthcare systems and local provider networks.',
         inLanguage: 'en-US',
-        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
-        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina#breadcrumb' }
+        isPartOf: { '@id': 'https://www.elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina#breadcrumb' }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina#breadcrumb',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
-          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
-          { '@type': 'ListItem', position: 3, name: 'Wake County, North Carolina', item: 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://www.elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Wake County, North Carolina', item: 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina' }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/wake-county-north-carolina#service',
         name: 'Wake County North Carolina Medicare Advantage Plans',
         description: 'Medicare Advantage (Part C) plans for Wake County and Raleigh residents with 55% penetration rate and Research Triangle healthcare access.',
-        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://www.elmaginsurance.com' },
         areaServed: {
           '@type': 'County',
           name: 'Wake County, North Carolina',

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Find Medicare Advantage plans in Maui County HI. Kaiser Permanente network, Maui Memorial Medical Center access, island healthcare providers. Get your free quote today.',
   keywords: 'Medicare Advantage Maui County, Valley Isle Medicare plans, Kaiser Permanente Maui, Maui Memorial Medical Center Medicare',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage-maui-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage-maui-county',
   },
 };
 

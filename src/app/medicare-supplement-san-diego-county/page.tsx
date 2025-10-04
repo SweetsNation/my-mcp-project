@@ -9,50 +9,50 @@ const structuredData = {
     // WebPage Schema
     {
       '@type': 'WebPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-san-diego-county',
-      url: 'https://elmaginsurance.com/medicare-supplement-san-diego-county',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county',
       name: 'Medicare Supplement Plans San Diego County CA 2025 | Medigap Coverage San Diego, La Jolla, Carlsbad',
       description: 'Compare Medicare Supplement (Medigap) plans in San Diego County, California. Plans F, G, N coverage for San Diego, La Jolla, Carlsbad seniors. Free quotes, expert guidance for 625,000+ beneficiaries.',
       inLanguage: 'en-US',
       breadcrumb: {
-        '@id': 'https://elmaginsurance.com/medicare-supplement-san-diego-county#breadcrumb'
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county#breadcrumb'
       }
     },
     // BreadcrumbList Schema
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-san-diego-county#breadcrumb',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://elmaginsurance.com'
+          item: 'https://www.elmaginsurance.com'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Medicare Supplement',
-          item: 'https://elmaginsurance.com/medicare-supplement'
+          item: 'https://www.elmaginsurance.com/medicare-supplement'
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'San Diego County California',
-          item: 'https://elmaginsurance.com/medicare-supplement-san-diego-county'
+          item: 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county'
         }
       ]
     },
     // FinancialProduct Schema for Medicare Supplement Plans
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-san-diego-county#product',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county#product',
       name: 'Medicare Supplement Plans - San Diego County, California',
       description: 'Medicare Supplement (Medigap) insurance plans for San Diego County seniors, including San Diego, La Jolla, Carlsbad, Chula Vista with UC San Diego Health and Sharp HealthCare network access.',
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        url: 'https://elmaginsurance.com'
+        url: 'https://www.elmaginsurance.com'
       },
       category: 'Medicare Supplement Insurance',
       areaServed: {
@@ -90,7 +90,7 @@ const structuredData = {
     // FAQPage Schema
     {
       '@type': 'FAQPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-san-diego-county#faq',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -145,10 +145,10 @@ const structuredData = {
     // InsuranceAgency Schema for Service Area
     {
       '@type': 'InsuranceAgency',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-san-diego-county#business',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county#business',
       name: 'El-Mag Insurance - San Diego County Medicare Supplement',
       description: 'Medicare Supplement (Medigap) insurance specialists serving San Diego County, California, including San Diego, La Jolla, Carlsbad, Chula Vista, and all Southern California communities.',
-      url: 'https://elmaginsurance.com/medicare-supplement-san-diego-county',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county',
       telephone: '+1-331-343-2584',
       areaServed: {
         '@type': 'Place',
@@ -198,7 +198,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-san-diego-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county',
   },
 }
 

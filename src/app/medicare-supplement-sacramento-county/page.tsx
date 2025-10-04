@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-sacramento-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-sacramento-county',
   },
 }
 

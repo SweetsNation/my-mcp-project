@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-part-d/costs/comparison'
+    canonical: 'https://www.elmaginsurance.com/medicare-part-d/costs/comparison'
   }
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://elmaginsurance.com/medicare-part-d/costs/comparison",
+  "@id": "https://www.elmaginsurance.com/medicare-part-d/costs/comparison",
   "name": "Medicare Part D Cost Comparison Guide",
   "description": "Comprehensive guide to comparing Medicare Part D prescription drug plan costs, including side-by-side comparisons and cost analysis tools.",
   "breadcrumb": {
@@ -29,25 +29,25 @@ const jsonLd = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://elmaginsurance.com"
+        "item": "https://www.elmaginsurance.com"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "Medicare Part D",
-        "item": "https://elmaginsurance.com/medicare-part-d"
+        "item": "https://www.elmaginsurance.com/medicare-part-d"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Costs",
-        "item": "https://elmaginsurance.com/medicare-part-d/costs"
+        "item": "https://www.elmaginsurance.com/medicare-part-d/costs"
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Comparison",
-        "item": "https://elmaginsurance.com/medicare-part-d/costs/comparison"
+        "item": "https://www.elmaginsurance.com/medicare-part-d/costs/comparison"
       }
     ]
   }

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-part-d/costs'
+    canonical: 'https://www.elmaginsurance.com/medicare-part-d/costs'
   }
 };
 
@@ -21,7 +21,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://elmaginsurance.com/medicare-part-d/costs",
+      "@id": "https://www.elmaginsurance.com/medicare-part-d/costs",
       "name": "Medicare Part D Costs 2025 - Complete Guide",
       "description": "Comprehensive guide to Medicare Part D costs for 2025 including premiums, deductibles, copays, and cost-saving strategies.",
       "breadcrumb": {
@@ -31,19 +31,19 @@ const jsonLd = {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://elmaginsurance.com"
+            "item": "https://www.elmaginsurance.com"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Medicare Part D",
-            "item": "https://elmaginsurance.com/medicare-part-d"
+            "item": "https://www.elmaginsurance.com/medicare-part-d"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Part D Costs",
-            "item": "https://elmaginsurance.com/medicare-part-d/costs"
+            "item": "https://www.elmaginsurance.com/medicare-part-d/costs"
           }
         ]
       }

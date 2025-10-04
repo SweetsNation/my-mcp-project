@@ -9,50 +9,50 @@ const structuredData = {
     // WebPage Schema
     {
       '@type': 'WebPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida',
-      url: 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida',
       name: 'Medicare Supplement Plans Hernando County FL 2025 | Medigap Coverage Spring Hill, Brooksville',
       description: 'Compare Medicare Supplement (Medigap) plans in Hernando County, Florida. Plans F, G, N coverage for Spring Hill, Brooksville, Weeki Wachee seniors. Free quotes, expert guidance.',
       inLanguage: 'en-US',
       breadcrumb: {
-        '@id': 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida#breadcrumb'
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida#breadcrumb'
       }
     },
     // BreadcrumbList Schema
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida#breadcrumb',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida#breadcrumb',
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://elmaginsurance.com'
+          item: 'https://www.elmaginsurance.com'
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Medicare Supplement',
-          item: 'https://elmaginsurance.com/medicare-supplement'
+          item: 'https://www.elmaginsurance.com/medicare-supplement'
         },
         {
           '@type': 'ListItem',
           position: 3,
           name: 'Hernando County Florida',
-          item: 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida'
+          item: 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida'
         }
       ]
     },
     // FinancialProduct Schema for Medicare Supplement Plans
     {
       '@type': 'FinancialProduct',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida#product',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida#product',
       name: 'Medicare Supplement Plans - Hernando County, Florida',
       description: 'Medicare Supplement (Medigap) insurance plans for Hernando County seniors, including Plans G, N, and F coverage options.',
       provider: {
         '@type': 'Organization',
         name: 'El-Mag Insurance',
-        url: 'https://elmaginsurance.com'
+        url: 'https://www.elmaginsurance.com'
       },
       category: 'Medicare Supplement Insurance',
       areaServed: {
@@ -86,7 +86,7 @@ const structuredData = {
     // FAQPage Schema
     {
       '@type': 'FAQPage',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida#faq',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida#faq',
       mainEntity: [
         {
           '@type': 'Question',
@@ -141,10 +141,10 @@ const structuredData = {
     // LocalBusiness Schema for Service Area
     {
       '@type': 'InsuranceAgency',
-      '@id': 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida#business',
+      '@id': 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida#business',
       name: 'El-Mag Insurance - Hernando County Medicare Supplement',
       description: 'Medicare Supplement (Medigap) insurance specialists serving Hernando County, Florida, including Spring Hill, Brooksville, and Weeki Wachee.',
-      url: 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida',
+      url: 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida',
       telephone: '+1-331-343-2584',
       areaServed: {
         '@type': 'Place',
@@ -194,7 +194,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-hernando-county-florida',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida',
   },
 }
 

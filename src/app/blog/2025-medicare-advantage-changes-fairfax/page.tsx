@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/blog/2025-medicare-advantage-changes-fairfax',
+    canonical: 'https://www.elmaginsurance.com/blog/2025-medicare-advantage-changes-fairfax',
   },
 }
 

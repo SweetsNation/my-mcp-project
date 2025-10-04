@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-2025-changes',
+    canonical: 'https://www.elmaginsurance.com/medicare-2025-changes',
   },
 }
 

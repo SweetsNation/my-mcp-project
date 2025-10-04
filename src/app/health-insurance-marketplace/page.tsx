@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description: 'Save $2,400+ per year with ACA subsidies and premium tax credits. Get expert help enrolling in Marketplace health insurance.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/health-insurance-marketplace',
+    canonical: 'https://www.elmaginsurance.com/health-insurance-marketplace',
   },
 }
 

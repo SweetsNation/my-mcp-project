@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-deadline-december-7',
+    canonical: 'https://www.elmaginsurance.com/medicare-deadline-december-7',
   },
 }
 

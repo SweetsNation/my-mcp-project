@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: 'Connect with our team of licensed insurance specialists. Expert Medicare advisors, ACA Marketplace specialists, and multi-line insurance agents. Free consultations - call 331-343-2584.',
   keywords: 'insurance specialists, licensed insurance agents, Medicare specialists, ACA experts, health insurance advisors, insurance consultants, free insurance consultation',
   alternates: {
-    canonical: 'https://elmaginsurance.com/specialists',
+    canonical: 'https://www.elmaginsurance.com/specialists',
   },
 };
 

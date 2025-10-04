@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans with expert guidance across multiple states.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage',
   },
 };
 

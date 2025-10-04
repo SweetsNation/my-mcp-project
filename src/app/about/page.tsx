@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Learn about El-Mag Insurance, our mission to help you find the perfect Medicare Advantage plan, and our team of licensed insurance professionals.',
   keywords: 'about El-Mag Insurance, Medicare experts, licensed agents, insurance agency',
   alternates: {
-    canonical: 'https://elmaginsurance.com/about',
+    canonical: 'https://www.elmaginsurance.com/about',
   },
 };
 

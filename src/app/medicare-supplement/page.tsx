@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Compare Medicare Supplement (Medigap) plans to fill gaps in Original Medicare coverage. Get quotes and expert guidance.',
   keywords: 'Medicare Supplement, Medigap, Medicare Gap Insurance, Medicare coverage',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement',
   },
 };
 
@@ -18,45 +18,45 @@ export default function MedicareSupplementPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement',
-        url: 'https://elmaginsurance.com/medicare-supplement',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement',
+        url: 'https://www.elmaginsurance.com/medicare-supplement',
         name: 'Medicare Supplement Plans | El-Mag Insurance',
         description: 'Compare Medicare Supplement (Medigap) plans to fill gaps in Original Medicare coverage. Get quotes and expert guidance.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         },
         breadcrumb: {
-          '@id': 'https://elmaginsurance.com/medicare-supplement#breadcrumb'
+          '@id': 'https://www.elmaginsurance.com/medicare-supplement#breadcrumb'
         }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-supplement#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Medicare Supplement',
-            item: 'https://elmaginsurance.com/medicare-supplement'
+            item: 'https://www.elmaginsurance.com/medicare-supplement'
           }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-supplement#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement#service',
         name: 'Medicare Supplement Insurance',
         description: 'Medicare Supplement (Medigap) insurance services helping fill gaps in Original Medicare coverage across the United States.',
         provider: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         areaServed: {
           '@type': 'Country',
@@ -95,7 +95,7 @@ export default function MedicareSupplementPage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement#faq',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement#faq',
         mainEntity: [
           {
             '@type': 'Question',

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Complete guide to Medicare Part D prescription drug coverage, formularies, and costs. Expert guidance from El-Mag Insurance.',
   keywords: 'Medicare Part D, prescription drug coverage, formulary, drug costs, Medicare Advantage drug benefits',
   alternates: {
-    canonical: 'https://elmaginsurance.com/resources/prescription-drug-coverage',
+    canonical: 'https://www.elmaginsurance.com/resources/prescription-drug-coverage',
   },
 };
 
@@ -18,14 +18,14 @@ export default function PrescriptionDrugCoveragePage() {
     '@graph': [
       {
         '@type': 'Article',
-        '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage',
-        url: 'https://elmaginsurance.com/resources/prescription-drug-coverage',
+        '@id': 'https://www.elmaginsurance.com/resources/prescription-drug-coverage',
+        url: 'https://www.elmaginsurance.com/resources/prescription-drug-coverage',
         headline: 'Medicare Prescription Drug Coverage Guide',
         description: 'Complete guide to Medicare Part D prescription drug coverage, formularies, and costs. Expert guidance from El-Mag Insurance.',
         inLanguage: 'en-US',
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage'
+          '@id': 'https://www.elmaginsurance.com/resources/prescription-drug-coverage'
         },
         author: {
           '@type': 'Organization',
@@ -34,38 +34,38 @@ export default function PrescriptionDrugCoveragePage() {
         publisher: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         datePublished: '2024-01-01',
         dateModified: '2024-12-01'
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/resources/prescription-drug-coverage#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Resources',
-            item: 'https://elmaginsurance.com/resources'
+            item: 'https://www.elmaginsurance.com/resources'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Prescription Drug Coverage',
-            item: 'https://elmaginsurance.com/resources/prescription-drug-coverage'
+            item: 'https://www.elmaginsurance.com/resources/prescription-drug-coverage'
           }
         ]
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage#faq',
+        '@id': 'https://www.elmaginsurance.com/resources/prescription-drug-coverage#faq',
         mainEntity: [
           {
             '@type': 'Question',

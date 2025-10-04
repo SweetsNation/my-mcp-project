@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-plan-comparison-tool',
+    canonical: 'https://www.elmaginsurance.com/medicare-plan-comparison-tool',
   },
 }
 

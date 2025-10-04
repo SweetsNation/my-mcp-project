@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: 'Expert Social Security claiming strategies to maximize your lifetime benefits. Get free analysis of optimal timing, spousal benefits, and retirement planning. Call 331-E-HEALTH for personalized consultation.',
   keywords: 'Social Security benefits analysis, Social Security claiming strategies, retirement planning, Social Security optimization, when to claim Social Security, Social Security calculator, spousal benefits, delayed retirement credits, Social Security consultation, maximize Social Security benefits, retirement income planning, Social Security timing, full retirement age, early retirement Social Security',
   alternates: {
-    canonical: 'https://elmaginsurance.com/social-security-analysis',
+    canonical: 'https://www.elmaginsurance.com/social-security-analysis',
   },
 };
 

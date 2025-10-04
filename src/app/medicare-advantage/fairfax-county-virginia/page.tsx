@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Fairfax County, VA with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
   },
 };
 
@@ -108,29 +108,29 @@ export default function FairfaxCountyVirginiaPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
-        url: 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
+        url: 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
         name: 'Medicare Advantage Plans Fairfax County Virginia 2025 | El-Mag Insurance',
         description: 'Compare Medicare Advantage plans in Fairfax County, Virginia. $0 premium options available. 45% penetration rate means better choices. Licensed agents ready to help.',
         inLanguage: 'en-US',
-        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
-        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia#breadcrumb' }
+        isPartOf: { '@id': 'https://www.elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia#breadcrumb' }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia#breadcrumb',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
-          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
-          { '@type': 'ListItem', position: 3, name: 'Fairfax County, Virginia', item: 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia' }
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://www.elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Fairfax County, Virginia', item: 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia' }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/fairfax-county-virginia#service',
         name: 'Fairfax County Virginia Medicare Advantage Plans',
         description: 'Medicare Advantage (Part C) plans for Fairfax County residents with 45% penetration rate and comprehensive provider networks.',
-        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://www.elmaginsurance.com' },
         areaServed: {
           '@type': 'County',
           name: 'Fairfax County, Virginia',

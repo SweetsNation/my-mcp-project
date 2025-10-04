@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: 'Licensed insurance specialists with expertise across all major insurance types. Get expert guidance for your insurance needs.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/team',
+    canonical: 'https://www.elmaginsurance.com/team',
   },
 }
 

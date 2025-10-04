@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: 'Get in touch with our Medicare Advantage experts. Call, email, or schedule a consultation to find the perfect plan for your needs.',
   keywords: 'contact El-Mag Insurance, Medicare consultation, insurance agents, get help',
   alternates: {
-    canonical: 'https://elmaginsurance.com/contact',
+    canonical: 'https://www.elmaginsurance.com/contact',
   },
 };
 

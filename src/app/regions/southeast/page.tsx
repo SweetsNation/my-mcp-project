@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Comprehensive Medicare and health insurance coverage in the Southeast region including Florida, Georgia, Alabama, and South Carolina. Get local market insights and enrollment data.',
   keywords: 'Southeast Medicare, Florida Medicare, Georgia Medicare, Alabama Medicare, South Carolina Medicare, Southeast health insurance, regional coverage',
   alternates: {
-    canonical: 'https://elmaginsurance.com/regions/southeast',
+    canonical: 'https://www.elmaginsurance.com/regions/southeast',
   },
 };
 

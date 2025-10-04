@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/blog/grady-health-system-medicare-advantage-atlanta',
+    canonical: 'https://www.elmaginsurance.com/blog/grady-health-system-medicare-advantage-atlanta',
   },
 }
 

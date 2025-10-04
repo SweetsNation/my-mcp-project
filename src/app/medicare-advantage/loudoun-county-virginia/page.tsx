@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Loudoun County, VA with expert guidance.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/loudoun-county-virginia',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/loudoun-county-virginia',
   },
 };
 

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-open-enrollment-checklist',
+    canonical: 'https://www.elmaginsurance.com/medicare-open-enrollment-checklist',
   },
 }
 

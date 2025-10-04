@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/health-insurance-fulton-county-georgia',
+    canonical: 'https://www.elmaginsurance.com/health-insurance-fulton-county-georgia',
   },
 }
 

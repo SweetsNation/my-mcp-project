@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/blog/uab-vs-st-vincents-medicare-advantage-birmingham',
+    canonical: 'https://www.elmaginsurance.com/blog/uab-vs-st-vincents-medicare-advantage-birmingham',
   },
 }
 

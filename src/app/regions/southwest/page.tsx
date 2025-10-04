@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert Medicare Advantage and Medicare Supplement guidance in the Southwest. Serving Arizona, Nevada, and New Mexico with specialized desert healthcare networks, competitive rates, and bilingual support.',
   keywords: 'Southwest Medicare, Arizona Medicare, Nevada Medicare, New Mexico Medicare, Phoenix Medicare Advantage, Las Vegas Medicare, Albuquerque Medicare Supplement, desert healthcare, Southwest health insurance, bilingual Medicare support',
   alternates: {
-    canonical: 'https://elmaginsurance.com/regions/southwest',
+    canonical: 'https://www.elmaginsurance.com/regions/southwest',
   },
 };
 

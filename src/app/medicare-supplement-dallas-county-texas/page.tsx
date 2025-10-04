@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert Medicare Supplement (Medigap) guidance for Dallas County, Texas. Compare plans, save on premiums, and get personalized help navigating DFW healthcare networks. Serving 2.6M+ residents with 300K+ Medicare beneficiaries across Dallas County.',
   keywords: 'Dallas Medicare Supplement, Dallas County Medigap, Medicare Supplement Dallas Texas, Medigap Dallas County, Medicare Supplement insurance Texas, Dallas Medicare plans, DFW Medicare coverage, Medicare Supplement Plan G Dallas, Dallas County Medicare help',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas',
   },
 };
 
@@ -20,51 +20,51 @@ export default function DallasCountyMedicareSupplementPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas',
-        url: 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas',
+        url: 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas',
         name: 'Dallas County Texas Medicare Supplement Insurance | Medigap Plans 2025',
         description: 'Expert Medicare Supplement (Medigap) guidance for Dallas County, Texas. Compare plans, save on premiums, and get personalized help navigating DFW healthcare networks.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         },
         breadcrumb: {
-          '@id': 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas#breadcrumb'
+          '@id': 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas#breadcrumb'
         }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Medicare Supplement',
-            item: 'https://elmaginsurance.com/medicare-supplement'
+            item: 'https://www.elmaginsurance.com/medicare-supplement'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Dallas County, Texas',
-            item: 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas'
+            item: 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas'
           }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas#service',
         name: 'Dallas County Texas Medicare Supplement Insurance',
         description: 'Medicare Supplement (Medigap) insurance services for Dallas County residents with affordable Texas pricing and comprehensive DFW healthcare network access.',
         provider: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         areaServed: {
           '@type': 'County',
@@ -137,7 +137,7 @@ export default function DallasCountyMedicareSupplementPage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-dallas-county-texas#faq',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-dallas-county-texas#faq',
         mainEntity: [
           {
             '@type': 'Question',

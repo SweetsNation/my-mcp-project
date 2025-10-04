@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert Medicare Supplement and Medicare Advantage guidance in the Mid-Atlantic region. Serving New York, Pennsylvania, Maryland, New Jersey, and Delaware with specialized market knowledge and competitive rates.',
   keywords: 'Mid-Atlantic Medicare, New York Medicare, Pennsylvania Medicare, Maryland Medicare, New Jersey Medicare, Delaware Medicare, Medicare Supplement New York, Medicare Advantage Pennsylvania, low penetration states, Mid-Atlantic health insurance',
   alternates: {
-    canonical: 'https://elmaginsurance.com/regions/mid-atlantic',
+    canonical: 'https://www.elmaginsurance.com/regions/mid-atlantic',
   },
 };
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: 'Free Medicare and health insurance tools including cost calculators, plan comparison tools, enrollment timelines, and more. Make informed decisions about your healthcare coverage.',
   keywords: 'Medicare tools, health insurance calculators, Medicare comparison tools, cost calculators, enrollment tools, plan finders',
   alternates: {
-    canonical: 'https://elmaginsurance.com/tools',
+    canonical: 'https://www.elmaginsurance.com/tools',
   },
 };
 

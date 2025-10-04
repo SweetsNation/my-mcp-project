@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/honolulu-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/honolulu-county',
   },
 }
 

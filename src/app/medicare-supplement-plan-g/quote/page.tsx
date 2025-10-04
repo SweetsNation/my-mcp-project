@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-plan-g/quote',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-plan-g/quote',
   },
 }
 

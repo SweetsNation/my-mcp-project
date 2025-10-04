@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert Medicare Supplement (Medigap) guidance across the West Coast. Serving California, Oregon, and Washington with specialized knowledge of low-penetration markets, community rating advantages, and Pacific Northwest healthcare networks.',
   keywords: 'West Coast Medicare Supplement, California Medigap, Oregon Medicare Supplement, Washington Medigap, California community rating, Pacific Northwest Medicare, West Coast low penetration, Seattle Medicare Supplement, Portland Medigap, San Francisco Medicare',
   alternates: {
-    canonical: 'https://elmaginsurance.com/regions/west-coast',
+    canonical: 'https://www.elmaginsurance.com/regions/west-coast',
   },
 };
 

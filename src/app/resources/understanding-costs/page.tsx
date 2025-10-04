@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: 'Learn about Medicare Advantage costs including premiums, deductibles, copays, and out-of-pocket maximums. Get expert guidance from El-Mag Insurance.',
   keywords: 'Medicare Advantage costs, premiums, deductibles, copays, out-of-pocket maximum, Medicare expenses',
   alternates: {
-    canonical: 'https://elmaginsurance.com/resources/understanding-costs',
+    canonical: 'https://www.elmaginsurance.com/resources/understanding-costs',
   },
 };
 

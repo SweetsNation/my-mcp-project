@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'El-Mag Insurance - Medicare Advantage Plans',
     description: 'Find the best Medicare Advantage plans with comprehensive coverage.',
-    url: 'https://elmaginsurance.com',
+    url: 'https://www.elmaginsurance.com',
     siteName: 'El-Mag Insurance',
     locale: 'en_US',
     type: 'website',
@@ -59,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://elmaginsurance.com" />
+        <link rel="canonical" href="https://www.elmaginsurance.com" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="El-Mag Insurance" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -74,7 +74,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'El-Mag Insurance',
-              url: 'https://elmaginsurance.com',
+              url: 'https://www.elmaginsurance.com',
               description: 'Licensed insurance agency specializing in Medicare Advantage plans',
               contactPoint: {
                 '@type': 'ContactPoint',

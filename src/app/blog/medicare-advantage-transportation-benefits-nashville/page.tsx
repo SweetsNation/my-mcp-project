@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/blog/medicare-advantage-transportation-benefits-nashville',
+    canonical: 'https://www.elmaginsurance.com/blog/medicare-advantage-transportation-benefits-nashville',
   },
 }
 

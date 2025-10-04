@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/health-insurance-marketplace-broward-county',
+    canonical: 'https://www.elmaginsurance.com/health-insurance-marketplace-broward-county',
   },
 }
 

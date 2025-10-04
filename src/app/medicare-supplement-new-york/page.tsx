@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Expert Medicare Supplement (Medigap) guidance for New York. Navigate NY\'s unique standardized plans, compare options, and protect yourself from high healthcare costs. Serving 3.5M+ NY Medicare beneficiaries with personalized Medigap solutions.',
   keywords: 'New York Medicare Supplement, NY Medigap, Medicare Supplement New York State, Medigap NY, New York Medicare plans, NYC Medicare coverage, New York Medicare Supplement Plan F, New York Medigap rates, Medicare Supplement insurance New York',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-supplement-new-york',
+    canonical: 'https://www.elmaginsurance.com/medicare-supplement-new-york',
   },
 };
 
@@ -20,51 +20,51 @@ export default function NewYorkMedicareSupplementPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-new-york',
-        url: 'https://elmaginsurance.com/medicare-supplement-new-york',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-new-york',
+        url: 'https://www.elmaginsurance.com/medicare-supplement-new-york',
         name: 'New York Medicare Supplement Insurance | Medigap Plans 2025',
         description: 'Expert Medicare Supplement (Medigap) guidance for New York. Navigate NY\'s unique standardized plans, compare options, and protect yourself from high healthcare costs.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         },
         breadcrumb: {
-          '@id': 'https://elmaginsurance.com/medicare-supplement-new-york#breadcrumb'
+          '@id': 'https://www.elmaginsurance.com/medicare-supplement-new-york#breadcrumb'
         }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-new-york#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-new-york#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Medicare Supplement',
-            item: 'https://elmaginsurance.com/medicare-supplement'
+            item: 'https://www.elmaginsurance.com/medicare-supplement'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'New York',
-            item: 'https://elmaginsurance.com/medicare-supplement-new-york'
+            item: 'https://www.elmaginsurance.com/medicare-supplement-new-york'
           }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-new-york#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-new-york#service',
         name: 'New York Medicare Supplement Insurance',
         description: 'Medicare Supplement (Medigap) insurance services for New York residents, including NY-specific standardized plans and expert guidance.',
         provider: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         areaServed: {
           '@type': 'State',
@@ -125,7 +125,7 @@ export default function NewYorkMedicareSupplementPage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/medicare-supplement-new-york#faq',
+        '@id': 'https://www.elmaginsurance.com/medicare-supplement-new-york#faq',
         mainEntity: [
           {
             '@type': 'Question',

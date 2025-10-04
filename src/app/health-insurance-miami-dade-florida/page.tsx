@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/miami-dade-florida',
+    canonical: 'https://www.elmaginsurance.com/miami-dade-florida',
   },
 }
 

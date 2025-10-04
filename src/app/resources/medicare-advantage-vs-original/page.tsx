@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: 'Detailed comparison of Medicare Advantage vs Original Medicare. Learn the differences in costs, benefits, provider networks, and which option might be right for you.',
   keywords: 'Medicare Advantage vs Original Medicare, Medicare Part C, Medicare comparison, Medicare benefits, Medicare costs',
   alternates: {
-    canonical: 'https://elmaginsurance.com/resources/medicare-advantage-vs-original',
+    canonical: 'https://www.elmaginsurance.com/resources/medicare-advantage-vs-original',
   },
 };
 

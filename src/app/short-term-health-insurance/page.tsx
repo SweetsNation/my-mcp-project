@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/short-term-health-insurance',
+    canonical: 'https://www.elmaginsurance.com/short-term-health-insurance',
   },
 }
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/blog/emory-vs-piedmont-medicare-advantage-atlanta',
+    canonical: 'https://www.elmaginsurance.com/blog/emory-vs-piedmont-medicare-advantage-atlanta',
   },
 }
 

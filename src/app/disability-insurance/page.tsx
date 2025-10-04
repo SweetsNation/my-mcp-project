@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/disability-insurance',
+    canonical: 'https://www.elmaginsurance.com/disability-insurance',
   },
 }
 

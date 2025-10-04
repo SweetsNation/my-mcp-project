@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Find Medicare Advantage plans in Fresno County CA. Kaiser Permanente & Anthem network, Community Regional Medical Center access, Central Valley providers. Get your free quote.',
   keywords: 'Medicare Advantage Fresno County California, Central Valley Medicare plans, Kaiser Permanente Fresno, Community Regional Medical Center Medicare',
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage-fresno-county',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage-fresno-county',
   },
 };
 

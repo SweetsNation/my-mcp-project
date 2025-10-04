@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-part-d-formulary-lookup',
+    canonical: 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup',
   },
 }
 
@@ -22,51 +22,51 @@ export default function PartDFormularyLookupPage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup',
-        url: 'https://elmaginsurance.com/medicare-part-d-formulary-lookup',
+        '@id': 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup',
+        url: 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup',
         name: 'Medicare Part D Formulary Lookup Guide 2025 | Check Drug Coverage',
         description: 'Learn how to use Medicare Part D formulary lookup tools to check if your medications are covered. Find drug tiers, restrictions, and coverage details for all plans.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         },
         breadcrumb: {
-          '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#breadcrumb'
+          '@id': 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup#breadcrumb'
         }
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#breadcrumb',
+        '@id': 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://elmaginsurance.com'
+            item: 'https://www.elmaginsurance.com'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Medicare Part D',
-            item: 'https://elmaginsurance.com/medicare-part-d'
+            item: 'https://www.elmaginsurance.com/medicare-part-d'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Formulary Lookup',
-            item: 'https://elmaginsurance.com/medicare-part-d-formulary-lookup'
+            item: 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup'
           }
         ]
       },
       {
         '@type': 'Service',
-        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#service',
+        '@id': 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup#service',
         name: 'Medicare Part D Formulary Lookup Services',
         description: 'Comprehensive guidance for checking Medicare Part D drug coverage using formulary lookup tools. Expert assistance with medication coverage verification.',
         provider: {
           '@type': 'Organization',
           name: 'El-Mag Insurance',
-          url: 'https://elmaginsurance.com'
+          url: 'https://www.elmaginsurance.com'
         },
         serviceType: 'Medicare Part D Drug Coverage Verification',
         areaServed: {
@@ -76,7 +76,7 @@ export default function PartDFormularyLookupPage() {
       },
       {
         '@type': 'FAQPage',
-        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#faq',
+        '@id': 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup#faq',
         mainEntity: [
           {
             '@type': 'Question',

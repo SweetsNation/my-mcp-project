@@ -21,13 +21,13 @@ export default function MedicareAdvantagePlansPage({
     '@graph': [
       {
         '@type': 'WebPage',
-        '@id': 'https://elmaginsurance.com/medicare-advantage/plans',
-        url: 'https://elmaginsurance.com/medicare-advantage/plans',
+        '@id': 'https://www.elmaginsurance.com/medicare-advantage/plans',
+        url: 'https://www.elmaginsurance.com/medicare-advantage/plans',
         name: 'Medicare Advantage Plans - Compare & Find the Best Plan',
         description: 'Compare Medicare Advantage plans in your area. Find $0 premium plans with dental, vision & fitness benefits.',
         inLanguage: 'en-US',
         isPartOf: {
-          '@id': 'https://elmaginsurance.com/#website'
+          '@id': 'https://www.elmaginsurance.com/#website'
         }
       },
       {

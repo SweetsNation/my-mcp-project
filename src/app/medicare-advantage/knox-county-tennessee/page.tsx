@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Knox County, TN with UT Medical Center access. Expert guidance for university community and East Tennessee retirees.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/knox-county-tennessee',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/knox-county-tennessee',
   },
 };
 

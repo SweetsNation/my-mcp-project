@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: 'Get affordable term life insurance for your family. Compare life insurance quotes, calculate coverage needs, protect your loved ones.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/term-life-insurance',
+    canonical: 'https://www.elmaginsurance.com/term-life-insurance',
   },
 };
 

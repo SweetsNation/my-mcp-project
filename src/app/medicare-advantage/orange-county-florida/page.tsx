@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     images: ['/images/orange-county-florida-medicare-advantage-2025.jpg']
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/medicare-advantage/orange-county-florida',
+    canonical: 'https://www.elmaginsurance.com/medicare-advantage/orange-county-florida',
   },
   robots: {
     index: true,

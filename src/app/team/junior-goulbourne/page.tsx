@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Expert Medicare Advantage & Life Insurance guidance. Medicare plans, term life, final expense, employee benefits. 11+ years experience. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/team/junior-goulbourne',
+    canonical: 'https://www.elmaginsurance.com/team/junior-goulbourne',
   },
 }
 

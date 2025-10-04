@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Expert Health Insurance Marketplace & ACA guidance. Affordable health insurance, premium tax credits, subsidy optimization. Bilingual service.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/team/yaissa-acosta',
+    canonical: 'https://www.elmaginsurance.com/team/yaissa-acosta',
   },
 }
 

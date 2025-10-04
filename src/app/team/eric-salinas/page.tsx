@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Expert Medicare Supplement & Part D guidance. Medigap insurance, prescription drug coverage, Medicare enrollment. Bilingual service. Free consultation.',
   },
   alternates: {
-    canonical: 'https://elmaginsurance.com/team/eric-salinas',
+    canonical: 'https://www.elmaginsurance.com/team/eric-salinas',
   },
 }
 
