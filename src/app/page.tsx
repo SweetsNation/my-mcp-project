@@ -2,10 +2,44 @@ import { MedicareAdvantageHero } from '@/components/MedicareAdvantageHero';
 import { MedicareAdvantageZipSearch } from '@/components/MedicareAdvantageZipSearch';
 import Link from 'next/link';
 import { generateHomePageSchema } from '@/lib/schema/organization-schema';
+import type { Metadata } from 'next';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: 'Medicare Advantage Plans 2025 | Compare Plans & Get Expert Help | El-Mag Insurance',
+  description: 'Find the perfect Medicare Advantage plan with $0 premiums, dental, vision, and prescription coverage. Compare plans in your area with licensed agents. Free consultation - call 331-E-HEALTH.',
+  keywords: 'Medicare Advantage plans, Medicare plans 2025, $0 premium Medicare, Medicare Advantage benefits, Medicare Supplement, Medicare Part D, health insurance marketplace, ACA plans, licensed Medicare agents, Medicare enrollment help',
+  openGraph: {
+    title: 'Medicare Advantage Plans 2025 | Expert Guidance & Plan Comparison',
+    description: 'Compare Medicare Advantage plans with comprehensive benefits. Expert licensed agents help you find the best coverage for your needs. Free consultation available.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'El-Mag Insurance',
+    url: 'https://www.elmaginsurance.com',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Medicare Advantage Plans 2025 | El-Mag Insurance',
+    description: 'Find Medicare Advantage plans with $0 premiums, dental, vision & prescription coverage. Expert help from licensed agents.',
+  },
+  alternates: {
+    canonical: 'https://www.elmaginsurance.com',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function HomePage() {
   const structuredData = generateHomePageSchema();

@@ -68,10 +68,157 @@ const nextConfig = {
         destination: 'https://elmag-insurance.com/:path*',
         permanent: true,
       },
-      // Legacy redirects
+      // Legacy WordPress URL redirects
       {
         source: '/home',
         destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/medicare/',
+        destination: '/medicare-advantage',
+        permanent: true,
+      },
+      {
+        source: '/contact/',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/medicare-supplements/',
+        destination: '/medicare-supplement-plan-g',
+        permanent: true,
+      },
+      {
+        source: '/medicare-supplements/supplement-plan-comparison/',
+        destination: '/medicare-supplement-plan-g/comparison',
+        permanent: true,
+      },
+      {
+        source: '/under-65-health/marketplace-aca/',
+        destination: '/health-insurance-marketplace',
+        permanent: true,
+      },
+      {
+        source: '/under-65-health/',
+        destination: '/health-insurance-marketplace',
+        permanent: true,
+      },
+      {
+        source: '/medicare-advantage/',
+        destination: '/medicare-advantage',
+        permanent: true,
+      },
+      {
+        source: '/medicare-advantage/chronic-special-needs-plans/',
+        destination: '/medicare-advantage',
+        permanent: true,
+      },
+      {
+        source: '/medicare-advantage/dual-special-needs-plans/',
+        destination: '/medicare-advantage',
+        permanent: true,
+      },
+      {
+        source: '/medicare-part-d/',
+        destination: '/medicare-part-d',
+        permanent: true,
+      },
+      {
+        source: '/medicare/part-b-premium-give-back/',
+        destination: '/part-b-premium-give-back',
+        permanent: true,
+      },
+      {
+        source: '/blog/',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/credit-repair/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/privacy-policy/',
+        destination: '/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/privacy-policy-terms-of-service/',
+        destination: '/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/thank-you/',
+        destination: '/contact',
+        permanent: true,
+      },
+      // Old blog post redirects
+      {
+        source: '/how-will-medicare-benefit-you/',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/is-there-a-medigap-plan-that-covers-everything/',
+        destination: '/medicare-supplement-plan-g',
+        permanent: true,
+      },
+      {
+        source: '/hello-world/',
+        destination: '/medicare-part-d',
+        permanent: true,
+      },
+      {
+        source: '/what-to-do-during-the-medicare-aep/',
+        destination: '/medicare-open-enrollment-2025',
+        permanent: true,
+      },
+      {
+        source: '/what-are-the-different-parts-of-medicare/',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/how-to-preparing-for-the-annual-enrollment-period/',
+        destination: '/medicare-open-enrollment-checklist',
+        permanent: true,
+      },
+      {
+        source: '/do-i-have-to-use-the-annual-enrollment-period/',
+        destination: '/enrollment-timeline',
+        permanent: true,
+      },
+      {
+        source: '/looking-for-2021-health-coverage/',
+        destination: '/health-insurance-marketplace',
+        permanent: true,
+      },
+      {
+        source: '/health-insurance-made-easy/',
+        destination: '/health-insurance-marketplace',
+        permanent: true,
+      },
+      // Archive and tag pages redirect to relevant sections
+      {
+        source: '/blog/page/:page*',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/author/:author*',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/tag/:tag*',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/category/:category*',
+        destination: '/blog',
         permanent: true,
       },
     ];
