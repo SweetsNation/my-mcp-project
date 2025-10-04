@@ -1,19 +1,41 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Performance optimizations
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: false,
+  optimizeFonts: true,
+  
   typescript: {
     ignoreBuildErrors: false,
   },
   eslint: {
     ignoreDuringBuilds: false,
   },
-  // Force dynamic rendering to avoid hydration issues
+  
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  
+  // Output configuration
   output: 'standalone',
-  // Disable static generation completely
   trailingSlash: false,
+  
   experimental: {
-    // Disable static optimization for problematic pages
-    workerThreads: false,
-    cpus: 1,
+    // Enable for better performance
+    workerThreads: true,
+    cpus: 4,
+    optimizeCss: true,
+    // Optimize heavy package imports
+    optimizePackageImports: [
+      'framer-motion',
+      'lucide-react',
+    ],
   },
   images: {
     // Allowed domains for external images
@@ -303,6 +325,45 @@ const nextConfig = {
         ],
       },
     ];
+  },
+  
+  // Webpack performance optimizations
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Production optimizations
+      config.optimization = {
+        ...config.optimization,
+        usedExports: true,
+        sideEffects: false,
+        minimize: true,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendor',
+              chunks: 'all',
+              priority: 10,
+            },
+            common: {
+              minChunks: 2,
+              priority: 5,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+          },
+        },
+      };
+      
+      // Performance hints
+      config.performance = {
+        hints: 'warning',
+        maxEntrypointSize: 512000, // 500 KB
+        maxAssetSize: 512000,
+      };
+    }
+    
+    return config;
   },
 };
 
