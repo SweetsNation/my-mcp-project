@@ -29,12 +29,12 @@ export const metadata: Metadata = {
 
 export default function MedicareAdvantageDiverseCommunitiesAtlantaPage() {
   const structuredData = generateBlogPostSchema({
-    title: blogPostData.title,
-    description: blogPostData.description,
-    publishDate: blogPostData.publishDate,
-    modifiedDate: blogPostData.modifiedDate,
+    pagePath: '/blog/medicare-advantage-diverse-communities-atlanta',
+    pageTitle: blogPostData.title,
+    pageDescription: blogPostData.description,
+    datePublished: blogPostData.publishDate,
+    dateModified: blogPostData.modifiedDate,
     author: blogPostData.author,
-    url: 'https://elmaginsurance.com/blog/medicare-advantage-diverse-communities-atlanta',
     category: blogPostData.category,
   })
 

@@ -29,12 +29,12 @@ export const metadata: Metadata = {
 
 export default function MedicareAdvantageTransportationBenefitsNashvillePage() {
   const structuredData = generateBlogPostSchema({
-    title: blogPostData.title,
-    description: blogPostData.description,
-    publishDate: blogPostData.publishDate,
-    modifiedDate: blogPostData.modifiedDate,
+    pagePath: '/blog/medicare-advantage-transportation-benefits-nashville',
+    pageTitle: blogPostData.title,
+    pageDescription: blogPostData.description,
+    datePublished: blogPostData.publishDate,
+    dateModified: blogPostData.modifiedDate,
     author: blogPostData.author,
-    url: 'https://elmaginsurance.com/blog/medicare-advantage-transportation-benefits-nashville',
     category: blogPostData.category,
   })
 

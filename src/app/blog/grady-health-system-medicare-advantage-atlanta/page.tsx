@@ -29,12 +29,12 @@ export const metadata: Metadata = {
 
 export default function GradyHealthSystemMedicareAdvantageAtlantaPage() {
   const structuredData = generateBlogPostSchema({
-    title: blogPostData.title,
-    description: blogPostData.description,
-    publishDate: blogPostData.publishDate,
-    modifiedDate: blogPostData.modifiedDate,
+    pagePath: '/blog/grady-health-system-medicare-advantage-atlanta',
+    pageTitle: blogPostData.title,
+    pageDescription: blogPostData.description,
+    datePublished: blogPostData.publishDate,
+    dateModified: blogPostData.modifiedDate,
     author: blogPostData.author,
-    url: 'https://elmaginsurance.com/blog/grady-health-system-medicare-advantage-atlanta',
     category: blogPostData.category,
   })
 
