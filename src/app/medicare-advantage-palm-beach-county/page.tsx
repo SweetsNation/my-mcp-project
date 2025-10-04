@@ -160,7 +160,6 @@ export default function PalmBeachMAPage() {
         state="Florida"
         demographics={{
           avgAge: 68,
-          householdIncome: 72500,
         }}
         keyMetrics={{
           totalBeneficiaries: palmBeachMAData.maEnrollment,
