@@ -22,7 +22,16 @@ export const metadata: Metadata = {
     title: 'Community Health Centers & Medicare Advantage Birmingham: Affordable Care Access',
     description: 'Find Birmingham community health centers accepting your Medicare Advantage plan. FQHCs, sliding scale care, and affordable healthcare options for Jefferson County seniors.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/community-health-centers-medicare-advantage-birmingham',
   },

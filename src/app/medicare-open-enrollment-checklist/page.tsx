@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Medicare Open Enrollment Checklist 2025 - Complete Guide',
     description: 'Essential checklist for Medicare Open Enrollment 2025. Don\'t miss these critical steps before the December 7 deadline.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-open-enrollment-checklist',
   },

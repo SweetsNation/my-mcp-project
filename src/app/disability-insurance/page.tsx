@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Disability Insurance Coverage | Protect Your Income & Financial Security 2025',
     description: 'Comprehensive disability insurance to protect your income and financial security when you cannot work.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/disability-insurance',
   },

@@ -14,7 +14,16 @@ export const metadata: Metadata = {
     description: 'Find top-rated Medicare Advantage plans in Gwinnett County, GA with suburban Atlanta coverage and growing diverse community focus. Better benefits than Original Medicare with modern healthcare networks, family-oriented care, and multicultural services for Hispanic, Asian American, and suburban families.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Medicare Advantage Plans Gwinnett County GA 2025 | Family-Oriented Suburban Care',

@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Find top-rated Medicare Advantage plans in Knox County, TN with UT Medical Center access and university community benefits. Better coverage than Original Medicare with 5-star East Tennessee networks and academic medical excellence.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Medicare Advantage Plans Knox County TN 2025 | UT Medical Access | University Benefits',

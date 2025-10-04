@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
 import BlogPostLinking from '@/components/BlogPostLinking';
 import ToolLinking from '@/components/ToolLinking';
 import ResourceLinking from '@/components/ResourceLinking';
 import { generateBlogListingSchema } from '@/lib/schema/blog-schema';
+import { generatePageMetadata } from '@/lib/metadata';
 
 // Structured Data for SEO
 const structuredData = generateBlogListingSchema({
@@ -11,14 +11,15 @@ const structuredData = generateBlogListingSchema({
   pageDescription: 'Expert insurance blog with educational articles on Medicare, health insurance, ACA Marketplace, and more. Get informed with our comprehensive guides and resources.'
 });
 
-export const metadata: Metadata = {
+export const metadata = generatePageMetadata({
   title: 'Insurance Blog & Educational Resources | Medicare, Health Insurance & More | El-Mag Insurance',
   description: 'Expert insurance blog with educational articles on Medicare, health insurance, ACA Marketplace, and more. Get informed with our comprehensive guides and resources.',
+  url: '/blog',
+  image: '/images/og-blog.jpg',
+  imageAlt: 'El-Mag Insurance Blog - Medicare and Health Insurance Education',
+  type: 'website',
   keywords: 'insurance blog, Medicare articles, health insurance guides, ACA Marketplace blog, insurance education, Medicare Advantage blog, Medicare Supplement articles',
-  alternates: {
-    canonical: 'https://www.elmaginsurance.com/blog',
-  },
-};
+});
 
 export default function BlogPage() {
   return (

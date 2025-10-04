@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Maui County Hawaii Medicare Advantage Plans 2025 | Island Healthcare Networks',
     description: 'Premium Medicare Advantage plans in Maui County with Kaiser Permanente and HMSA networks plus island-specific healthcare benefits.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const mauiCountyData = {

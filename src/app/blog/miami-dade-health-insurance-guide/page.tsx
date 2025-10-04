@@ -18,7 +18,16 @@ export const metadata: Metadata = {
     authors: ['El-Mag Insurance Team'],
     section: 'Health Insurance Guides',
     tags: ['Health Insurance', 'Miami-Dade County', 'ACA Marketplace', 'Florida'],
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://el-mag.com/blog/miami-dade-health-insurance-guide'
   }

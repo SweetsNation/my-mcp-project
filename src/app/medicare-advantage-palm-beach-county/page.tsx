@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Palm Beach County with $0 premiums, comprehensive benefits, and local enrollment support.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-advantage-palm-beach-county',
   },

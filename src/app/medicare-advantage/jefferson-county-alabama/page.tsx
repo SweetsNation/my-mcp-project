@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Jefferson County, AL with $0 premium options and extra benefits.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Advantage Plans Jefferson County Alabama 2025',

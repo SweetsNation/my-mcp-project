@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Free Hawaii Medicare Supplement Guide - Island Healthcare Coverage',
     description: 'Comprehensive guide for Hawaii\'s unique Medicare challenges. Free download with expert insights.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const hawaiiStructuredData = {

@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Medicare Part D Formulary Lookup Guide 2025',
     description: 'Complete guide to checking Medicare Part D drug coverage using formulary lookup tools. Ensure your medications are covered before choosing a plan.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-part-d.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Part D Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-part-d-formulary-lookup',
   },

@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     title: 'Health Insurance Marketplace Subsidies 2025',
     description: 'Check your eligibility for subsidies to lower your health insurance costs.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-marketplace.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Health Insurance Marketplace - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 // Structured Data for SEO

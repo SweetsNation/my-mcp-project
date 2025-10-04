@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Duval County Florida Medicare Advantage Plans 2025 | Jacksonville Networks',
     description: 'Comprehensive Medicare Advantage coverage in Duval County with Mayo Clinic, Baptist Health, and UF Health networks serving Jacksonville\'s diverse community.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const duvalCountyData = {

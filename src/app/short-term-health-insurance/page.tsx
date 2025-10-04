@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     title: 'Short-Term Health Insurance 2025 | Temporary Coverage Plans',
     description: 'Affordable short-term health insurance for coverage gaps. Compare temporary medical plans with instant approval and flexible terms.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/short-term-health-insurance',
   },

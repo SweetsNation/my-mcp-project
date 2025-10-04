@@ -8,11 +8,20 @@ export const metadata: Metadata = {
   description: 'Medicare Supplement Plan F costs $227.83/month average in 2025. High-deductible Plan F only $82.50/month. 36% market share. Pre-2020 Medicare eligibility required.',
   keywords: 'Medicare Plan F cost 2025, Medigap Plan F premiums, Medicare Supplement Plan F benefits, Plan F high deductible, Medicare Plan F rates, Plan F vs Plan G 2025, Medicare Supplement Plan F eligibility, Medigap Plan F coverage, Medicare Plan F quotes',
   openGraph: {
-    title: 'Medicare Plan F Cost 2025 | $227.83/Month Average | Comprehensive Coverage',
-    description: 'Medicare Plan F costs $227.83/month average in 2025. Most comprehensive Medigap coverage. High-deductible option $82.50/month. Pre-2020 eligibility required.',
+    title: 'Medicare Plan F Cost 2025 | },27.83/Month Average | Comprehensive Coverage',
+    description: 'Medicare Plan F costs },27.83/month average in 2025. Most comprehensive Medigap coverage. High-deductible option $82.50/month. Pre-2020 eligibility required.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Plan F Cost 2025 | $227.83/Month Average',

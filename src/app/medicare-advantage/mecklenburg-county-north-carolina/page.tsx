@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Mecklenburg County, NC. Better benefits than Original Medicare with Charlotte metro provider networks, $0 premiums, and 5-star ratings. Free enrollment assistance from licensed agents.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Medicare Advantage Plans Mecklenburg County NC 2025 | Charlotte Metro Coverage',

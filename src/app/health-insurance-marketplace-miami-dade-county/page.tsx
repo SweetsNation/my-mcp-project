@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Find affordable health insurance in Miami-Dade County with ACA Marketplace plans, subsidies up to 100%, and bilingual enrollment support.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-marketplace.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Health Insurance Marketplace - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/health-insurance-marketplace-miami-dade-county',
   },

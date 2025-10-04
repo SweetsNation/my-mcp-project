@@ -16,7 +16,16 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
     url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Social Security Optimization Expert | Medicare Supplement Specialist',

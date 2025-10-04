@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Fresno County California Medicare Advantage Plans 2025 | Central Valley Healthcare',
     description: 'Comprehensive Medicare Advantage coverage in Fresno County with Central Valley healthcare networks and bilingual services.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const fresnoCountyData = {

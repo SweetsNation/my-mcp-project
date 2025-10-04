@@ -22,7 +22,16 @@ export const metadata: Metadata = {
     title: 'Inova vs Kaiser Permanente Medicare Advantage: Fairfax Hospital Comparison',
     description: 'Which Fairfax County hospital network is better for your Medicare Advantage plan? Compare Inova Health System and Kaiser Permanente coverage, access, and benefits.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/inova-vs-kaiser-medicare-advantage-fairfax',
   },

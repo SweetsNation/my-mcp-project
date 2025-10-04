@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Find top-rated Medicare Advantage plans in DeKalb County, GA with Atlanta metro coverage and diverse community focus. Better benefits than Original Medicare with Emory Healthcare, cultural competency, and language services for African American seniors and multicultural families.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Medicare Advantage Plans DeKalb County GA 2025 | Atlanta Diversity | Cultural Competency',

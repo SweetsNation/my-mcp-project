@@ -192,7 +192,16 @@ export const metadata: Metadata = {
     title: 'Medicare Supplement Plans Hernando County FL | Medigap Coverage',
     description: 'Find the best Medicare Supplement plans in Hernando County. Compare Plan F, G, N options for Spring Hill and Brooksville seniors.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-hernando-county-florida',
   },

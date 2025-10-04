@@ -21,12 +21,21 @@ export const metadata: Metadata = {
   keywords: 'Medicare Supplement Plan G, Medicare Supplement Plan G 2025, Medigap Plan G, Plan G benefits, Plan G coverage, Plan G deductible, Plan G quotes, Plan G vs Plan F, Plan G vs Plan N, best Medicare Supplement plan, Medigap Plan G rates, Medicare Supplement quotes',
   openGraph: {
     title: 'Medicare Supplement Plan G 2025 | Most Popular Medigap Plan',
-    description: 'Get comprehensive Medicare coverage with Plan G. Only $240 deductible, covers 100% of costs after. No networks, see any doctor nationwide.',
+    description: 'Get comprehensive Medicare coverage with Plan G. Only },40 deductible, covers 100% of costs after. No networks, see any doctor nationwide.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
     url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-supplement-plan-g',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Supplement Plan G 2025 | $240 Deductible Only',

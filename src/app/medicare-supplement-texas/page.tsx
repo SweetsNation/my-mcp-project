@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     description: 'Discover why Texas offers the nation\'s best Medicare Supplement value with low costs and comprehensive coverage options.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-texas',
   },

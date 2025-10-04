@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'San Francisco County Medicare Advantage Plans 2025 | UCSF Kaiser Networks',
     description: 'Premium Medicare Advantage plans in San Francisco County with UCSF, Kaiser Permanente, and Sutter Health networks plus high-cost area special benefits.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const sanFranciscoData = {

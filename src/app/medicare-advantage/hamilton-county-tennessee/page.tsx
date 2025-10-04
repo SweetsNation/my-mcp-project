@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Find affordable Medicare Advantage plans in Hamilton County, TN with Chattanooga coverage and Tennessee River Valley industrial heritage focus. Better benefits than Original Medicare with CHI Memorial, Erlanger networks designed for manufacturing and logistics retirees.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Affordable Medicare Advantage Plans Hamilton County TN 2025 | Chattanooga Industrial Heritage',

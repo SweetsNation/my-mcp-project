@@ -14,7 +14,16 @@ export const metadata: Metadata = {
     title: 'Medicare Advantage Broward County Florida | Fort Lauderdale Plans 2025',
     description: 'Compare Medicare Advantage plans in Broward County, FL. Find coverage for Fort Lauderdale, Hollywood, and Pembroke Pines.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const browardCountyData = {

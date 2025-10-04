@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     title: 'Medicare Part D Costs 2025 - Complete Cost Guide & Calculator',
     description: 'Calculate your Medicare Part D costs for 2025. Compare plans, understand all expenses, and find ways to save on prescription drug coverage.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-part-d.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Part D Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-part-d/costs'
   }

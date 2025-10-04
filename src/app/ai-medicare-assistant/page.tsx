@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'AI Medicare Assistant - Instant Expert Medicare Guidance',
     description: 'Get instant AI-powered answers to complex Medicare questions. Expert-level guidance available 24/7.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 const structuredData = {

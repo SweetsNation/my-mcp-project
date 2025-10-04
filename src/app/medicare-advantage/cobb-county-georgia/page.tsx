@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Cobb County Georgia Medicare Advantage Plans 2025 | Atlanta Suburbs Networks',
     description: 'Premium Medicare Advantage plans in Cobb County with Wellstar, Northside, and Emory networks serving Atlanta\'s northwestern suburbs.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const cobbCountyData = {

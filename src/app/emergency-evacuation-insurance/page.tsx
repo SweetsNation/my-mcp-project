@@ -21,7 +21,16 @@ export const metadata: Metadata = {
     description: 'Protect yourself with comprehensive emergency evacuation insurance. Coverage for medical emergencies, natural disasters, and emergency transport worldwide.',
     type: 'website',
     url: '/emergency-evacuation-insurance',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: '/emergency-evacuation-insurance',
   },

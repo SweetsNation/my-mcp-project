@@ -14,9 +14,22 @@ export const metadata: Metadata = {
   keywords: 'long term care insurance 2025, nursing home insurance, assisted living coverage, home care insurance, elder care planning, LTC insurance quotes, long-term care benefits, nursing home costs, Medicaid planning, retirement care insurance, senior care coverage, long term care premium, custodial care insurance, memory care coverage, respite care benefits, long term care policy, elder law planning, care coordination benefits, aging in place insurance, long term care riders',
   openGraph: {
     title: 'Long-Term Care Insurance 2025 | Nursing Home Coverage | Home Care Protection',
+    description: 'Protect your retirement savings with comprehensive long-term care insurance. Coverage for nursing homes, assisted living, and in-home care starting at openGraph: {
+    title: 'Long-Term Care Insurance 2025 | Nursing Home Coverage | Home Care Protection',
     description: 'Protect your retirement savings with comprehensive long-term care insurance. Coverage for nursing homes, assisted living, and in-home care starting at $150/month.',
     type: 'website',
-  },
+  50/month.',
+    type: 'website',
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 const ltcData = {

@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     title: 'Health Insurance Marketplace Enrollment Guide 2025',
     description: 'Step-by-step guide to enrolling in affordable health insurance.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-marketplace.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Health Insurance Marketplace - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 // Structured Data for SEO

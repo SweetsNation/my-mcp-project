@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Plan G vs Other Medicare Plans - Complete 2025 Comparison',
     description: 'Compare Plan G benefits, costs, and coverage with other Medicare options. Find the best plan for your healthcare needs.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-plan-g/comparison',
   },

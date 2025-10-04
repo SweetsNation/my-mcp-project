@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Medicare 2025 Guide | Parts A, B, C, D Explained | Medicare Advantage vs Supplement',
     description: 'Complete Medicare guide for 2025. Understand all Medicare parts, compare Advantage vs Supplement plans, and get expert enrollment help.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 const medicareData = {

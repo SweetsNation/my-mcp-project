@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Compare UAB Medicine and St. Vincent\'s Medicare Advantage networks in Birmingham AL. Viva Health 5-star rated, 42 plans from 10 insurers available.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'UAB vs St. Vincent\'s Medicare Advantage Birmingham AL 2025',

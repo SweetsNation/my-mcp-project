@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Part D prescription drug plans for Miami-Dade County\'s 485,000+ beneficiaries with bilingual support and major pharmacy networks.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-part-d.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Part D Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-part-d-miami-dade-county',
   },

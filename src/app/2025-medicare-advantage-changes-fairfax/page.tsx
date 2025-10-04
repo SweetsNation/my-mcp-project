@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Stay informed about 2025 Medicare Advantage changes in Fairfax VA. 36 plans available with new benefits, expanded Inova networks, and $0 premium options.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: '2025 Medicare Advantage Changes Fairfax VA | 36 Plans Available',

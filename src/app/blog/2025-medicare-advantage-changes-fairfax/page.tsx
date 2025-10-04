@@ -22,7 +22,16 @@ export const metadata: Metadata = {
     title: '2025 Medicare Advantage Changes in Fairfax County, Virginia',
     description: 'Everything Fairfax County seniors need to know about 2025 Medicare Advantage changes affecting Inova, Kaiser, and local healthcare coverage.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/2025-medicare-advantage-changes-fairfax',
   },

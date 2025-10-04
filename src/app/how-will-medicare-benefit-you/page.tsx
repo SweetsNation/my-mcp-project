@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'How Will Medicare Benefit You? | Medicare Benefits Guide 2025',
     description: 'Discover how Medicare can benefit your healthcare and finances with comprehensive coverage, preventive care, and financial protection at 65+.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 const medicareBenefitsData = {

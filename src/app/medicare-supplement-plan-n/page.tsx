@@ -10,11 +10,30 @@ export const metadata: Metadata = {
   description: 'Medicare Supplement Plan N costs $165.45/month average in 2025. Nearly comprehensive coverage with small copays. Popular alternative to Plan G with lower premiums.',
   keywords: 'Medicare Plan N cost 2025, Medigap Plan N premiums, Medicare Supplement Plan N benefits, Plan N vs Plan G, Medicare Plan N rates, Plan N copays, Medicare Supplement Plan N coverage, Medigap Plan N quotes, Medicare Plan N enrollment',
   openGraph: {
+    title: 'Medicare Plan N Cost 2025 | openGraph: {
     title: 'Medicare Plan N Cost 2025 | $165.45/Month Average | Smart Medigap Choice',
     description: 'Medicare Plan N costs $165.45/month average in 2025. Nearly comprehensive coverage with small copays. Popular alternative to Plan G.',
     type: 'website',
     locale: 'en_US',
-  },
+  65.45/Month Average | Smart Medigap Choice',
+    description: 'Medicare Plan N costs openGraph: {
+    title: 'Medicare Plan N Cost 2025 | $165.45/Month Average | Smart Medigap Choice',
+    description: 'Medicare Plan N costs $165.45/month average in 2025. Nearly comprehensive coverage with small copays. Popular alternative to Plan G.',
+    type: 'website',
+    locale: 'en_US',
+  65.45/month average in 2025. Nearly comprehensive coverage with small copays. Popular alternative to Plan G.',
+    type: 'website',
+    locale: 'en_US',
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Plan N Cost 2025 | $165.45/Month Average',

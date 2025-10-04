@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Medicare LIS Program: Low Income Subsidy for Prescription Drugs',
     description: 'Complete guide to Medicare LIS program benefits, qualification requirements, and application process.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 export default function MedicareLISPage() {

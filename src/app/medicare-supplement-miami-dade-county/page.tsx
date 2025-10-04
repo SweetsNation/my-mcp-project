@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Comprehensive Medicare Supplement coverage for Miami-Dade County\'s 485,000+ beneficiaries with specialized expertise in South Florida\'s diverse healthcare landscape.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-miami-dade-county',
   },

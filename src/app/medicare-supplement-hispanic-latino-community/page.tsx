@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     description: 'Información completa sobre Medicare Supplement para la comunidad hispana con explicaciones claras en español.',
     type: 'article',
     locale: 'es_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 const hispanicStructuredData = {

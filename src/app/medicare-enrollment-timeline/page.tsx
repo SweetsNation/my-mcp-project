@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     title: 'Medicare Enrollment Timeline 2025 | Important Dates & Deadlines',
     description: 'Never miss a Medicare enrollment deadline. Complete guide to Medicare enrollment periods and when to apply for coverage.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://el-mag.com/medicare-enrollment-timeline'
   }

@@ -22,7 +22,16 @@ export const metadata: Metadata = {
     title: 'Vanderbilt vs HCA TriStar Medicare Advantage: Nashville Hospital Comparison',
     description: 'Which Nashville hospital network is better for your Medicare Advantage plan? Compare Vanderbilt Medical Center and HCA TriStar coverage, access, and benefits.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/vanderbilt-vs-hca-medicare-advantage-nashville',
   },

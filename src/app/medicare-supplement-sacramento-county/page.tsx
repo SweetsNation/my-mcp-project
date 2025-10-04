@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     title: 'Sacramento County Medicare Supplement Plans 2025 | California Medigap',
     description: 'Compare Medigap Plan G, Plan N, Plan F in Sacramento County. California Birthday Rule annual switching. UC Davis Health & Sutter coverage.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-sacramento-county',
   },

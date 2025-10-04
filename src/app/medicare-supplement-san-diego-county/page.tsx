@@ -196,7 +196,16 @@ export const metadata: Metadata = {
     title: 'Medicare Supplement Plans San Diego County CA | Medigap Coverage',
     description: 'Find the best Medicare Supplement plans in San Diego County. Compare Plan F, G, N options for San Diego, La Jolla, and Carlsbad seniors with access to UC San Diego Health and Sharp HealthCare.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-san-diego-county',
   },

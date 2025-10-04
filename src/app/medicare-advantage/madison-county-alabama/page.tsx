@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Find top-rated Medicare Advantage plans in Madison County, AL with Huntsville Research Triangle technology focus and high-tech healthcare networks. Better benefits than Original Medicare with modern aerospace industry medical facilities and research-integrated services.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Medicare Advantage Plans Madison County AL 2025 | High-Tech Healthcare',

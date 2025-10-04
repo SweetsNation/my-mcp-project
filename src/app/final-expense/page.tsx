@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     url: 'https://www.elmaginsurance.com/final-expense',
     siteName: 'El-Mag Insurance',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Final Expense Insurance & Burial Insurance Quotes',

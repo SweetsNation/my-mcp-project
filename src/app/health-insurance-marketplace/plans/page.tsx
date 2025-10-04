@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     title: 'Health Insurance Marketplace Plans Comparison 2025',
     description: 'Compare Bronze, Silver, Gold, and Platinum plans.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-marketplace.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Health Insurance Marketplace - El-Mag Insurance',
+        },
+      ],
+    },
 }
 
 // Structured Data for SEO

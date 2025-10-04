@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Part D prescription drug plans for Palm Beach County\'s 350,000+ enrollees with comprehensive pharmacy networks in West Palm Beach and beyond.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-part-d.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Part D Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-part-d-palm-beach-county',
   },

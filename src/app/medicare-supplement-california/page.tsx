@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Navigate California\'s largest Medicare market with community rating advantages and comprehensive Medigap coverage options.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-california',
   },

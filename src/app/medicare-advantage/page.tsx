@@ -29,7 +29,16 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Advantage Plans 2025 | Compare Plans by County',

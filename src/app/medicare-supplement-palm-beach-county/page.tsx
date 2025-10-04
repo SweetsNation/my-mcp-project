@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Supplement plans for Palm Beach County\'s 455,000+ beneficiaries with expert guidance and no network restrictions.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-palm-beach-county',
   },

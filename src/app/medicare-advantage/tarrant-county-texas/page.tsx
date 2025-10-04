@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Fort Worth TX & Tarrant County. Access to Texas Health Resources & JPS Health networks. 29 $0 premium options available.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Advantage Fort Worth TX 2025 | 55 Plans Available',

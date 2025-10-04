@@ -22,7 +22,16 @@ export const metadata: Metadata = {
     title: 'Emory vs Piedmont Medicare Advantage: Atlanta Hospital Comparison',
     description: 'Which Atlanta hospital network is better for your Medicare Advantage plan? Compare Emory Healthcare and Piedmont Healthcare coverage, access, and benefits.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/emory-vs-piedmont-medicare-advantage-atlanta',
   },

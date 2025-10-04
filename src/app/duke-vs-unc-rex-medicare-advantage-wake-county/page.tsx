@@ -13,7 +13,16 @@ export const metadata: Metadata = {
     title: 'Duke vs UNC REX Medicare Advantage Wake County | Compare Healthcare Networks 2025',
     description: 'Compare Duke Health and UNC REX Medicare Advantage plans in Wake County, NC. Find the best coverage for Raleigh-Durham residents.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 const wakeCountyData = {

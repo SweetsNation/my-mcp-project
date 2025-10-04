@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     title: 'Hidden Medicare Advantage Benefits Northern Virginia 2025 | Exclusive Perks',
     description: 'Uncover exclusive Medicare Advantage benefits in Northern Virginia that most seniors miss. Wellness programs, transportation, and premium services.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
 }
 
 const analyticsData = {

@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     description: 'Navigate Florida\'s booming Medicare market with comprehensive Medigap coverage for 4.8 million beneficiaries and growing.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-florida',
   },

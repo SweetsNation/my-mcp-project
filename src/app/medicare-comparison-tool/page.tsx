@@ -23,7 +23,16 @@ export const metadata: Metadata = {
     title: 'Medicare Comparison Tool - Find Your Best Medicare Option',
     description: 'Interactive tool compares Medicare Advantage vs Medicare Supplement plans. Get personalized recommendations in minutes.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-comparison-tool',
   },

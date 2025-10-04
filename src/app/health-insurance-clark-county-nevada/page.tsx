@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     description: 'Affordable Health Insurance Marketplace plans for Clark County\'s 280,000+ uninsured residents with Las Vegas healthcare expertise.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/health-insurance-clark-county-nevada',
   },

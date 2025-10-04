@@ -18,7 +18,16 @@ export const metadata: Metadata = {
     description: 'Comprehensive Medicare Supplement coverage for Monroe County\'s 22,500+ beneficiaries with specialized Florida Keys island healthcare expertise.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-monroe-county',
   },

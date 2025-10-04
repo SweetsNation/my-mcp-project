@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     title: 'Medicare Part D Cost Comparison 2025 - Find the Cheapest Plan',
     description: 'Compare Medicare Part D prescription drug plan costs side-by-side. Find the cheapest plan for your specific medications and save thousands.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-part-d.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Part D Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-part-d/costs/comparison'
   }

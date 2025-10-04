@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Comprehensive Medicare Supplement coverage for Harris County\'s 600,000+ beneficiaries with Houston healthcare expertise.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-harris-county-texas',
   },

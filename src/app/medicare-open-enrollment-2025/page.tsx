@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Medicare Open Enrollment 2025 - Critical Deadline Information',
     description: 'Medicare Open Enrollment period is October 15 - December 7, 2025. Review your coverage and make necessary changes before the deadline.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-open-enrollment-2025',
   },

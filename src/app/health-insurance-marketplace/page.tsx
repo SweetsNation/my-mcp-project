@@ -21,13 +21,22 @@ export const metadata: Metadata = {
   description: 'Get affordable health insurance through the ACA Marketplace with subsidies up to $2,400/year. Compare Obamacare plans, check eligibility, and enroll with expert help. Free licensed agent assistance - call 331-E-HEALTH.',
   keywords: 'Health Insurance Marketplace, Health Insurance Marketplace 2025, ACA plans, Obamacare enrollment, Affordable Care Act plans, health insurance subsidies, premium tax credits, marketplace health insurance, health insurance enrollment, ACA subsidies, health insurance marketplace enrollment, health insurance marketplace plans',
   openGraph: {
-    title: 'Health Insurance Marketplace 2025 | Save $2,400+ with ACA Subsidies',
+    title: 'Health Insurance Marketplace 2025 | Save },,400+ with ACA Subsidies',
     description: 'Get affordable ACA health insurance with premium tax credits and subsidies. Expert guidance for Marketplace enrollment. Free licensed agent help available.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
     url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/health-insurance-marketplace',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-marketplace.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Health Insurance Marketplace - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Health Insurance Marketplace 2025 | ACA Plans & Subsidies',

@@ -21,7 +21,16 @@ export const metadata: Metadata = {
     title: 'Grady Health System Medicare Advantage Plans Atlanta 2025 | Grady Hospital Coverage',
     description: 'Medicare Advantage plans covering Grady Health System in Atlanta. Network access, specialists, emergency care.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/grady-health-system-medicare-advantage-atlanta',
   },

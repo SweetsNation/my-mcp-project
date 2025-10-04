@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Medicare Plan Comparison Tool 2025 - Find Your Best Plan',
     description: 'Compare all Medicare plans available in your area. Side-by-side comparison of costs, benefits, and coverage options.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-plan-comparison-tool',
   },

@@ -14,13 +14,22 @@ export const metadata: Metadata = {
   description: 'Find the best Medicare Part D prescription drug plans for 2025. New $2,000 out-of-pocket cap! Compare 25+ plans, avoid late enrollment penalties. Free expert help - call 331-E-HEALTH.',
   keywords: 'Medicare Part D, Medicare Part D plans 2025, prescription drug plans, Medicare Part D enrollment, Part D comparison, Medicare prescription coverage, Medicare Part D costs, late enrollment penalty, $2000 cap, Extra Help Medicare',
   openGraph: {
-    title: 'Medicare Part D Plans 2025 | $2,000 Cap | Avoid Late Penalties',
-    description: 'Historic changes to Medicare Part D in 2025! New $2,000 out-of-pocket maximum. Compare 25+ prescription drug plans. Free expert consultation.',
+    title: 'Medicare Part D Plans 2025 | },,000 Cap | Avoid Late Penalties',
+    description: 'Historic changes to Medicare Part D in 2025! New },,000 out-of-pocket maximum. Compare 25+ prescription drug plans. Free expert consultation.',
     type: 'website',
     locale: 'en_US',
     siteName: 'El-Mag Insurance',
     url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-part-d',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-part-d.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Part D Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Part D 2025 | $2,000 Cap | Compare Plans',

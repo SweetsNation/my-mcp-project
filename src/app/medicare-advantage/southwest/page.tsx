@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Compare top-rated Medicare Advantage plans in Texas, Arizona, New Mexico, Nevada, Colorado. $0 premium options with 4-5 star ratings, bilingual Spanish services, prescription drug coverage, dental & vision benefits. Expert guidance during 2025 open enrollment.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Medicare Advantage Plans Southwest 2025 | $0 Premium Available',

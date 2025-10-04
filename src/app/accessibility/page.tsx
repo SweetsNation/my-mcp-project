@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Fully accessible Medicare and health insurance services designed for people with disabilities and accessibility needs.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Accessible Medicare & Health Insurance Services',

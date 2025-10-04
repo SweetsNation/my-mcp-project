@@ -21,7 +21,16 @@ export const metadata: Metadata = {
     title: 'Complete Guide to Health Insurance in Harris County, Texas 2025',
     description: 'Everything Harris County residents need to know about health insurance, subsidies, and Houston healthcare access.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/health-insurance-harris-county-guide',
   },

@@ -7,9 +7,18 @@ export const metadata: Metadata = {
   keywords: 'Medicare changes 2025, Medicare updates 2025, Part D changes, Medicare premium increases, Medicare benefits 2025',
   openGraph: {
     title: 'Medicare Changes 2025 - Important Updates for Beneficiaries',
-    description: 'Major Medicare changes for 2025 including the new $2,000 Part D out-of-pocket cap and other benefit updates.',
+    description: 'Major Medicare changes for 2025 including the new },,000 Part D out-of-pocket cap and other benefit updates.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-2025-changes',
   },

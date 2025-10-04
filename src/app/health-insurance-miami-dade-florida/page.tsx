@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     description: 'Affordable Health Insurance Marketplace plans for Miami-Dade\'s 400,000+ uninsured residents with bilingual South Florida expertise.',
     type: 'article',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/miami-dade-florida',
   },

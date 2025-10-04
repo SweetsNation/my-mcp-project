@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     title: 'Best Medicare Advantage Plans Honolulu County 2025 | Oahu Coverage',
     description: 'Compare 40+ Medicare Advantage plans in Honolulu County. Urban healthcare networks, specialists, and comprehensive coverage for Oahu seniors.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   robots: {
     index: true,
     follow: true,

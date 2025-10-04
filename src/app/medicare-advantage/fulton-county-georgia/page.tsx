@@ -10,7 +10,16 @@ export const metadata: Metadata = {
     description: 'Find the best Medicare Advantage plans in Fulton County & Atlanta, GA with dual-eligible benefits and local provider networks.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-advantage.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Advantage Plans - El-Mag Insurance',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Advantage Plans Fulton County Georgia 2025',

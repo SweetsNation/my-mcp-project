@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Free Plan G Quotes - Compare 2025 Medicare Supplement Rates',
     description: 'Get instant Plan G quotes from top insurance companies. Compare rates and find the best Medicare Supplement coverage.',
     type: 'website',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-medicare-supplement.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'Medicare Supplement Plans - El-Mag Insurance',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-supplement-plan-g/quote',
   },

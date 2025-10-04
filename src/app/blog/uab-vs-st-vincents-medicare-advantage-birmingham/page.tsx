@@ -22,7 +22,16 @@ export const metadata: Metadata = {
     title: 'UAB vs St. Vincent\'s Medicare Advantage: Birmingham Hospital Comparison',
     description: 'Which Birmingham hospital network is better for your Medicare Advantage plan? Compare UAB Medicine and St. Vincent\'s coverage, access, and benefits.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/uab-vs-st-vincents-medicare-advantage-birmingham',
   },

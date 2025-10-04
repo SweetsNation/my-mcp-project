@@ -21,7 +21,16 @@ export const metadata: Metadata = {
     title: 'Medicare Advantage Plans for Diverse Communities in Atlanta | Multicultural Healthcare',
     description: 'Medicare Advantage plans with multilingual support and culturally competent care for Atlanta\'s diverse communities.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/medicare-advantage-diverse-communities-atlanta',
   },

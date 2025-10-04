@@ -9,7 +9,16 @@ export const metadata: Metadata = {
     title: 'Medicare Deadline December 7, 2025 - URGENT ACTION REQUIRED',
     description: 'Final warning: Medicare Open Enrollment deadline is December 7, 2025. Don\'t get locked into bad coverage for 2025!',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/medicare-deadline-december-7',
   },

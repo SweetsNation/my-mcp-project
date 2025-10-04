@@ -21,7 +21,16 @@ export const metadata: Metadata = {
     title: 'Medicare Advantage Transportation Benefits in Nashville | Free Rides to Doctor Appointments',
     description: 'Medicare Advantage plans in Nashville offer free transportation to medical appointments. Compare ride benefits and NEMT coverage.',
     type: 'article',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-blog.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance Blog - Medicare Education',
+        },
+      ],
+    },
   alternates: {
     canonical: 'https://www.elmaginsurance.com/blog/medicare-advantage-transportation-benefits-nashville',
   },

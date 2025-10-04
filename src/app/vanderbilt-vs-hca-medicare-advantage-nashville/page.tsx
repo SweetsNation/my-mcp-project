@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Compare Medicare Advantage plans in Nashville TN. 46 plans available with HCA extensive network. Vanderbilt network participation limited. 57.11% enrollment rate.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Medicare Advantage Nashville TN 2025 | 46 Plans Available',

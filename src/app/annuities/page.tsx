@@ -12,7 +12,16 @@ export const metadata: Metadata = {
     description: 'Find the best annuities for 2025 with fixed rates up to 6.80%. Compare top-rated annuity companies for guaranteed retirement income.',
     type: 'website',
     locale: 'en_US',
-  },
+  ,
+      images: [
+        {
+          url: 'https://www.elmaginsurance.com/images/og-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'El-Mag Insurance - Medicare and Health Insurance Solutions',
+        },
+      ],
+    },
   twitter: {
     card: 'summary_large_image',
     title: 'Best Annuities 2025 | Fixed Rates up to 6.80%',
