@@ -83,26 +83,22 @@ export default function OptimizedImage({
     );
   }
 
-  const imageProps = {
-    src,
-    alt,
-    className: `${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`,
-    priority,
-    placeholder,
-    blurDataURL: placeholder === 'blur' ? (blurDataURL || defaultBlurDataURL) : undefined,
-    quality,
-    onLoadingComplete: handleLoadingComplete,
-    onError: handleError,
-  };
-
   if (fill) {
     return (
       <div className="relative overflow-hidden">
         <Image
-          {...imageProps}
+          src={src}
+          alt={alt}
           fill
           sizes={responsiveSizes}
           style={{ objectFit: 'cover' }}
+          className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+          priority={priority}
+          placeholder={placeholder}
+          blurDataURL={placeholder === 'blur' ? (blurDataURL || defaultBlurDataURL) : undefined}
+          quality={quality}
+          onLoadingComplete={handleLoadingComplete}
+          onError={handleError}
         />
       </div>
     );
@@ -110,10 +106,18 @@ export default function OptimizedImage({
 
   return (
     <Image
-      {...imageProps}
+      src={src}
+      alt={alt}
       width={width}
       height={height}
       sizes={responsiveSizes}
+      className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+      priority={priority}
+      placeholder={placeholder}
+      blurDataURL={placeholder === 'blur' ? (blurDataURL || defaultBlurDataURL) : undefined}
+      quality={quality}
+      onLoadingComplete={handleLoadingComplete}
+      onError={handleError}
     />
   );
 }
