@@ -205,13 +205,4 @@ class NewYorkMedigapTracking {
 // Export singleton instance
 export const newYorkMedigapTracking = new NewYorkMedigapTracking();
 
-// Type augmentation for gtag
-declare global {
-  interface Window {
-    gtag?: (
-      command: string,
-      eventName: string,
-      eventParams: Record<string, any>
-    ) => void;
-  }
-}
+// gtag is declared globally in src/lib/analytics.ts
