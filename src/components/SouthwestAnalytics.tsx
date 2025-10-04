@@ -202,7 +202,7 @@ export default function SouthwestAnalytics() {
         const state = parent?.getAttribute('data-state-highlight') as any;
 
         if (['AZ', 'NV', 'NM'].includes(state)) {
-          southwestTracking.trackCTA('state_link', 'content', state);
+          southwestTracking.trackCTA('state_link', 'state_values', state);
           southwestTracking.trackStateEngagement(state, 'state_link_click');
         }
       }
