@@ -190,7 +190,7 @@ export default function MidAtlanticAnalytics() {
       if (href?.includes('/states/')) {
         const state = href.split('/states/')[1]?.split('/')[0]?.toUpperCase().substring(0, 2) as any;
         if (['NY', 'PA', 'MD', 'NJ', 'DE'].includes(state)) {
-          midAtlanticTracking.trackCTA('state_link', 'content', state);
+          midAtlanticTracking.trackCTA('state_link', 'state_values', state);
           midAtlanticTracking.trackStateEngagement(state, 'state_link_click');
         }
       }
