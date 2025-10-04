@@ -12,8 +12,104 @@ export const metadata: Metadata = {
 };
 
 export default function PrescriptionDrugCoveragePage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage',
+        url: 'https://elmaginsurance.com/resources/prescription-drug-coverage',
+        headline: 'Medicare Prescription Drug Coverage Guide',
+        description: 'Complete guide to Medicare Part D prescription drug coverage, formularies, and costs. Expert guidance from El-Mag Insurance.',
+        inLanguage: 'en-US',
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage'
+        },
+        author: {
+          '@type': 'Organization',
+          name: 'El-Mag Insurance'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'El-Mag Insurance',
+          url: 'https://elmaginsurance.com'
+        },
+        datePublished: '2024-01-01',
+        dateModified: '2024-12-01'
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://elmaginsurance.com'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Resources',
+            item: 'https://elmaginsurance.com/resources'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Prescription Drug Coverage',
+            item: 'https://elmaginsurance.com/resources/prescription-drug-coverage'
+          }
+        ]
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://elmaginsurance.com/resources/prescription-drug-coverage#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What is Medicare Part D prescription drug coverage?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Medicare Part D is prescription drug coverage that helps pay for outpatient prescription medications. Part D is offered through private insurance companies approved by Medicare. You can get Part D coverage through a stand-alone Prescription Drug Plan (PDP) if you have Original Medicare, or through a Medicare Advantage Plan (Part C) that includes drug coverage (MA-PD). Part D plans have formularies (lists of covered drugs) organized into tiers with different cost-sharing amounts.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How does the Medicare Part D donut hole work?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'The Part D coverage gap, or "donut hole," is a temporary limit on what your plan covers for prescription drugs. In 2024, you enter the gap after your total drug costs reach $5,030. While in the gap, you pay 25% of the cost for both brand-name and generic drugs. Once your out-of-pocket costs reach $8,000, you exit the gap and enter catastrophic coverage, where you pay only minimal amounts ($4.15 for generics, $10.35 for brand-name drugs, or 5% coinsurance, whichever is greater) for the rest of the year.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Can I get financial help with Part D costs?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes, the Extra Help/Low-Income Subsidy (LIS) program helps people with limited income and resources pay for Part D premiums, deductibles, and copayments. To qualify in 2024, your annual income must be below $23,000 (individual) or $31,000 (married couple), and resources below $17,220 (individual) or $34,360 (couple). Extra Help can save you an average of $5,000+ per year. Some people automatically qualify if they have Medicaid, receive SSI, or participate in certain state programs. Apply through Social Security or your state Medicaid office.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What drugs are covered by Medicare Part D?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Medicare Part D plans must cover at least two drugs in each therapeutic category and class, but each plan has its own formulary (list of covered drugs). Formularies typically include most FDA-approved prescription medications, organized into cost tiers. Part D plans must cover all or substantially all drugs in six protected classes: immunosuppressants for transplant patients, antidepressants, antipsychotics, anticonvulsants, antiretrovirals for HIV/AIDS, and antineoplastics for cancer. However, Part D does not cover certain drugs like those covered by Medicare Part B, over-the-counter medications, drugs used for weight loss or cosmetic purposes, fertility drugs, or cough/cold medications.'
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="container mx-auto px-4 py-8">
         <Breadcrumbs 
           items={[

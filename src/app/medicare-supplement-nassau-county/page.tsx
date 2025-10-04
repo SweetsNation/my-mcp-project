@@ -76,9 +76,9 @@ export default function NassauCountyMedicareSupplementPage() {
                   Nassau County: Long Island's Healthcare Hub
                 </h2>
                 <p className="text-blue-700">
-                  With <strong>240,000+ Medicare beneficiaries</strong> and access to premium healthcare facilities like 
-                  NYU Langone Hospital—Long Island and North Shore University Hospital, Nassau County offers exceptional 
-                  Medicare Supplement opportunities. Despite NY's high premiums, Long Island's healthcare infrastructure 
+                  With <strong>240,000+ Medicare beneficiaries</strong> and access to premium healthcare facilities like
+                  NYU Langone Hospital—Long Island and North Shore University Hospital, Nassau County offers exceptional
+                  Medicare Supplement opportunities. Despite <Link href="/medicare-supplement-new-york" className="text-blue-900 underline hover:text-blue-600">NY's high premiums</Link>, Long Island's healthcare infrastructure
                   justifies comprehensive Medigap coverage.
                 </p>
               </div>

@@ -2,6 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, Calculator, Users, Shield, Clock, CheckCircle, Heart, DollarSign, FileText, Award, MapPin, Plane, Car, Ship } from 'lucide-react'
 import BreadcrumbNavigation, { TRIP_CANCELLATION_BREADCRUMBS } from '@/components/BreadcrumbNavigation'
+import { generateTripCancellationInsuranceSchema, tripCancellationInsuranceFAQs } from '@/lib/schema/trip-cancellation-insurance-schema'
+
+// Structured Data for SEO
+const structuredData = generateTripCancellationInsuranceSchema({
+  pagePath: '/trip-cancellation-insurance',
+  pageTitle: 'Trip Cancellation Insurance | Travel Cancellation Coverage | Vacation Insurance Protection',
+  pageDescription: 'Get comprehensive trip cancellation insurance to protect your travel investment. Coverage for flight cancellations, hotel bookings, and vacation expenses. Affordable travel protection starting at $15/trip.',
+  faqs: tripCancellationInsuranceFAQs
+});
 
 export const metadata: Metadata = {
   title: 'Trip Cancellation Insurance | Travel Cancellation Coverage | Vacation Insurance Protection',
@@ -47,6 +56,12 @@ export const metadata: Metadata = {
 export default function TripCancellationInsurancePage() {
   return (
     <>
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100">
         <div className="container mx-auto px-4 py-8">
           {/* Breadcrumb Navigation */}

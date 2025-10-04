@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { generateMarketplaceSchema, plansFAQs, commonMarketplaceFAQs } from '@/lib/schema/marketplace-insurance-schema'
 
 export const metadata: Metadata = {
   title: 'Health Insurance Marketplace Plans Comparison 2025',
@@ -12,9 +13,24 @@ export const metadata: Metadata = {
   },
 }
 
+// Structured Data for SEO
+const structuredData = generateMarketplaceSchema({
+  pagePath: '/health-insurance-marketplace/plans',
+  pageTitle: 'Health Insurance Marketplace Plans Comparison 2025',
+  pageDescription: 'Compare Bronze, Silver, Gold, and Platinum health insurance plans. Understand metal tiers, network types (HMO, PPO, EPO), and find the best Marketplace coverage for your needs.',
+  pageType: 'plans',
+  faqs: [...plansFAQs, ...commonMarketplaceFAQs.slice(0, 2)]
+})
+
 export default function MarketplacePlansPage() {
   return (
     <main className="min-h-screen">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-8 text-center">

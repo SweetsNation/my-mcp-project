@@ -2,6 +2,14 @@ import type { Metadata } from 'next';
 import BlogPostLinking from '@/components/BlogPostLinking';
 import ToolLinking from '@/components/ToolLinking';
 import ResourceLinking from '@/components/ResourceLinking';
+import { generateBlogListingSchema } from '@/lib/schema/blog-schema';
+
+// Structured Data for SEO
+const structuredData = generateBlogListingSchema({
+  pagePath: '/blog',
+  pageTitle: 'Insurance Blog & Educational Resources | Medicare, Health Insurance & More',
+  pageDescription: 'Expert insurance blog with educational articles on Medicare, health insurance, ACA Marketplace, and more. Get informed with our comprehensive guides and resources.'
+});
 
 export const metadata: Metadata = {
   title: 'Insurance Blog & Educational Resources | Medicare, Health Insurance & More | El-Mag Insurance',
@@ -15,6 +23,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div className="bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

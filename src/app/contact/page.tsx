@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
 import ContactPageClient from '@/components/ContactPageClient';
+import { generateContactPageSchema } from '@/lib/schema/organization-schema';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+// Structured Data for SEO
+const structuredData = generateContactPageSchema();
 
 export const metadata: Metadata = {
   title: 'Contact Us - El-Mag Insurance',
@@ -15,5 +19,14 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactPageClient />;
+  return (
+    <>
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <ContactPageClient />
+    </>
+  );
 }

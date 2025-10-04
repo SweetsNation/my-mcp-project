@@ -2,6 +2,14 @@ import type { Metadata } from 'next';
 import TeamMemberLinking from '@/components/TeamMemberLinking';
 import ToolLinking from '@/components/ToolLinking';
 import ResourceLinking from '@/components/ResourceLinking';
+import { generateSpecialistsPageSchema } from '@/lib/schema/team-schema';
+
+// Structured Data for SEO
+const structuredData = generateSpecialistsPageSchema({
+  pagePath: '/specialists',
+  pageTitle: 'Insurance Specialists & Licensed Agents | Expert Medicare & Health Insurance Advisors',
+  pageDescription: 'Connect with our team of licensed insurance specialists. Expert Medicare advisors, ACA Marketplace specialists, and multi-line insurance agents.'
+});
 
 export const metadata: Metadata = {
   title: 'Insurance Specialists & Licensed Agents | Expert Medicare & Health Insurance Advisors | El-Mag Insurance',
@@ -15,6 +23,12 @@ export const metadata: Metadata = {
 export default function SpecialistsPage() {
   return (
     <div className="bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

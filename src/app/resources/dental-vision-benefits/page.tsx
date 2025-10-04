@@ -1,6 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { generateArticlePageSchema } from '@/lib/schema/article-schema';
+
+// Structured Data for SEO
+const structuredData = generateArticlePageSchema({
+  pagePath: '/resources/dental-vision-benefits',
+  pageTitle: 'Extra Benefits: Dental, Vision, and Hearing Coverage',
+  pageDescription: 'Complete guide to dental and vision benefits in Medicare Advantage plans. Learn about coverage options and costs.',
+  datePublished: '2024-02-15',
+  category: 'Benefits',
+  wordCount: 900
+});
 
 export const metadata: Metadata = {
   title: 'Medicare Advantage Dental & Vision Benefits - El-Mag Insurance',
@@ -14,6 +25,12 @@ export const metadata: Metadata = {
 export default function DentalVisionBenefitsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <div className="container mx-auto px-4 py-8">
         <Breadcrumbs 
           items={[

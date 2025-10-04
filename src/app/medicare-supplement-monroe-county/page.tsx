@@ -7,6 +7,7 @@ import {
   trackMedicareAdvancedCTA,
   setupMedicareAdvancedScrollTracking
 } from '@/lib/analytics/medicareAdvancedTracking'
+import { generateCountyMedicareSchema, getMedicareSupplementFAQs } from '@/lib/schema/county-medicare-schema'
 
 export const metadata: Metadata = {
   title: 'Monroe County Medicare Supplement Plans 2025 - Florida Keys Medigap Coverage | El-Mag Insurance',
@@ -32,35 +33,17 @@ const monroeCountyData = {
   islandChallenges: 6
 }
 
-const monroeStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://el-mag.com/medicare-supplement-monroe-county',
-  name: 'Monroe County Medicare Supplement Plans',
-  description: 'Comprehensive Medicare Supplement insurance guide for Monroe County, Florida Keys residents',
-  url: 'https://el-mag.com/medicare-supplement-monroe-county',
-  about: {
-    '@type': 'FinancialProduct',
-    name: 'Medicare Supplement Insurance',
-    category: 'Health Insurance',
-    provider: {
-      '@type': 'Organization',
-      name: 'El-Mag Insurance'
-    }
-  },
-  geo: {
-    '@type': 'AdministrativeArea',
-    name: 'Monroe County, Florida',
-    containedInPlace: {
-      '@type': 'State',
-      name: 'Florida'
-    }
-  },
-  audience: {
-    '@type': 'Audience',
-    audienceType: 'Monroe County Medicare beneficiaries'
-  }
-}
+const monroeStructuredData = generateCountyMedicareSchema({
+  pagePath: '/medicare-supplement-monroe-county',
+  pageTitle: 'Monroe County Medicare Supplement Plans 2025 - Florida Keys Medigap Coverage',
+  pageDescription: 'Monroe County Medicare Supplement guide: Navigate Florida Keys\' unique island healthcare with specialized Medigap plans for 22,500+ beneficiaries. Hurricane preparedness and mainland access coverage.',
+  county: 'Monroe County',
+  state: 'Florida',
+  productType: 'medicare-supplement',
+  totalBeneficiaries: 22500,
+  averagePremium: 165,
+  faqs: getMedicareSupplementFAQs('Monroe County', 'Florida', 165)
+})
 
 export default function MonroeCountyMedicareSupplementPage() {
   React.useEffect(() => {
@@ -145,9 +128,9 @@ export default function MonroeCountyMedicareSupplementPage() {
                 </p>
                 <p className="text-blue-700">
                   With <strong>22,500+ Medicare beneficiaries</strong> spread across the 110-mile Florida Keys island chain,
-                  Monroe County presents unique healthcare challenges requiring specialized Medicare Supplement coverage.
+                  Monroe County presents unique healthcare challenges requiring specialized <Link href="/medicare-supplement" className="text-blue-900 underline hover:text-blue-600">Medicare Supplement coverage</Link>.
                   Access critical access hospitals like <strong>Lower Keys Medical Center, Mariners Hospital, and Fishermen's Hospital</strong>,
-                  with <Link href="/medicare-supplement" className="text-blue-900 underline hover:text-blue-600">Medigap plans</Link> that
+                  with <Link href="/medicare-supplement-plan-g" className="text-blue-900 underline hover:text-blue-600">Plan G</Link> and <Link href="/medicare-supplement-plan-n" className="text-blue-900 underline hover:text-blue-600">Plan N</Link> options that
                   provide crucial flexibility for mainland specialist care, hurricane evacuation coverage, and island-adapted healthcare solutions.
                 </p>
               </div>
@@ -237,12 +220,12 @@ export default function MonroeCountyMedicareSupplementPage() {
           </div>
 
           <div className="mt-8 bg-blue-50 border-l-4 border-blue-400 p-6 rounded">
-            <h4 className="font-semibold text-blue-800 mb-2">🌴 Florida Keys Medigap Value:</h4>
+            <h3 className="font-semibold text-blue-800 mb-2">🌴 Florida Keys Medigap Value</h3>
             <p className="text-blue-700 mb-4">
-              Monroe County's unique 110-mile island chain geography makes Medicare Supplement plans especially valuable.
+              Monroe County's unique 110-mile island chain geography makes <Link href="/medicare-supplement-florida" className="text-blue-900 underline hover:text-blue-600">Florida Medicare Supplement plans</Link> especially valuable.
               The ability to access <strong>any Medicare provider without network restrictions</strong> is critical when local
-              critical access hospitals must refer complex cases to mainland facilities in Miami-Dade, Broward, or Palm Beach counties.
-              Medigap coverage eliminates prior authorization delays during emergencies and hurricane evacuations.
+              critical access hospitals must refer complex cases to mainland facilities in <Link href="/medicare-advantage/miami-dade-county" className="text-blue-900 underline hover:text-blue-600">Miami-Dade</Link>, <Link href="/medicare-advantage/broward-county-florida" className="text-blue-900 underline hover:text-blue-600">Broward</Link>, or <Link href="/medicare-advantage/palm-beach-county" className="text-blue-900 underline hover:text-blue-600">Palm Beach counties</Link>.
+              Medigap coverage eliminates <Link href="/resources/medicare-advantage-vs-original" className="text-blue-900 underline hover:text-blue-600">prior authorization delays</Link> during emergencies and hurricane evacuations.
             </p>
             <div className="border-t border-blue-200 pt-3">
               <p className="text-sm text-blue-700 font-semibold mb-2">Compare Florida Medicare Options:</p>
@@ -257,7 +240,7 @@ export default function MonroeCountyMedicareSupplementPage() {
 
         {/* Keys Regional Coverage */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">🏝️ Florida Keys Medicare Coverage by Island Region</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">🏝️ Monroe County Medicare Coverage by Florida Keys Region</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg">
@@ -286,13 +269,13 @@ export default function MonroeCountyMedicareSupplementPage() {
                 <div><strong>Medicare Pop:</strong> 7,200+ beneficiaries</div>
                 <div><strong>Healthcare Hub:</strong> Lower Keys Medical Center</div>
                 <div><strong>Southernmost:</strong> Most isolated location</div>
-                <div><strong>Medigap Benefit:</strong> Critical evacuation coverage</div>
+                <div><strong>Medigap Benefit:</strong> Critical <Link href="/emergency-evacuation-insurance" className="text-purple-900 underline hover:text-purple-600">evacuation coverage</Link></div>
               </div>
             </div>
           </div>
 
           <div className="bg-purple-50 border-l-4 border-purple-400 p-6 rounded">
-            <h4 className="font-semibold text-purple-800 mb-3">Explore Other Florida County Medicare Options:</h4>
+            <h3 className="font-semibold text-purple-800 mb-3">Explore Other Florida County Medicare Options</h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-purple-700 font-semibold mb-2">Medicare Advantage Alternatives:</p>
@@ -316,7 +299,7 @@ export default function MonroeCountyMedicareSupplementPage() {
 
         {/* Island-Specific Healthcare Challenges */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">🌊 Why Medigap is Essential for Florida Keys Residents</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">🌊 Why Medicare Supplement is Essential for Monroe County Florida Keys Residents</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white border border-gray-200 rounded-xl p-6">
@@ -375,7 +358,7 @@ export default function MonroeCountyMedicareSupplementPage() {
 
         {/* Cost-Benefit Analysis */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">💰 Monroe County Medicare Supplement Value Analysis</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">💰 Monroe County Florida Medicare Supplement Cost Analysis</h2>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-green-50 border border-green-200 p-6 rounded-lg">
@@ -440,16 +423,16 @@ export default function MonroeCountyMedicareSupplementPage() {
           </div>
 
           <div className="bg-orange-50 border-l-4 border-orange-400 p-6 rounded">
-            <h4 className="font-semibold text-orange-800 mb-2">🌴 Keys Island Healthcare Reality:</h4>
+            <h3 className="font-semibold text-orange-800 mb-2">🌴 Keys Island Healthcare Reality</h3>
             <p className="text-orange-700 mb-3">
-              Florida Keys residents face unique healthcare costs that make Medigap especially valuable:
+              Florida Keys residents face unique <Link href="/resources/understanding-costs" className="text-orange-900 underline hover:text-orange-600">healthcare costs</Link> that make Medigap especially valuable:
             </p>
             <ul className="space-y-2 text-orange-700 text-sm">
-              <li>• <strong>Mainland Specialist Trips:</strong> Average 4-6 annual visits ($165 miles to Miami)</li>
+              <li>• <strong>Mainland Specialist Trips:</strong> Average 4-6 annual visits (165 miles to <Link href="/medicare-advantage/miami-dade-county" className="text-orange-900 underline hover:text-orange-600">Miami</Link>)</li>
               <li>• <strong>Hurricane Evacuations:</strong> Emergency healthcare during relocation</li>
               <li>• <strong>Air Ambulance:</strong> Critical transfer to trauma centers ($20,000+ without coverage)</li>
               <li>• <strong>Snowbird Travel:</strong> Healthcare coverage in multiple states</li>
-              <li>• <strong>Network Limitations:</strong> MA plans restrict Baptist Health South Florida access</li>
+              <li>• <strong>Network Limitations:</strong> <Link href="/medicare-advantage/monroe-county-florida" className="text-orange-900 underline hover:text-orange-600">MA plans</Link> restrict Baptist Health South Florida access</li>
             </ul>
           </div>
         </section>
@@ -474,9 +457,9 @@ export default function MonroeCountyMedicareSupplementPage() {
               <div>
                 <h4 className="font-semibold text-green-700 mb-3">Medigap Advantages:</h4>
                 <ul className="space-y-2 text-green-600 text-sm">
-                  <li>✓ <strong>Any Provider Access:</strong> No network restrictions during evacuation</li>
+                  <li>✓ <strong>Any Provider Access:</strong> No <Link href="/resources/medicare-advantage-vs-original" className="text-green-800 underline hover:text-green-900">network restrictions</Link> during evacuation</li>
                   <li>✓ <strong>Nationwide Coverage:</strong> Healthcare anywhere in evacuation zone</li>
-                  <li>✓ <strong>No Prior Authorization:</strong> Emergency care without delays</li>
+                  <li>✓ <strong>No Prior Authorization:</strong> <Link href="/emergency-evacuation-insurance" className="text-green-800 underline hover:text-green-900">Emergency care</Link> without delays</li>
                   <li>✓ <strong>Predictable Costs:</strong> No surprise bills during crisis</li>
                   <li>✓ <strong>Continuous Coverage:</strong> Same benefits regardless of location</li>
                 </ul>
@@ -525,7 +508,8 @@ export default function MonroeCountyMedicareSupplementPage() {
               <div className="flex flex-wrap gap-2">
                 <Link href="/supplemental-insurance" className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">Supplemental Insurance Options</Link>
                 <Link href="/term-life-insurance" className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">Life Insurance for Snowbirds</Link>
-                <Link href="/annuities" className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">Retirement Planning</Link>
+                <Link href="/trip-cancellation-insurance" className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">Travel Insurance</Link>
+                <Link href="/social-security-analysis" className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded hover:bg-purple-200">Social Security Planning</Link>
               </div>
             </div>
           </div>
@@ -551,7 +535,7 @@ export default function MonroeCountyMedicareSupplementPage() {
                 <li>✓ Nationwide travel protection</li>
               </ul>
               <div className="bg-green-50 p-3 rounded text-sm text-green-800">
-                <strong>Perfect for:</strong> Keys residents needing mainland access
+                <strong>Perfect for:</strong> Keys residents needing mainland access. <Link href="/medicare-supplement-plan-g" className="text-green-900 underline hover:text-green-600">Learn more about Plan G</Link>
               </div>
             </div>
 
@@ -570,7 +554,7 @@ export default function MonroeCountyMedicareSupplementPage() {
                 <li>✓ Predictable cost-sharing</li>
               </ul>
               <div className="bg-blue-50 p-3 rounded text-sm text-blue-800">
-                <strong>Perfect for:</strong> Budget-conscious island residents
+                <strong>Perfect for:</strong> Budget-conscious island residents. <Link href="/medicare-supplement-plan-n" className="text-blue-900 underline hover:text-blue-600">Learn more about Plan N</Link>
               </div>
             </div>
 
@@ -596,9 +580,9 @@ export default function MonroeCountyMedicareSupplementPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-12">
+        <section className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg mb-12" aria-labelledby="cta-heading">
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">🌴 Get Expert Florida Keys Medicare Supplement Guidance</h2>
+            <p id="cta-heading" className="text-2xl font-bold mb-4">🌴 Get Expert Florida Keys Medicare Supplement Guidance</p>
             <p className="text-blue-100 mb-6 max-w-3xl mx-auto">
               Navigate Monroe County's unique island healthcare challenges with comprehensive Medicare Supplement coverage.
               Get personalized Florida Keys Medicare expertise from licensed Florida specialists who understand island living,
@@ -636,6 +620,7 @@ export default function MonroeCountyMedicareSupplementPage() {
                 <li>• <Link href="/medicare-part-d-formulary-lookup" className="underline hover:text-blue-900">Part D Prescription Drug Coverage</Link></li>
                 <li>• <Link href="/resources/prescription-drug-coverage" className="underline hover:text-blue-900">Prescription Drug Resources</Link></li>
                 <li>• <Link href="/resources/understanding-costs" className="underline hover:text-blue-900">Understanding Medicare Costs</Link></li>
+                <li>• <Link href="/resources/enrollment-periods-explained" className="underline hover:text-blue-900">Enrollment Periods Explained</Link></li>
               </ul>
             </div>
 
@@ -647,6 +632,7 @@ export default function MonroeCountyMedicareSupplementPage() {
                 <li>• Mainland Transportation Coordination</li>
                 <li>• <Link href="/emergency-evacuation-insurance" className="underline hover:text-green-900">Emergency Evacuation Insurance</Link></li>
                 <li>• <Link href="/trip-cancellation-insurance" className="underline hover:text-green-900">Travel & Trip Insurance</Link></li>
+                <li>• <Link href="/specialists" className="underline hover:text-green-900">Medicare Specialists Team</Link></li>
               </ul>
             </div>
           </div>
@@ -660,6 +646,7 @@ export default function MonroeCountyMedicareSupplementPage() {
                   <li>• <Link href="/medicare-advantage/monroe-county-florida" className="underline hover:text-blue-900">Monroe MA Plans</Link></li>
                   <li>• <Link href="/medicare-advantage/miami-dade-county" className="underline hover:text-blue-900">Miami-Dade Options</Link></li>
                   <li>• <Link href="/medicare-advantage/orange-county-florida" className="underline hover:text-blue-900">Orange County Plans</Link></li>
+                  <li>• <Link href="/medicare-advantage/broward-county-florida" className="underline hover:text-blue-900">Broward County Plans</Link></li>
                 </ul>
               </div>
               <div>
@@ -668,14 +655,16 @@ export default function MonroeCountyMedicareSupplementPage() {
                   <li>• <Link href="/supplemental-insurance" className="underline hover:text-green-900">Supplemental Insurance</Link></li>
                   <li>• <Link href="/final-expense" className="underline hover:text-green-900">Final Expense Plans</Link></li>
                   <li>• <Link href="/whole-life-insurance" className="underline hover:text-green-900">Whole Life Insurance</Link></li>
+                  <li>• <Link href="/resources/dental-vision-benefits" className="underline hover:text-green-900">Dental & Vision Benefits</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-purple-800 mb-3">Planning Resources:</h4>
                 <ul className="space-y-1 text-purple-700 text-sm">
                   <li>• <Link href="/resources/enrollment-periods-explained" className="underline hover:text-purple-900">Enrollment Periods</Link></li>
-                  <li>• <Link href="/benefits-analysis" className="underline hover:text-purple-900">Benefits Analysis</Link></li>
+                  <li>• <Link href="/resources/star-ratings-guide" className="underline hover:text-purple-900">Star Ratings Guide</Link></li>
                   <li>• <Link href="/social-security-analysis" className="underline hover:text-purple-900">Social Security Planning</Link></li>
+                  <li>• <Link href="/contact" className="underline hover:text-purple-900">Contact Our Team</Link></li>
                 </ul>
               </div>
             </div>

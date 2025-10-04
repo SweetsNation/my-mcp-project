@@ -98,8 +98,59 @@ const wakeCountyData = {
 };
 
 export default function WakeCountyNorthCarolinaPage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
+        url: 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina',
+        name: 'Medicare Advantage Plans Wake County North Carolina 2025 | Raleigh Medicare',
+        description: 'Compare Medicare Advantage plans in Wake County & Raleigh, NC. 55% penetration rate offers growth opportunity. Top healthcare systems and local provider networks.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Wake County, North Carolina', item: 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/wake-county-north-carolina#service',
+        name: 'Wake County North Carolina Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Wake County and Raleigh residents with 55% penetration rate and Research Triangle healthcare access.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Wake County, North Carolina',
+          containsPlace: [
+            { '@type': 'City', name: 'Raleigh' },
+            { '@type': 'City', name: 'Cary' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Wake County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Raleigh-area network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across North Carolina' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       {/* Main Content */}
       <main>
         {/* Hero Section with H1 */}

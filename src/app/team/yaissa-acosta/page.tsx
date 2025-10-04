@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import TeamPageAnalytics from '@/components/TeamPageAnalytics'
+import { generateTeamMemberSchema } from '@/lib/schema/team-member-schema'
 
 export const metadata: Metadata = {
   title: 'Yaissa Acosta - Health Insurance Marketplace Expert Florida | ACA Plans Specialist | Premium Tax Credits & Affordable Health Insurance',
@@ -26,7 +27,27 @@ export const metadata: Metadata = {
   },
 }
 
-const yaissaStructuredData = [
+const structuredData = generateTeamMemberSchema({
+  name: 'Yaissa Acosta',
+  jobTitle: 'Health Insurance Marketplace Expert & ACA Specialist',
+  slug: 'yaissa-acosta',
+  description: 'Bilingual Health Insurance Marketplace specialist with over 2 years of experience and healthcare field background. Specializes in ACA plans, premium tax credits, Medicare Advantage enrollment, and comprehensive health insurance solutions for Florida families.',
+  specialties: [
+    'Health Insurance Marketplace',
+    'Premium Tax Credits',
+    'ACA Plans',
+    'Medicare Advantage Plans',
+    'Supplemental Health Insurance',
+    'Affordable Health Insurance'
+  ],
+  experience: '2+ years',
+  location: 'Florida',
+  languages: ['English', 'Spanish'],
+  email: 'yaissa@elmag-insurance.com',
+  phone: '+1-786-378-3921'
+});
+
+const yaissaStructuredDataOld = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -268,7 +289,7 @@ export default function YaissaAcostaPage() {
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(yaissaStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       <TeamPageAnalytics 

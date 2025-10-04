@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import TeamPageAnalytics from '@/components/TeamPageAnalytics'
+import { generateTeamMemberSchema } from '@/lib/schema/team-member-schema'
 
 export const metadata: Metadata = {
   title: 'Junior Goulbourne - Medicare Advantage Expert | Life Insurance Specialist Florida | Final Expense Insurance & Employee Benefits',
@@ -26,7 +27,27 @@ export const metadata: Metadata = {
   },
 }
 
-const juniorStructuredData = [
+const structuredData = generateTeamMemberSchema({
+  name: 'Junior Goulbourne',
+  jobTitle: 'Medicare Advantage Expert & Life Insurance Specialist',
+  slug: 'junior-goulbourne',
+  description: 'Insurance specialist with over 11 years of experience and law enforcement background. Specializes in Medicare Advantage plans, Life Insurance solutions, Final Expense coverage, and comprehensive Employee Benefits packages serving Florida families and businesses.',
+  specialties: [
+    'Medicare Advantage Plans',
+    'Life Insurance',
+    'Final Expense Insurance',
+    'Health Insurance Marketplace',
+    'Employee Benefits',
+    'Group Health Insurance'
+  ],
+  experience: '11+ years',
+  location: 'Florida',
+  languages: ['English'],
+  email: 'junior@elmag-insurance.com',
+  phone: '+1-786-515-3808'
+});
+
+const juniorStructuredDataOld = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -265,7 +286,7 @@ export default function JuniorGoulbournePage() {
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(juniorStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       <TeamPageAnalytics 

@@ -16,8 +16,127 @@ export const metadata: Metadata = {
 }
 
 export default function PartDFormularyLookupPage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup',
+        url: 'https://elmaginsurance.com/medicare-part-d-formulary-lookup',
+        name: 'Medicare Part D Formulary Lookup Guide 2025 | Check Drug Coverage',
+        description: 'Learn how to use Medicare Part D formulary lookup tools to check if your medications are covered. Find drug tiers, restrictions, and coverage details for all plans.',
+        inLanguage: 'en-US',
+        isPartOf: {
+          '@id': 'https://elmaginsurance.com/#website'
+        },
+        breadcrumb: {
+          '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#breadcrumb'
+        }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://elmaginsurance.com'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Medicare Part D',
+            item: 'https://elmaginsurance.com/medicare-part-d'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Formulary Lookup',
+            item: 'https://elmaginsurance.com/medicare-part-d-formulary-lookup'
+          }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#service',
+        name: 'Medicare Part D Formulary Lookup Services',
+        description: 'Comprehensive guidance for checking Medicare Part D drug coverage using formulary lookup tools. Expert assistance with medication coverage verification.',
+        provider: {
+          '@type': 'Organization',
+          name: 'El-Mag Insurance',
+          url: 'https://elmaginsurance.com'
+        },
+        serviceType: 'Medicare Part D Drug Coverage Verification',
+        areaServed: {
+          '@type': 'Country',
+          name: 'United States'
+        }
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://elmaginsurance.com/medicare-part-d-formulary-lookup#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'How do I check if my drug is covered by Medicare Part D?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You can check if your medication is covered by using Medicare\'s official Plan Finder tool at Medicare.gov or by contacting the specific Part D plan directly. Enter your drug name and dosage to see which plans cover it and at what cost tier. Each Part D plan maintains its own formulary (list of covered drugs), so coverage can vary significantly between plans. It\'s important to check formularies before enrolling to ensure your medications are covered.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What are formulary tiers in Medicare Part D?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Formulary tiers are categories that determine your out-of-pocket costs for medications. Most Part D plans use 5-6 tiers: Tier 1 (preferred generic drugs, lowest cost), Tier 2 (generic drugs), Tier 3 (preferred brand drugs), Tier 4 (non-preferred brand drugs), Tier 5 (specialty drugs, highest cost), and sometimes Tier 6 (select care drugs). Lower tiers generally have lower copayments or coinsurance. Your medication\'s tier placement significantly impacts your costs.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What if my medication is not on the formulary?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'If your medication is not on your Part D plan\'s formulary, you have several options: 1) Ask your doctor about covered alternatives, 2) Request a formulary exception from your plan (requires medical justification from your doctor), 3) Pay full price out-of-pocket, or 4) Switch to a different Part D plan during the next enrollment period that covers your medication. Formulary exceptions and appeals are available if your doctor determines the drug is medically necessary and no covered alternatives are appropriate.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Do Medicare Part D formularies change during the year?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Medicare Part D plans can make limited changes to their formularies during the year, but they must provide 60 days advance notice for most changes. If your medication is removed from the formulary or moved to a higher tier mid-year, you have the right to request an exception or appeal the decision. You may also qualify for a Special Enrollment Period to switch plans if your medication is no longer covered. Plans can add drugs to the formulary at any time without notice.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'What are prior authorization and step therapy requirements?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Prior authorization requires your doctor to get approval from the Part D plan before the drug will be covered, demonstrating medical necessity. Step therapy requires you to try less expensive drugs first before the plan will cover a more costly medication. These utilization management tools help control costs but can delay access to medications. If you and your doctor believe these requirements are inappropriate for your situation, you can request an exception or expedited appeal.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'How often should I review my Part D formulary?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'You should review your Part D plan\'s formulary annually during the October 15 - December 7 Annual Enrollment Period, as formularies can change significantly from year to year. Also review the formulary if you\'re prescribed a new medication, if your existing medications change tiers or coverage status, or if you receive an Annual Notice of Change (ANOC) from your plan indicating formulary modifications. Regular reviews ensure your medications remain covered at the lowest possible cost.'
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="container mx-auto px-4 py-8 max-w-6xl">
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">

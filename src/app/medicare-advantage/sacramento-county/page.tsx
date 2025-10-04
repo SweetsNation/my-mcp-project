@@ -177,6 +177,55 @@ export default function SacramentoCountyPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county',
+        name: 'Best Medicare Advantage Plans Sacramento County CA 2025 | 74 Plans | 51 Zero Premium Options',
+        description: 'Find the best Medicare Advantage plans in Sacramento County CA 2025. Compare 74 plans including 51 zero premium options. Kaiser Permanente, Sutter Health, UC Davis Health networks.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website' },
+        breadcrumb: { '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Sacramento County, California', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/sacramento-county#service',
+        name: 'Sacramento County California Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Sacramento County residents with 74 plan options and Kaiser, Sutter, UC Davis Health networks.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Sacramento County, California',
+          containsPlace: [
+            { '@type': 'City', name: 'Sacramento' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Sacramento County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Sacramento-area network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across California' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   React.useEffect(() => {
     // Track advanced page view
     trackMedicareAdvancedPageView(
@@ -227,12 +276,7 @@ export default function SacramentoCountyPage() {
           pageType: 'county_market'
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

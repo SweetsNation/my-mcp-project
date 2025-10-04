@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { generateAboutPageSchema } from '@/lib/schema/organization-schema';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+// Structured Data for SEO
+const structuredData = generateAboutPageSchema();
 
 export const metadata: Metadata = {
   title: 'About Us - El-Mag Insurance',
@@ -17,6 +21,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

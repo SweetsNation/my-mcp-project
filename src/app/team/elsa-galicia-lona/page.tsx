@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import TeamPageAnalytics from '@/components/TeamPageAnalytics'
+import { generateTeamMemberSchema } from '@/lib/schema/team-member-schema'
 
 export const metadata: Metadata = {
   title: 'Elsa Galicia-Lona - Health Insurance Marketplace Expert | Medicare Specialist Florida | Affordable ACA Plans',
@@ -26,249 +27,33 @@ export const metadata: Metadata = {
   },
 }
 
-const elsaStructuredData = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#person',
-    name: 'Elsa Galicia-Lona',
-    givenName: 'Elsa',
-    familyName: 'Galicia-Lona',
-    jobTitle: 'Health Insurance Marketplace Expert & International Health Specialist',
-    description: 'Bilingual Health Insurance Marketplace expert with over 15 years of experience and international finance background. Specializes in ACA plans, international health coverage, Medicare Advantage enrollment, and comprehensive health insurance solutions for multicultural Florida communities.',
-    url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
-    sameAs: [
-      'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
-      'https://www.linkedin.com/in/elsa-galicia-lona-insurance'
-    ],
-    email: 'elsa@elmag-insurance.com',
-    telephone: '+1-954-240-7777',
-    worksFor: {
-      '@type': 'Organization',
-      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app#organization',
-      name: 'El-Mag Insurance',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app',
-      telephone: '954-240-7777',
-      email: 'info@elmag-insurance.com'
-    },
-    knowsAbout: [
-      {
-        '@type': 'Thing',
-        name: 'Health Insurance Marketplace',
-        description: 'ACA marketplace navigation with premium tax credits and international coverage coordination'
-      },
-      {
-        '@type': 'Thing', 
-        name: 'International Health Insurance',
-        description: 'Global health coverage, expatriate insurance, and international travel health plans'
-      },
-      {
-        '@type': 'Thing',
-        name: 'Global Travel Insurance',
-        description: 'Comprehensive travel health insurance for international trips and business travel'
-      },
-      {
-        '@type': 'Thing',
-        name: 'Medicare Advantage Plans',
-        description: 'Medicare Advantage enrollment with international travel benefits'
-      },
-      {
-        '@type': 'Thing',
-        name: 'Multicultural Health Solutions',
-        description: 'Specialized health insurance guidance for diverse international communities'
-      }
-    ],
-    areaServed: [
-      {
-        '@type': 'State',
-        name: 'Florida',
-        alternateName: 'FL'
-      },
-      {
-        '@type': 'City',
-        name: 'Miami',
-        containedInPlace: {
-          '@type': 'State',
-          name: 'Florida'
-        }
-      },
-      {
-        '@type': 'City',
-        name: 'Miami Beach',
-        containedInPlace: {
-          '@type': 'State',
-          name: 'Florida'
-        }
-      },
-      {
-        '@type': 'City',
-        name: 'Coral Gables',
-        containedInPlace: {
-          '@type': 'State',
-          name: 'Florida'
-        }
-      },
-      {
-        '@type': 'City',
-        name: 'Hialeah',
-        containedInPlace: {
-          '@type': 'State',
-          name: 'Florida'
-        }
-      }
-    ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        credentialCategory: 'Professional License',
-        name: 'Licensed Insurance Agent - Florida',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'Florida Department of Financial Services'
-        }
-      },
-      {
-        '@type': 'EducationalOccupationalCredential', 
-        credentialCategory: 'Certification',
-        name: 'International Health Insurance Specialist',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'International Association of Insurance Professionals'
-        }
-      },
-      {
-        '@type': 'EducationalOccupationalCredential', 
-        credentialCategory: 'Professional Experience',
-        name: 'International Finance Background',
-        recognizedBy: {
-          '@type': 'Organization',
-          name: 'Financial Services Industry'
-        }
-      }
-    ],
-    knowsLanguage: [
-      {
-        '@type': 'Language',
-        name: 'English'
-      },
-      {
-        '@type': 'Language', 
-        name: 'Spanish',
-        alternateName: 'Español'
-      }
-    ],
-    hasOccupation: {
-      '@type': 'Occupation',
-      name: 'International Health Insurance Specialist',
-      occupationLocation: {
-        '@type': 'State',
-        name: 'Florida'
-      },
-      skills: [
-        'Health Insurance Marketplace Navigation',
-        'International Health Coverage',
-        'Global Travel Insurance',
-        'Cross-Border Insurance Solutions',
-        'Multicultural Customer Service',
-        'International Finance Expertise',
-        'Bilingual Communication'
-      ]
-    }
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#services',
-    name: 'Health Insurance Marketplace & International Health Specialist Services',
-    description: 'Professional Health Insurance Marketplace and international health coverage services in Florida, including ACA plans, international health insurance, global travel coverage, and specialized solutions for multicultural communities.',
-    provider: {
-      '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#person'
-    },
-    areaServed: {
-      '@type': 'State',
-      name: 'Florida'
-    },
-    serviceType: [
-      'Health Insurance Marketplace Enrollment',
-      'International Health Insurance',
-      'Global Travel Insurance',
-      'Medicare Advantage Plans',
-      'Expatriate Health Coverage',
-      'Cross-Border Insurance Solutions',
-      'Multicultural Health Planning'
-    ],
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'International Health Insurance Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Health Insurance Marketplace Consultation',
-            description: 'Complete ACA marketplace plan guidance with international coverage coordination'
-          },
-          price: '0',
-          priceCurrency: 'USD'
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service', 
-            name: 'International Health Insurance Planning',
-            description: 'Comprehensive global health coverage for expatriates and international travelers'
-          },
-          price: '0',
-          priceCurrency: 'USD'
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Travel Health Insurance',
-            description: 'Global travel insurance for international trips and extended stays abroad'
-          },
-          price: '0',
-          priceCurrency: 'USD'
-        }
-      ]
-    },
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      description: 'Free international health insurance consultation and planning'
-    }
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ContactPoint',
-    '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona#contact',
-    contactType: 'customer service',
-    telephone: '+1-954-240-7777',
-    email: 'elsa@elmag-insurance.com',
-    availableLanguage: ['English', 'Spanish'],
-    areaServed: {
-      '@type': 'State', 
-      name: 'Florida'
-    },
-    hoursAvailable: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
-      validFrom: '2024-01-01',
-      validThrough: '2025-12-31'
-    }
-  }
-];
+const structuredData = generateTeamMemberSchema({
+  name: 'Elsa Galicia-Lona',
+  jobTitle: 'Health Insurance Marketplace Expert & Medicare Specialist',
+  slug: 'elsa-galicia-lona',
+  description: 'Bilingual Health Insurance Marketplace expert with over 15 years of experience and international finance background. Specializes in ACA plans, international health coverage, Medicare Advantage enrollment, and comprehensive health insurance solutions for multicultural Florida communities.',
+  specialties: [
+    'Health Insurance Marketplace',
+    'International Health Insurance',
+    'Global Travel Insurance',
+    'Medicare Advantage Plans',
+    'ACA Plans',
+    'Premium Tax Credits',
+    'Multicultural Health Solutions'
+  ],
+  experience: '15+ years',
+  location: 'Florida',
+  languages: ['English', 'Spanish'],
+  email: 'elsa@elmag-insurance.com',
+  phone: '+1-954-240-7777'
+});
 
 export default function ElsaGaliciaLonaPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(elsaStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       <TeamPageAnalytics 

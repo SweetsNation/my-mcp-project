@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ResourceLinking from '@/components/ResourceLinking';
+import { generateResourcesPageSchema } from '@/lib/schema/resources-schema';
+
+// Structured Data for SEO
+const structuredData = generateResourcesPageSchema();
 
 export const metadata: Metadata = {
   title: 'Medicare Resources & Education - El-Mag Insurance',
@@ -73,6 +77,12 @@ const categories = ['All', 'Comparison', 'Enrollment', 'Costs', 'Quality', 'Bene
 export default function ResourcesPage() {
   return (
     <div className="bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

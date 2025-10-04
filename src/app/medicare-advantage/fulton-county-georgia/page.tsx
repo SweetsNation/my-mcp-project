@@ -98,8 +98,58 @@ const fultonCountyData = {
 };
 
 export default function FultonCountyGeorgiaPage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia',
+        url: 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia',
+        name: 'Medicare Advantage Plans Fulton County Georgia 2025 | Atlanta Medicare Plans',
+        description: 'Compare Medicare Advantage plans in Fulton County & Atlanta, Georgia. 60% penetration rate with $0 premium options. Dual-eligible specialized benefits available.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Fulton County, Georgia', item: 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/fulton-county-georgia#service',
+        name: 'Fulton County Georgia Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Fulton County and Atlanta residents with 60% penetration rate and diverse community support.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Fulton County, Georgia',
+          containsPlace: [
+            { '@type': 'City', name: 'Atlanta' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Fulton County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Atlanta-area network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across Georgia' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       {/* Main Content */}
       <main>
         {/* Hero Section with H1 */}

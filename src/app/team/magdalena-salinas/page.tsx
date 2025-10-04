@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import TeamPageAnalytics from '@/components/TeamPageAnalytics'
+import { generateTeamMemberSchema } from '@/lib/schema/team-member-schema'
 
 export const metadata: Metadata = {
   title: 'Magdalena Salinas - Social Security Optimization Expert | Medicare Supplement Specialist Florida | Multi-State Social Security Benefits Advisor',
@@ -26,7 +27,27 @@ export const metadata: Metadata = {
   },
 }
 
-const magdalenaStructuredData = [
+const structuredData = generateTeamMemberSchema({
+  name: 'Magdalena Salinas',
+  jobTitle: 'Social Security Optimization Expert & Medicare Supplement Specialist',
+  slug: 'magdalena-salinas',
+  description: 'Bilingual Social Security Advisor and Medicare specialist with over 11 years of experience and treasury management background. Specializes in Social Security benefit optimization, Medicare Supplement plans, and comprehensive retirement planning across 7 states.',
+  specialties: [
+    'Social Security Benefits Optimization',
+    'Medicare Supplement Insurance',
+    'Retirement Planning',
+    'Medicare Advantage Plans',
+    'Social Security Claiming Strategy',
+    'Medigap Insurance'
+  ],
+  experience: '11+ years',
+  location: 'Florida, Alabama, Arizona, Georgia, Texas, North Carolina, Utah',
+  languages: ['English', 'Spanish'],
+  email: 'magdalena@elmag-insurance.com',
+  phone: '+1-954-668-1970'
+});
+
+const magdalenaStructuredDataOld = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -344,7 +365,7 @@ export default function MagdalenaSalinasPage() {
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(magdalenaStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       <TeamPageAnalytics 

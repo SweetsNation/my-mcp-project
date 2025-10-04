@@ -1,6 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ResourceLinking from '@/components/ResourceLinking';
+import { generateArticlePageSchema } from '@/lib/schema/article-schema';
+
+// Structured Data for SEO
+const structuredData = generateArticlePageSchema({
+  pagePath: '/resources/medicare-advantage-vs-original',
+  pageTitle: 'Medicare Advantage vs Original Medicare: Complete Comparison',
+  pageDescription: 'Detailed comparison of Medicare Advantage vs Original Medicare. Learn the differences in costs, benefits, provider networks, and which option might be right for you.',
+  datePublished: '2024-03-15',
+  category: 'Comparison',
+  wordCount: 1200
+});
 
 export const metadata: Metadata = {
   title: 'Medicare Advantage vs Original Medicare: Complete Comparison - El-Mag Insurance',
@@ -14,6 +25,11 @@ export const metadata: Metadata = {
 export default function MedicareAdvantageVsOriginalPage() {
   return (
     <div className="bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

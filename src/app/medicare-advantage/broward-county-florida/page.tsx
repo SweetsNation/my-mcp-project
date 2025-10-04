@@ -4,6 +4,7 @@ import LandingPageAnalytics from '@/components/LandingPageAnalytics'
 import MarketingOptimizer from '@/components/MarketingOptimizer'
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs'
 import { PrimaryLinksSection, ContextualLinksSection, CrossSellSection } from '@/components/InternalLinksSection'
+import { generateCountyMedicareSchema, getMedicareAdvantageFAQs } from '@/lib/schema/county-medicare-schema'
 
 export const metadata: Metadata = {
   title: 'Medicare Advantage Broward County Florida | Fort Lauderdale Medicare Plans 2025',
@@ -39,47 +40,17 @@ const browardCountyData = {
   averageSavings: 2280
 }
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Medicare Advantage Plans Broward County Florida",
-  "description": "Medicare Advantage plan comparison and enrollment services for Broward County, Florida including Fort Lauderdale, Hollywood, Pembroke Pines, and surrounding communities.",
-  "serviceType": "Medicare Advantage Insurance",
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Broward County, Florida"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Broward County Medicare Advantage Plans",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Humana Medicare Advantage Plans",
-          "description": "Comprehensive Medicare Advantage plans with extensive provider networks in South Florida"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "UnitedHealthcare Medicare Advantage",
-          "description": "Medicare Advantage plans with nationwide coverage and local Florida providers"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Florida Blue Medicare Advantage",
-          "description": "Local Florida Medicare Advantage plans with strong regional network"
-        }
-      }
-    ]
-  }
-}
+const browardMAStructuredData = generateCountyMedicareSchema({
+  pagePath: '/medicare-advantage/broward-county-florida',
+  pageTitle: 'Medicare Advantage Broward County Florida | Fort Lauderdale Medicare Plans 2025',
+  pageDescription: 'Find the best Medicare Advantage plans in Broward County, Florida. Compare coverage options for Fort Lauderdale, Hollywood, Pembroke Pines, and surrounding areas.',
+  county: 'Broward County',
+  state: 'Florida',
+  productType: 'medicare-advantage',
+  totalBeneficiaries: 89000,
+  averagePremium: 42,
+  faqs: getMedicareAdvantageFAQs('Broward County', 'Florida', 32, 18)
+})
 
 const breadcrumbItems = [
   { label: "Home", url: "/" },
@@ -115,11 +86,7 @@ export default function BrowardCountyMedicareAdvantage() {
 
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateBreadcrumbStructuredData(breadcrumbItems)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(browardMAStructuredData) }}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-teal-900 via-blue-800 to-teal-900">

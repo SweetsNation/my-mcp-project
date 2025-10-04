@@ -102,14 +102,62 @@ export default function FairfaxCountyVirginiaPage() {
   const breadcrumbItems = generateMedicareBreadcrumbs('county', 'Fairfax County, Virginia');
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
+        url: 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia',
+        name: 'Medicare Advantage Plans Fairfax County Virginia 2025 | El-Mag Insurance',
+        description: 'Compare Medicare Advantage plans in Fairfax County, Virginia. $0 premium options available. 45% penetration rate means better choices. Licensed agents ready to help.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Fairfax County, Virginia', item: 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/fairfax-county-virginia#service',
+        name: 'Fairfax County Virginia Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Fairfax County residents with 45% penetration rate and comprehensive provider networks.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Fairfax County, Virginia',
+          containsPlace: [
+            { '@type': 'City', name: 'Fairfax' },
+            { '@type': 'City', name: 'McLean' },
+            { '@type': 'City', name: 'Reston' },
+            { '@type': 'City', name: 'Vienna' },
+            { '@type': 'City', name: 'Arlington' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Fairfax County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Northern Virginia network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across Virginia' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="min-h-screen bg-gray-50">
         {/* Breadcrumb Navigation */}
         <div className="bg-white border-b border-gray-200">

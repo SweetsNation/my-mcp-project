@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import TeamPageAnalytics from '@/components/TeamPageAnalytics'
+import { generateTeamMemberSchema } from '@/lib/schema/team-member-schema'
 
 export const metadata: Metadata = {
   title: 'Marcia Cordero - Health Insurance Marketplace Expert Florida | Life Insurance Specialist | ACA Plans & Term Life Insurance',
@@ -26,7 +27,27 @@ export const metadata: Metadata = {
   },
 }
 
-const marciaStructuredData = [
+const structuredData = generateTeamMemberSchema({
+  name: 'Marcia Zulema Cordero Rizo',
+  jobTitle: 'Health Insurance Marketplace Expert & Life Insurance Specialist',
+  slug: 'marcia-cordero',
+  description: 'Bilingual Health Insurance Marketplace & Life Insurance expert with 1+ years experience serving Florida families. Specializes in ACA plans, premium tax credits, and life insurance solutions.',
+  specialties: [
+    'Health Insurance Marketplace',
+    'Life Insurance',
+    'Premium Tax Credits',
+    'Final Expense Insurance',
+    'Medicare Advantage Plans',
+    'ACA Plans'
+  ],
+  experience: '1+ years',
+  location: 'Florida',
+  languages: ['Spanish', 'English'],
+  email: 'marcia@elmag-insurance.com',
+  phone: '+1-786-569-7713'
+});
+
+const marciaStructuredDataOld = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -239,7 +260,7 @@ export default function MarciaCorderoPage() {
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(marciaStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       <TeamPageAnalytics 

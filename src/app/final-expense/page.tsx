@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import FinalExpenseAnalytics from '@/components/FinalExpenseAnalytics';
+import { generateFinalExpenseSchema, finalExpenseFAQs } from '@/lib/schema/final-expense-schema';
 
 export const metadata: Metadata = {
   title: 'Final Expense Insurance & Burial Insurance Quotes | Guaranteed Acceptance Life Insurance | El-Mag Insurance',
@@ -24,78 +25,13 @@ export const metadata: Metadata = {
 };
 
 export default function FinalExpensePage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Final Expense Insurance & Burial Insurance Quotes",
-    "description": "Get affordable final expense insurance and burial insurance quotes. No medical exam required. Guaranteed acceptance life insurance for funeral cost coverage.",
-    "url": "https://elmaginsurance.com/final-expense",
-    "mainEntity": {
-      "@type": "Service",
-      "name": "Final Expense Insurance",
-      "description": "Comprehensive final expense and burial insurance coverage with guaranteed acceptance and no medical exam required",
-      "provider": {
-        "@type": "Organization",
-        "name": "El-Mag Insurance",
-        "url": "https://elmaginsurance.com"
-      },
-      "areaServed": "United States",
-      "serviceType": "Insurance",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Basic Final Expense Coverage",
-          "price": "10.00",
-          "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "10.00",
-            "priceCurrency": "USD",
-            "billingIncrement": "Monthly"
-          },
-          "itemOffered": {
-            "@type": "Product",
-            "name": "$5,000 Final Expense Insurance",
-            "description": "Basic funeral cost coverage"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Standard Final Expense Coverage",
-          "price": "35.00",
-          "priceCurrency": "USD",
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "price": "35.00",
-            "priceCurrency": "USD",
-            "billingIncrement": "Monthly"
-          },
-          "itemOffered": {
-            "@type": "Product",
-            "name": "$15,000 Final Expense Insurance",
-            "description": "Most popular complete protection package"
-          }
-        }
-      ]
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://elmaginsurance.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Final Expense Insurance",
-          "item": "https://elmaginsurance.com/final-expense"
-        }
-      ]
-    }
-  };
+  // Enhanced Structured Data for SEO
+  const structuredData = generateFinalExpenseSchema({
+    pagePath: '/final-expense',
+    pageTitle: 'Final Expense Insurance & Burial Insurance Quotes | Guaranteed Acceptance Life Insurance',
+    pageDescription: 'Get affordable final expense insurance and burial insurance quotes. No medical exam required. Guaranteed acceptance life insurance for funeral cost coverage. Compare rates from top providers starting at $10/month.',
+    faqs: finalExpenseFAQs
+  });
 
   return (
     <div className="min-h-screen bg-gray-50">

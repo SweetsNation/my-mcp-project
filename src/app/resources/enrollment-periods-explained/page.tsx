@@ -1,6 +1,17 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ResourceLinking from '@/components/ResourceLinking';
+import { generateArticlePageSchema } from '@/lib/schema/article-schema';
+
+// Structured Data for SEO
+const structuredData = generateArticlePageSchema({
+  pagePath: '/resources/enrollment-periods-explained',
+  pageTitle: 'Medicare Enrollment Periods Explained',
+  pageDescription: 'Complete guide to Medicare enrollment periods including Annual Open Enrollment, Special Enrollment Periods, and when you can make changes to your coverage.',
+  datePublished: '2024-03-10',
+  category: 'Enrollment',
+  wordCount: 900
+});
 
 export const metadata: Metadata = {
   title: 'Medicare Enrollment Periods Explained - El-Mag Insurance',
@@ -14,6 +25,11 @@ export const metadata: Metadata = {
 export default function EnrollmentPeriodsExplainedPage() {
   return (
     <div className="bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Header */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

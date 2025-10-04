@@ -1,0 +1,73 @@
+{
+  "timestamp": "2025-09-30T23:33:26.426Z",
+  "domain": "elmag-insurance.com",
+  "summary": {
+    "total": 10,
+    "passed": 0,
+    "failed": 4,
+    "warnings": 7,
+    "success_rate": 0
+  },
+  "tests": [
+    {
+      "name": "Homepage Accessibility",
+      "url": "https://elmag-insurance.com",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "SSL Certificate",
+      "url": "https://elmag-insurance.com",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "API - Health Check",
+      "url": "https://elmag-insurance.com/api/health",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "API - Contact API",
+      "url": "https://elmag-insurance.com/api/contact",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "API - Quote API",
+      "url": "https://elmag-insurance.com/api/quote",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "API - Sitemap",
+      "url": "https://elmag-insurance.com/api/sitemap",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "API - Robots.txt",
+      "url": "https://elmag-insurance.com/api/robots",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "WWW to non-WWW redirect",
+      "url": "https://www.elmag-insurance.com",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND www.elmag-insurance.com"
+    },
+    {
+      "name": "HTTP to HTTPS redirect",
+      "url": "http://elmag-insurance.com",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    },
+    {
+      "name": "SEO Basics",
+      "url": "https://elmag-insurance.com",
+      "passed": false,
+      "error": "getaddrinfo ENOTFOUND elmag-insurance.com"
+    }
+  ]
+}

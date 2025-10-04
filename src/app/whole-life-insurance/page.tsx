@@ -6,6 +6,7 @@ import LandingPageAnalytics from '@/components/LandingPageAnalytics';
 import InsurancePageAnalytics from '@/components/InsurancePageAnalytics';
 import InsuranceMarketingStrategy from '@/components/InsuranceMarketingStrategy';
 import KeywordOptimizedContent from '@/components/KeywordOptimizedContent';
+import { generateWholeLifeInsuranceSchema, wholeLifeInsuranceFAQs } from '@/lib/schema/whole-life-insurance-schema';
 
 export const metadata: Metadata = {
   title: 'Whole Life Insurance 2025 | Permanent Coverage & Cash Value | Compare Best Rates | Life Insurance Guide',
@@ -191,6 +192,14 @@ export default function WholeLifeInsurancePage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Enhanced Structured Data for SEO
+  const wholeLifeStructuredData = generateWholeLifeInsuranceSchema({
+    pagePath: '/whole-life-insurance',
+    pageTitle: 'Whole Life Insurance 2025 | Permanent Coverage & Cash Value',
+    pageDescription: 'Comprehensive whole life insurance guide 2025. Compare rates, understand cash value benefits, fixed premiums, and tax advantages. Find the best permanent life insurance coverage for estate planning, retirement supplement, and family protection.',
+    faqs: wholeLifeInsuranceFAQs
+  });
+
   // Track scroll depth and time on page
   React.useEffect(() => {
     let scrollDepth = 0;
@@ -291,26 +300,7 @@ export default function WholeLifeInsurancePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Whole Life Insurance Guidance",
-            "description": "Expert guidance on whole life insurance, permanent coverage options, cash value benefits, and rate comparisons to help you find the right life insurance protection.",
-            "provider": {
-              "@type": "Organization",
-              "name": "El-Mag Insurance",
-              "telephone": "331-343-2584",
-              "url": "https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app"
-            },
-            "areaServed": "United States",
-            "serviceType": "Life Insurance Consultation"
-          }),
+          __html: JSON.stringify(wholeLifeStructuredData),
         }}
       />
       <div className="min-h-screen bg-gray-50">

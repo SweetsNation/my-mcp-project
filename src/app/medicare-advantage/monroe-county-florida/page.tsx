@@ -217,6 +217,55 @@ export default function MonroeCountyFloridaPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida',
+        name: 'Best Medicare Advantage Plans Monroe County Florida 2025 | 31 Plans | Key West Keys Healthcare',
+        description: 'Find the best Medicare Advantage plans in Monroe County Florida 2025. Compare 31 plans covering Key West, Key Largo, Marathon, and Islamorada. 18 zero premium options.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website' },
+        breadcrumb: { '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Monroe County, Florida', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/monroe-county-florida#service',
+        name: 'Monroe County Florida Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Monroe County and Florida Keys residents with 31 plan options and specialized island healthcare coverage.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Monroe County, Florida',
+          containsPlace: [
+            { '@type': 'City', name: 'Key West' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Monroe County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Florida Keys network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across Florida' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   React.useEffect(() => {
     // Track advanced page view
     trackMedicareAdvancedPageView(
@@ -266,12 +315,7 @@ export default function MonroeCountyFloridaPage() {
           pageType: 'island_healthcare'
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

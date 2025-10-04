@@ -1,6 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { generateArticlePageSchema } from '@/lib/schema/article-schema';
+
+// Structured Data for SEO
+const structuredData = generateArticlePageSchema({
+  pagePath: '/resources/star-ratings-guide',
+  pageTitle: 'Medicare Star Ratings: What They Mean and Why They Matter',
+  pageDescription: 'Understand Medicare Star Ratings and how to use them to choose the best Medicare Advantage plan.',
+  datePublished: '2024-02-28',
+  category: 'Quality',
+  wordCount: 750
+});
 
 export const metadata: Metadata = {
   title: 'Medicare Star Ratings Guide - El-Mag Insurance',
@@ -14,6 +25,12 @@ export const metadata: Metadata = {
 export default function StarRatingsGuidePage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <div className="container mx-auto px-4 py-8">
         <Breadcrumbs 
           items={[

@@ -3,6 +3,15 @@ import Link from 'next/link';
 import SocialSecurityAnalytics from '@/components/SocialSecurityAnalytics';
 import SEOMarketingEnhancement from '@/components/SEOMarketingEnhancement';
 import MarketingAutomation from '@/components/MarketingAutomation';
+import { generateSocialSecuritySchema, socialSecurityFAQs } from '@/lib/schema/social-security-schema';
+
+// Structured Data for SEO
+const structuredData = generateSocialSecuritySchema({
+  pagePath: '/social-security-analysis',
+  pageTitle: 'Social Security Benefits Analysis 2025 | Maximize Your Retirement Income | Free Consultation',
+  pageDescription: 'Expert Social Security claiming strategies to maximize your lifetime benefits. Get free analysis of optimal timing, spousal benefits, and retirement planning.',
+  faqs: socialSecurityFAQs
+});
 
 export const metadata: Metadata = {
   title: 'Social Security Benefits Analysis 2025 | Maximize Your Retirement Income | Free Consultation',
@@ -16,6 +25,12 @@ export const metadata: Metadata = {
 export default function SocialSecurityAnalysisPage() {
   return (
     <main className="min-h-screen">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Analytics Component */}
       <SocialSecurityAnalytics 
         pageType="main"

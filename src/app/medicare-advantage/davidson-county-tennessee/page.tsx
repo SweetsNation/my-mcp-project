@@ -98,8 +98,56 @@ const davidsonCountyData = {
 };
 
 export default function DavidsonCountyTennesseePage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
+        url: 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee',
+        name: 'Medicare Advantage Plans Davidson County Tennessee 2025 | Nashville Medicare',
+        description: 'Find Medicare Advantage plans in Davidson County & Nashville, TN. 45% penetration rate with $0 premium options. Dual-eligible specialized benefits available.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Davidson County, Tennessee', item: 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/davidson-county-tennessee#service',
+        name: 'Davidson County Tennessee Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Davidson County and Nashville residents with 45% penetration rate and dual-eligible options.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Davidson County, Tennessee',
+          containsPlace: [{ '@type': 'City', name: 'Nashville' }]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Davidson County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Nashville-area network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across Tennessee' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       {/* Main Content */}
       <main>
         {/* Hero Section with H1 */}

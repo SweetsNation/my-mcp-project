@@ -1,6 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SupplementalInsuranceAnalytics from '@/components/SupplementalInsuranceAnalytics';
+import { generateSupplementalInsuranceSchema, commonSupplementalFAQs } from '@/lib/schema/supplemental-insurance-schema';
+
+// Structured Data for SEO
+const structuredData = generateSupplementalInsuranceSchema({
+  pagePath: '/supplemental-insurance',
+  pageTitle: 'Supplemental Health Insurance 2025 | Hospital Indemnity Plans | Cancer Insurance Coverage | Critical Illness Insurance',
+  pageDescription: 'Get supplemental health insurance for high deductible health plans. Hospital indemnity plans, cancer insurance coverage, accident insurance for families, and critical illness coverage options. Fill coverage gaps with supplemental insurance.',
+  pageType: 'main',
+  faqs: commonSupplementalFAQs
+});
 
 export const metadata: Metadata = {
   title: 'Supplemental Health Insurance 2025 | Hospital Indemnity Plans | Cancer Insurance Coverage | Critical Illness Insurance',
@@ -27,6 +37,12 @@ export const metadata: Metadata = {
 export default function SupplementalInsurancePage() {
   return (
     <main className="min-h-screen">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Analytics Component */}
       <SupplementalInsuranceAnalytics 
         pageType="main"

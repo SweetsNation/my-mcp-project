@@ -1,6 +1,15 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import TermLifeInsuranceAnalytics from '@/components/TermLifeInsuranceAnalytics';
+import { generateTermLifeInsuranceSchema, termLifeInsuranceFAQs } from '@/lib/schema/term-life-insurance-schema';
+
+// Structured Data for SEO
+const structuredData = generateTermLifeInsuranceSchema({
+  pagePath: '/term-life-insurance',
+  pageTitle: 'Life Insurance Quotes 2025 | Term Life Insurance | Affordable Coverage',
+  pageDescription: 'Get instant life insurance quotes! Compare affordable term life insurance rates for families, young adults & business owners. Use our life insurance calculator for coverage needs.',
+  faqs: termLifeInsuranceFAQs
+});
 
 export const metadata: Metadata = {
   title: 'Life Insurance Quotes 2025 | Term Life Insurance | Affordable Coverage for Families & Young Adults',
@@ -27,6 +36,12 @@ export const metadata: Metadata = {
 export default function TermLifeInsurancePage() {
   return (
     <main className="min-h-screen">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* Analytics Component */}
       <TermLifeInsuranceAnalytics 
         pageType="main"

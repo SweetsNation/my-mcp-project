@@ -1,5 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { generateBlogPostSchema } from '@/lib/schema/blog-schema'
+
+// Structured Data for SEO
+const structuredData = generateBlogPostSchema({
+  pagePath: '/blog/health-insurance-harris-county-guide',
+  pageTitle: 'Complete Guide to Health Insurance in Harris County, Texas 2025',
+  pageDescription: 'Comprehensive Harris County health insurance guide covering Marketplace plans, subsidies, Houston healthcare access, and coverage for 650,000+ uninsured residents.',
+  datePublished: '2025-01-15',
+  category: 'Health Insurance Guides',
+  location: 'Harris County, Texas',
+  wordCount: 2400
+});
 
 export const metadata: Metadata = {
   title: 'Complete Guide to Health Insurance in Harris County, Texas 2025 | El-Mag Insurance Blog',
@@ -18,6 +30,11 @@ export const metadata: Metadata = {
 export default function HarrisCountyHealthInsuranceGuidePage() {
   return (
     <main className="min-h-screen bg-white">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <article className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Breadcrumbs */}
         <nav className="text-sm text-gray-500 mb-6">

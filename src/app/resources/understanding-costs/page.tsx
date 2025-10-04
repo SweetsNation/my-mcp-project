@@ -1,6 +1,17 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { generateArticlePageSchema } from '@/lib/schema/article-schema';
+
+// Structured Data for SEO
+const structuredData = generateArticlePageSchema({
+  pagePath: '/resources/understanding-costs',
+  pageTitle: 'Understanding Medicare Advantage Costs',
+  pageDescription: 'Learn about Medicare Advantage costs including premiums, deductibles, copays, and out-of-pocket maximums.',
+  datePublished: '2024-03-05',
+  category: 'Costs',
+  wordCount: 1050
+});
 
 export const metadata: Metadata = {
   title: 'Understanding Medicare Advantage Costs - El-Mag Insurance',
@@ -14,6 +25,12 @@ export const metadata: Metadata = {
 export default function UnderstandingCostsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <div className="container mx-auto px-4 py-8">
         <Breadcrumbs 
           items={[

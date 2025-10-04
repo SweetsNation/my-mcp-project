@@ -3,11 +3,12 @@ import Link from 'next/link';
 import React from 'react';
 import { Breadcrumbs, generateBreadcrumbStructuredData } from '@/components/Breadcrumbs';
 import LandingPageAnalytics from '@/components/LandingPageAnalytics';
-import { 
-  trackMedicareAdvancedPageView, 
+import {
+  trackMedicareAdvancedPageView,
   trackMedicareAdvancedCTA,
-  setupMedicareAdvancedScrollTracking 
+  setupMedicareAdvancedScrollTracking
 } from '@/lib/analytics/medicareAdvancedTracking';
+import { generateCountyMedicareSchema, getMedicareAdvantageFAQs } from '@/lib/schema/county-medicare-schema';
 
 export const metadata: Metadata = {
   title: 'Miami-Dade County Medicare Advantage 2025 | Bilingual Florida Plans | Hispanic Community Coverage',
@@ -89,6 +90,19 @@ const topPlans = [
     specialFeatures: ['Hispanic community focus', 'Cultural competency', 'Family-centered care']
   }
 ];
+
+// Comprehensive County Medicare Schema with FAQs
+const miamiDadeMAStructuredData = generateCountyMedicareSchema({
+  pagePath: '/medicare-advantage/miami-dade-county',
+  pageTitle: 'Miami-Dade County Medicare Advantage 2025 | Bilingual Florida Plans | Hispanic Community Coverage',
+  pageDescription: 'Best Miami-Dade County Medicare Advantage plans 2025. Compare 95+ bilingual plans for Hispanic families. Spanish-speaking agents, cultural competency, Jackson Health System networks.',
+  county: 'Miami-Dade County',
+  state: 'Florida',
+  productType: 'medicare-advantage',
+  totalBeneficiaries: 525000,
+  averagePremium: 0,
+  faqs: getMedicareAdvantageFAQs('Miami-Dade County', 'Florida', 95, 58)
+});
 
 export default function MiamiDadeCountyPage() {
   const breadcrumbItems = [
@@ -229,6 +243,12 @@ export default function MiamiDadeCountyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbStructuredData),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(miamiDadeMAStructuredData),
         }}
       />
       <div className="min-h-screen bg-gray-50">

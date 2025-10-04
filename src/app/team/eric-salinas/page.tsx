@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import TeamPageAnalytics from '@/components/TeamPageAnalytics'
+import { generateTeamMemberSchema } from '@/lib/schema/team-member-schema'
 
 export const metadata: Metadata = {
   title: 'Eric Salinas - Medicare Supplement Expert | Medicare Part D Specialist Florida | Medigap Insurance Plans & Prescription Drug Coverage',
@@ -26,7 +27,27 @@ export const metadata: Metadata = {
   },
 }
 
-const ericStructuredData = [
+const structuredData = generateTeamMemberSchema({
+  name: 'Eric Salinas',
+  jobTitle: 'Medicare Supplement & Part D Expert',
+  slug: 'eric-salinas',
+  description: 'Bilingual Medicare specialist with over 10 years of experience and Information Technology background. Specializes in Medicare Supplement plans, Medicare Part D prescription coverage, Hospital Indemnity plans, and Security Evacuation services across 5 states.',
+  specialties: [
+    'Medicare Supplement Plans',
+    'Medicare Part D',
+    'Medicare Advantage Plans',
+    'Hospital Indemnity Insurance',
+    'Security and Evacuation Membership',
+    'Medigap Insurance'
+  ],
+  experience: '10+ years',
+  location: 'Florida, Georgia, South Carolina, North Carolina, Texas',
+  languages: ['English', 'Spanish'],
+  email: 'eric@elmag-insurance.com',
+  phone: '+1-954-665-7228'
+});
+
+const ericStructuredDataOld = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
@@ -310,7 +331,7 @@ export default function EricSalinasPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ericStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       
       <TeamPageAnalytics 

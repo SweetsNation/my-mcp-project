@@ -149,6 +149,55 @@ export default function SanDiegoCountyPage() {
   ];
   const breadcrumbStructuredData = generateBreadcrumbStructuredData(breadcrumbItems);
 
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county',
+        url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county',
+        name: 'Medicare Advantage San Diego County CA 2025 | 67 Plans | Kaiser, Sharp, Scripps | Best Medicare Plans California',
+        description: 'Compare 67 Medicare Advantage plans in San Diego County California. San Diego, Chula Vista, Oceanside, Carlsbad, Encinitas coverage. 42 $0 premium plans available.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/#website' },
+        breadcrumb: { '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'San Diego County, California', item: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/medicare-advantage/san-diego-county#service',
+        name: 'San Diego County California Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for San Diego County residents with 67 plan options and Kaiser, Sharp, Scripps healthcare networks.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app' },
+        areaServed: {
+          '@type': 'County',
+          name: 'San Diego County, California',
+          containsPlace: [
+            { '@type': 'City', name: 'San Diego' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'San Diego County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with San Diego-area network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across California' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   // Track scroll depth and time on page
   React.useEffect(() => {
     let scrollDepth = 0;
@@ -252,12 +301,7 @@ export default function SanDiegoCountyPage() {
           pageType: 'county_market'
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData),
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

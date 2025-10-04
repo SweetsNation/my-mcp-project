@@ -2,6 +2,15 @@ import { Metadata } from 'next';
 import EmergencyEvacuationAnalytics from '@/components/EmergencyEvacuationAnalytics';
 import BreadcrumbNavigation from '@/components/BreadcrumbNavigation';
 import InternalLinking from '@/components/InternalLinking';
+import { generateEmergencyEvacuationInsuranceSchema, emergencyEvacuationInsuranceFAQs } from '@/lib/schema/emergency-evacuation-insurance-schema';
+
+// Structured Data for SEO
+const structuredData = generateEmergencyEvacuationInsuranceSchema({
+  pagePath: '/emergency-evacuation-insurance',
+  pageTitle: 'Emergency Evacuation Insurance | Medical Evacuation Coverage & Travel Protection',
+  pageDescription: 'Comprehensive emergency evacuation insurance for medical emergencies, natural disasters, and political unrest. Get coverage for air ambulance, ground transport, and repatriation services worldwide.',
+  faqs: emergencyEvacuationInsuranceFAQs
+});
 
 export const metadata: Metadata = {
   title: 'Emergency Evacuation Insurance | Medical Evacuation Coverage & Travel Protection',
@@ -52,8 +61,14 @@ const emergencyEvacuationLinks = {
 export default function EmergencyEvacuationInsurancePage() {
   return (
     <>
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <EmergencyEvacuationAnalytics />
-      
+
       <div className="min-h-screen bg-white">
         {/* Breadcrumb Navigation */}
         <BreadcrumbNavigation customBreadcrumbs={emergencyEvacuationBreadcrumbs.map(bc => ({

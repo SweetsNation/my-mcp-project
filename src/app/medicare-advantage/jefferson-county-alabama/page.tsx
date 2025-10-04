@@ -96,8 +96,58 @@ const jeffersonCountyData = {
 };
 
 export default function JeffersonCountyAlabamaPage() {
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
+        url: 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama',
+        name: 'Medicare Advantage Plans Jefferson County Alabama 2025 | $0 Premium Options',
+        description: 'Find Medicare Advantage plans in Jefferson County, Alabama with $0 premiums. 42% penetration rate offers better plan choices. Birmingham area Medicare specialists.',
+        inLanguage: 'en-US',
+        isPartOf: { '@id': 'https://elmaginsurance.com/#website' },
+        breadcrumb: { '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama#breadcrumb' }
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama#breadcrumb',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://elmaginsurance.com' },
+          { '@type': 'ListItem', position: 2, name: 'Medicare Advantage', item: 'https://elmaginsurance.com/medicare-advantage' },
+          { '@type': 'ListItem', position: 3, name: 'Jefferson County, Alabama', item: 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama' }
+        ]
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/jefferson-county-alabama#service',
+        name: 'Jefferson County Alabama Medicare Advantage Plans',
+        description: 'Medicare Advantage (Part C) plans for Jefferson County and Birmingham residents with 42% penetration rate and dual-eligible options.',
+        provider: { '@type': 'Organization', name: 'El-Mag Insurance', url: 'https://elmaginsurance.com' },
+        areaServed: {
+          '@type': 'County',
+          name: 'Jefferson County, Alabama',
+          containsPlace: [
+            { '@type': 'City', name: 'Birmingham' }
+          ]
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Jefferson County Medicare Advantage Plans',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'HMO Medicare Advantage', description: '$0 premium plans with Birmingham-area network coverage' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'PPO Medicare Advantage', description: 'Flexible provider access across Alabama' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'D-SNP Plans', description: 'Dual-eligible Special Needs Plans for Medicaid beneficiaries' } }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       {/* Main Content */}
       <main>
         {/* Hero Section with H1 */}

@@ -312,7 +312,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/community-health-centers-medicare-advantage-birmingham`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/blog/medicare-advantage-diverse-communities-atlanta`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/blog/medicare-advantage-transportation-benefits-nashville`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${baseUrl}/blog/raleigh-tech-innovation-medicare-advantage`, lastModified: today, changeFrequency: 'weekly', priority: 0.85 },
     // Health insurance guides
     { url: `${baseUrl}/blog/miami-dade-health-insurance-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/blog/health-insurance-harris-county-guide`, lastModified: today, changeFrequency: 'monthly', priority: 0.7 },

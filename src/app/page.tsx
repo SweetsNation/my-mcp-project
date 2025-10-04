@@ -1,15 +1,22 @@
 import { MedicareAdvantageHero } from '@/components/MedicareAdvantageHero';
 import { MedicareAdvantageZipSearch } from '@/components/MedicareAdvantageZipSearch';
 import Link from 'next/link';
+import { generateHomePageSchema } from '@/lib/schema/organization-schema';
 
 // Force dynamic rendering to prevent prerendering issues
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default function HomePage() {
+  const structuredData = generateHomePageSchema();
 
   return (
     <div className="bg-gray-50">
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <MedicareAdvantageHero headline="Find Your Perfect Medicare Plan" />
 

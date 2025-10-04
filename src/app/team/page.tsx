@@ -4,6 +4,14 @@ import ContactForm from '@/components/ContactForm'
 import SocialProofSection from '@/components/SocialProofSection'
 import RelatedServices from '@/components/RelatedServices'
 import ResourceLinks from '@/components/ResourceLinks'
+import { generateTeamPageSchema } from '@/lib/schema/team-schema'
+
+// Enhanced Structured Data for SEO
+const structuredData = generateTeamPageSchema({
+  pagePath: '/team',
+  pageTitle: 'Our Expert Insurance Team | Licensed Agents & Specialists',
+  pageDescription: 'Meet our team of licensed insurance experts specializing in Medicare, ACA Marketplace, life insurance, disability insurance, business insurance, and auto insurance.'
+});
 
 export const metadata: Metadata = {
   title: 'Our Expert Insurance Team | Licensed Agents & Specialists | El-Mag Insurance',
@@ -27,71 +35,6 @@ export const metadata: Metadata = {
   },
 }
 
-const teamStructuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'El-Mag Insurance Team',
-  url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team',
-  description: 'Professional insurance agency with licensed specialists in Medicare, health insurance, life insurance, disability insurance, business insurance, and auto insurance.',
-  telephone: '331-343-2584',
-  email: 'support@elmaginsurance.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '7520 NW 5th St, #201',
-    addressLocality: 'Plantation',
-    addressRegion: 'FL',
-    postalCode: '33317',
-    addressCountry: 'US'
-  },
-  areaServed: {
-    '@type': 'Country',
-    name: 'United States'
-  },
-  employee: [
-    {
-      '@type': 'Person',
-      name: 'Elsa Galicia-Lona',
-      jobTitle: 'Senior Insurance Specialist',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/elsa-galicia-lona',
-      knowsAbout: ['Medicare Advantage', 'Health Insurance Marketplace', 'International Health Insurance']
-    },
-    {
-      '@type': 'Person',
-      name: 'Magdalena Salinas',
-      jobTitle: 'Social Security Advisor & Medicare Specialist',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/magdalena-salinas',
-      knowsAbout: ['Social Security Benefits', 'Medicare Advantage', 'Supplemental Health Insurance', 'Health Insurance Marketplace']
-    },
-    {
-      '@type': 'Person',
-      name: 'Eric Salinas',
-      jobTitle: 'Medicare Specialist',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/eric-salinas',
-      knowsAbout: ['Medicare Supplement Plans', 'Medicare Part D', 'Medicare Advantage Plans', 'Hospital Indemnity Insurance']
-    },
-    {
-      '@type': 'Person',
-      name: 'Junior Goulbourne',
-      jobTitle: 'Insurance Specialist',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/junior-goulbourne',
-      knowsAbout: ['Medicare Advantage Plans', 'Final Expense Insurance', 'Life Insurance', 'Health Insurance Marketplace', 'Employee Benefits']
-    },
-    {
-      '@type': 'Person',
-      name: 'Yaissa Acosta',
-      jobTitle: 'Insurance Specialist',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/yaissa-acosta',
-      knowsAbout: ['Health Insurance Marketplace', 'Medicare Advantage Plans', 'Life Insurance', 'Supplemental Health Insurance']
-    },
-    {
-      '@type': 'Person',
-      name: 'Marcia Zulema Cordero Rizo',
-      jobTitle: 'Insurance Specialist',
-      url: 'https://my-mcp-project-q7w8myfvu-eric-salinas-projects-46bb41ca.vercel.app/team/marcia-cordero',
-      knowsAbout: ['Health Insurance Marketplace', 'Life Insurance', 'Final Expense Insurance', 'Medicare Advantage', 'Health Discount Plans']
-    }
-  ]
-};
 
 const teamMembers = [
   {
@@ -183,9 +126,10 @@ const getColorClasses = (color: string) => {
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      {/* Enhanced Schema Markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamStructuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
       {/* Hero Section */}

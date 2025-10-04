@@ -15,8 +15,73 @@ export default function MedicareAdvantagePlansPage({
 }) {
   const zipCode = searchParams.zip;
 
+  // Structured Data for SEO
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': 'https://elmaginsurance.com/medicare-advantage/plans',
+        url: 'https://elmaginsurance.com/medicare-advantage/plans',
+        name: 'Medicare Advantage Plans - Compare & Find the Best Plan',
+        description: 'Compare Medicare Advantage plans in your area. Find $0 premium plans with dental, vision & fitness benefits.',
+        inLanguage: 'en-US',
+        isPartOf: {
+          '@id': 'https://elmaginsurance.com/#website'
+        }
+      },
+      {
+        '@type': 'Service',
+        name: 'Medicare Advantage Plan Comparison',
+        description: 'Compare Medicare Advantage (Part C) plans including HMO, PPO, PFFS, and SNP options with comprehensive coverage comparison.',
+        provider: {
+          '@type': 'Organization',
+          name: 'El-Mag Insurance'
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'United States'
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Medicare Advantage Plan Types',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Medicare Advantage HMO Plans',
+                description: '$0 premium options with network-based care and comprehensive benefits'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Medicare Advantage PPO Plans',
+                description: 'Flexible provider choice with in-network and out-of-network coverage'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Medicare Advantage SNP Plans',
+                description: 'Special Needs Plans for chronic conditions or dual-eligible beneficiaries'
+              }
+            }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
